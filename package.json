@@ -6,10 +6,18 @@
   "private": true,
   "scripts": {
     "fontes": "node scripts/baixar-fontes.mjs fontes",
-    "catalogo": "pdftotext -layout -f 71 -l 153 fontes/moc-anexo1.pdf fontes/anexo1-regras.txt && node scripts/extrair-anexo1.mjs fontes/anexo1-regras.txt catalogo/moc-anexo1.json",
+    "catalogo": "node scripts/montar-catalogo.mjs",
     "test": "node --test"
   },
-  "keywords": ["nfe", "nfce", "sefaz", "nota-fiscal", "validacao", "xml", "reforma-tributaria"],
+  "keywords": [
+    "nfe",
+    "nfce",
+    "sefaz",
+    "nota-fiscal",
+    "validacao",
+    "xml",
+    "reforma-tributaria"
+  ],
   "author": "quietwright",
   "license": "MIT",
   "repository": {

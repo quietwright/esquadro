@@ -1,0 +1,8 @@
+[
+ {
+  "documento": "NT 2015.001",
+  "ids": ["P13-14", "P19"],
+  "acao": "excluir",
+  "motivo": "Regras do evento de Pedido de Prorrogação (NfeRecepcaoEvento), citadas numa seção de alterações que não diz o serviço."
+ }
+]
