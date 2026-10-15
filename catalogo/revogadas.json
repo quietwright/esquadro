@@ -1,0 +1,254 @@
+[
+ {
+  "id": "YA02-50",
+  "revogadaPor": "NT 2020.006 v1.31, p. 11",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 126,
+   "cStat": 436
+  }
+ },
+ {
+  "id": "C02a-04",
+  "revogadaPor": "NT 2022.003 v1.11, p. 11",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 81,
+   "cStat": 337
+  }
+ },
+ {
+  "id": "C02a-08",
+  "revogadaPor": "NT 2022.003 v1.11, p. 11",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 81,
+   "cStat": 652
+  }
+ },
+ {
+  "id": "C02a-14",
+  "revogadaPor": "NT 2022.003 v1.11, p. 11",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 81,
+   "cStat": 407
+  }
+ },
+ {
+  "id": "N17c-30",
+  "revogadaPor": "NT 2024.001 v1.20, p. 14",
+  "ultimaVersao": {
+   "documento": "NT 2022.003 v1.11",
+   "pagina": 12,
+   "cStat": 474
+  }
+ },
+ {
+  "id": "1C17-40",
+  "revogadaPor": "NT 2024.001 v1.20, p. 16",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 134,
+   "cStat": 301
+  }
+ },
+ {
+  "id": "X03-10",
+  "revogadaPor": "NT 2023.004 v1.20, p. 14",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 124,
+   "cStat": 754
+  }
+ },
+ {
+  "id": "X03-20",
+  "revogadaPor": "NT 2023.004 v1.20, p. 14",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 124,
+   "cStat": 786
+  }
+ },
+ {
+  "id": "LA03d-10",
+  "revogadaPor": "NT 2023.001 v1.60, p. 29",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 97,
+   "cStat": 856
+  }
+ },
+ {
+  "id": "GAP03a-2",
+  "revogadaPor": "NT 2025.001 v1.03, p. 8",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 73,
+   "cStat": 776
+  }
+ },
+ {
+  "id": "E16a-35",
+  "revogadaPor": "NT 2025.001 v1.03, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 86,
+   "cStat": 805
+  }
+ },
+ {
+  "id": "I08-94",
+  "revogadaPor": "NT 2024.003 v1.10, p. 9",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 92,
+   "cStat": 771
+  }
+ },
+ {
+  "id": "7I03-10",
+  "revogadaPor": "NT 2021.003 v1.50, p. 12",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 138,
+   "cStat": 889
+  }
+ },
+ {
+  "id": "9I03-40",
+  "revogadaPor": "NT 2021.003 v1.50, p. 13",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 139,
+   "cStat": 893
+  }
+ },
+ {
+  "id": "9I12-20",
+  "revogadaPor": "NT 2021.003 v1.50, p. 13",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 139,
+   "cStat": 895
+  }
+ },
+ {
+  "id": "9I12-30",
+  "revogadaPor": "NT 2021.003 v1.50, p. 13",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 139,
+   "cStat": 896
+  }
+ },
+ {
+  "id": "BA05-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 9",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 79,
+   "cStat": 317
+  }
+ },
+ {
+  "id": "BA06-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 9",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 79,
+   "cStat": 548
+  }
+ },
+ {
+  "id": "BA12-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 80,
+   "cStat": 322
+  }
+ },
+ {
+  "id": "BA13-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 80,
+   "cStat": 549
+  }
+ },
+ {
+  "id": "BA14-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 80,
+   "cStat": 550
+  }
+ },
+ {
+  "id": "BA15-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 80,
+   "cStat": 551
+  }
+ },
+ {
+  "id": "BA20-10",
+  "revogadaPor": "NT 2026.002 v1.11, p. 10",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 81,
+   "cStat": 684
+  }
+ },
+ {
+  "id": "BA20-20",
+  "revogadaPor": "NT 2026.002 v1.11, p. 11",
+  "ultimaVersao": {
+   "documento": "NT 2019.001 v1.70",
+   "pagina": 15,
+   "cStat": 923
+  }
+ },
+ {
+  "id": "VC02-50",
+  "revogadaPor": "NT 2026.002 v1.11, p. 18",
+  "ultimaVersao": {
+   "documento": "NT 2025.002 v1.52",
+   "pagina": 70,
+   "cStat": 1194
+  }
+ },
+ {
+  "id": "C17-10",
+  "revogadaPor": "NT 2026.007 v1.10, p. 6",
+  "ultimaVersao": {
+   "documento": "MOC 7.0 Anexo I",
+   "pagina": 82,
+   "cStat": 229
+  }
+ },
+ {
+  "id": "5E17-70",
+  "revogadaPor": "NT 2026.007 v1.10, p. 8",
+  "ultimaVersao": {
+   "documento": "NT 2019.001 v1.70",
+   "pagina": 23,
+   "cStat": 246
+  }
+ },
+ {
+  "id": "UB16-10",
+  "revogadaPor": "NT 2026.008 v1.00, p. 8",
+  "ultimaVersao": {
+   "documento": "NT 2025.002 v1.52",
+   "pagina": 43,
+   "cStat": 1104
+  }
+ }
+]

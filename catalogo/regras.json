@@ -176,11 +176,6 @@
   "consultaBaseSefaz": true,
   "historico": [
    {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 134,
-    "cStat": 301
-   },
-   {
     "documento": "NT 2021.002 v1.12",
     "pagina": 16,
     "cStat": 301
@@ -1318,33 +1313,6 @@
   "historico": []
  },
  {
-  "id": "5E17-70",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": "3.9. Banco de Dados: Destinatário",
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 246,
-  "efeito": "rejeicao",
-  "regra": "Mensagens opcionais se informada IE do destinatário e IE não vinculada ao CNPJ/CPF. - Acessar Cadastro de Pessoa Jurídica ou Pessoa Física: – CNPJ destinatário não cadastrado",
-  "mensagem": "Rejeição: CNPJ Destinatário não cadastrado",
-  "pagina": 23,
-  "consultaBaseSefaz": true,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 137,
-    "cStat": 246
-   },
-   {
-    "documento": "NT 2021.002 v1.12",
-    "pagina": 17,
-    "cStat": 246
-   }
-  ]
- },
- {
   "id": "5E17-80",
   "documento": "NT 2019.001 v1.70",
   "grupo": "3.9. Banco de Dados: Destinatário",
@@ -1478,23 +1446,6 @@
   "efeito": "rejeicao",
   "regra": "Verificar se o CNPJ/CPF informado na primeira ocorrência do Grupo de Autorização corresponde a um Escritório de Contabilidade cadastrado na SEFAZ, conforme legislação estadual. Observação: Regra de Validação opcional a critério da UF. (NT 2015.002)",
   "mensagem": "Rejeição: Escritório de Contabilidade não cadastrado na SEFAZ",
-  "pagina": 138,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "7I03-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 889,
-  "efeito": "rejeicao",
-  "regra": "Se não informado GTIN (cEAN=Nulo). Observação: Para produtos que não possuem GTIN, utilizar a informação de \"SEM GTIN\" (NT 2017.001)",
-  "mensagem": "Rejeição: Obrigatória a informação do GTIN para o produto [nItem: 999]",
   "pagina": 138,
   "consultaBaseSefaz": true,
   "historico": []
@@ -1677,23 +1628,6 @@
   ]
  },
  {
-  "id": "9I03-40",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 893,
-  "efeito": "rejeicao",
-  "regra": "Se informado GTIN-14 (tag: cEAN>09999999999999) com prefixo do Brasil (iniciado em 789 ou 790) e informado GTIN da unidade tributável (tag: cEANTrib) diferente do GTIN Contido cadastrado no CCG Exceção: a RV não se aplica em operações com exterior (idDest=3) Nota: o GTIN pode possuir GTIN de nível inferior (GTIN Contido), agrupando diversas unidades do mesmo produto. O GTIN da unidade tributável deve corresponder àquele da menor unidade comercializável identificada por código GTIN, ou seja, deve corresponder ao GTIN do menor nível inferior (GTIN Contido). (NT 2017.001)",
-  "mensagem": "Rejeição: GTIN da unidade tributável diverge do GTIN Contido cadastrado no CCG [nItem:999; GTIN Contido esperado: 99999999999999]",
-  "pagina": 139,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
   "id": "9I12-10",
   "documento": "NT 2021.003 v1.50",
   "grupo": null,
@@ -1715,40 +1649,6 @@
     "cStat": 894
    }
   ]
- },
- {
-  "id": "9I12-20",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 895,
-  "efeito": "rejeicao",
-  "regra": "Se informado GTIN da unidade tributável (tag: cEANTrib) com prefixo do Brasil (iniciado em 789 ou 790) e NCM informada na NF-e diferente da cadastrada no CCG (NT 2017.001)",
-  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com a NCM [nItem:999; NCM esperada: 99999999]",
-  "pagina": 139,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "9I12-30",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 896,
-  "efeito": "rejeicao",
-  "regra": "Se informado GTIN da unidade tributável (tag: cEANTrib) com prefixo do Brasil (iniciado em 789 ou 790) e CEST informado na NF-e diferente do cadastrado no CCG (NT 2017.001)",
-  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com CEST [nItem:999; CEST esperado: 9999999]",
-  "pagina": 139,
-  "consultaBaseSefaz": true,
-  "historico": []
  },
  {
   "id": "10ZF04-10",
@@ -4145,38 +4045,6 @@
   ]
  },
  {
-  "id": "BA05-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 317,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF Modelo 1 referenciada (tag:refNF): - NF modelo 1 referenciada emitida há mais de 20 anos da data atual ou com data de emissão superior ao Ano-Mês atual (NT 2015.002)",
-  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
-  "pagina": 79,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "BA06-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 548,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF Modelo 1 referenciada (tag:refNF): - CNPJ com zeros, nulo ou DV inválido",
-  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
-  "pagina": 79,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "BA10-10",
   "documento": "NT 2026.002 v1.11",
   "grupo": null,
@@ -4295,70 +4163,6 @@
     "cStat": 922
    }
   ]
- },
- {
-  "id": "BA12-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 322,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - NF de produtor referenciada emitida a mais de 20 anos da data atual ou com data de emissão superior ao Ano-Mês atual (NT 2015.002)",
-  "mensagem": "Rejeição: NF de produtor referenciada com data de emissão inválida [nOcor:nnn]",
-  "pagina": 80,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "BA13-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 549,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - CNPJ com zeros, nulo ou DV inválido",
-  "mensagem": "Rejeição: CNPJ da NF referenciada de produtor inválido [nOcor: 999]",
-  "pagina": 80,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "BA14-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 550,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - CPF com zeros, nulo, 111..., 222, ..., ou DV inválido (NT 2012/003)",
-  "mensagem": "Rejeição: CPF da NF referenciada de produtor inválido.",
-  "pagina": 80,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "BA15-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 551,
-  "efeito": "rejeicao",
-  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - IE com zeros, nulo ou DV inválido para a UF.",
-  "mensagem": "Rejeição: IE da NF referenciada de produtor inválido.",
-  "pagina": 80,
-  "consultaBaseSefaz": false,
-  "historico": []
  },
  {
   "id": "BA19-10",
@@ -4487,44 +4291,6 @@
   "pagina": 81,
   "consultaBaseSefaz": false,
   "historico": []
- },
- {
-  "id": "BA20-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 684,
-  "efeito": "rejeicao",
-  "regra": "Se informado Cupom Fiscal referenciado (tag:refECF): - Verificar duplicidade de Cupom Fiscal referenciado (mesmo Modelo, Número de Ordem e COO) (NT 2013/003)",
-  "mensagem": "Rejeição: Duplicidade de Cupom Fiscal referenciado (Modelo, Número de Ordem e COO) [nOcor: 999]",
-  "pagina": 81,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "BA20-20",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 923,
-  "efeito": "rejeicao",
-  "regra": "Informado Cupom Fiscal referenciado (tag: refECF) ou informado NF modelo 1 ou 2 referenciada (tag: refNF) em NF-e de operação interestadual ou com o exterior (tag: idDest<>1)",
-  "mensagem": "Rejeição: Referenciado documento de operação interna em operação interestadual ou com o exterior",
-  "pagina": 15,
-  "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 81,
-    "cStat": 923
-   }
-  ]
  },
  {
   "id": "BA20-30",
@@ -4976,28 +4742,6 @@
   "mensagem": "Rejeição: NFC-e para emitente pessoa física",
   "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 81,
-    "cStat": 337
-   }
-  ]
- },
- {
-  "id": "C02a-08",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 652,
-  "efeito": "rejeicao",
-  "regra": "Se informado CPF do emitente: – Se NF-e (modelo 55) Observação: Regra de validação opcional a critério da UF. (NT 2018.001)",
-  "mensagem": "Rejeição: NF-e para emitente pessoa física",
-  "pagina": 81,
-  "consultaBaseSefaz": false,
   "historico": []
  },
  {
@@ -5047,13 +4791,7 @@
   "mensagem": "Rejeição: CPF do Emitente somente no serviço de Nota Fiscal Avulsa no site do Fisco",
   "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 81,
-    "cStat": 407
-   }
-  ]
+  "historico": []
  },
  {
   "id": "C02a-20",
@@ -5157,23 +4895,6 @@
     "cStat": 247
    }
   ]
- },
- {
-  "id": "C17-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 229,
-  "efeito": "rejeicao",
-  "regra": "IE Emitente com zeros ou nulo",
-  "mensagem": "Rejeição: IE do emitente não informada",
-  "pagina": 82,
-  "consultaBaseSefaz": false,
-  "historico": []
  },
  {
   "id": "C17-11",
@@ -6238,22 +5959,6 @@
   ]
  },
  {
-  "id": "E16a-35",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 805,
-  "efeito": "rejeicao",
-  "regra": "Informado destinatário como Contribuinte Isento de Inscrição Estadual (indIEDest=2-ISENTO) em UF que não permite esta situação nas operações internas (idDest=1) Exceção 1: Esta regra de validação não se aplica quando houver destaque do ICMS-ST (campo vICMSST) em pelo menos um item da NF-e. Exceção 2: Esta regra de validação não se aplica quando houver informação do ICMS-ST retido anteriormente (campo vICMSSTRet) em pelo menos um item da NF-e. Exceção 3: A regra de validação não se aplica, em produção, para Nota Fiscal com data de emissão anterior a 01/07/2016. Exceção 4: Esta regra de validação não se aplica nas operações isentas (CST=40-Isenta ou CSOSN=103-Isento), imunes ou não tributadas (CST=41-Não tributada, ou CSOSN=300-Imune, ou CSOSN=400-Não tributada pelo Simples Nacional) (NT 2015.003)",
-  "mensagem": "Rejeição: A SEFAZ do destinatário não permite Contribuinte Isento de Inscrição Estadual",
-  "pagina": 86,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "E16a-40",
   "documento": "NT 2019.001 v1.70",
   "grupo": null,
@@ -6871,20 +6576,6 @@
   "historico": []
  },
  {
-  "id": "GAP03a-2",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": null,
-  "aplicacao": "facultativa",
-  "cStat": 776,
-  "efeito": "rejeicao",
-  "regra": "Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
-  "mensagem": "Rejeição: Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
-  "pagina": 73,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "GAP03a-3",
   "documento": "NT 2025.001 v1.03",
   "grupo": null,
@@ -7404,22 +7095,6 @@
     "cStat": 523
    }
   ]
- },
- {
-  "id": "I08-94",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 771,
-  "efeito": "rejeicao",
-  "regra": "Operação Interestadual (idDest=2) e informado idEstrangeiro Exceção: A regra acima não se aplica para o CFOP=”6.667-Venda de combustível ou lubrificante a consumidor ou usuário final estabelecido em outra UF diferente da que ocorrer o consumo” (NT 2015.002)",
-  "mensagem": "Rejeição: Informado idEstrangeiro em operação interestadual",
-  "pagina": 92,
-  "consultaBaseSefaz": false,
-  "historico": []
  },
  {
   "id": "I08-110",
@@ -8656,22 +8331,6 @@
   "efeito": "rejeicao",
   "regra": "Se informado GLP (cProdANP=210203001) o somatório dos percentuais pGLP(id:LA03a) e pGNn(id:LA03b) e pGNi(id:LA03c) deve ser igual a 100. (NT 2016.002)",
   "mensagem": "Rejeição: Somatório percentuais de GLP derivado do petróleo, GLGNn e GLGNi diferente de 100 [nItem: 999].",
-  "pagina": 97,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "LA03d-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 856,
-  "efeito": "rejeicao",
-  "regra": "Obrigatória a informação do campo vPart (id: LA03d) para produto \"210203001 – GLP\" (tag:cProdANP) (NT 2016.002)",
-  "mensagem": "Rejeição: Campo valor de partida não preenchido para produto GLP [nItem: 999].",
   "pagina": 97,
   "consultaBaseSefaz": false,
   "historico": []
@@ -9978,22 +9637,6 @@
   "regra": "Se Operação interestadual (tag:idDest=2) para Consumidor Final (tag: indFinal=1), não contribuinte (tag: indIEDest=9) e informado o valor do FCP (tag: vFCP) Observação: Em operações interestaduais para consumidor final não contribuinte, o valor do FCP, quando existir, deve ser informado no campo vFCPUFDest (id:NA13). (NT 2016.002)",
   "mensagem": "Rejeição: Operação interestadual para Consumidor Final e valor do FCP informado em campo diferente de vFCPUFDest (id:NA13) [nItem: 999]",
   "pagina": 111,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N17c-30",
-  "documento": "NT 2022.003 v1.11",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 474,
-  "efeito": "rejeicao",
-  "regra": "Se Operação Interna ou Operação Interestadual (idDest=1 ou 2) com CST=00 (operação tributada normalmente): - Se informado valor diferente de zero para o FCP (verificar tags vFCP, vFCPST, vFCPSTRet) Observação: Regra de validação aplicável para a UF CE.",
-  "mensagem": "Rejeição: FCP não deve ser destacado na NF-e conforme legislação estadual [nItem:999]",
-  "pagina": 12,
   "consultaBaseSefaz": false,
   "historico": []
  },
@@ -11388,23 +11031,6 @@
   "efeito": "rejeicao",
   "regra": "Se informado tipo de nota de crédito (tag: tpNFCredito): - Validar se tpNFCredito é compatível com o cClassTrib, de acordo com a tabela abaixo: tpNFCredito cClassTrib 01=Multa e Juros Não limitar 02=Apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM (art. 450, § 1º, LC 214/25) 810001 03=Retorno por recusa total na entrega ou por não localização do destinatário na tentativa de entrega Não limitar 04=Redução de valores Não limitar 05=Transferência de crédito na sucessão 800001 06=Retorno por recusa parcial na entrega Não limitar --",
   "mensagem": "Rejeição: cClassTrib incompatível com o tipo de Nota de Crédito [nItem: 999]",
-  "pagina": 43,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "UB16-10",
-  "documento": "NT 2025.002 v1.52",
-  "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 1104,
-  "efeito": "rejeicao",
-  "regra": "Valor da Base de cálculo do IBS e CBS (gIBSCBS/vBC) deve ser igual ao somatório de: (+) vProd (+) vServ (+) vFrete (+) vSeg (+) vOutro (+) vII (-) vDesc (-) vPIS (-) vCOFINS (-) vICMS (-) vICMSUFDest (-) vFCP (-) vFCPUFDest (-) vICMSMono (-) vISSQN (+) vIS Exceção 1: Não subtrair o valor do PIS por Substituição Tributária (PIST/vPIS) quando compor o valor total da NF-e (se indSomaPISST=1); Exceção 2: Não subtrair o valor do COFINS por Substituição Tributária (COFINSST/vCOFINS) quando compor o valor total da NF-e (se indSomaCOFINSST=1). Nota: Implementação Futura, aguardando orientação normativa.",
-  "mensagem": "Rejeição: Valor da Base de cálculo do IBS e CBS difere do somatório dos valores que a compõem [nItem: 999]",
   "pagina": 43,
   "consultaBaseSefaz": false,
   "historico": []
@@ -13933,22 +13559,6 @@
   ]
  },
  {
-  "id": "VC02-50",
-  "documento": "NT 2025.002 v1.52",
-  "grupo": "VC. Referenciamento de item de outro Documento Fiscal Eletrônico - DF-e",
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 1194,
-  "efeito": "rejeicao",
-  "regra": "Se NF-e de devolução de mercadoria (tag: finNFe = 4) e tpNF=1-Saída: - Se o DFeReferenciado for de saída (tpNF=1-Saída): - CNPJ/CPF do Emitente do DFeReferenciado deve ser igual ao CNPJ/CPF do Destinatário da NF-e atual Observação: No caso de Nota Fiscal Avulsa (NFA) com CNPJ da SEFAZ na Chave de Acesso deve ser considerado o CNPJ ou CPF do Emitente.",
-  "mensagem": "Rejeição: Destintário da NF-e deve ser o igual ao Emitente da NF referenciada [nItem: 999]",
-  "pagina": 70,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "VC03-10",
   "documento": "NT 2025.002 v1.52",
   "grupo": "VC. Referenciamento de item de outro Documento Fiscal Eletrônico - DF-e",
@@ -15385,38 +14995,6 @@
   "historico": []
  },
  {
-  "id": "X03-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 754,
-  "efeito": "rejeicao",
-  "regra": "NFC-e com dados do Transportador e não é entrega a domicílio (tag:transporta e indPres<>4)",
-  "mensagem": "Rejeição: NFC-e com dados do Transportador",
-  "pagina": 124,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "X03-20",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 786,
-  "efeito": "rejeicao",
-  "regra": "NFC-e sem dados do Transportador (tag:transporta) e é entrega a domicílio (indPres=4)",
-  "mensagem": "Rejeição: NFC-e de entrega a domicílio sem dados do Transportador",
-  "pagina": 124,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "X03-30",
   "documento": "NT 2021.004 v1.35",
   "grupo": null,
@@ -16009,22 +15587,6 @@
   "regra": "Informado tpag (id=YA02)= 90 “Sem Pagamento” ) (NT 2016.002)",
   "mensagem": "Rejeição: Informado incorretamente o campo meio de pagamento",
   "pagina": 125,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "YA02-50",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 436,
-  "efeito": "rejeicao",
-  "regra": "Informado meio de pagamento tPag= 99 “Outros” Observação: Regra de validação valida a partir de 01/02/2021 para homologação e 01/09/2021 para produção (Incluída na NT 2020.006)",
-  "mensagem": "Rejeição: Informado 99-Outros como meio de pagamento",
-  "pagina": 126,
   "consultaBaseSefaz": false,
   "historico": []
  },

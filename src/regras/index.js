@@ -2,5 +2,6 @@
 
 import ide from './ide.js'
 import partes from './partes.js'
+import produtos from './produtos.js'
 
-export const regras = [...ide, ...partes]
+export const regras = [...ide, ...partes, ...produtos]

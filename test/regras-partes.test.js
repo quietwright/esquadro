@@ -21,7 +21,6 @@ const casos = [
   ['C02-10', 'CNPJ do emitente com DV errado', comChave(nota([['<CNPJ>11222333000181', '<CNPJ>11222333000182']]))],
   ['C02-30', 'série fora da faixa de emitente CNPJ', comChave(nota([['<serie>1</serie>', '<serie>950</serie>']]))],
   ['C02a-04', 'NFC-e de pessoa física', comChave(nota([['<CNPJ>11222333000181</CNPJ>', '<CPF>12345678909</CPF>']], NFCE))],
-  ['C02a-08', 'NF-e de pessoa física', emitCpf(920)],
   ['C02a-10', 'série fora da faixa de emitente CPF', emitCpf(1)],
   ['C02a-20', 'CPF do emitente inválido', comChave(nota([['<CNPJ>11222333000181</CNPJ>', '<CPF>12345678900</CPF>'], ['<serie>1</serie>', '<serie>920</serie>']]))],
   ['C10-20', 'município do emitente de outra UF', nota([['<cMun>3550308</cMun><xMun>SAO PAULO</xMun><UF>SP</UF><CEP>01001000', '<cMun>3304557</cMun><xMun>SAO PAULO</xMun><UF>SP</UF><CEP>01001000']])],

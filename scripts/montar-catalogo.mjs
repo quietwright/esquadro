@@ -44,18 +44,25 @@ const aplicadas = [...notas.values()]
 
 const regras = new Map()
 const fontes = []
+const revogadas = []
 for (const fonte of [BASE, ...aplicadas]) {
   const [primeira, ultima] = fonte.paginas ?? [1, null]
   const extraidas = extrair(`fontes/${fonte.arquivo}`, fonte.documento, primeira, ultima)
   const daAutorizacao = extraidas.filter((r) => r.servico === 'autorizacao' && !excluida(r))
   const sha256 = manifesto.find((i) => i.arquivo === fonte.arquivo).sha256
-  fontes.push({ ...fonte, sha256, regras: daAutorizacao.length })
+  fontes.push({ ...fonte, sha256, regras: daAutorizacao.filter((r) => !r.revogada).length })
   for (const r of daAutorizacao) {
     const anterior = regras.get(r.id)
+    if (r.revogada) {
+      // Linha riscada na NT: a regra deixa de valer. Fica registrada em revogadas.json.
+      if (anterior) revogadas.push({ id: r.id, revogadaPor: `${fonte.documento}, p. ${r.pagina}`, ultimaVersao: origem(anterior) })
+      regras.delete(r.id)
+      continue
+    }
     const historico = anterior ? [...anterior.historico, origem(anterior)] : []
     regras.set(r.id, { ...r, data: fonte.data, historico })
   }
-  console.error(`${fonte.documento.padEnd(24)} ${String(daAutorizacao.length).padStart(4)} regras`)
+  console.error(`${fonte.documento.padEnd(24)} ${String(daAutorizacao.filter((r) => !r.revogada).length).padStart(4)} regras`)
 }
 
 function origem(r) {
@@ -68,7 +75,8 @@ const ordenadas = [...regras.values()]
 
 writeFileSync('catalogo/regras.json', JSON.stringify(ordenadas, null, 1) + '\n')
 writeFileSync('catalogo/fontes.json', JSON.stringify(fontes, null, 1) + '\n')
-console.error(`\n${ordenadas.length} regras vigentes de ${fontes.length} documentos`)
+writeFileSync('catalogo/revogadas.json', JSON.stringify(revogadas, null, 1) + '\n')
+console.error(`\n${ordenadas.length} regras vigentes de ${fontes.length} documentos; ${revogadas.length} revogadas`)
 
 // Versão enxuta para o pacote: o que o validador mostra em cada problema, sem o texto longo da
 // regra (esse fica em catalogo/regras.json, para quem quiser ler a fonte).

@@ -670,16 +670,6 @@ export default {
   ],
   "fonte": "NT 2026.002 v1.11, p. 24"
  },
- "5E17-70": {
-  "cStat": 246,
-  "mensagem": "Rejeição: CNPJ Destinatário não cadastrado",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "NT 2019.001 v1.70, p. 23"
- },
  "5E17-80": {
   "cStat": 623,
   "mensagem": "Rejeição: CPF Destinatário não cadastrado",
@@ -751,17 +741,6 @@ export default {
   "aplicacao": "facultativa",
   "modelos": [
    "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 138"
- },
- "7I03-10": {
-  "cStat": 889,
-  "mensagem": "Rejeição: Obrigatória a informação do GTIN para o produto [nItem: 999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
   ],
   "fonte": "MOC 7.0 Anexo I, p. 138"
  },
@@ -852,17 +831,6 @@ export default {
   ],
   "fonte": "NT 2021.003 v1.50, p. 12"
  },
- "9I03-40": {
-  "cStat": 893,
-  "mensagem": "Rejeição: GTIN da unidade tributável diverge do GTIN Contido cadastrado no CCG [nItem:999; GTIN Contido esperado: 99999999999999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 139"
- },
  "9I12-10": {
   "cStat": 894,
   "mensagem": "Rejeição: GTIN da unidade tributável inexistente no Cadastro Centralizado de GTIN (CCG) [nItem:999]",
@@ -873,28 +841,6 @@ export default {
    "65"
   ],
   "fonte": "NT 2021.003 v1.50, p. 13"
- },
- "9I12-20": {
-  "cStat": 895,
-  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com a NCM [nItem:999; NCM esperada: 99999999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 139"
- },
- "9I12-30": {
-  "cStat": 896,
-  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com CEST [nItem:999; CEST esperado: 9999999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 139"
  },
  "10ZF04-10": {
   "cStat": 837,
@@ -2272,26 +2218,6 @@ export default {
   ],
   "fonte": "NT 2026.002 v1.11, p. 9"
  },
- "BA05-10": {
-  "cStat": 317,
-  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 79"
- },
- "BA06-10": {
-  "cStat": 548,
-  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 79"
- },
  "BA10-10": {
   "cStat": 682,
   "mensagem": "Rejeição: Proibido referenciar NF de Produtor [nOcor: 999]",
@@ -2341,46 +2267,6 @@ export default {
    "55"
   ],
   "fonte": "NT 2026.002 v1.11, p. 10"
- },
- "BA12-10": {
-  "cStat": 322,
-  "mensagem": "Rejeição: NF de produtor referenciada com data de emissão inválida [nOcor:nnn]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 80"
- },
- "BA13-10": {
-  "cStat": 549,
-  "mensagem": "Rejeição: CNPJ da NF referenciada de produtor inválido [nOcor: 999]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 80"
- },
- "BA14-10": {
-  "cStat": 550,
-  "mensagem": "Rejeição: CPF da NF referenciada de produtor inválido.",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 80"
- },
- "BA15-10": {
-  "cStat": 551,
-  "mensagem": "Rejeição: IE da NF referenciada de produtor inválido.",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 80"
  },
  "BA19-10": {
   "cStat": 547,
@@ -2461,26 +2347,6 @@ export default {
    "55"
   ],
   "fonte": "MOC 7.0 Anexo I, p. 81"
- },
- "BA20-10": {
-  "cStat": 684,
-  "mensagem": "Rejeição: Duplicidade de Cupom Fiscal referenciado (Modelo, Número de Ordem e COO) [nOcor: 999]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 81"
- },
- "BA20-20": {
-  "cStat": 923,
-  "mensagem": "Rejeição: Referenciado documento de operação interna em operação interestadual ou com o exterior",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "NT 2019.001 v1.70, p. 15"
  },
  "BA20-30": {
   "cStat": 924,
@@ -2755,16 +2621,6 @@ export default {
   ],
   "fonte": "NT 2021.002 v1.12, p. 10"
  },
- "C02a-08": {
-  "cStat": 652,
-  "mensagem": "Rejeição: NF-e para emitente pessoa física",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 81"
- },
  "C02a-10": {
   "cStat": 495,
   "mensagem": "Rejeição: CPF do Emitente com Série incompatível",
@@ -2840,17 +2696,6 @@ export default {
    "65"
   ],
   "fonte": "NT 2026.007 v1.10, p. 6"
- },
- "C17-10": {
-  "cStat": 229,
-  "mensagem": "Rejeição: IE do emitente não informada",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 82"
  },
  "C17-11": {
   "cStat": 166,
@@ -3455,16 +3300,6 @@ export default {
   ],
   "fonte": "NT 2025.001 v1.03, p. 9"
  },
- "E16a-35": {
-  "cStat": 805,
-  "mensagem": "Rejeição: A SEFAZ do destinatário não permite Contribuinte Isento de Inscrição Estadual",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 86"
- },
  "E16a-40": {
   "cStat": 696,
   "mensagem": "Rejeição: Operação com não contribuinte deve indicar operação com consumidor final",
@@ -3825,14 +3660,6 @@ export default {
   "modelos": null,
   "fonte": "MOC 7.0 Anexo I, p. 73"
  },
- "GAP03a-2": {
-  "cStat": 776,
-  "mensagem": "Rejeição: Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": null,
-  "fonte": "MOC 7.0 Anexo I, p. 73"
- },
  "GAP03a-3": {
   "cStat": 452,
   "mensagem": "Rejeição: Solicitada resposta assíncrona para Lote com somente 1 (uma) NF-e",
@@ -4132,16 +3959,6 @@ export default {
    "55"
   ],
   "fonte": "NT 2020.006 v1.31, p. 10"
- },
- "I08-94": {
-  "cStat": 771,
-  "mensagem": "Rejeição: Informado idEstrangeiro em operação interestadual",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 92"
  },
  "I08-110": {
   "cStat": 525,
@@ -4831,16 +4648,6 @@ export default {
   ],
   "fonte": "MOC 7.0 Anexo I, p. 97"
  },
- "LA03d-10": {
-  "cStat": 856,
-  "mensagem": "Rejeição: Campo valor de partida não preenchido para produto GLP [nItem: 999].",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 97"
- },
  "LA11-10": {
   "cStat": 378,
   "mensagem": "Rejeição: Grupo de Combustível sem a informação de Encerrante [nItem: nnn]",
@@ -5488,16 +5295,6 @@ export default {
    "55"
   ],
   "fonte": "MOC 7.0 Anexo I, p. 111"
- },
- "N17c-30": {
-  "cStat": 474,
-  "mensagem": "Rejeição: FCP não deve ser destacado na NF-e conforme legislação estadual [nItem:999]",
-  "efeito": "rejeicao",
-  "aplicacao": "facultativa",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "NT 2022.003 v1.11, p. 12"
  },
  "N18-10": {
   "cStat": 932,
@@ -6311,17 +6108,6 @@ export default {
   "aplicacao": "obrigatoria",
   "modelos": [
    "55"
-  ],
-  "fonte": "NT 2025.002 v1.52, p. 43"
- },
- "UB16-10": {
-  "cStat": 1104,
-  "mensagem": "Rejeição: Valor da Base de cálculo do IBS e CBS difere do somatório dos valores que a compõem [nItem: 999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55",
-   "65"
   ],
   "fonte": "NT 2025.002 v1.52, p. 43"
  },
@@ -7924,16 +7710,6 @@ export default {
   ],
   "fonte": "NT 2026.002 v1.11, p. 18"
  },
- "VC02-50": {
-  "cStat": 1194,
-  "mensagem": "Rejeição: Destintário da NF-e deve ser o igual ao Emitente da NF referenciada [nItem: 999]",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "55"
-  ],
-  "fonte": "NT 2025.002 v1.52, p. 70"
- },
  "VC03-10": {
   "cStat": 1039,
   "mensagem": "Rejeição: nItem do DFeReferenciado informado indevidamente [nItem: 999]",
@@ -8809,26 +8585,6 @@ export default {
   ],
   "fonte": "MOC 7.0 Anexo I, p. 124"
  },
- "X03-10": {
-  "cStat": 754,
-  "mensagem": "Rejeição: NFC-e com dados do Transportador",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 124"
- },
- "X03-20": {
-  "cStat": 786,
-  "mensagem": "Rejeição: NFC-e de entrega a domicílio sem dados do Transportador",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 124"
- },
  "X03-30": {
   "cStat": 845,
   "mensagem": "Rejeição: O Grupo Transportador não pode ser preenchido para Modalidade do frete informada",
@@ -9178,16 +8934,6 @@ export default {
    "65"
   ],
   "fonte": "MOC 7.0 Anexo I, p. 125"
- },
- "YA02-50": {
-  "cStat": 436,
-  "mensagem": "Rejeição: Informado 99-Outros como meio de pagamento",
-  "efeito": "rejeicao",
-  "aplicacao": "obrigatoria",
-  "modelos": [
-   "65"
-  ],
-  "fonte": "MOC 7.0 Anexo I, p. 126"
  },
  "YA02-60": {
   "cStat": 436,

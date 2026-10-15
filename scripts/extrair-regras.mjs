@@ -315,6 +315,7 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
       // que sobrou sem risco nela (referências a NTs, por exemplo).
       const primeira = colunas[0]?.[1] ?? []
       if (primeira.length && primeira.every((p) => p.riscada) && ID.test(primeira.map((p) => p.texto).join(''))) {
+        regras.push({ id: primeira.map((p) => p.texto).join(''), documento, pagina, servico: servicoAtual, revogada: true })
         atual = null
         continue
       }
@@ -368,6 +369,7 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
   // Sem código nem na continuação: linha que não é regra de verdade.
   for (let i = regras.length - 1; i >= 0; i--) if (regras[i].cStat === null) regras.splice(i, 1)
   for (const r of regras) {
+    if (r.revogada) continue
     r.regra = juntar(r.regra)
     r.mensagem = juntar(r.mensagem)
     if (!r.efeito) {
@@ -380,7 +382,11 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
   // autorização, 215 nos demais). Fica a primeira, que no MOC é a da autorização.
   const unicas = []
   for (const r of regras) {
-    const anterior = unicas.find((u) => u.id === r.id && u.servico === r.servico)
+    if (r.revogada) {
+      unicas.push(r)
+      continue
+    }
+    const anterior = unicas.find((u) => u.id === r.id && u.servico === r.servico && !u.revogada)
     if (!anterior) unicas.push(r)
     else (anterior.variantes ??= []).push({ cStat: r.cStat, regra: r.regra, mensagem: r.mensagem })
   }

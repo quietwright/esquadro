@@ -99,12 +99,6 @@ export default [
     },
   },
   {
-    id: 'C02a-08',
-    verificar({ emit }, falhar) {
-      if (tem(emit, 'CPF')) falhar(el(emit, 'CPF'), 'NF-e com emitente CPF; a UF pode recusar')
-    },
-  },
-  {
     id: 'C02a-10',
     verificar({ ide, emit }, falhar) {
       const serie = serieNum(ide)
