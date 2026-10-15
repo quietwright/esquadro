@@ -282,6 +282,12 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
   let papeis = null // coluna (x) -> papel, herdado entre páginas quando não há cabeçalho
   let atual = null
 
+  // Cabeçalho corrido: linha de texto no topo que se repete em várias páginas do documento.
+  const noTopo = paginas.map((ps) => new Set(linhas(ps.filter((p) => p.y0 < 110)).map((l) => l.palavras.map((p) => p.texto).join(' '))))
+  const frequencia = new Map()
+  for (const conjunto of noTopo) for (const t of conjunto) frequencia.set(t, (frequencia.get(t) ?? 0) + 1)
+  const corrido = (t) => paginas.length >= 3 && (frequencia.get(t) ?? 0) >= Math.max(3, paginas.length * 0.3)
+
   paginas.forEach((todas, i) => {
     const pagina = primeira + i
     const base = bordas[i] ?? { horizontais: [], verticais: [], riscos: [] }
@@ -304,7 +310,7 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
     for (const item of fluxo) {
       if (item.titulo !== undefined) {
         const t = item.titulo.trim()
-        if (!t || ruido.some((r) => r.test(t)) || /\.{4}/.test(t)) continue
+        if (!t || ruido.some((r) => r.test(t)) || /\.{4}/.test(t) || (item.y < 110 && corrido(t))) continue
         const g = t.match(cabecalhoDeGrupo)
         const n = t.match(cabecalhoNumerado)
         if (g) {

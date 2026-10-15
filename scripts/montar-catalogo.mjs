@@ -94,5 +94,5 @@ for (const r of ordenadas) {
 writeFileSync(
   'src/catalogo.js',
   '// Gerado por scripts/montar-catalogo.mjs a partir de catalogo/regras.json. Não editar à mão.\n\n' +
-    `export default ${JSON.stringify(enxuto, null, 1)}\n`,
+    `export default ${JSON.stringify(enxuto)}\n`,
 )

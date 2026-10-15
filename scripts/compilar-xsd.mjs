@@ -235,5 +235,5 @@ for (const [k, no] of globais.element) {
 
 const modelo = { pacote: basename(dirname(entrada)), arquivos, raizes, tipos }
 const cabecalho = `// Gerado por scripts/compilar-xsd.mjs a partir do pacote de schemas ${modelo.pacote}.\n// Não editar à mão.\n\n`
-writeFileSync(saida, `${cabecalho}export default ${JSON.stringify(modelo, null, 1)}\n`)
+writeFileSync(saida, `${cabecalho}export default ${JSON.stringify(modelo)}\n`)
 console.error(`${modelo.pacote}: ${Object.keys(tipos).length} tipos, raízes ${Object.keys(raizes).join(', ')}`)

@@ -109,6 +109,11 @@ export default [
     if (c === '30' && val(ide, 'idDest') === '2' && derivadoDePetroleo(d)) return null
     if (['50', '51'].includes(c) && val(ide, 'finNFe') === '4') return null
     if (c === '51' && (['5123', '5922', '6123', '6922'].includes(codigoCfop(d)) || (val(ide, 'idDest') === '1' && ['5906', '5907'].includes(codigoCfop(d))))) return null
+    // Energia elétrica no mercado livre (ACL) em operação interestadual (exceção 9).
+    if (c === '30' && val(ide, 'idDest') === '2' && val(d, 'prod/NCM') === '27160000') return null
+    // CE: CST 90 com CFOP 5403 ou 5405.
+    if (c === '90' && val(ide, 'cUF') === '23' && ['5403', '5405'].includes(codigoCfop(d))) return null
+    if (c === '10' && val(ide, 'idDest') === '1') return `CST 10 em operação com não contribuinte (a UF pode dispensar na operação interna)`
     return `CST ${c} em operação com não contribuinte`
   }),
   porItem('N12-80', (d, { dest }, g) => {
@@ -154,7 +159,12 @@ export default [
     return null
   }),
   porItem('N12a-91', (d, { emit, ide, simplificada }) => simplificada && val(emit, 'CRT') === '4' && val(ide, 'idDest') !== '3' && codigoCfop(d) !== '5102' && `MEI com CFOP ${codigoCfop(d)}; aceito só 5102`),
-  porItem('N14a-10', (d, n, g) => cst(g) === '51' && num(g, 'pRedBC') > 0 && !tem(g, 'cBenefRBC') && 'CST 51 com redução de base sem cBenefRBC'),
+  porItem('N14a-10', (d, { ide }, g) => {
+    if (cst(g) !== '51' || !(num(g, 'pRedBC') > 0) || tem(g, 'cBenefRBC')) return null
+    if (val(ide, 'finNFe') === '4' && ['2', '3'].includes(val(ide, 'idDest'))) return null
+    const dispensavel = val(ide, 'finNFe') === '4' || val(ide, 'finNFe') === '3' || val(ide, 'tpNF') === '0'
+    return `CST 51 com redução de base sem cBenefRBC${dispensavel ? ' (a UF pode dispensar nesta operação)' : ''}`
+  }),
   porItem('N16-04', (d, n, g) => {
     const { ide } = n
     if (val(ide, 'idDest') !== '2' || val(ide, 'tpNF') !== '1' || !importado(g) || !['00', '10', '20', '70', '90'].includes(cst(g))) return null

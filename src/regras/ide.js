@@ -83,6 +83,43 @@ export default [
       if (atraso > 5 * MINUTO) falhar(el(ide, 'dhEmi'), `emitida ${Math.round(atraso / MINUTO)} minutos antes do recebimento; o limite é 5`)
     },
   },
+  // O início da NF-e varia por UF; a primeira do país foi em 14/09/2006 e a primeira NFC-e em
+  // 01/03/2013. Sem a data de cada UF, o esquadro confere só esse piso nacional.
+  {
+    id: 'B09-30',
+    verificar({ ide }, falhar) {
+      if (diaCivil(val(ide, 'dhEmi')) < '2006-09-14') falhar(el(ide, 'dhEmi'), 'emissão anterior à primeira NF-e autorizada no país (14/09/2006)')
+    },
+  },
+  {
+    id: 'B09-50',
+    verificar({ ide }, falhar) {
+      if (diaCivil(val(ide, 'dhEmi')) < '2013-03-01') falhar(el(ide, 'dhEmi'), 'emissão anterior à primeira NFC-e autorizada no país (01/03/2013)')
+    },
+  },
+  {
+    id: 'B10-20',
+    verificar({ ide, agora }, falhar) {
+      const saida = instante(val(ide, 'dhSaiEnt'))
+      if (saida > agora.getTime() + 30 * DIA) falhar(el(ide, 'dhSaiEnt'), `entrada/saída ${val(ide, 'dhSaiEnt')} mais de 30 dias depois da autorização`)
+    },
+  },
+  {
+    id: 'B10-30',
+    verificar({ ide, agora }, falhar) {
+      // Para as UF que aceitam contingência com mais de 30 dias, só vale para tpEmis 1, 3, 6 e 7.
+      const saida = instante(val(ide, 'dhSaiEnt'))
+      if (saida < agora.getTime() - 30 * DIA && ['1', '3', '6', '7'].includes(val(ide, 'tpEmis'))) {
+        falhar(el(ide, 'dhSaiEnt'), `entrada/saída ${val(ide, 'dhSaiEnt')} mais de 30 dias antes da autorização`)
+      }
+    },
+  },
+  {
+    id: 'B28-30',
+    verificar({ ide, agora }, falhar) {
+      if (instante(val(ide, 'dhCont')) > agora.getTime() + 5 * MINUTO) falhar(el(ide, 'dhCont'), `entrada em contingência ${val(ide, 'dhCont')} depois do recebimento`)
+    },
+  },
   {
     id: 'B10-10',
     verificar({ ide, simplificada }, falhar) {
