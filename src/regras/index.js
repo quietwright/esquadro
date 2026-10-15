@@ -2,6 +2,7 @@
 
 import apoio from './apoio.js'
 import finais from './finais.js'
+import finalidade from './finalidade.js'
 import ibscbs from './ibscbs.js'
 import ide from './ide.js'
 import partes from './partes.js'
@@ -9,4 +10,4 @@ import produtos from './produtos.js'
 import totais from './totais.js'
 import tributos from './tributos.js'
 
-export const regras = [...ide, ...partes, ...produtos, ...tributos, ...ibscbs, ...totais, ...finais, ...apoio]
+export const regras = [...ide, ...finalidade, ...partes, ...produtos, ...tributos, ...ibscbs, ...totais, ...finais, ...apoio]

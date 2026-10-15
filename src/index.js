@@ -93,9 +93,15 @@ export function validar(xml, opcoes = {}) {
     return resultado('estrutura')
   }
 
+  // Modelo e chave, mesmo que o resto da nota esteja errado: ajudam a identificar o arquivo.
+  const id = infNFe ? atributo(infNFe, 'Id') ?? '' : ''
+  const identificacao = {
+    modelo: elementos(elementos(infNFe ?? nfe).find((e) => e.nome === 'ide') ?? nfe).find((e) => e.nome === 'mod')?.filhos[0]?.valor ?? null,
+    chave: /^NFe\w{44}$/.test(id) ? id.slice(3) : null,
+  }
   const falhasDeEsquema = validarEsquema(modelo, nfe)
   for (const p of falhasDeEsquema) acusar('D01', p, p.detalhe)
-  if (falhasDeEsquema.length) return resultado('esquema')
+  if (falhasDeEsquema.length) return resultado('esquema', identificacao)
 
   // --- Regras de negócio ------------------------------------------------------------------
   const ctx = contexto(nfe, opcoes)
