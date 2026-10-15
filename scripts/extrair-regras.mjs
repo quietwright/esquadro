@@ -46,6 +46,7 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
   let atual = null
   let servicoAtual = 'autorizacao'
   let colunaMensagem = 0
+  let colunaRegra = 0
 
   for (const bruta of texto.split('\n')) {
     if (bruta.includes('\f')) pagina += bruta.split('\f').length - 1
@@ -86,6 +87,7 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
     if (m) {
       const [, , id, modelo, regra, aplicacao, cStat, efeito, mensagem] = m
       colunaMensagem = linha.length - mensagem.length
+      colunaRegra = regra.trim() ? linha.indexOf(regra.trim(), id.length) : colunaMensagem
       atual = {
         id,
         documento,
@@ -105,6 +107,11 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
     }
 
     if (!atual) continue
+    // Texto corrido que começa bem à esquerda da coluna da regra é parágrafo depois da tabela.
+    if (linha.search(/\S/) < colunaRegra - 6) {
+      atual = null
+      continue
+    }
     // Continuação: o que está à direita da coluna da mensagem é mensagem; o resto é regra.
     const corte = colunaMensagem - 2
     const esquerda = linha.slice(0, corte).trim()
