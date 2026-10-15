@@ -69,6 +69,22 @@ function origem(r) {
   return { documento: r.documento, pagina: r.pagina, cStat: r.cStat }
 }
 
+// A coluna "Aplic." às vezes diz Obrig. para regra que o próprio texto declara opcional, a
+// critério da UF. Prevalece o texto: a regra fica facultativa.
+const OPCIONAL = /(Regra(?: de [Vv]alida[çc][ãa]o)? opcional(?!,? até)|Implementa[çc][ãa]o (?:opcional )?a crit[ée]rio da UF|Regra de [Vv]alida[çc][ãa]o a crit[ée]rio da UF|Regra de valida[çc][ãa]o opcional a crit[ée]rio da UF)/
+for (const r of regras.values()) {
+  if (r.aplicacao === 'obrigatoria' && OPCIONAL.test(r.regra)) {
+    r.aplicacao = 'facultativa'
+    r.aplicacaoPeloTexto = true
+  }
+}
+for (const a of ajustes.filter((a) => a.acao === 'aplicacao')) {
+  for (const id of a.ids) {
+    const r = regras.get(id)
+    if (r) Object.assign(r, { aplicacao: a.valor, ajuste: a.motivo })
+  }
+}
+
 const ordenadas = [...regras.values()]
   .map(({ servico, secao, data, ...r }) => r)
   .sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }))

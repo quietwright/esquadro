@@ -189,7 +189,7 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 307,
   "efeito": "rejeicao",
   "regra": "Se operação de saída interestadual (tpNF=1 e idDest=2) e operação com Consumidor Final (indFinal=1) e indIEDest=9: • Acessar Cadastro Centralizado de Contribuinte (Chave: UF do Destinatário, CNPJ do Emitente, cSitCNPJ=10) • Rejeitar a NF-e se for encontrado registro de bloqueio no CCC Nota: Regra de Validação opcional por UF, conforme Ajuste SINIEF 33/19 Nota: Regra de Validação não aplicável pelas UFs não signatárias, conforme parágrafo 7º da Cláusula sexta, do Ajuste SINIEF 07/05.(NT 2020.005)",
@@ -202,7 +202,8 @@
     "pagina": 21,
     "cStat": 307
    }
-  ]
+  ],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "1C17-60",
@@ -4784,14 +4785,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 407,
   "efeito": "rejeicao",
   "regra": "Se informado CPF do Emitente e tpEmis <> 3-NFF (NT 2021.002):  Série difere da faixa para emitente CPF: 890-899 e 910-919 Observação: Regra de validação opcional a critério da UF. Permite a emissão de NF-e por pessoa física, somente no serviço de Nota Fiscal Avulsa no site da UF. (NT 2018.001)",
   "mensagem": "Rejeição: CPF do Emitente somente no serviço de Nota Fiscal Avulsa no site do Fisco",
   "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "C02a-20",
@@ -6633,7 +6635,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 927,
   "efeito": "rejeicao",
   "regra": "Número sequencial do item no arquivo XML “nItem” fora de ordem incremental, consecutiva, a partir de 1. Observação: Regra de validação opcional, a critério da UF.",
@@ -6646,7 +6648,8 @@
     "pagina": 89,
     "cStat": 927
    }
-  ]
+  ],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "I03-10",
@@ -9194,7 +9197,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 384,
   "efeito": "rejeicao",
   "regra": "NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com CSOSN 103 ou 400 não permitidos para a UF. Observação: Regra de validação opcional a critério da UF. Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. (NT 2015.002)",
@@ -9207,7 +9210,8 @@
     "pagina": 108,
     "cStat": 384
    }
-  ]
+  ],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "N12a-34",
@@ -10766,14 +10770,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1115,
   "efeito": "rejeicao",
   "regra": "Não informado grupo de imposto IBS e CBS (grupo: det/imposto/IBSCBS) Exceção 1: Não se aplica à NFe de devolução de mercadorias (tag: finNFe = 4) ou NFe complementar (tag: finNFe = 2) que referencia NFe com data de emissão anterior a 2027. Exceção 2: Não se aplica caso informado campo cProdANP (id: LA02) e produto está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP). Observação 1: implementação em homologação para NFe com data de emissão maior ou igual a 01/07/2026 e emitente com CRT 3=Regime Normal. Observação 2: implementação futura para produção. Observação 3: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica.",
   "mensagem": "Rejeição: Grupo IBSCBS não informado [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "ajuste": "A NT 2025.002 v1.52 prevê a regra em homologação desde 01/07/2026, mas há nota de homologação de 20/07/2026, regime normal, autorizada sem o grupo IBSCBS. Até a obrigatoriedade valer de fato, o esquadro avisa sem invalidar a nota."
  },
  {
   "id": "UB12-11",
@@ -14283,7 +14288,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 752,
   "efeito": "rejeicao",
   "regra": "Se NFC-e com valor total superior a R$ 10.000,00: - Endereço do Destinatário não informado (tag:dest/enderDest) Observação: Regra de Validação opcional, a critério da UF. (NT 2015.002)",
@@ -14296,7 +14301,8 @@
     "pagina": 122,
     "cStat": 752
    }
-  ]
+  ],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "W16a-10",

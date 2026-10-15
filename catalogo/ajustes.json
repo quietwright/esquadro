@@ -6,8 +6,19 @@
  },
  {
   "documento": "NT 2015.001",
-  "ids": ["P13-14", "P19"],
+  "ids": [
+   "P13-14",
+   "P19"
+  ],
   "acao": "excluir",
   "motivo": "Regras do evento de Pedido de Prorrogação (NfeRecepcaoEvento), citadas numa seção de alterações que não diz o serviço."
+ },
+ {
+  "ids": [
+   "UB12-10"
+  ],
+  "acao": "aplicacao",
+  "valor": "facultativa",
+  "motivo": "A NT 2025.002 v1.52 prevê a regra em homologação desde 01/07/2026, mas há nota de homologação de 20/07/2026, regime normal, autorizada sem o grupo IBSCBS. Até a obrigatoriedade valer de fato, o esquadro avisa sem invalidar a nota."
  }
 ]

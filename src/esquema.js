@@ -15,8 +15,8 @@ const NAMESPACES = {
  * Valida um elemento contra uma raiz do modelo.
  * @returns {Array<{caminho: string, linha: number, coluna: number, detalhe: string}>}
  */
-export function validarEsquema(modelo, raiz, nomeRaiz = raiz.nome) {
-  const v = new Validador(modelo)
+export function validarEsquema(modelo, raiz, { nomeRaiz = raiz.nome, assinaturaOpcional = false } = {}) {
+  const v = new Validador(modelo, { assinaturaOpcional })
   const tipo = modelo.raizes[nomeRaiz]
   if (!tipo) v.falha(raiz, `elemento raiz <${raiz.nome}> não existe no schema`)
   else if (raiz.ns !== NAMESPACES.nfe) v.falha(raiz, `elemento raiz <${raiz.nome}> fora do namespace ${NAMESPACES.nfe}`)
@@ -32,8 +32,10 @@ class Falha {
 }
 
 class Validador {
-  constructor(modelo) {
+  constructor(modelo, { assinaturaOpcional = false } = {}) {
     this.modelo = modelo
+    // Nota ainda não assinada (validação antes de assinar): ds:Signature passa a ser opcional.
+    this.assinaturaOpcional = assinaturaOpcional
     this.problemas = []
     this.regexes = new Map()
     this.primeirosCache = new WeakMap()
@@ -137,7 +139,8 @@ class Validador {
         i++
         n++
       }
-      if (n < p.min) throw new Falha(i, new Set([k]))
+      const minimo = this.assinaturaOpcional && k === 'ds:Signature' ? 0 : p.min
+      if (n < minimo) throw new Falha(i, new Set([k]))
       return i
     }
     let repeticoes = 0

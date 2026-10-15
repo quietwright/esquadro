@@ -39,8 +39,10 @@ export const veiculoExiste = (tpVeic, espVeic) => veiculos.has(`${Number(tpVeic)
 export const tipoDeVeiculoExiste = (tpVeic) => [...veiculos].some((v) => v.startsWith(`${Number(tpVeic)}-`))
 export const especieDeVeiculoExiste = (espVeic) => [...veiculos].some((v) => v.endsWith(`-${Number(espVeic)}`))
 
+// Nas tabelas de meios de pagamento e de bandeiras, a data inicial é a da criação da tabela
+// (2020), não a do código: só o fim de vigência conta.
 export function meioDePagamentoVigente(tPag, dia) {
-  return t.meiosPagamento.some(([c, inicio, fim]) => c === tPag && vigente(inicio, fim, dia))
+  return t.meiosPagamento.some(([c, , fim]) => c === tPag && vigente(null, fim, dia))
 }
 
 /** Percentual de FCP aceito para a UF (código IBGE), segundo a tabela por UF. */
@@ -55,7 +57,7 @@ export const classificacaoTributaria = (cClassTrib) => t.cclasstrib[cClassTrib] 
 export const fontesDasTabelas = t.fontes
 
 export function bandeiraVigente(tBand, dia) {
-  return t.bandeiras.some(([c, inicio, fim]) => c === tBand && vigente(inicio, fim, dia))
+  return t.bandeiras.some(([c, , fim]) => c === tBand && vigente(null, fim, dia))
 }
 
 /** Indicadores do CST do IBS/CBS (1 exige, 0 veda, null: avaliar no cClassTrib), ou null. */

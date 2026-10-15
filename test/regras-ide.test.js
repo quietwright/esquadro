@@ -100,3 +100,15 @@ test('chave com CNPJ alfanumérico: DV calculado com ASCII - 48', () => {
   const r = acusadas(xml)
   assert.ok(!r.includes('A03-10') && !r.includes('B23-10'), r.join(', '))
 })
+
+test('nota sem assinatura: valida com aviso; com exigirAssinatura, falha de schema', async () => {
+  const { validarNota } = await import('./ajuda.js')
+  const semAssinatura = nota([[/<Signature.*<\/Signature>/.exec(NFE_55)[0], '']])
+  const r = validarNota(semAssinatura)
+  assert.equal(r.valida, true)
+  assert.equal(r.etapa, 'negocio')
+  assert.ok(r.problemas.some((p) => p.regra === 'esquadro' && /sem assinatura/.test(p.detalhe)))
+  const exigida = validarNota(semAssinatura, { exigirAssinatura: true })
+  assert.equal(exigida.valida, false)
+  assert.match(exigida.problemas[0].detalhe, /falta <Signature>/)
+})

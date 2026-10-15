@@ -37,6 +37,8 @@ const LIMITE_BYTES = 500 * 1024
  * @param {object} [opcoes]
  * @param {Date} [opcoes.agora]  Instante de referência para regras de data (padrão: agora).
  *   Simula o horário de recebimento na SEFAZ.
+ * @param {boolean} [opcoes.exigirAssinatura]  Trata a falta de Signature como falha de schema,
+ *   como a SEFAZ. Por padrão a nota sem assinatura é validada e só recebe um aviso.
  * @returns {{valida: boolean, modelo: string|null, chave: string|null, problemas: Problema[], etapa: string}}
  */
 export function validar(xml, opcoes = {}) {
@@ -50,6 +52,9 @@ export function validar(xml, opcoes = {}) {
     problemas,
   })
   const acusar = (id, onde, detalhe) => problemas.push(problema(id, onde, detalhe))
+  // Aviso do próprio esquadro, que não é regra da SEFAZ e não invalida a nota.
+  const avisar = (onde, detalhe) =>
+    problemas.push({ regra: 'esquadro', cStat: null, mensagem: 'Aviso', efeito: 'alerta', aplicacao: 'facultativa', detalhe, caminho: caminho(onde), linha: onde.linha, coluna: onde.coluna, fonte: 'esquadro' })
 
   // --- Mensagem ---------------------------------------------------------------------------
   let textoXml = xml
@@ -73,8 +78,9 @@ export function validar(xml, opcoes = {}) {
     acusar('B02', { linha: e.linha, coluna: e.coluna }, e.descricao)
     return resultado('mensagem')
   }
+  // A declaração de um nfeProc é a do arquivo guardado, não a da mensagem que foi enviada.
   const codificacao = doc.declaracao?.codificacao
-  if (codificacao && codificacao.toUpperCase() !== 'UTF-8') {
+  if (codificacao && codificacao.toUpperCase() !== 'UTF-8' && doc.raiz.nome === 'NFe') {
     acusar('D03', doc.raiz, `a declaração XML informa encoding="${codificacao}"`)
   }
 
@@ -99,7 +105,11 @@ export function validar(xml, opcoes = {}) {
     modelo: elementos(elementos(infNFe ?? nfe).find((e) => e.nome === 'ide') ?? nfe).find((e) => e.nome === 'mod')?.filhos[0]?.valor ?? null,
     chave: /^NFe\w{44}$/.test(id) ? id.slice(3) : null,
   }
-  const falhasDeEsquema = validarEsquema(modelo, nfe)
+  // Nota sem assinatura: por padrão o esquadro valida mesmo assim (é o caso de quem confere
+  // antes de assinar) e só avisa. Com { exigirAssinatura: true }, vira falha de schema como na SEFAZ.
+  const semAssinatura = !elementos(nfe).some((e) => e.nome === 'Signature')
+  if (semAssinatura && !opcoes.exigirAssinatura) avisar(nfe, 'nota sem assinatura (Signature); a SEFAZ exige, assine antes de enviar')
+  const falhasDeEsquema = validarEsquema(modelo, nfe, { assinaturaOpcional: !opcoes.exigirAssinatura })
   for (const p of falhasDeEsquema) acusar('D01', p, p.detalhe)
   if (falhasDeEsquema.length) return resultado('esquema', identificacao)
 
