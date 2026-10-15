@@ -1,0 +1,10406 @@
+// Gerado por scripts/montar-catalogo.mjs a partir de catalogo/regras.json. Não editar à mão.
+
+export default {
+ "1C03-10": {
+  "cStat": 935,
+  "mensagem": "Rejeição: Razão Social do emitente diverge do informado no cadastro da SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 133"
+ },
+ "1C17-02": {
+  "cStat": 163,
+  "mensagem": "Rejeição: Emitente possui inscrição estadual ativa no cadastro da UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 8"
+ },
+ "1C17-04": {
+  "cStat": 164,
+  "mensagem": "Rejeição: Emitente com situação irregular na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 8"
+ },
+ "1C17-10": {
+  "cStat": 230,
+  "mensagem": "Rejeição: IE do emitente não cadastrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "1C17-20": {
+  "cStat": 231,
+  "mensagem": "Rejeição: IE do emitente não vinculada ao CNPJ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "1C17-30": {
+  "cStat": 622,
+  "mensagem": "Rej.Rejeição: IE emitente não vinculada ao CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "1C17-34": {
+  "cStat": 203,
+  "mensagem": "Rej.Rejeição: Emissor não habilitado para emissão da NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "1C17-38": {
+  "cStat": 781,
+  "mensagem": "Rejeição: Emissor não habilitado para emissão da NFC-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 10"
+ },
+ "1C17-40": {
+  "cStat": 301,
+  "mensagem": "Uso Denegado: Irregularidade fiscal do emitente",
+  "efeito": "denegacao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 10"
+ },
+ "1C17-50": {
+  "cStat": 307,
+  "mensagem": "Uso Denegado Rejeição: Emitente bloqueado pela UF de destino, em . operação com consumidor final",
+  "efeito": "denegacao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 16"
+ },
+ "1C17-60": {
+  "cStat": 245,
+  "mensagem": "Rejeição: CNPJ Emitente não cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "1C17-70": {
+  "cStat": 621,
+  "mensagem": "Rejeição: CPF Emitente não cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 16"
+ },
+ "2AB08-10": {
+  "cStat": 692,
+  "mensagem": "Rejeição: Existe EPEC registrado para esta Série e Número [Chave EPEC: xxxxxxxxxxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2014.001 v1.41, p. 16"
+ },
+ "2AB08-20": {
+  "cStat": 691,
+  "mensagem": "Rejeição: Chave de Acesso da NF-e diverge da Chave de Acesso do EPEC [Chave EPEC: xxxxxxxxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2014.001 v1.41, p. 16"
+ },
+ "2AB08-30": {
+  "cStat": 467,
+  "mensagem": "Rejeição: Dados da NF-e divergentes do EPEC [tag:xxxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2014.001 v1.41, p. 16"
+ },
+ "2AB08-40": {
+  "cStat": 468,
+  "mensagem": "Rejeição: NF-e com Tipo Emissão = 4, sem EPEC correspondente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2014.001 v1.41, p. 16"
+ },
+ "2B08-10": {
+  "cStat": 539,
+  "mensagem": "Rejeição: Duplicidade de NF-e com diferença na Chave de Acesso [chNFe: 99999999999999999999999999999999999999999999][nRec:9999999999999 99] Observação: Na resposta assíncrona, a SEFAZ pode devolver o nREC – Número do Recibo do Lote caso tenha condições.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 134"
+ },
+ "2B08-20": {
+  "cStat": 204,
+  "mensagem": "Rejeição: Duplicidade de NF-e [nRec:999999999999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 24"
+ },
+ "2B08-30": {
+  "cStat": 218,
+  "mensagem": "Rejeição: NF-e já está cancelada na base de dados da SEFAZ [nRec:999999999999999] Observação: Na resposta assíncrona, a SEFAZ pode devolver o nREC – Número do Recibo do Lote caso tenha condições.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 134"
+ },
+ "2B08-40": {
+  "cStat": 205,
+  "mensagem": "Rejeição: NF-e está denegada na base de dados da SEFAZ [nRec:999999999999999] Observação: Na resposta assíncrona, a SEFAZ pode devolver o nREC – Número do Recibo do Lote caso tenha condições.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 135"
+ },
+ "2B08-50": {
+  "cStat": 635,
+  "mensagem": "Rejeição: NF-e com mesmo número e série já transmitida e aguardando processamento",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 135"
+ },
+ "2P10-20": {
+  "cStat": 9495,
+  "mensagem": "Rejeição: GTIN existe no CCG com situação inválida. Solicitar ao dono da marca que entre em contato com a GS1",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "2P10-30": {
+  "cStat": 9496,
+  "mensagem": "Rejeição: GTIN existe no CCG, mas dono da marca não autorizou a publicação das informações. Entrar em contato com o dono da marca",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "2P10-40": {
+  "cStat": 9497,
+  "mensagem": "Rejeição: GTIN existe no CCG com NCM não cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "2P10-50": {
+  "cStat": 9498,
+  "mensagem": "Rejeição: GTIN existe no CCG com NCM inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "3B08-100": {
+  "cStat": 206,
+  "mensagem": "Rejeição: Numeração da NF-e já está inutilizada na Base de Dados da SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 21"
+ },
+ "3BA02-10": {
+  "cStat": 267,
+  "mensagem": "Rejeição: Chave de Acesso referenciada inexistente [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 72"
+ },
+ "3BA02-20": {
+  "cStat": 268,
+  "mensagem": "Rejeição: NF Complementar referencia uma outra NF-e Complementar",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "3BA02-30": {
+  "cStat": 686,
+  "mensagem": "Rejeição: NF Complementar referencia uma NF-e cancelada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "3BA02-40": {
+  "cStat": 687,
+  "mensagem": "Rejeição: NF Complementar referencia uma NF-e denegada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "3BA02-50": {
+  "cStat": 545,
+  "mensagem": "Rejeição: NF-e de devolução com valor total superior a NF-e devolvida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.005 v1.11, p. 5"
+ },
+ "3BA02-54": {
+  "cStat": 546,
+  "mensagem": "Rejeição: NF-e de devolução com valor do ICMS superior a NF-e devolvida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.005 v1.11, p. 5"
+ },
+ "3BA02-58": {
+  "cStat": 566,
+  "mensagem": "Rejeição: NF-e de devolução com valor do FCP superior a NF-e devolvida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.005 v1.11, p. 6"
+ },
+ "3BA02-64": {
+  "cStat": 567,
+  "mensagem": "Rejeição: NF-e de devolução com valor do ICMS da UF Destino superior a NF-e devolvida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.005 v1.11, p. 6"
+ },
+ "3BA02-68": {
+  "cStat": 581,
+  "mensagem": "Rejeição: NF-e de devolução com valor do FCP da UF Destino superior a NF-e devolvida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.005 v1.11, p. 7"
+ },
+ "3BA02-70": {
+  "cStat": 1095,
+  "mensagem": "Rejeição: Chave de acesso referenciada deve existir e não estar cancelada [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 72"
+ },
+ "3BA02a-10": {
+  "cStat": 267,
+  "mensagem": "Rejeição: Chave de Acesso referenciada inexistente [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 13"
+ },
+ "3BA15-10": {
+  "cStat": 688,
+  "mensagem": "Rejeição: NF referenciada de Produtor com IE inexistente [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "3BA15-20": {
+  "cStat": 689,
+  "mensagem": "Rejeição: NF referenciada de Produtor com IE não vinculada ao CNPJ/CPF informado [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "4I54-10": {
+  "cStat": 357,
+  "mensagem": "Rejeição: Chave de Acesso do grupo de Exportação Indireta inexistente [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 136"
+ },
+ "4I54-20": {
+  "cStat": 358,
+  "mensagem": "Rejeição: Chave de Acesso do grupo de Exportação Indireta cancelada ou denegada [nRef: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 137"
+ },
+ "4P15-30": {
+  "cStat": 939,
+  "mensagem": "Rejeição: Pedido de Cancelamento para NF-e com evento de Averbação para Exportação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2020.005 v1.21, p. 22"
+ },
+ "4P15-34": {
+  "cStat": 940,
+  "mensagem": "Rejeição: Pedido de Cancelamento para NF-e com evento Financeiro",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2020.005 v1.21, p. 22"
+ },
+ "5AF15-10": {
+  "cStat": 942,
+  "mensagem": "Rejeição: IE do local de retirada não cadastrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 8"
+ },
+ "5AF15-11": {
+  "cStat": 165,
+  "mensagem": "Rejeição: IE do Local de Retirada com situação irregular na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5AF15-12": {
+  "cStat": 167,
+  "mensagem": "Rejeição: IE do local de retirada não está ativa na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5AF15-20": {
+  "cStat": 943,
+  "mensagem": "Rejeição: IE do local de retirada não vinculada ao CNPJ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 19"
+ },
+ "5AF15-30": {
+  "cStat": 944,
+  "mensagem": "Rejeição: IE do local de retirada não vinculada ao CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 19"
+ },
+ "5AF17-10": {
+  "cStat": 168,
+  "mensagem": "Rejeição: IE do local de retirada não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5AF17-20": {
+  "cStat": 169,
+  "mensagem": "Rejeição: CNPJ do Local de Retirada com situação irregular na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5BG15-10": {
+  "cStat": 171,
+  "mensagem": "Rejeição: IE do local de entrega não cadastrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5BG15-11": {
+  "cStat": 173,
+  "mensagem": "Rejeição: IE do Local de Entrega com situação irregular na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5BG15-12": {
+  "cStat": 175,
+  "mensagem": "Rejeição: IE do local de Entrega não está ativa na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5BG15-20": {
+  "cStat": 947,
+  "mensagem": "Rejeição: IE do local de entrega não vinculada ao CNPJ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 19"
+ },
+ "5BG15-30": {
+  "cStat": 948,
+  "mensagem": "Rejeição: IE do local de entrega não vinculada ao CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 19"
+ },
+ "5BG17-10": {
+  "cStat": 176,
+  "mensagem": "Rejeição: IE do local de Entrega não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5BG17-20": {
+  "cStat": 177,
+  "mensagem": "Rejeição: CNPJ do Local de Entrega com situação irregular na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "5E17-10": {
+  "cStat": 233,
+  "mensagem": "Rejeição: IE do destinatário não cadastrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-12": {
+  "cStat": 300,
+  "mensagem": "Rejeição: Tipo da IE do Destinatário difere de Não Contribuinte no cadastro da UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 13"
+ },
+ "5E17-20": {
+  "cStat": 234,
+  "mensagem": "Rejeição: IE do destinatário não vinculada ao CNPJ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-30": {
+  "cStat": 624,
+  "mensagem": "Rejeição: IE Destinatário não vinculada ao CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-40": {
+  "cStat": 302,
+  "mensagem": "Uso Denegado: Irregularidade fiscal do destinatário",
+  "efeito": "denegacao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-43": {
+  "cStat": 305,
+  "mensagem": "Rejeição: Destinatário bloqueado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-46": {
+  "cStat": 306,
+  "mensagem": "Rejeição: IE do destinatário não está ativa na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-50": {
+  "cStat": 232,
+  "mensagem": "Rejeição: IE do destinatário não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-60": {
+  "cStat": 303,
+  "mensagem": "Uso Denegado: Destinatário não habilitado a operar na UF",
+  "efeito": "denegacao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-63": {
+  "cStat": 305,
+  "mensagem": "Rejeição: Destinatário bloqueado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "5E17-65": {
+  "cStat": 172,
+  "mensagem": "Alerta: Situação do CNPJ destinatário inabilitado no momento da autorização",
+  "efeito": "alerta",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 24"
+ },
+ "5E17-70": {
+  "cStat": 246,
+  "mensagem": "Rejeição: CNPJ Destinatário não cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 8"
+ },
+ "5E17-80": {
+  "cStat": 623,
+  "mensagem": "Rejeição: CPF Destinatário não cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 17"
+ },
+ "6P31-10": {
+  "cStat": 233,
+  "mensagem": "Rejeição: IE do destinatário não cadastrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "6P31-20": {
+  "cStat": 234,
+  "mensagem": "Rejeição: IE do destinatário não vinculada ao CNPJ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "6P31-30": {
+  "cStat": 624,
+  "mensagem": "Rejeição: IE Destinatário não vinculada ao CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "6P31-40": {
+  "cStat": 302,
+  "mensagem": "Uso Denegado: Irregularidade fiscal do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 23"
+ },
+ "6P31-43": {
+  "cStat": 305,
+  "mensagem": "Rejeição: Destinatário bloqueado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 24"
+ },
+ "6P31-46": {
+  "cStat": 306,
+  "mensagem": "Rejeição: IE do destinatário não está ativa na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 24"
+ },
+ "6P31-50": {
+  "cStat": 232,
+  "mensagem": "Rejeição: IE do destinatário não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 24"
+ },
+ "6P31-60": {
+  "cStat": 303,
+  "mensagem": "Uso Denegado: Destinatário não habilitado a operar na UF",
+  "efeito": "denegacao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 24"
+ },
+ "6P31-63": {
+  "cStat": 305,
+  "mensagem": "Rejeição: Destinatário bloqueado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 24"
+ },
+ "7B09-10": {
+  "cStat": 479,
+  "mensagem": "Rejeição: Data de Emissão anterior a data de credenciamento ou anterior a Data de Abertura do estabelecimento",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7C10-10": {
+  "cStat": 480,
+  "mensagem": "Rejeição: Código Município do Emitente diverge do cadastrado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7C21-10": {
+  "cStat": 481,
+  "mensagem": "Rejeição: Código Regime Tributário do emitente diverge do cadastro na SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 17"
+ },
+ "7E10-10": {
+  "cStat": 482,
+  "mensagem": "Rejeição: Código do Município do Destinatário diverge do cadastrado na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7GA01-10": {
+  "cStat": 486,
+  "mensagem": "Rejeição: Não informado o Grupo de Autorização para UF que exige a identificação do Escritório de Contabilidade na Nota Fiscal",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7GA01-20": {
+  "cStat": 487,
+  "mensagem": "Rejeição: Escritório de Contabilidade não cadastrado na SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7I03-10": {
+  "cStat": 889,
+  "mensagem": "Rejeição: Obrigatória a informação do GTIN para o produto [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 12"
+ },
+ "7ZD02-10": {
+  "cStat": 974,
+  "mensagem": "Rejeição: CNPJ do responsável técnico diverge do cadastrado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7ZD08-10": {
+  "cStat": 976,
+  "mensagem": "Rejeição: Identificador do CSRT não cadastrado na SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7ZD08-20": {
+  "cStat": 977,
+  "mensagem": "Rejeição: Identificador do CSRT revogado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "7ZD09-10": {
+  "cStat": 978,
+  "mensagem": "Rejeição: Hash do CSRT diverge do calculado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 138"
+ },
+ "8C02-10": {
+  "cStat": 488,
+  "mensagem": "Rejeição: Vendas do Emitente incompatíveis com o Porte da Empresa",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 139"
+ },
+ "9I03-10": {
+  "cStat": 890,
+  "mensagem": "Rejeição: GTIN inexistente no Cadastro Centralizado de GTIN (CCG) [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 12"
+ },
+ "9I03-20": {
+  "cStat": 891,
+  "mensagem": "Rejeição: GTIN incompatível com a NCM [nItem:999; NCM esperada: 99999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 12"
+ },
+ "9I03-30": {
+  "cStat": 892,
+  "mensagem": "Rejeição: GTIN incompatível com CEST [nItem:999; CEST esperado: 9999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 12"
+ },
+ "9I03-40": {
+  "cStat": 893,
+  "mensagem": "Rejeição: GTIN da unidade tributável diverge do GTIN Contido cadastrado no CCG [nItem:999; GTIN Contido esperado: 99999999999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 13"
+ },
+ "9I12-10": {
+  "cStat": 894,
+  "mensagem": "Rejeição: GTIN da unidade tributável inexistente no Cadastro Centralizado de GTIN (CCG) [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 13"
+ },
+ "9I12-20": {
+  "cStat": 895,
+  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com a NCM [nItem:999; NCM esperada: 99999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 13"
+ },
+ "9I12-30": {
+  "cStat": 896,
+  "mensagem": "Rejeição: GTIN da unidade tributável incompatível com CEST [nItem:999; CEST esperado: 9999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 13"
+ },
+ "11BC01-10": {
+  "cStat": 1146,
+  "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado informada indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 73"
+ },
+ "11BC01-20": {
+  "cStat": 1147,
+  "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 73"
+ },
+ "11BC01-30": {
+  "cStat": 1143,
+  "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado deve ser do tipo débito, pagamento antecipado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 72"
+ },
+ "12C02-10": {
+  "cStat": 178,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do emitente não cadastrado na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 9"
+ },
+ "12C02-20": {
+  "cStat": 179,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do emitente com situação irregular na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12C21-20": {
+  "cStat": 180,
+  "mensagem": "Rejeição: Código Regime Tributário do emitente diverge do cadastro na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12E02-10": {
+  "cStat": 181,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do destinatário não cadastrado na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12E02-20": {
+  "cStat": 182,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do Destinatário com situação irregular na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12F02-10": {
+  "cStat": 183,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do Local de Retirada não cadastrado na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12F02-20": {
+  "cStat": 184,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do Local de Retirada com situação irregular na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 10"
+ },
+ "12G02-10": {
+  "cStat": 185,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do Local de Entrega não cadastrado na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 11"
+ },
+ "12G02-20": {
+  "cStat": 186,
+  "mensagem": "Rejeição: CNPJ [XX.XXX.XXX/XXXX-DV] do Local de Entrega com situação irregular na Receita Federal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 11"
+ },
+ "A01": {
+  "cStat": 280,
+  "mensagem": "Rejeição: Certificado Transmissor inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A02": {
+  "cStat": 281,
+  "mensagem": "Rejeição: Certificado Transmissor Data Validade",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A03": {
+  "cStat": 283,
+  "mensagem": "Rejeição: Certificado Transmissor - erro Cadeia de Certificação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A03-10": {
+  "cStat": 502,
+  "mensagem": "Rejeição: Erro na Chave de Acesso - Campo Id não corresponde à concatenação dos campos correspondentes",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "A04": {
+  "cStat": 286,
+  "mensagem": "Rejeição: Certificado Transmissor erro no acesso a LCR",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A05": {
+  "cStat": 284,
+  "mensagem": "Rejeição: Certificado Transmissor revogado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A06": {
+  "cStat": 285,
+  "mensagem": "Rejeição: Certificado Transmissor difere ICP-Brasil",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A07": {
+  "cStat": 282,
+  "mensagem": "Rejeição: Certificado Transmissor sem CNPJ/CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "A08": {
+  "cStat": 832,
+  "mensagem": "Rejeição: CNPJ incorreto na transmissão da NFF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 21"
+ },
+ "B00": {
+  "cStat": 242,
+  "mensagem": "Rejeição: Mensagem SOAP inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2020.005 v1.21, p. 23"
+ },
+ "B01": {
+  "cStat": 214,
+  "mensagem": "Rejeição: Tamanho da mensagem excedeu o limite estabelecido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B02": {
+  "cStat": 243,
+  "mensagem": "Rejeição: XML Mal Formado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B02-10": {
+  "cStat": 226,
+  "mensagem": "Rejeição: Código da UF do Emitente diverge da UF autorizadora",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 6"
+ },
+ "B02-20": {
+  "cStat": 476,
+  "mensagem": "Rejeição: Código da UF diverge da UF da primeira NF-e do Lote",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B03": {
+  "cStat": 108,
+  "mensagem": "Rejeição: Serviço Paralisado Momentaneamente (curto prazo)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B03-10": {
+  "cStat": 897,
+  "mensagem": "Rejeição: Código numérico em formato inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 15"
+ },
+ "B04": {
+  "cStat": 109,
+  "mensagem": "Rejeição: Serviço Paralisado sem Previsão",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B05": {
+  "cStat": 410,
+  "mensagem": "Rejeição: UF informada no campo cUF não é atendida pelo WebService",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B06": {
+  "cStat": 239,
+  "mensagem": "Rejeição: Versão do arquivo XML não suportada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 71"
+ },
+ "B06-10": {
+  "cStat": 702,
+  "mensagem": "Rejeição: NFC-e não é aceita pela UF do Emitente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B06-20": {
+  "cStat": 765,
+  "mensagem": "Rejeição: Lote só poderá conter NF-e ou NFC-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B06-30": {
+  "cStat": 450,
+  "mensagem": "Rejeição: Modelo da NF-e diferente de 55",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B06-40": {
+  "cStat": 775,
+  "mensagem": "Rejeição: Modelo da NFC-e diferente de 65",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B07-10": {
+  "cStat": 450,
+  "mensagem": "Rejeição: Modelo da NF-e diferente de 55",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B09-10": {
+  "cStat": 703,
+  "mensagem": "Rejeição: Data-Hora de Emissão posterior ao horário de recebimento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B09-20": {
+  "cStat": 228,
+  "mensagem": "Rejeição: Data de Emissão muito atrasada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B09-30": {
+  "cStat": 315,
+  "mensagem": "Rejeição: Data de Emissão anterior ao início da autorização de Nota Fiscal na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 75"
+ },
+ "B09-40": {
+  "cStat": 704,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com Data-Hora de emissão atrasada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B09-50": {
+  "cStat": 315,
+  "mensagem": "Rejeição: Data de Emissão anterior ao início da autorização de Nota Fiscal na UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B10-10": {
+  "cStat": 705,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com data de entrada/saída",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B10-20": {
+  "cStat": 504,
+  "mensagem": "Rejeição: Data de Entrada/Saída posterior ao permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B10-30": {
+  "cStat": 505,
+  "mensagem": "Rejeição: Data de Entrada/Saída anterior ao permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B10-40": {
+  "cStat": 506,
+  "mensagem": "Rejeição: Data de Saída menor que a Data de Emissão",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B10a-10": {
+  "cStat": 1153,
+  "mensagem": "Rejeição: NFC-e com data de previsão de entrega",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 30"
+ },
+ "B10a-20": {
+  "cStat": 1154,
+  "mensagem": "Rejeição: Data de previsão de entrega posterior ao permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 30"
+ },
+ "B10a-30": {
+  "cStat": 1155,
+  "mensagem": "Rejeição: Data de previsão de entrega anterior ao permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 30"
+ },
+ "B10a-40": {
+  "cStat": 1156,
+  "mensagem": "Rejeição: Data de previsão de entrega não permitida para a finalidade de emissão informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 30"
+ },
+ "B10a-50": {
+  "cStat": 1157,
+  "mensagem": "Rejeição: Data de previsão de entrega não permitida para a modalidade de frete informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B11-10": {
+  "cStat": 706,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 para operação de entrada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B11a-10": {
+  "cStat": 707,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 para operação interestadual ou com o exterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B12-10": {
+  "cStat": 270,
+  "mensagem": "Rejeição: Código Município do Fato Gerador de ICMS inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B12-20": {
+  "cStat": 271,
+  "mensagem": "Rejeição: Código Município do Fato Gerador: difere da UF do emitente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B12a-20": {
+  "cStat": 1000,
+  "mensagem": "informado apenas em operação presencial fora do",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2024.002 v1.10, p. 27"
+ },
+ "B21-10": {
+  "cStat": 709,
+  "mensagem": "Rejeição: NFC-e com formato de DANFE inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B21-20": {
+  "cStat": 710,
+  "mensagem": "Rejeição: NF-e com formato de DANFE inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B22-10": {
+  "cStat": 711,
+  "mensagem": "Rejeição: NF-e com contingência off-line em operação não permitida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B22-20": {
+  "cStat": 712,
+  "mensagem": "Rejeição: NFC-e com contingência off-line para a UF",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 76"
+ },
+ "B22-30": {
+  "cStat": 570,
+  "mensagem": "Rejeição: Tipo de Emissão 3, 6 ou 7 só é válido nas contingências SCAN/SVC",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 10"
+ },
+ "B22-34": {
+  "cStat": 714,
+  "mensagem": "Rejeição: NFC-e com contingência inválida (tpEmis=2, 4 (a critério da UF) ou 5)",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B22-60": {
+  "cStat": 713,
+  "mensagem": "Rejeição: Tipo de Emissão diferente de 6 ou 7 para contingência da SVC acessada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B22-70": {
+  "cStat": 783,
+  "mensagem": "Rejeição: NFC-e não é autorizada pela SVC",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B23-10": {
+  "cStat": 253,
+  "mensagem": "Rejeição: Digito Verificador da chave de acesso composta inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B24-10": {
+  "cStat": 252,
+  "mensagem": "Rejeição: Ambiente informado diverge do Ambiente de recebimento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B25-20": {
+  "cStat": 715,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com finalidade inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 8"
+ },
+ "B25-30": {
+  "cStat": 254,
+  "mensagem": "Rejeição: NF-e não possui NF referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-40": {
+  "cStat": 255,
+  "mensagem": "Rejeição: NF-e possui mais de uma NF referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-50": {
+  "cStat": 269,
+  "mensagem": "Rejeição: CNPJ/CPF Emitente da NF-e difere do CNPJ/CPF da NF Referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-60": {
+  "cStat": 678,
+  "mensagem": "Rejeição: NF referenciada com UF diferente desta NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-65": {
+  "cStat": 1027,
+  "mensagem": "Rejeição: NF referenciada informada indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-70": {
+  "cStat": 321,
+  "mensagem": "Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B25-80": {
+  "cStat": 1001,
+  "mensagem": "Rejeição: NF-e com finalidade de débito ou crédito somente para IBS/CBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 7"
+ },
+ "B25-90": {
+  "cStat": 1002,
+  "mensagem": "Rejeição: NF-e sem informação de ICMS / ISSQN",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 6"
+ },
+ "B25-100": {
+  "cStat": 1003,
+  "mensagem": "Rejeição: NF-e de crédito faz referência a documento fiscal diferente de NF-e modelo 55",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 31"
+ },
+ "B25-110": {
+  "cStat": 1161,
+  "mensagem": "Rejeição: Tipo de Operação incompatível com NF-e de Crédito",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25-120": {
+  "cStat": 1162,
+  "mensagem": "Rejeição: Tipo de Operação incompatível com NF-e de Débito",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.1-10": {
+  "cStat": 1139,
+  "mensagem": "Rejeição: Tipo de nota de débito informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.1-20": {
+  "cStat": 1009,
+  "mensagem": "Rejeição: Não informado tipo de nota de débito",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.2-10": {
+  "cStat": 1163,
+  "mensagem": "Rejeição: Tipo de nota de crédito informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.2-20": {
+  "cStat": 1164,
+  "mensagem": "Rejeição: Não informado tipo de nota de crédito",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.2-30": {
+  "cStat": 1145,
+  "mensagem": "Rejeição: Tipo de nota de crédito só pode ser usado a partir de janeiro/2029.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25.2-40": {
+  "cStat": 1152,
+  "mensagem": "Rejeição: Tipo de Operação incompatível com NF-e de Crédito do tipo Retorno",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25a-10": {
+  "cStat": 716,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 em operação não destinada a consumidor final",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "B25b-10": {
+  "cStat": 794,
+  "mensagem": "Rejeição: NF-e com indicativo de NFC-e com entrega a domicílio",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B25b-20": {
+  "cStat": 717,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 em operação não permitida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "B25b-30": {
+  "cStat": 785,
+  "mensagem": "Rejeição: NFC-e com entrega a domicílio não permitida pela UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B25b-40": {
+  "cStat": 864,
+  "mensagem": "Rejeição: NF-e com indicativo de Operação presencial, fora do estabelecimento e não informada NF referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 77"
+ },
+ "B25b-60": {
+  "cStat": 1000,
+  "mensagem": "Rejeição: Município do fato gerador do IBS informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25b-70": {
+  "cStat": 1005,
+  "mensagem": "Rejeição: Operação presencial fora do estabelecimento sem informação do município do fato gerador do IBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25c-10": {
+  "cStat": 434,
+  "mensagem": "Rejeição: NF-e sem indicativo do intermediador",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 10"
+ },
+ "B25c-20": {
+  "cStat": 435,
+  "mensagem": "Rejeição: NF-e não pode ter o indicativo do intermediador",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 10"
+ },
+ "B25d-10": {
+  "cStat": 1099,
+  "mensagem": "Rejeição: Não é permitido o uso do código indicador do local da operação de fornecimento na NFC-e modelo 65",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25d-20": {
+  "cStat": 1102,
+  "mensagem": "Rejeição: Código indicador do local de operação de fornecimento não permitido neste modelo de DFe",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B25d-30": {
+  "cStat": 1110,
+  "mensagem": "Rejeição: Local de Retirada não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "B26-10": {
+  "cStat": 244,
+  "mensagem": "Rejeição: Processo de Emissão pelo Contribuinte incompatível com a Série da NF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-20": {
+  "cStat": 451,
+  "mensagem": "Rejeição: Processo de Emissão pelo Fisco incompatível com a Série da NF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-22": {
+  "cStat": 631,
+  "mensagem": "Rejeição: Ambiente de autorização não suporta esta operação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-24": {
+  "cStat": 667,
+  "mensagem": "Rejeição: Processo de Emissão pelo PAA incompatível com a Série da NF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-26": {
+  "cStat": 867,
+  "mensagem": "Rejeição: Grupo de informações do Provedor de Assinatura e Autorização não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-28": {
+  "cStat": 893,
+  "mensagem": "Rejeição: Grupo de informações do Provedor de Assinatura e Autorização informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 12"
+ },
+ "B26-30": {
+  "cStat": 370,
+  "mensagem": "Rejeição: Processo de emissão pelo Fisco com Tipo de Emissão inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 8"
+ },
+ "B26-40": {
+  "cStat": 571,
+  "mensagem": "Rejeição: Processo de emissão pelo Fisco com Certificado de Transmissão incompatível",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "B26-50": {
+  "cStat": 957,
+  "mensagem": "Rejeição: Tipo de emissão incompatível com o Processo de Emissão",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 8"
+ },
+ "B28-10": {
+  "cStat": 556,
+  "mensagem": "Rejeição: Justificativa de entrada em contingência não deve ser informada para tipo de emissão normal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "B28-20": {
+  "cStat": 557,
+  "mensagem": "Rejeição: A Justificativa de entrada em contingência deve ser informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "B28-30": {
+  "cStat": 558,
+  "mensagem": "Rejeição: Data de entrada em contingência posterior a data de recebimento",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "B28-40": {
+  "cStat": 569,
+  "mensagem": "Rejeição: Data de entrada em contingência muito atrasada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "BA01-10": {
+  "cStat": 708,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 não pode referenciar documento fiscal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "BA02-10": {
+  "cStat": 547,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Dígito Verificador inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "BA02-14": {
+  "cStat": 522,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com UF inválida[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "BA02-20": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "BA02-24": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 78"
+ },
+ "BA02-30": {
+  "cStat": 552,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 14"
+ },
+ "BA02-34": {
+  "cStat": 679,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA02-35": {
+  "cStat": 679,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "BA02-40": {
+  "cStat": 683,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Número inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA02-44": {
+  "cStat": 680,
+  "mensagem": "Rejeição: Chave de Acesso referenciada em duplicidade na NF-e [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA02-50": {
+  "cStat": 316,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com a mesma Chave de Acesso da Nota Fiscal atual [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA02-60": {
+  "cStat": 953,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com tipo de emissão inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02-70": {
+  "cStat": 954,
+  "mensagem": "Rejeição: Chave de Acesso referenciada não permitida para esta operação[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02-80": {
+  "cStat": 954,
+  "mensagem": "Rejeição: Chave de Acesso referenciada não permitida para esta operação[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02a-10": {
+  "cStat": 951,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com código numérico zerado não permitida para finalidade diferente de normal. [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02a-20": {
+  "cStat": 522,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com UF inválida[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02a-30": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02a-40": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 9"
+ },
+ "BA02a-50": {
+  "cStat": 552,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-60": {
+  "cStat": 679,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-70": {
+  "cStat": 683,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Número inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-74": {
+  "cStat": 955,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com código numérico não zerado [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-80": {
+  "cStat": 680,
+  "mensagem": "Rejeição: Chave de Acesso referenciada em duplicidade na NF-e [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-90": {
+  "cStat": 680,
+  "mensagem": "Rejeição: Chave de Acesso referenciada em duplicidade na NF-e [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-100": {
+  "cStat": 952,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com a mesma Chave Natural da Nota Fiscal atual [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-110": {
+  "cStat": 953,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com tipo de emissão inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 10"
+ },
+ "BA02a-120": {
+  "cStat": 956,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com código numérico zerado não permitida na UF [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 11"
+ },
+ "BA03-10": {
+  "cStat": 681,
+  "mensagem": "Rejeição: Proibido informar NF referenciada [nOcor: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "BA05-10": {
+  "cStat": 317,
+  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA06-10": {
+  "cStat": 548,
+  "mensagem": "Rejeição: NF modelo 1 referenciada com data de emissão inválida [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA10-10": {
+  "cStat": 682,
+  "mensagem": "Rejeição: Proibido referenciar NF de Produtor [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 9"
+ },
+ "BA10-20": {
+  "cStat": 318,
+  "mensagem": "Rejeição: Contranota de Produtor sem Nota Fiscal referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA10-30": {
+  "cStat": 319,
+  "mensagem": "Rejeição: Contranota de Produtor não pode referenciar somente Nota Fiscal de entrada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 79"
+ },
+ "BA10-40": {
+  "cStat": 320,
+  "mensagem": "Rejeição: Contranota de Produtor referencia somente NF de outro emitente",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA10-50": {
+  "cStat": 922,
+  "mensagem": "Rejeição: Contranota de Produtor só pode referenciar NF-e ou NF de Produtor Modelo 4",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA12-10": {
+  "cStat": 322,
+  "mensagem": "Rejeição: NF de produtor referenciada com data de emissão inválida [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA13-10": {
+  "cStat": 549,
+  "mensagem": "Rejeição: CNPJ da NF referenciada de produtor inválido [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA14-10": {
+  "cStat": 550,
+  "mensagem": "Rejeição: CPF da NF referenciada de produtor inválido.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA15-10": {
+  "cStat": 551,
+  "mensagem": "Rejeição: IE da NF referenciada de produtor inválido.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-10": {
+  "cStat": 547,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Dígito Verificador inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-14": {
+  "cStat": 522,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com UF inválida[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-20": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-24": {
+  "cStat": 524,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Ano-Mês inválido [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-30": {
+  "cStat": 552,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 80"
+ },
+ "BA19-34": {
+  "cStat": 679,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "BA19-40": {
+  "cStat": 683,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Número inválido[nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "BA19-44": {
+  "cStat": 680,
+  "mensagem": "Rejeição: Chave de Acesso referenciada em duplicidade na NF-e [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "BA20-10": {
+  "cStat": 684,
+  "mensagem": "Rejeição: Duplicidade de Cupom Fiscal referenciado (Modelo, Número de Ordem e COO) [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "BA20-20": {
+  "cStat": 923,
+  "mensagem": "Rejeição: Referenciado documento de operação interna em operação interestadual ou com o exterior",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "BA20-30": {
+  "cStat": 924,
+  "mensagem": "Rejeição: Proibido referenciar Cupom Fisca [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "BB01-10": {
+  "cStat": 1006,
+  "mensagem": "Rejeição: NFCe com grupo de compra governamental",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "BB02-10": {
+  "cStat": 1008,
+  "mensagem": "Rejeição: Nota de compra governamental e alíquota dos outros entes informada incorretamente 1=União 2=Estado 3=Distrito Federal 4=Município 5=Consórcio Público 6=Comitê Gestor do IBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 32"
+ },
+ "BB05-10": {
+  "cStat": 1195,
+  "mensagem": "Rejeição: Referenciado indevidamente DFe anterior em operação com ente governamental na operação de fornecimento com pagamento posterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-20": {
+  "cStat": 1196,
+  "mensagem": "Rejeição: Não referenciado DFe anterior em operação com ente governamental na operação de recebimento do pagamento com fornecimento já realizado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-30": {
+  "cStat": 1197,
+  "mensagem": "Rejeição: Referenciado mais de um DFe anterior em operação com ente governamental na operação de recebimento do pagamento com fornecimento já realizado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-40": {
+  "cStat": 1198,
+  "mensagem": "Rejeição: Não referenciado DFe anterior em operação com ente governamental na operação de fornecimento com pagamento já realizado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-50": {
+  "cStat": 1199,
+  "mensagem": "Rejeição: Referenciado indevidamente DFe anterior em operação com ente governamental na operação de recebimento do pagamento com fornecimento posterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-60": {
+  "cStat": 1203,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com tamanho inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-70": {
+  "cStat": 1204,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com Dígito Verificador inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 33"
+ },
+ "BB05-80": {
+  "cStat": 1205,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com UF inválida [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-90": {
+  "cStat": 1206,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com Ano inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-100": {
+  "cStat": 1207,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com Mês inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-110": {
+  "cStat": 1208,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com CNPJ/CPF inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-120": {
+  "cStat": 1209,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com Modelo inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-130": {
+  "cStat": 1210,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com Número inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-140": {
+  "cStat": 1211,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental em duplicidade [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-150": {
+  "cStat": 1212,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com a mesma Chave de Acesso da Nota Fiscal atual [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-160": {
+  "cStat": 1213,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental com tipo de emissão inválido [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 34"
+ },
+ "BB05-170": {
+  "cStat": 1214,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental deve existir e não estar cancelada [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "BB05-180": {
+  "cStat": 1215,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental deve possuir o mesmo CNPJ base ou CPF do emitente do documento [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "BB05-190": {
+  "cStat": 1216,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental deve ser de fornecimento com pagamento posterior [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "BB05-200": {
+  "cStat": 1217,
+  "mensagem": "Rejeição: DFe referenciado em operação com ente governamental deve ser de recebimento do pagamento com fornecimento posterior [nOcor:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "C02-10": {
+  "cStat": 207,
+  "mensagem": "Rejeição: CNPJ do emitente inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "C02-20": {
+  "cStat": 560,
+  "mensagem": "Rejeição: CNPJ base/CPF do emitente difere do CNPJ base/CPF da primeira NF-e do lote recebido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 81"
+ },
+ "C02-30": {
+  "cStat": 503,
+  "mensagem": "Rejeição: CNPJ do emitente com Série incompatível",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 13"
+ },
+ "C02a-04": {
+  "cStat": 337,
+  "mensagem": "Rejeição: NFC-e para emitente pessoa física",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 10"
+ },
+ "C02a-08": {
+  "cStat": 652,
+  "mensagem": "Rejeição: NF-e para emitente pessoa física",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 11"
+ },
+ "C02a-10": {
+  "cStat": 495,
+  "mensagem": "Rejeição: CPF do Emitente com Série incompatível",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 13"
+ },
+ "C02a-14": {
+  "cStat": 407,
+  "mensagem": "Rejeição: CPF do Emitente somente no serviço de Nota Fiscal Avulsa no site do Fisco",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 10"
+ },
+ "C02a-20": {
+  "cStat": 401,
+  "mensagem": "Rejeição: CPF do emitente inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 8"
+ },
+ "C02a-30": {
+  "cStat": 560,
+  "mensagem": "Rejeição: CNPJ Base/CPF do emitente difere do CNPJ Base/CPF da primeira NF-e do lote recebido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C10-10": {
+  "cStat": 272,
+  "mensagem": "Rejeição: Código Município do Emitente inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C10-20": {
+  "cStat": 273,
+  "mensagem": "Rejeição: Código Município do Emitente: difere da UF do emitente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C12-10": {
+  "cStat": 247,
+  "mensagem": "Rejeição: Sigla da UF do Emitente diverge da UF autorizadora",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 6"
+ },
+ "C17-10": {
+  "cStat": 229,
+  "mensagem": "Rejeição: IE do emitente não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 6"
+ },
+ "C17-11": {
+  "cStat": 166,
+  "mensagem": "Rejeição: UF de autorização não permitida para contribuinte exclusivo do IBS/CBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "C17-20": {
+  "cStat": 209,
+  "mensagem": "Rejeição: IE do emitente inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "C17-30": {
+  "cStat": 554,
+  "mensagem": "Rejeição: IE do Emitente informada como ISENTO indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C17-42": {
+  "cStat": 156,
+  "mensagem": "Rejeição: NFC-e não pode ser emitida por contribuinte exclusivo do IBS/CBS.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "C17-43": {
+  "cStat": 157,
+  "mensagem": "Rejeição: Obrigatório informar CNPJ do emitente para contribuinte exclusivo do IBS/CBS.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "C18-10": {
+  "cStat": 718,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 não deve informar IE de Substituto Tributário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "C18-14": {
+  "cStat": 347,
+  "mensagem": "Rejeição: Informada IE do substituto tributário em operação que não é interestadual",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C18-20": {
+  "cStat": 478,
+  "mensagem": "Rejeição: Local da entrega não informado para faturamento direto de veículos novos",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C18-30": {
+  "cStat": 211,
+  "mensagem": "Rejeição: IE do substituto inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C18-40": {
+  "cStat": 363,
+  "mensagem": "Rejeição: IE do substituto tributário idêntica à IE do emitente ou do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C18-50": {
+  "cStat": 158,
+  "mensagem": "Rejeição: Proibido informar IEST para contribuinte exclusivo do IBS/CBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "C21-10": {
+  "cStat": 812,
+  "mensagem": "Rejeição: Regime Tributário SN, com excesso de sublimite não é permitido para Emitentes desta UF",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 82"
+ },
+ "C21-20": {
+  "cStat": 1178,
+  "mensagem": "Rejeição: Utilização de PAA não permitida para contribuinte enquadrado no regime normal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 13"
+ },
+ "C22-10": {
+  "cStat": 1185,
+  "mensagem": "Rejeição: Município do Emitente não pertence à área incentivada - CBS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "C22-20": {
+  "cStat": 1186,
+  "mensagem": "Rejeição: Inscrição do emitente na Suframa com dígito verificador inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 35"
+ },
+ "D01": {
+  "cStat": 215,
+  "mensagem": "Rejeição: Falha no schema XML",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D01-10": {
+  "cStat": 403,
+  "mensagem": "Rejeição: O grupo de informações da NF-e avulsa é de uso exclusivo do Fisco",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "D01-20": {
+  "cStat": 369,
+  "mensagem": "Rejeição: Não informado o grupo avulsa na emissão pelo Fisco",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "D01a": {
+  "cStat": 516,
+  "mensagem": "Rejeição: Falha no schema XML – inexiste a tag raiz esperada para a mensagem",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D01b": {
+  "cStat": 517,
+  "mensagem": "Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz da mensagem",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D01d": {
+  "cStat": 587,
+  "mensagem": "Rejeição: Usar somente o namespace padrão da NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D01e": {
+  "cStat": 588,
+  "mensagem": "Rejeição: Não é permitida a presença de caracteres de edição no início/fim da mensagem ou entre as tags da mensagem",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D02": {
+  "cStat": 404,
+  "mensagem": "Rejeição: Uso de prefixo de namespace não permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D03": {
+  "cStat": 402,
+  "mensagem": "Rejeição: XML da área de dados com codificação diferente de UTF-8",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 72"
+ },
+ "D04": {
+  "cStat": 491,
+  "mensagem": "Rejeição: O tpEvento informado inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "D05": {
+  "cStat": 492,
+  "mensagem": "Rejeição: O verEvento informado inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "D06": {
+  "cStat": 493,
+  "mensagem": "Rejeição: Evento não atende o Schema XML específico",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "E01": {
+  "cStat": 290,
+  "mensagem": "Rejeição: Certificado Assinatura inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "E01-10": {
+  "cStat": 719,
+  "mensagem": "Rejeição: NF-e sem a identificação do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E01-20": {
+  "cStat": 787,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) em operação não presencial sem a identificação do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "E02": {
+  "cStat": 291,
+  "mensagem": "Rejeição: Certificado Assinatura Data Validade",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "E02-10": {
+  "cStat": 208,
+  "mensagem": "Rejeição: CNPJ do destinatário inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E02-20": {
+  "cStat": 220,
+  "mensagem": "Rejeição: Destinatário com identificação igual à identificação do emitente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E03": {
+  "cStat": 292,
+  "mensagem": "Rejeição: Certificado de Assinatura sem CNPJ/CPF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "E03-10": {
+  "cStat": 237,
+  "mensagem": "Rejeição: CPF do destinatário inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E03a-10": {
+  "cStat": 720,
+  "mensagem": "Rejeição: Na operação com Exterior deve ser informada tag idEstrangeiro",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.002 v1.30a, p. 12"
+ },
+ "E03a-20": {
+  "cStat": 721,
+  "mensagem": "Rejeição: Informado idEstrangeiro e Operação não é com consumidor final.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E03a-30": {
+  "cStat": 925,
+  "mensagem": "Rejeição: NF-e com identificação de estrangeiro e inscrição estadual informada para destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "E03a-60": {
+  "cStat": 372,
+  "mensagem": "Rejeição: Destinatário com identificação de estrangeiro com caracteres inválidos",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E04": {
+  "cStat": 293,
+  "mensagem": "Rejeição: Certificado Assinatura - erro Cadeia de Certificação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "E04-10": {
+  "cStat": 724,
+  "mensagem": "Rejeição: NF-e sem o nome do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E04-20": {
+  "cStat": 598,
+  "mensagem": "Rejeição: NF-e emitida em ambiente de homologação com Razão Social do destinatário diferente de NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 11"
+ },
+ "E05": {
+  "cStat": 296,
+  "mensagem": "Rejeição: Certificado Assinatura erro no acesso a LCR",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "E05-10": {
+  "cStat": 726,
+  "mensagem": "Rejeição: NF-e sem a informação de endereço do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E05-20": {
+  "cStat": 788,
+  "mensagem": "Rejeição: NFC-e de entrega a domicílio sem o endereço do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E06": {
+  "cStat": 294,
+  "mensagem": "Rejeição: Certificado Assinatura revogado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "E07": {
+  "cStat": 295,
+  "mensagem": "Rejeição: Certificado Assinatura difere ICP-Brasil",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "E10-10": {
+  "cStat": 274,
+  "mensagem": "Rejeição: Código Município do Destinatário inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 83"
+ },
+ "E10-20": {
+  "cStat": 275,
+  "mensagem": "Rejeição: Código Município do Destinatário: difere da UF do Destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 84"
+ },
+ "E10-30": {
+  "cStat": 509,
+  "mensagem": "Rejeição: Informado código de município diferente de “9999999” para operação com o exterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 84"
+ },
+ "E12-10": {
+  "cStat": 727,
+  "mensagem": "Rejeição: Operação com Exterior e UF diferente de EX",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.002 v1.30a, p. 12"
+ },
+ "E12-30": {
+  "cStat": 772,
+  "mensagem": "Rejeição: Operação Interestadual e UF de destino igual à UF de origem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 84"
+ },
+ "E12-40": {
+  "cStat": 773,
+  "mensagem": "Rejeição: Operação Interna e UF de destino difere da UF de origem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 84"
+ },
+ "E12-50": {
+  "cStat": 772,
+  "mensagem": "Rejeição: Operação Interestadual e UF de destino igual à UF de origem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 85"
+ },
+ "E12-60": {
+  "cStat": 773,
+  "mensagem": "Rejeição: Operação Interna e UF de destino difere da UF de origem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 85"
+ },
+ "E14-04": {
+  "cStat": 377,
+  "mensagem": "Rejeição: Código de País do destinatário inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 85"
+ },
+ "E14-10": {
+  "cStat": 510,
+  "mensagem": "Rejeição: Operação com Exterior e Código País destinatário é 1058 (Brasil) ou não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.002 v1.30a, p. 12"
+ },
+ "E14-20": {
+  "cStat": 511,
+  "mensagem": "Rejeição: Não é de Operação com Exterior e Código País destinatário difere de 1058 (Brasil)",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 85"
+ },
+ "E14-30": {
+  "cStat": 926,
+  "mensagem": "Rejeição: Operação com Exterior e país de destino igual a Brasil",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "E16a-10": {
+  "cStat": 789,
+  "mensagem": "Rejeição: NFC-e para destinatário contribuinte de ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 86"
+ },
+ "E16a-20": {
+  "cStat": 790,
+  "mensagem": "Rejeição: Operação com Exterior para destinatário Contribuinte de ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.002 v1.30a, p. 12"
+ },
+ "E16a-30": {
+  "cStat": 805,
+  "mensagem": "Rejeição: A SEFAZ do destinatário não permite Contribuinte Isento de Inscrição Estadual",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 9"
+ },
+ "E16a-35": {
+  "cStat": 805,
+  "mensagem": "Rejeição: A SEFAZ do destinatário não permite Contribuinte Isento de Inscrição Estadual",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 86"
+ },
+ "E16a-40": {
+  "cStat": 696,
+  "mensagem": "Rejeição: Operação com não contribuinte deve indicar operação com consumidor final",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "E17-10": {
+  "cStat": 729,
+  "mensagem": "Rejeição: NFC-e com informação da IE do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 86"
+ },
+ "E17-20": {
+  "cStat": 728,
+  "mensagem": "Rejeição: NF-e sem informação da IE do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 86"
+ },
+ "E17-30": {
+  "cStat": 791,
+  "mensagem": "Rejeição: NF-e com indicação de destinatário isento de IE, com a informação da IE do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 86"
+ },
+ "E17-40": {
+  "cStat": 792,
+  "mensagem": "Rejeição: Informada a IE do destinatário para operação com destinatário no Exterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "E17-50": {
+  "cStat": 210,
+  "mensagem": "Rejeição: IE do destinatário inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "E18-10": {
+  "cStat": 730,
+  "mensagem": "Rejeição: NFC-e com Inscrição Suframa",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "E18-20": {
+  "cStat": 235,
+  "mensagem": "Rejeição: Inscrição SUFRAMA inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "E18-30": {
+  "cStat": 251,
+  "mensagem": "Rejeição: UF/Município destinatário não pertence a SUFRAMA",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "F01": {
+  "cStat": 298,
+  "mensagem": "Rejeição: Assinatura difere do padrão do Sistema",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "F01-10": {
+  "cStat": 669,
+  "mensagem": "Rejeição: Local de retirada informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "F02": {
+  "cStat": 297,
+  "mensagem": "Rejeição: Assinatura difere do calculado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 74"
+ },
+ "F02-10": {
+  "cStat": 512,
+  "mensagem": "Rejeição: CNPJ do Local de Retirada inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "F02a-10": {
+  "cStat": 540,
+  "mensagem": "Rejeição: CPF do Local de Retirada inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "F03": {
+  "cStat": 213,
+  "mensagem": "Rejeição: CNPJ-Base do Emitente difere do CNPJ-Base do Certificado Digital",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2026.001 v1.02b, p. 11"
+ },
+ "F07-10": {
+  "cStat": 513,
+  "mensagem": "Rejeição: Código Município do Local de Retirada deve ser 9999999 para UF retirada = “EX”.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "F07-20": {
+  "cStat": 276,
+  "mensagem": "Rejeição: Código Município do Local de Retirada inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "F07-30": {
+  "cStat": 277,
+  "mensagem": "Rejeição: Código Município do Local de Retirada: difere da UF do Local de Retirada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 87"
+ },
+ "F11-10": {
+  "cStat": 970,
+  "mensagem": "Rejeição: Código de País inexistente [local de retirada/entrega]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 21"
+ },
+ "F15-10": {
+  "cStat": 971,
+  "mensagem": "Rejeição: IE inválida [local de retirada/entrega]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 21"
+ },
+ "G01-10": {
+  "cStat": 670,
+  "mensagem": "Rejeição: Local de entrega informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "G02-10": {
+  "cStat": 514,
+  "mensagem": "Rejeição: CNPJ do Local de Entrega inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "G02a-10": {
+  "cStat": 541,
+  "mensagem": "Rejeição: CPF do Local de Entrega inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "G04e": {
+  "cStat": 617,
+  "mensagem": "Rejeição: Chave de Acesso inválida (CNPJ/CPF zerado ou dígito inválido)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 9"
+ },
+ "G06": {
+  "cStat": 494,
+  "mensagem": "Rejeição: Chave de Acesso inexistente [chNFe:99999999999999999999999999999999 999999999999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 9"
+ },
+ "G07-10": {
+  "cStat": 515,
+  "mensagem": "Rejeição: Código Município do Local de Entrega deve ser 9999999 para UF entrega = “EX”.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "G07-20": {
+  "cStat": 278,
+  "mensagem": "Rejeição: Código Município do Local de Entrega inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "G07-30": {
+  "cStat": 279,
+  "mensagem": "Rejeição: Código Município do Local de Entrega: difere da UF do Local de Entrega",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "G08": {
+  "cStat": 574,
+  "mensagem": "Rejeição: O autor do evento diverge do emissor da NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 9"
+ },
+ "G11-10": {
+  "cStat": 970,
+  "mensagem": "Rejeição: Código de País inexistente [local de retirada/entrega]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 22"
+ },
+ "G15-10": {
+  "cStat": 971,
+  "mensagem": "Rejeição: IE inválida [local de retirada/entrega]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 22"
+ },
+ "GA02-10": {
+  "cStat": 323,
+  "mensagem": "Rejeição: CNPJ autorizado para download inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "GA03-10": {
+  "cStat": 325,
+  "mensagem": "Rejeição: CPF autorizado para download inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "GA03-20": {
+  "cStat": 326,
+  "mensagem": "Rejeição: CPF do destinatário já autorizado para download",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 88"
+ },
+ "GAP03a-1": {
+  "cStat": 764,
+  "mensagem": "Rejeição: Solicitada resposta síncrona para Lote com mais de uma NF-e (indSinc=1)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "GAP03a-2": {
+  "cStat": 776,
+  "mensagem": "Rejeição: Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "MOC 7.0 Anexo I, p. 73"
+ },
+ "GAP03a-3": {
+  "cStat": 452,
+  "mensagem": "Rejeição: Solicitada resposta assíncrona para Lote com somente 1 (uma) NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.001 v1.03, p. 8"
+ },
+ "GAP03a-4": {
+  "cStat": 126,
+  "mensagem": "Rejeição: Enviado lote com mais de 1 NFC-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2023.002 v1.01, p. 7"
+ },
+ "GAP03a-5": {
+  "cStat": 127,
+  "mensagem": "Rejeição: Enviado lote com mais de 1 NF-e",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2026.001 v1.02b, p. 11"
+ },
+ "H02-10": {
+  "cStat": 927,
+  "mensagem": "Rejeição: Número do item fora da ordem sequencial.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "I03-10": {
+  "cStat": 611,
+  "mensagem": "Rejeição: GTIN (cEAN) inválido [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I03-20": {
+  "cStat": 882,
+  "mensagem": "Rejeição: GTIN (cEAN) com prefixo inválido [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I03-30": {
+  "cStat": 883,
+  "mensagem": "Rejeição: GTIN (cEAN) sem informação [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I04-10": {
+  "cStat": 373,
+  "mensagem": "Rejeição: Descrição do primeiro item diferente de NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 11"
+ },
+ "I05-10": {
+  "cStat": 777,
+  "mensagem": "Rejeição: Obrigatória a informação do NCM completo (redação dada pela NT 2013/005 v 1.20) [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 9"
+ },
+ "I05-20": {
+  "cStat": 778,
+  "mensagem": "Rejeição: Informado NCM inexistente[nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 90"
+ },
+ "I05-24": {
+  "cStat": 471,
+  "mensagem": "Rejeição: Informado NCM=00 indevidamente (NT 2014/004) [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 90"
+ },
+ "I05-30": {
+  "cStat": 779,
+  "mensagem": "Rejeição: NFC-e com NCM incompatível [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 90"
+ },
+ "I05c-10": {
+  "cStat": 446,
+  "mensagem": "Rejeição: Informado CEST inexistente [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 17"
+ },
+ "I05e-10": {
+  "cStat": 879,
+  "mensagem": "Rejeição: Informado item “Produzido em Escala NÃO Relevante” e não informado CNPJ do Fabricante [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 90"
+ },
+ "I05e-20": {
+  "cStat": 489,
+  "mensagem": "Rejeição: CNPJ informado inválido (DV ou zeros) [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 90"
+ },
+ "I05f-10": {
+  "cStat": 928,
+  "mensagem": "Rejeição: Informado código de benefício fiscal para CST sem benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "I05f-20": {
+  "cStat": 931,
+  "mensagem": "Rejeição: CST não corresponde ao tipo de código de benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I05f-30": {
+  "cStat": 934,
+  "mensagem": "Rejeição: Não informado valor do ICMS desonerado ou o Motivo de desoneração [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I05k-10": {
+  "cStat": 1165,
+  "mensagem": "Rejeição: Não é permitido informar a classificação para subapuração do IBS na ZFM na NFC-e modelo 65 [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "I05k-20": {
+  "cStat": 1166,
+  "mensagem": "Rejeição: Classificação para subapuração do IBS na ZFM informado indevidamente. [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "I05k-30": {
+  "cStat": 1167,
+  "mensagem": "Rejeição: Classificação para subapuração do IBS na ZFM não informada [nItem: 999] Rejeição: CFOP inválido para Nota Fiscal de devolução",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "I08-04": {
+  "cStat": 770,
+  "mensagem": "Rejeição: CFOP Inexistente [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-10": {
+  "cStat": 518,
+  "mensagem": "Rejeição: CFOP de entrada para NF-e de saída",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-20": {
+  "cStat": 519,
+  "mensagem": "Rejeição: CFOP de saída para NF-e de entrada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-30": {
+  "cStat": 731,
+  "mensagem": "Rejeição: CFOP de operação com Exterior e idDest <> 3",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-40": {
+  "cStat": 732,
+  "mensagem": "Rejeição: CFOP de operação interestadual e idDest <> 2",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-50": {
+  "cStat": 733,
+  "mensagem": "Rejeição: CFOP de operação interna e idDest <> 1",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-60": {
+  "cStat": 520,
+  "mensagem": "Rejeição: CFOP de Operação com Exterior e UF destinatário difere de “EX”",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-70": {
+  "cStat": 521,
+  "mensagem": "Rejeição: Operação Interna e UF do emitente difere da UF do destinatário/remetente contribuinte do ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 91"
+ },
+ "I08-90": {
+  "cStat": 523,
+  "mensagem": "Rejeição: CFOP não é de Operação Estadual e UF emitente igual à UF destinatário [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 10"
+ },
+ "I08-94": {
+  "cStat": 771,
+  "mensagem": "Rejeição: Informado idEstrangeiro em operação interestadual",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 92"
+ },
+ "I08-110": {
+  "cStat": 525,
+  "mensagem": "Rejeição: CFOP de Importação e não informado dados da DI [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 92"
+ },
+ "I08-120": {
+  "cStat": 597,
+  "mensagem": "Rejeição: CFOP de Importação e não informado dados de IPI",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 92"
+ },
+ "I08-130": {
+  "cStat": 599,
+  "mensagem": "Rejeição: CFOP de Importação e não informado dados de II [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 92"
+ },
+ "I08-140": {
+  "cStat": 327,
+  "mensagem": "Rejeição: CFOP inválido para Nota Fiscal de devolução ou de retorno de mercadoria [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.009 v1.00, p. 5"
+ },
+ "I08-141": {
+  "cStat": 1179,
+  "mensagem": "ou de retorno de mercadoria emitida por MEI",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "I08-144": {
+  "cStat": 328,
+  "mensagem": "que não é de devolução ou de retorno de mercadoria",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 36"
+ },
+ "I08-150": {
+  "cStat": 725,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com CFOP inválido[nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 12"
+ },
+ "I08-160": {
+  "cStat": 374,
+  "mensagem": "Rejeição: CFOP incompatível com o grupo de tributação [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 16"
+ },
+ "I08-170": {
+  "cStat": 374,
+  "mensagem": "Rejeição: CFOP incompatível com o grupo de tributação [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 17"
+ },
+ "I08-171": {
+  "cStat": 374,
+  "mensagem": "Rejeição: CFOP incompatível com o grupo de tributação [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 17"
+ },
+ "I08-180": {
+  "cStat": 375,
+  "mensagem": "Rejeição: NF-e com lançamento relativo a Cupom Fiscal referencia uma NFC-e [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 12"
+ },
+ "I08-184": {
+  "cStat": 701,
+  "mensagem": "Rejeição: Não informado Nota Fiscal referenciada (Lançamento relativo a Cupom Fiscal) [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 93"
+ },
+ "I08-186": {
+  "cStat": 953,
+  "mensagem": "Rejeição: Informado ECF referenciado para CFOP 5.929 em UF que não permite essa referência",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 12"
+ },
+ "I08-190": {
+  "cStat": 701,
+  "mensagem": "Rejeição: Não informado Nota Fiscal referenciada (CFOP de Exportação Indireta) [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 93"
+ },
+ "I08-191": {
+  "cStat": 159,
+  "mensagem": "Rejeição: Operação não permitida para contribuinte exclusivo do IBS/CBS. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "I08-194": {
+  "cStat": 475,
+  "mensagem": "Rejeição: Operação não permitida para não contribuinte [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 12"
+ },
+ "I08-198": {
+  "cStat": 475,
+  "mensagem": "Rejeição: Operação não permitida para não contribuinte [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.003 v1.11, p. 12"
+ },
+ "I09-10": {
+  "cStat": 734,
+  "mensagem": "Rejeição: NFC-e com Unidade de Comercialização inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 93"
+ },
+ "I11-10": {
+  "cStat": 629,
+  "mensagem": "Rejeição: Valor do Produto difere do produto Valor Unitário de Comercialização e Quantidade Comercial [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 93"
+ },
+ "I11-20": {
+  "cStat": 630,
+  "mensagem": "Rejeição: Valor do Produto difere do produto Valor Unitário de Tributação e Quantidade Tributável [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 93"
+ },
+ "I11c-10": {
+  "cStat": 1278,
+  "mensagem": "Rejeição: Valor Líquido do Produto não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 7"
+ },
+ "I11c-20": {
+  "cStat": 1279,
+  "mensagem": "Rejeição: Valor Líquido do Produto difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 7"
+ },
+ "I12-10": {
+  "cStat": 612,
+  "mensagem": "Rejeição: GTIN da unidade tributável (cEANTrib) inválido [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I12-20": {
+  "cStat": 884,
+  "mensagem": "Rejeição: GTIN da unidade tributável (cEANTrib) com prefixo inválido [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I12-30": {
+  "cStat": 885,
+  "mensagem": "Rejeição: GTIN informado, mas não informado o GTIN da unidade tributável [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I12-40": {
+  "cStat": 886,
+  "mensagem": "Rejeição: GTIN da unidade tributável informado, mas não informado o GTIN [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I12-60": {
+  "cStat": 888,
+  "mensagem": "Rejeição: GTIN da unidade tributável (cEANTrib) sem informação [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 11"
+ },
+ "I13-10": {
+  "cStat": 735,
+  "mensagem": "Rejeição: NFC-e com Unidade de Tributação inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 94"
+ },
+ "I13-20": {
+  "cStat": 854,
+  "mensagem": "Rejeição: Unidade Tributável (tag:uTrib) incompatível com produto informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 28"
+ },
+ "I14-10": {
+  "cStat": 817,
+  "mensagem": "Rejeição: Unidade Tributável incompatível com o NCM informado na operação com Comércio Exterior [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 94"
+ },
+ "I17-10": {
+  "cStat": 483,
+  "mensagem": "Rejeição: Valor do desconto maior que valor do produto [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 94"
+ },
+ "I17b-10": {
+  "cStat": 774,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com indicador de item não participante do total [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 12"
+ },
+ "I19-10": {
+  "cStat": 329,
+  "mensagem": "Rejeição: Número da DI /DSI inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I23-10": {
+  "cStat": 376,
+  "mensagem": "Rejeição: Data do Desembaraço Aduaneiro inválida [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I23b-10": {
+  "cStat": 330,
+  "mensagem": "Rejeição: Informar o Valor da AFRMM na importação por via marítima",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I23d-10": {
+  "cStat": 331,
+  "mensagem": "Rejeição: Informar o CNPJ ou CPF do adquirente ou do encomendante nesta forma de importação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 13"
+ },
+ "I23d-20": {
+  "cStat": 332,
+  "mensagem": "Rejeição: CNPJ/CPF do adquirente ou do encomendante da importação inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 13"
+ },
+ "I23d1-10": {
+  "cStat": 332,
+  "mensagem": "Rejeição: CNPJ/CPF do adquirente ou do encomendante da importação inválido’",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 13"
+ },
+ "I23e-10": {
+  "cStat": 333,
+  "mensagem": "Rejeição: Informar a UF do adquirente ou do encomendante nesta forma de importação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I29a-10": {
+  "cStat": 334,
+  "mensagem": "Rejeição: Número do processo de drawback não informado na importação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I29a-20": {
+  "cStat": 335,
+  "mensagem": "Rejeição: Número do processo de drawback na importação inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I50-10": {
+  "cStat": 336,
+  "mensagem": "Rejeição: Informado o grupo de exportação no item em operação que não é com exterior [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I51-10": {
+  "cStat": 338,
+  "mensagem": "Rejeição: Número do processo de drawback não informado na exportação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I51-20": {
+  "cStat": 339,
+  "mensagem": "Rejeição: Número do processo de drawback na exportação inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I52-10": {
+  "cStat": 340,
+  "mensagem": "Rejeição: Não informado o grupo de exportação indireta no item",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I53-10": {
+  "cStat": 341,
+  "mensagem": "Rejeição: Número do registro de exportação inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I54-10": {
+  "cStat": 342,
+  "mensagem": "Rejeição: Chave de Acesso informada na Exportação Indireta com DV inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I54-20": {
+  "cStat": 343,
+  "mensagem": "Rejeição: Modelo da NF-e informada na Exportação Indireta diferente de 55",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I54-30": {
+  "cStat": 344,
+  "mensagem": "Rejeição: Duplicidade de NF-e informada na Exportação Indireta (Chave de Acesso informada mais de uma vez)",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 95"
+ },
+ "I54-40": {
+  "cStat": 345,
+  "mensagem": "Rejeição: Chave de Acesso informada na Exportação Indireta não consta como NF-e referenciada",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 96"
+ },
+ "I55-10": {
+  "cStat": 346,
+  "mensagem": "Rejeição: Somatório das quantidades informadas na Exportação Indireta não corresponde a quantidade total do item",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 96"
+ },
+ "I70-10": {
+  "cStat": 465,
+  "mensagem": "Rejeição: Número de Controle da FCI inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 96"
+ },
+ "I83-10": {
+  "cStat": 877,
+  "mensagem": "Rejeição: Data de fabricação maior que a data de processamento [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 96"
+ },
+ "I84-10": {
+  "cStat": 870,
+  "mensagem": "Rejeição: Data de validade incompatível com data de fabricação [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 96"
+ },
+ "I86-10": {
+  "cStat": 820,
+  "mensagem": "Rejeição: Informado produto fiscal de NFF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 21"
+ },
+ "I87-10": {
+  "cStat": 833,
+  "mensagem": "Rejeição: Informada embalagem do produto",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 22"
+ },
+ "J01-10": {
+  "cStat": 736,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo de Veículos novos",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 12"
+ },
+ "J19-10": {
+  "cStat": 841,
+  "mensagem": "Rejeição: Código do Tipo de Veículo Inexistente [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 14"
+ },
+ "J20-10": {
+  "cStat": 842,
+  "mensagem": "Rejeição: Código da espécie de Veículo Inexistente [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 14"
+ },
+ "J20-20": {
+  "cStat": 843,
+  "mensagem": "Rejeição: Código da espécie de Veículo incompatível com o tipo do Veículo. [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 14"
+ },
+ "K01-10": {
+  "cStat": 840,
+  "mensagem": "Rejeição: NCM de medicamento e não informado o grupo de medicamento (med) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 13"
+ },
+ "K01-20": {
+  "cStat": 873,
+  "mensagem": "Rejeição: Operação com medicamentos e não informado os campos de rastreabilidade [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 13"
+ },
+ "L01-10": {
+  "cStat": 738,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo de Armamentos",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 13"
+ },
+ "LA01-20": {
+  "cStat": 660,
+  "mensagem": "Rejeição: CFOP de Combustível e não informado grupo de combustível da NF-e [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 97"
+ },
+ "LA01-30": {
+  "cStat": 1106,
+  "mensagem": "Rejeição: Não informado grupo de combustível para cClassTrib de Combustível [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 37"
+ },
+ "LA02-10": {
+  "cStat": 761,
+  "mensagem": "Rejeição: Código de Produto ANP inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 97"
+ },
+ "LA03c-10": {
+  "cStat": 461,
+  "mensagem": "Rejeição: Informado campos de percentual de GLP e/ou GLGNn e/ou GLGNi para produto diferente de GLP [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 97"
+ },
+ "LA03c-20": {
+  "cStat": 855,
+  "mensagem": "Rejeição: Somatório percentuais de GLP derivado do petróleo, GLGNn e GLGNi diferente de 100 [nItem: 999].",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 97"
+ },
+ "LA03d-10": {
+  "cStat": 856,
+  "mensagem": "Rejeição: Campo valor de partida não preenchido para produto GLP [nItem: 999].",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 29"
+ },
+ "LA11-10": {
+  "cStat": 378,
+  "mensagem": "Rejeição: Grupo de Combustível sem a informação de Encerrante [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 98"
+ },
+ "LA11-20": {
+  "cStat": 379,
+  "mensagem": "Rejeição: Grupo de Encerrante na NF-e (modelo 55) para CFOP diferente de venda de combustível para consumidor final [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 98"
+ },
+ "LA16-10": {
+  "cStat": 380,
+  "mensagem": "Rejeição: Valor do Encerrante final não é superior ao Encerrante inicial [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 98"
+ },
+ "LA17-10": {
+  "cStat": 907,
+  "mensagem": "Rejeição: Grupo de combustível não pode ter o índice de mistura do Biocombustível. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 29"
+ },
+ "LA17-20": {
+  "cStat": 908,
+  "mensagem": "Rejeição: Obrigatório o preenchimento do índice de mistura do Biocombustível. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 14"
+ },
+ "LA18-10": {
+  "cStat": 909,
+  "mensagem": "Rejeição: Obrigatório o preenchimento do grupo de UF de origem do combustível [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 14"
+ },
+ "LA18-20": {
+  "cStat": 909,
+  "mensagem": "Rejeição: Obrigatório o preenchimento do grupo de UF de origem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 15"
+ },
+ "LA18-30": {
+  "cStat": 747,
+  "mensagem": "Rejeição: Não permitido o preenchimento do grupo de UF de origem do combustível [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 32"
+ },
+ "LA21-10": {
+  "cStat": 958,
+  "mensagem": "Rejeição: Somatório dos percentuais originários para a UF do combustível diverge de 100. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 33"
+ },
+ "LA21-20": {
+  "cStat": 958,
+  "mensagem": "Rejeição: Somatório dos percentuais originários para a UF do combustível diverge de 100. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 33"
+ },
+ "LB01-10": {
+  "cStat": 348,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo RECOPI",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 15"
+ },
+ "LB01-20": {
+  "cStat": 349,
+  "mensagem": "Rejeição: Número RECOPI não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 98"
+ },
+ "LB01-30": {
+  "cStat": 350,
+  "mensagem": "Rejeição: Número RECOPI inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 99"
+ },
+ "N01-10": {
+  "cStat": 161,
+  "mensagem": "Rejeição: Proibido informar ICMS para contribuinte exclusivo do IBS/CBS [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 7"
+ },
+ "N07-10": {
+  "cStat": 929,
+  "mensagem": "Rejeição: Informado CST de diferimento sem as informações de diferimento [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 99"
+ },
+ "N08-10": {
+  "cStat": 858,
+  "mensagem": "Rejeição: Grupo de Tributação informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 99"
+ },
+ "N11-10": {
+  "cStat": 966,
+  "mensagem": "Rejeição: Obrigatório o preenchimento da origem da mercadoria [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 37"
+ },
+ "N12-10": {
+  "cStat": 527,
+  "mensagem": "Rejeição: Operação de Exportação com informação de ICMS incompatível",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 99"
+ },
+ "N12-20": {
+  "cStat": 590,
+  "mensagem": "Rejeição: Informado CST para emissor do Simples Nacional (CRT=1) [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 34"
+ },
+ "N12-30": {
+  "cStat": 766,
+  "mensagem": "Rejeição: Item com CST indevido [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 15"
+ },
+ "N12-34": {
+  "cStat": 381,
+  "mensagem": "Rejeição: Grupo de tributação ICMS90, informando dados do ICMS-ST [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12-40": {
+  "cStat": 382,
+  "mensagem": "Rejeição: CFOP não permitido para o CST informado [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12-44": {
+  "cStat": 382,
+  "mensagem": "Rejeição: CFOP não permitido para o CST informado [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12-50": {
+  "cStat": 741,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com Partilha de ICMS entre UF",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12-60": {
+  "cStat": 740,
+  "mensagem": "Rejeição: Item com Repasse de ICMS retido por Substituto Tributário [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12-70": {
+  "cStat": 508,
+  "mensagem": "Rejeição: CST incompatível na operação com Não Contribuinte [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.003 v1.40, p. 8"
+ },
+ "N12-80": {
+  "cStat": 529,
+  "mensagem": "Rejeição: CST incompatível na operação com Contribuinte Isento de Inscrição Estadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 18"
+ },
+ "N12-81": {
+  "cStat": 938,
+  "mensagem": "Rejeição: Não informada BCST, pST e ICMSST retido na operação anterior [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 102"
+ },
+ "N12-82": {
+  "cStat": 906,
+  "mensagem": "Rejeição: Não informados os campos para informações do ICMS Efetivo. [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 22"
+ },
+ "N12-84": {
+  "cStat": 930,
+  "mensagem": "Rejeição: CST com benefício fiscal e não informado o código de benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 102"
+ },
+ "N12-85": {
+  "cStat": 930,
+  "mensagem": "Rejeição: CST com benefício fiscal e não informado o código de benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 12"
+ },
+ "N12-86": {
+  "cStat": 928,
+  "mensagem": "Rejeição: Informado código de benefício fiscal para CST sem benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 13"
+ },
+ "N12-88": {
+  "cStat": 931,
+  "mensagem": "Rejeição: CST não corresponde ao tipo de código de benefício fiscal [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 104"
+ },
+ "N12-90": {
+  "cStat": 934,
+  "mensagem": "Rejeição: Não informado valor do ICMS desonerado ou o Motivo de desoneração [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 105"
+ },
+ "N12-94": {
+  "cStat": 931,
+  "mensagem": "Rejeição: Informado código de benefício fiscal incompatível com CST e UF [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 13"
+ },
+ "N12-97": {
+  "cStat": 929,
+  "mensagem": "Rejeição: Informado CST de diferimento sem as informações de diferimento [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 106"
+ },
+ "N12-98": {
+  "cStat": 946,
+  "mensagem": "Rejeição: Informado código de benefício fiscal incorreto ou inexistente na UF [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": null,
+  "fonte": "NT 2021.002 v1.12, p. 14"
+ },
+ "N12-100": {
+  "cStat": 959,
+  "mensagem": "Rejeição: NF-e não pode ter preenchimento de Grupo de Tributação do ICMS monofásica sobre combustíveis. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 36"
+ },
+ "N12-110": {
+  "cStat": 960,
+  "mensagem": "Rejeição: Obrigatório o preenchimento de Grupo de Tributação do ICMS monofásica sobre combustíveis. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 37"
+ },
+ "N12a-10": {
+  "cStat": 591,
+  "mensagem": "Rejeição: Informado CSOSN para emissor que não é do Simples Nacional (CRT diferente de 1 ou 4) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 12"
+ },
+ "N12a-20": {
+  "cStat": 383,
+  "mensagem": "Rejeição: Item com CSOSN indevido [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12a-30": {
+  "cStat": 384,
+  "mensagem": "Rejeição: CSOSN não permitido para a UF [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12a-34": {
+  "cStat": 385,
+  "mensagem": "Rejeição: Grupo de tributação ICMSSN900, informando dados do ICMS-ST [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12a-40": {
+  "cStat": 386,
+  "mensagem": "Rejeição: CFOP não permitido para o CSOSN informado [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 16"
+ },
+ "N12a-44": {
+  "cStat": 386,
+  "mensagem": "Rejeição: CFOP não permitido para o CSOSN informado [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "N12a-50": {
+  "cStat": 938,
+  "mensagem": "Rejeição: Não informada BCST, pST e ICMSST retido na operação anterior [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 107"
+ },
+ "N12a-60": {
+  "cStat": 906,
+  "mensagem": "Rejeição: Não informados os campos para informações do ICMS Efetivo. [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 22"
+ },
+ "N12a-70": {
+  "cStat": 600,
+  "mensagem": "Rejeição: CSOSN incompatível na operação com Não Contribuinte [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.003 v1.10, p. 9"
+ },
+ "N12a-80": {
+  "cStat": 782,
+  "mensagem": "Rejeição: CSOSN inválido para emitente MEI (CRT=4) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 13"
+ },
+ "N12a-81": {
+  "cStat": 782,
+  "mensagem": "Rejeição: CSOSN inválido para emitente MEI (CRT=4) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "N12a-90": {
+  "cStat": 337,
+  "mensagem": "Rejeição: CFOP inválido para emitente MEI (CRT=4) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 13"
+ },
+ "N12a-91": {
+  "cStat": 337,
+  "mensagem": "Rejeição: CFOP inválido para emitente MEI (CRT=4) [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "N16-04": {
+  "cStat": 663,
+  "mensagem": "Rejeição: Alíquota do ICMS com valor superior a 4 por cento na operação de saída interestadual com produtos importados [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 109"
+ },
+ "N16-20": {
+  "cStat": 693,
+  "mensagem": "Rejeição: Alíquota de ICMS superior à definida para a operação interestadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 110"
+ },
+ "N16a-10": {
+  "cStat": 351,
+  "mensagem": "Rejeição: Valor do ICMS da Operação no CST=51 difere do produto BC e Alíquota [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 110"
+ },
+ "N16c-10": {
+  "cStat": 352,
+  "mensagem": "Rejeição: Valor do ICMS Diferido no CST=51 difere do produto Valor ICMS Operação e percentual diferimento [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 110"
+ },
+ "N17-10": {
+  "cStat": 353,
+  "mensagem": "Rejeição: Valor do ICMS no CST=51 não corresponde a diferença do ICMS operação e ICMS diferido [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 110"
+ },
+ "N17-20": {
+  "cStat": 528,
+  "mensagem": "Rejeição: Valor do ICMS difere do produto BC e Alíquota [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N17b-10": {
+  "cStat": 880,
+  "mensagem": "Rejeição: Percentual de FCP igual a zero [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N17b-20": {
+  "cStat": 874,
+  "mensagem": "Rejeição: Percentual de FCP inválido [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N17c-10": {
+  "cStat": 860,
+  "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 18"
+ },
+ "N17c-20": {
+  "cStat": 876,
+  "mensagem": "Rejeição: Operação interestadual para Consumidor Final e valor do FCP informado em campo diferente de vFCPUFDest (id:NA13) [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N17c-30": {
+  "cStat": 474,
+  "mensagem": "Rejeição: FCP não deve ser destacado na NF-e conforme legislação estadual [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.001 v1.20, p. 14"
+ },
+ "N18-10": {
+  "cStat": 932,
+  "mensagem": "Rejeição: Informada modalidade de determinação da BC da ST como MVA e não informado o campo pMVAST [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N18-20": {
+  "cStat": 933,
+  "mensagem": "Rejeição: Informada modalidade de determinação da BC da ST diferente de MVA e informado o campo pMVAST [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 111"
+ },
+ "N23-10": {
+  "cStat": 806,
+  "mensagem": "Rejeição: Operação com ICMS-ST sem informação do CEST [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 112"
+ },
+ "N23b-10": {
+  "cStat": 881,
+  "mensagem": "Rejeição: Percentual de FCPST igual a zero [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 112"
+ },
+ "N23b-20": {
+  "cStat": 875,
+  "mensagem": "Rejeição: Percentual de FCPST inválido [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 112"
+ },
+ "N23d-10": {
+  "cStat": 860,
+  "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 112"
+ },
+ "N27b-10": {
+  "cStat": 881,
+  "mensagem": "Rejeição: Percentual de FCPST igual a zero [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 112"
+ },
+ "N27b-20": {
+  "cStat": 875,
+  "mensagem": "Rejeição: Percentual de FCPST inválido [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 113"
+ },
+ "N27d-10": {
+  "cStat": 860,
+  "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 113"
+ },
+ "N28-10": {
+  "cStat": 625,
+  "mensagem": "Rejeição: Inscrição SUFRAMA deve ser informada na venda com isenção para ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 113"
+ },
+ "N28-12": {
+  "cStat": 652,
+  "mensagem": "Rejeição: informado indicador de desoneração inválido para a ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "N28-20": {
+  "cStat": 626,
+  "mensagem": "Rejeição: CFOP de operação isenta para ZFM diferente do previsto [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2019.001 v1.70, p. 20"
+ },
+ "N28-30": {
+  "cStat": 627,
+  "mensagem": "Rejeição: O valor do ICMS desonerado deve ser informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 113"
+ },
+ "N33-10": {
+  "cStat": 906,
+  "mensagem": "Rejeição: Não informados os campos do grupo opcional para informações do ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2018.005 v1.52, p. 22"
+ },
+ "N37a-10": {
+  "cStat": 767,
+  "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 36"
+ },
+ "N38-10": {
+  "cStat": 961,
+  "mensagem": "Rejeição: Alíquota adrem do imposto difere do definido na legislação para o produto. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 36"
+ },
+ "N39-10": {
+  "cStat": 962,
+  "mensagem": "Rejeição: Valor do ICMS próprio difere do calculado. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 37"
+ },
+ "N39a-10": {
+  "cStat": 768,
+  "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada sujeita a retenção [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 37"
+ },
+ "N40-10": {
+  "cStat": 963,
+  "mensagem": "Rejeição: Alíquota adrem do imposto com retenção difere do definido na legislação para o produto. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 37"
+ },
+ "N41-10": {
+  "cStat": 964,
+  "mensagem": "Rejeição: Valor do ICMS com retenção difere do calculado. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 37"
+ },
+ "N41-20": {
+  "cStat": 964,
+  "mensagem": "Rejeição: Valor do ICMS com retenção difere do calculado. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 38"
+ },
+ "N43a-10": {
+  "cStat": 769,
+  "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada retida anteriormente [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 38"
+ },
+ "N44-10": {
+  "cStat": 965,
+  "mensagem": "Rejeição: Alíquota adrem do imposto retido anteriormente difere do definido na legislação para o produto. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 38"
+ },
+ "N45-10": {
+  "cStat": 966,
+  "mensagem": "Rejeição: Valor do ICMS retido anteriormente difere do calculado. [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 38"
+ },
+ "NA01-10": {
+  "cStat": 807,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo de ICMS para a UF do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "NA01-20": {
+  "cStat": 694,
+  "mensagem": "Rejeição: Não informado o grupo de ICMS para a UF de destino [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 37"
+ },
+ "NA01-30": {
+  "cStat": 695,
+  "mensagem": "Rejeição: Informado indevidamente o grupo de ICMS para a UF de destino [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 116"
+ },
+ "NA09-10": {
+  "cStat": 697,
+  "mensagem": "Rejeição: Alíquota interestadual do ICMS com origem diferente do previsto [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 116"
+ },
+ "NA09-20": {
+  "cStat": 697,
+  "mensagem": "Rejeição: Alíquota interestadual do ICMS com origem diferente do previsto [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 116"
+ },
+ "NA09-30": {
+  "cStat": 698,
+  "mensagem": "Rejeição: Alíquota interestadual do ICMS incompatível com as UF envolvidas na operação [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 117"
+ },
+ "NA11-10": {
+  "cStat": 699,
+  "mensagem": "Rejeição: Percentual do ICMS Interestadual para a UF de destino difere do previsto para o ano da Data de Emissão [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 117"
+ },
+ "NA13-10": {
+  "cStat": 793,
+  "mensagem": "Rejeição: Valor do ICMS relativo ao Fundo de Combate à Pobreza na UF de destino difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 117"
+ },
+ "NA15-10": {
+  "cStat": 815,
+  "mensagem": "Rejeição: Valor do ICMS Interestadual para UF de Destino difere do calculado [nItem: 999] (Valor Informado: XXX, Valor Calculado:XXX)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 19"
+ },
+ "NA17-10": {
+  "cStat": 816,
+  "mensagem": "Rejeição: Valor do ICMS Interestadual para UF do Remetente difere do calculado [nItem: 999] (Valor Informado: XXX, Valor Calculado:XXX)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.005 v1.21, p. 19"
+ },
+ "NB01-10": {
+  "cStat": 1280,
+  "mensagem": "Rejeição: Grupo do ICMS Previsto no Pagamento Antecipado informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 7"
+ },
+ "NB01-20": {
+  "cStat": 1280,
+  "mensagem": "Rejeição: Grupo do ICMS Previsto no Pagamento Antecipado informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 7"
+ },
+ "NB01-30": {
+  "cStat": 1281,
+  "mensagem": "Rejeição: Grupo do ICMS Previsto no Pagamento Antecipado não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 8"
+ },
+ "O01-10": {
+  "cStat": 742,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo do IPI",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "O06-10": {
+  "cStat": 387,
+  "mensagem": "Rejeição: Código de Enquadramento Legal do IPI inválido [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.002 v1.01, p. 6"
+ },
+ "O09-10": {
+  "cStat": 388,
+  "mensagem": "Rejeição: Código de Situação Tributária do IPI incompatível com o Código de Enquadramento Legal do IPI [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2020.002 v1.01, p. 6"
+ },
+ "P01-10": {
+  "cStat": 743,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo do II",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "P10-10": {
+  "cStat": 9491,
+  "mensagem": "Rejeição: GTIN com dígito verificador inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "P10-20": {
+  "cStat": 9492,
+  "mensagem": "Rejeição: GTIN não possui prefixo 789 ou 790 (Brasil)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2022.001 v1.00, p. 10"
+ },
+ "Q01-20": {
+  "cStat": 745,
+  "mensagem": "Rejeição: NF-e sem grupo do PIS [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 38"
+ },
+ "R01-10": {
+  "cStat": 746,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo do PIS-ST",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 17"
+ },
+ "S01-20": {
+  "cStat": 748,
+  "mensagem": "Rejeição: NF-e sem grupo da COFINS [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 38"
+ },
+ "T01-10": {
+  "cStat": 749,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com grupo da COFINS-ST",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "U01-10": {
+  "cStat": 530,
+  "mensagem": "Rejeição: Operação com tributação de ISSQN sem informar a Inscrição Municipal",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 119"
+ },
+ "U01-20": {
+  "cStat": 592,
+  "mensagem": "Rejeição: A NF-e deve ter pelo menos um item de produto sujeito ao ICMS.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2022.004 v1.10, p. 7"
+ },
+ "U01-30": {
+  "cStat": 887,
+  "mensagem": "Item de Serviço e informado GTIN diferente de SEM GTIN [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.003 v1.50, p. 12"
+ },
+ "U05-10": {
+  "cStat": 287,
+  "mensagem": "Rejeição: Código Município do Fato Gerador de ISSQN inexistente [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 119"
+ },
+ "U06-10": {
+  "cStat": 844,
+  "mensagem": "Rejeição: Código de Item da Lista de Serviços inexistente. [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 15"
+ },
+ "U14-10": {
+  "cStat": 389,
+  "mensagem": "Rejeição: Código Município ISSQN inexistente [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 119"
+ },
+ "U15-10": {
+  "cStat": 739,
+  "mensagem": "Rejeição: Código de País do ISSQN Inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 119"
+ },
+ "UA01-10": {
+  "cStat": 354,
+  "mensagem": "Rejeição: Informado grupo de devolução de tributos para NF-e que não tem finalidade de devolução de mercadoria",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 119"
+ },
+ "UA01-20": {
+  "cStat": 390,
+  "mensagem": "Rejeição: Nota Fiscal com grupo de devolução de Tributos [nItem: nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "UB01-10": {
+  "cStat": 1011,
+  "mensagem": "Rejeição: Não é permitido uso do Imposto Seletivo para esta classificação da operação [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB01-20": {
+  "cStat": 1012,
+  "mensagem": "Rejeição: É exigido o uso do Imposto Seletivo para esta classificação da operação [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB01-30": {
+  "cStat": 1013,
+  "mensagem": "Rejeição: É exigido o uso do Imposto Seletivo para esta classificação da operação para este NCM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB02-10": {
+  "cStat": 1014,
+  "mensagem": "Rejeição: CST do Imposto Seletivo informado inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB03-10": {
+  "cStat": 1015,
+  "mensagem": "Rejeição: Classificação Tributária do Imposto Seletivo informada inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB05-10": {
+  "cStat": 1103,
+  "mensagem": "Rejeição: Valor da Base de cálculo do Imposto Seletivo difere do somatório dos valores que a compõem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 39"
+ },
+ "UB06-10": {
+  "cStat": 1016,
+  "mensagem": "Rejeição: CST do Imposto Seletivo obriga informação de alíquota de Imposto Seletivo [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB07-10": {
+  "cStat": 1017,
+  "mensagem": "Rejeição: Obrigatório informação de alíquota específica de Imposto Seletivo [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB08-10": {
+  "cStat": 1018,
+  "mensagem": "Rejeição: Unidade tributável (uTrib) e Quantidade tributável (qTrib) do imposto seletivo não informados [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB11-10": {
+  "cStat": 1019,
+  "mensagem": "Rejeição: Valor do Imposto Seletivo difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB12-10": {
+  "cStat": 1115,
+  "mensagem": "Rejeição: Grupo IBSCBS não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB12-11": {
+  "cStat": 162,
+  "mensagem": "Rejeição: Grupo IBS/CBS obrigatório para contribuinte exclusivo do IBS/CBS [nItem:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.007 v1.10, p. 8"
+ },
+ "UB13-10": {
+  "cStat": 1020,
+  "mensagem": "Rejeição: CST do IBS/CBS informado inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB13-20": {
+  "cStat": 1021,
+  "mensagem": "Rejeição: Grupo gIBSCBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 40"
+ },
+ "UB13-30": {
+  "cStat": 1022,
+  "mensagem": "Rejeição: Grupo gIBSCBS não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB13-39": {
+  "cStat": 1151,
+  "mensagem": "Rejeição: Grupo gIBSCBSMono informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB13-40": {
+  "cStat": 1116,
+  "mensagem": "Rejeição: Grupo gIBSCBSMono não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB13-44": {
+  "cStat": 1131,
+  "mensagem": "Rejeição: Grupo de transferência de crédito informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB13-45": {
+  "cStat": 1132,
+  "mensagem": "Rejeição: Grupo de transferência de crédito não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB14-10": {
+  "cStat": 1023,
+  "mensagem": "Rejeição: Classificação Tributária do IBS/CBS informada inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB14-20": {
+  "cStat": 1024,
+  "mensagem": "Rejeição: Rejeição: Classificação Tributária do IBS e da CBS incompatível com o CST informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB14-25": {
+  "cStat": 1025,
+  "mensagem": "Rejeição: cClassTrib do IBS/CBS não permitido neste modelo de DFe [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB14-30": {
+  "cStat": 1043,
+  "mensagem": "Rejeição: Índice de mistura do Biocombustível inferior ao obrigatório para esta Classificação Tributária do IBS e CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 41"
+ },
+ "UB14-50": {
+  "cStat": 1059,
+  "mensagem": "Rejeição: Índice de mistura do Biocombustível superior ao obrigatório para esta Classificação Tributária do IBS e CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 42"
+ },
+ "UB14-60": {
+  "cStat": 1202,
+  "mensagem": "Rejeição: cClassTrib incompatível com a finalidade da nota ou com o tipo de Nota de Débito ou Crédito [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 42"
+ },
+ "UB14-70": {
+  "cStat": 1200,
+  "mensagem": "Rejeição: cClassTrib incompatível com o tipo de Nota de Débito [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 42"
+ },
+ "UB14-80": {
+  "cStat": 1201,
+  "mensagem": "Rejeição: cClassTrib incompatível com o tipo de Nota de Crédito [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 43"
+ },
+ "UB16-10": {
+  "cStat": 1104,
+  "mensagem": "Rejeição: Valor da Base de cálculo do IBS e CBS difere do somatório dos valores que a compõem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 8"
+ },
+ "UB18-10": {
+  "cStat": 1026,
+  "mensagem": "Rejeição: Alíquota do IBS da UF inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 43"
+ },
+ "UB22-10": {
+  "cStat": 1029,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de diferimento Estadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB22-20": {
+  "cStat": 1030,
+  "mensagem": "Rejeição: CST do IBS/CBS informado obriga informação de diferimento Estadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB23-10": {
+  "cStat": 1031,
+  "mensagem": "Rejeição: Valor do Diferimento da UF difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB24-10": {
+  "cStat": 1111,
+  "mensagem": "Rejeição: Grupo de Devolução do IBS da UF informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB26-10": {
+  "cStat": 1032,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de redução de alíquota Estadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB26-20": {
+  "cStat": 1033,
+  "mensagem": "Rejeição: Não informado o grupo de redução de alíquota Estadual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB27-10": {
+  "cStat": 1034,
+  "mensagem": "Rejeição: Percentual de redução de alíquota da UF não é válido para este cClassTrib [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 44"
+ },
+ "UB28-10": {
+  "cStat": 1035,
+  "mensagem": "Rejeição: Valor da Alíquota Efetiva do IBS da UF calculado incorretamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 45"
+ },
+ "UB35-10": {
+  "cStat": 1041,
+  "mensagem": "Rejeição: Valor do IBS da UF difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 45"
+ },
+ "UB37-10": {
+  "cStat": 1036,
+  "mensagem": "Rejeição: Alíquota do IBS do Município inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 45"
+ },
+ "UB40-10": {
+  "cStat": 1044,
+  "mensagem": "Rejeição: CST do IBS/CBS informado obriga informação de diferimento Municipal [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB40-20": {
+  "cStat": 1083,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de diferimento Municipal [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB42-10": {
+  "cStat": 1045,
+  "mensagem": "Rejeição: Valor do Diferimento do Município difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB43-10": {
+  "cStat": 1112,
+  "mensagem": "Rejeição: Grupo de Devolução do IBS do Município informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB45-10": {
+  "cStat": 1007,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de redução de alíquota municipal [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB45-20": {
+  "cStat": 1074,
+  "mensagem": "Rejeição: Não informado o grupo de redução de alíquota Municipal [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB46-10": {
+  "cStat": 1046,
+  "mensagem": "Rejeição: Percentual de redução de alíquota do Município não é válido para este cClassTrib [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB47-10": {
+  "cStat": 1047,
+  "mensagem": "Rejeição: Valor da Alíquota Efetiva do IBS do Município calculado incorretamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 46"
+ },
+ "UB54-10": {
+  "cStat": 1052,
+  "mensagem": "Rejeição: Valor do IBS Municipal difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 47"
+ },
+ "UB54a-10": {
+  "cStat": 1150,
+  "mensagem": "Rejeição: Valor do IBS do Item (vIBS) difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 47"
+ },
+ "UB56-10": {
+  "cStat": 1037,
+  "mensagem": "Rejeição: Alíquota da CBS inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 47"
+ },
+ "UB56-20": {
+  "cStat": 1037,
+  "mensagem": "Rejeição: Alíquota da CBS inválida [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 48"
+ },
+ "UB59-10": {
+  "cStat": 1061,
+  "mensagem": "Rejeição: CST do IBS/CBS informado obriga informação de diferimento da CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB59-20": {
+  "cStat": 1090,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de diferimento da CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB61-10": {
+  "cStat": 1062,
+  "mensagem": "Rejeição: Valor do Diferimento da CBS difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB62-10": {
+  "cStat": 1187,
+  "mensagem": "Rejeição: Grupo de Devolução da CBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB62a-10": {
+  "cStat": 1188,
+  "mensagem": "Rejeição: Percentual de devolução da CBS não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB63-10": {
+  "cStat": 1189,
+  "mensagem": "Rejeição: Valor da CBS devolvida difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB64-10": {
+  "cStat": 1028,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação de redução de alíquota da CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB64-20": {
+  "cStat": 1079,
+  "mensagem": "Rejeição: Não informado o grupo de redução de alíquota da CBS [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 49"
+ },
+ "UB65-10": {
+  "cStat": 1063,
+  "mensagem": "Rejeição: Percentual de redução de alíquota da CBS não é válido para este cClassTrib [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 50"
+ },
+ "UB66-10": {
+  "cStat": 1064,
+  "mensagem": "Rejeição: Valor da Alíquota Efetiva da CBS calculado incorretamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 50"
+ },
+ "UB66a-10": {
+  "cStat": 1190,
+  "mensagem": "Rejeição: Inscrição do emitente na Suframa não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 50"
+ },
+ "UB66a-20": {
+  "cStat": 1191,
+  "mensagem": "Rejeição: Grupo de operações em áreas incentivadas (ALC/ZFM) - CBS (alíquota zero) não permitido [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 50"
+ },
+ "UB66c-10": {
+  "cStat": 1192,
+  "mensagem": "Rejeição: Número do processo na Suframa não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 51"
+ },
+ "UB66e-10": {
+  "cStat": 1218,
+  "mensagem": "Rejeição: Valor da CBS para operação fora de áreas ou regimes incentivado difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB67-10": {
+  "cStat": 1069,
+  "mensagem": "Rejeição: Valor da CBS difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB68-10": {
+  "cStat": 1065,
+  "mensagem": "Rejeição: Classificação Tributária do IBS e da CBS informada obriga informação da tributação regular [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB68-11": {
+  "cStat": 1114,
+  "mensagem": "Rejeição: Classificação Tributária do IBS e da CBS informada não permite informação da tributação regular [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB69-10": {
+  "cStat": 1066,
+  "mensagem": "Rejeição: CST do IBS e da CBS informado no grupo de tributação regular inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB70-10": {
+  "cStat": 1067,
+  "mensagem": "Rejeição: Classificação Tributária do IBS e da CBS informada no grupo de tributação regular inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB72-10": {
+  "cStat": 1040,
+  "mensagem": "Rejeição: Valor do Tributo Regular da UF difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB72b-10": {
+  "cStat": 1051,
+  "mensagem": "Rejeição: Valor do Tributo Regular do Município difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB72d-10": {
+  "cStat": 1068,
+  "mensagem": "Rejeição: Valor do Tributo Regular da CBS difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB82a-10": {
+  "cStat": 1141,
+  "mensagem": "Rejeição: Grupo de informações da composição do valor do IBS e da CBS em compras governamentais não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 52"
+ },
+ "UB82a-20": {
+  "cStat": 1142,
+  "mensagem": "Rejeição: Soma dos valores de IBS e CBS em compras governamentais divergente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB82a-30": {
+  "cStat": 1144,
+  "mensagem": "Rejeição: Grupo de informações da composição do valor do IBS e da CBS em compras governamentais informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB85a-10": {
+  "cStat": 1219,
+  "mensagem": "Rejeição: Tributação Monofásica Ad Rem do IBS informada indevidamente [nItem: 999] Observação: Tributação Monofásica do IBS e CBS: Ano IBS CBS 2026 AdValorem AdValorem 2027 AdValorem AdRem 2028 AdValorem AdRem 2029 AdRem AdRem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB85a-20": {
+  "cStat": 1220,
+  "mensagem": "Rejeição: Não informada Tributação Monofásica Ad Rem do IBS [nItem: 999] Observação: Vide tabela acima",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB86-10": {
+  "cStat": 1125,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Padrão de Combustível do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB86-20": {
+  "cStat": 1126,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Padrão de Combustível do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB86c-10": {
+  "cStat": 1221,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Padrão Ad Rem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 53"
+ },
+ "UB87-10": {
+  "cStat": 1127,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica de Combustível com Retenção do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 54"
+ },
+ "UB87-20": {
+  "cStat": 1128,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica de Combustível com Retenção do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 54"
+ },
+ "UB87c-10": {
+  "cStat": 1222,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Rem com Retenção difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 54"
+ },
+ "UB88-10": {
+  "cStat": 1108,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Retida Anteriormente do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 54"
+ },
+ "UB88-20": {
+  "cStat": 1109,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Retida Anteriormente do IBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 54"
+ },
+ "UB88a-10": {
+  "cStat": 1223,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Rem retido anteriormente difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.002 v1.52, p. 55"
+ },
+ "UB89-10": {
+  "cStat": 1224,
+  "mensagem": "Rejeição: Não informado o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório do IBS Monofásico Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 55"
+ },
+ "UB89-20": {
+  "cStat": 1225,
+  "mensagem": "Rejeição: Informado indevidamente o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório do IBS Monofásico Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 55"
+ },
+ "UB89a-10": {
+  "cStat": 1226,
+  "mensagem": "Rejeição: Quantidade de Biocombustível (EAC) a recolher ou a ressarcir do IBS Monofásico Ad Rem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 55"
+ },
+ "UB89b-10": {
+  "cStat": 1227,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Rem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB90-10": {
+  "cStat": 1228,
+  "mensagem": "Rejeição: Tributação Monofásica Ad Valorem do IBS informada indevidamente [nItem: 999] Observação: Tributação Monofásica do IBS e CBS: Ano IBS CBS 2026 AdValorem AdValorem 2027 AdValorem AdRem 2028 AdValorem AdRem 2029 AdRem AdRem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB90-20": {
+  "cStat": 1229,
+  "mensagem": "Rejeição: Não informada Tributação Monofásica Ad Valorem do IBS [nItem: 999] Observação: Vide tabela acima",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB91-10": {
+  "cStat": 1230,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Padrão de Combustível do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB91-20": {
+  "cStat": 1231,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Padrão de Combustível do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB91c-10": {
+  "cStat": 1232,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Padrão Ad Valorem Estadual difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 56"
+ },
+ "UB91e-10": {
+  "cStat": 1233,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Padrão Ad Valorem Municipal difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB91f-10": {
+  "cStat": 1234,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Padrão Ad Valorem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB92-10": {
+  "cStat": 1235,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica de Combustível com Retenção do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB92-20": {
+  "cStat": 1236,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica de Combustível com Retenção do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB92c-10": {
+  "cStat": 1237,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Valorem com Retenção difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB93-10": {
+  "cStat": 1238,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Retida Anteriormente do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB93-20": {
+  "cStat": 1239,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Retida Anteriormente do IBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 57"
+ },
+ "UB93a-10": {
+  "cStat": 1240,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Valorem retido anteriormente difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.002 v1.52, p. 58"
+ },
+ "UB94-10": {
+  "cStat": 1241,
+  "mensagem": "Rejeição: Não informado o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório do IBS Monofásico Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 58"
+ },
+ "UB94-20": {
+  "cStat": 1242,
+  "mensagem": "Rejeição: Informado indevidamente o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório do IBS Monofásico Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 58"
+ },
+ "UB94a-10": {
+  "cStat": 1243,
+  "mensagem": "Rejeição: Quantidade de Biocombustível (EAC) a recolher ou a ressarcir do IBS Monofásico Ad Valorem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 59"
+ },
+ "UB94b-10": {
+  "cStat": 1244,
+  "mensagem": "Rejeição: Valor do IBS Monofásico Ad Valorem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 59"
+ },
+ "UB95a-10": {
+  "cStat": 1245,
+  "mensagem": "Rejeição: Tributação Monofásica Ad Rem da CBS informada indevidamente [nItem: 999] Observação: Tributação Monofásica do IBS e CBS: Ano IBS CBS 2026 AdValorem AdValorem 2027 AdValorem AdRem 2028 AdValorem AdRem 2029 AdRem AdRem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 59"
+ },
+ "UB95a-20": {
+  "cStat": 1246,
+  "mensagem": "Rejeição: Não informada Tributação Monofásica Ad Rem da CBS [nItem: 999] Observação: Vide tabela acima",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 59"
+ },
+ "UB96-10": {
+  "cStat": 1247,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Padrão de Combustível da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 59"
+ },
+ "UB96-20": {
+  "cStat": 1248,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Padrão de Combustível da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB96c-10": {
+  "cStat": 1249,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Padrão Ad Rem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB97-10": {
+  "cStat": 1250,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica de Combustível com Retenção da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB97-20": {
+  "cStat": 1251,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica de Combustível com Retenção da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB97c-10": {
+  "cStat": 1252,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Rem com Retenção difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB98-10": {
+  "cStat": 1253,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Retida Anteriormente da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB98-20": {
+  "cStat": 1254,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Retida Anteriormente da CBS Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 60"
+ },
+ "UB98a-10": {
+  "cStat": 1255,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Rem retido anteriormente difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.002 v1.52, p. 61"
+ },
+ "UB99-10": {
+  "cStat": 1148,
+  "mensagem": "Rejeição: Não informado o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório da CBS Monofásica Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 61"
+ },
+ "UB99-20": {
+  "cStat": 1149,
+  "mensagem": "Rejeição: Informado indevidamente o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório da CBS Monofásica Ad Rem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 61"
+ },
+ "UB99a-10": {
+  "cStat": 1256,
+  "mensagem": "Rejeição: Quantidade de Biocombustível (EAC) a recolher ou a ressarcir da CBS Monofásica Ad Rem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 61"
+ },
+ "UB99b-10": {
+  "cStat": 1257,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Rem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB100-10": {
+  "cStat": 1258,
+  "mensagem": "Rejeição: Tributação Monofásica Ad Valorem da CBS informada indevidamente [nItem: 999] Observação: Tributação Monofásica do IBS e CBS: Ano IBS CBS 2026 AdValorem AdValorem 2027 AdValorem AdRem 2028 AdValorem AdRem 2029 AdRem AdRem",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB100-20": {
+  "cStat": 1259,
+  "mensagem": "Rejeição: Não informada Tributação Monofásica Ad Valorem da CBS [nItem: 999] Observação: Vide tabela acima",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB101-10": {
+  "cStat": 1260,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Padrão de Combustível da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB101-20": {
+  "cStat": 1261,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Padrão de Combustível da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB101c-10": {
+  "cStat": 1262,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Padrão Ad Valorem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 62"
+ },
+ "UB102-10": {
+  "cStat": 1263,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica de Combustível com Retenção da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB102-20": {
+  "cStat": 1264,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica de Combustível com Retenção da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB102c-10": {
+  "cStat": 1265,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Valorem com Retenção difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB103-10": {
+  "cStat": 1266,
+  "mensagem": "Rejeição: Não informada a Tributação Monofásica Retida Anteriormente da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB103-20": {
+  "cStat": 1267,
+  "mensagem": "Rejeição: Informada indevidamente a Tributação Monofásica Retida Anteriormente da CBS Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB103a-10": {
+  "cStat": 1268,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Valorem retido anteriormente difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": null,
+  "fonte": "NT 2025.002 v1.52, p. 63"
+ },
+ "UB104-10": {
+  "cStat": 1269,
+  "mensagem": "Rejeição: Não informado o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório da CBS Monofásica Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 64"
+ },
+ "UB104-20": {
+  "cStat": 1270,
+  "mensagem": "Rejeição: Informado indevidamente o grupo de informações sobre mistura de EAC com gasolina A em percentual inferior ou superior ao obrigatório da CBS Monofásica Ad Valorem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 64"
+ },
+ "UB104a-10": {
+  "cStat": 1271,
+  "mensagem": "Rejeição: Quantidade de Biocombustível (EAC) a recolher ou a ressarcir da CBS Monofásica Ad Valorem difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 64"
+ },
+ "UB104b-10": {
+  "cStat": 1272,
+  "mensagem": "Rejeição: Valor da CBS Monofásica Ad Valorem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 64"
+ },
+ "UB105a-10": {
+  "cStat": 1070,
+  "mensagem": "Rejeição: Valor do IBS monofásico difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB105b-10": {
+  "cStat": 1071,
+  "mensagem": "Rejeição: Valor da CBS monofásico difere do calculado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB106-30": {
+  "cStat": 1133,
+  "mensagem": "Rejeição: Finalidade de Emissão da Nota Fiscal incompatível com o CST [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB106-31": {
+  "cStat": 1168,
+  "mensagem": "Rejeição: Tipo de Nota de Débito incompatível com o CST [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB106-40": {
+  "cStat": 1129,
+  "mensagem": "Rejeição: Valor do IBS ou da CBS deve ser maior que zero na transferência de crédito. [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB112-10": {
+  "cStat": 1169,
+  "mensagem": "Rejeição: Grupo de Ajuste de Competência informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB112-20": {
+  "cStat": 1170,
+  "mensagem": "Rejeição: Grupo de Ajuste de Competência não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB112-30": {
+  "cStat": 1171,
+  "mensagem": "Rejeição: Valor do IBS ou da CBS deve ser maior que zero no ajuste de competência [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB116-10": {
+  "cStat": 1172,
+  "mensagem": "Rejeição: Grupo de Estorno de Crédito informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 65"
+ },
+ "UB116-20": {
+  "cStat": 1173,
+  "mensagem": "Rejeição: Grupo de Estorno de Crédito não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB116-30": {
+  "cStat": 1174,
+  "mensagem": "Rejeição: Valor do IBS ou da CBS deve ser maior que zero no estorno de crédito [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB120-10": {
+  "cStat": 1049,
+  "mensagem": "Rejeição: Não é permitido o uso de Crédito Presumido na NFC-e modelo 65 [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB120-20": {
+  "cStat": 1175,
+  "mensagem": "Rejeição: Grupo de Crédito Presumido na Operação informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB122-10": {
+  "cStat": 1055,
+  "mensagem": "Rejeição: Código de Crédito Presumido (cCredPres) da Operação inexistente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB123-10": {
+  "cStat": 1053,
+  "mensagem": "Rejeição: Crédito Presumido para o IBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB123-20": {
+  "cStat": 1054,
+  "mensagem": "Rejeição: Crédito Presumido para o IBS não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB125-10": {
+  "cStat": 1107,
+  "mensagem": "Rejeição: Valor do Crédito Presumido do IBS não pode ser superior a vProd [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB126-10": {
+  "cStat": 1056,
+  "mensagem": "Rejeição: Valor do Crédito Presumido em condição suspensiva do IBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 66"
+ },
+ "UB127-10": {
+  "cStat": 1050,
+  "mensagem": "Rejeição: Crédito Presumido para a CBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB127-20": {
+  "cStat": 1058,
+  "mensagem": "Rejeição: Crédito Presumido para a CBS não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB129-10": {
+  "cStat": 1124,
+  "mensagem": "Rejeição: Valor do Crédito Presumido da CBS não pode ser superior a vProd [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB130-10": {
+  "cStat": 1060,
+  "mensagem": "Rejeição: Valor do Crédito Presumido da CBS informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB131-10": {
+  "cStat": 1138,
+  "mensagem": "Rejeição: Não é permitido o uso de Crédito Presumido ZFM na NFC-e modelo 65 [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB131-20": {
+  "cStat": 1134,
+  "mensagem": "Rejeição: CST do IBS/CBS informado não permite informação do grupo para apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB131-30": {
+  "cStat": 1135,
+  "mensagem": "Rejeição: CST do IBS/CBS informado exige a informação do grupo para apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB131-40": {
+  "cStat": 1158,
+  "mensagem": "Rejeição: Tipo de Nota de Crédito não permite o grupo para apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB131-50": {
+  "cStat": 1159,
+  "mensagem": "Rejeição: Tipo de Nota de Crédito exige o grupo para apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB132-10": {
+  "cStat": 1160,
+  "mensagem": "Rejeição: Ano e mês referência do período de apuração superior ao ano e mês atual [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "UB133-10": {
+  "cStat": 1136,
+  "mensagem": "Rejeição: Não é possível repetir o Tipo de Classificação para o cálculo do crédito presumido na ZFM neste DFe [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 67"
+ },
+ "VB01-05": {
+  "cStat": 1137,
+  "mensagem": "Rejeição: Valor total do Item (vItem) não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 68"
+ },
+ "VB01-10": {
+  "cStat": 1105,
+  "mensagem": "Rejeição: Valor total do Item (vItem) difere do somatório dos valores que o compõem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 8"
+ },
+ "VB01-20": {
+  "cStat": 1105,
+  "mensagem": "Rejeição: Valor total do Item (vItem) difere do somatório dos valores que o compõem [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 9"
+ },
+ "VB02-10": {
+  "cStat": 1072,
+  "mensagem": "Rejeição: Item referenciado em duplicidade.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2024.002 v1.10, p. 37"
+ },
+ "VB02-20": {
+  "cStat": 1072,
+  "mensagem": "Rejeição: Mais de um documento fiscal referenciado.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2024.002 v1.10, p. 37"
+ },
+ "VC02-04": {
+  "cStat": 708,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 não pode referenciar documento fiscal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "VC02-05": {
+  "cStat": 1010,
+  "mensagem": "Rejeição: NF-e com referenciamento de documento a nível de nota e a nível de item [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-07": {
+  "cStat": 1042,
+  "mensagem": "Rejeição: NF-e com referenciamento a nível de item informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-10": {
+  "cStat": 1038,
+  "mensagem": "Rejeição: DFeReferenciado não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-14": {
+  "cStat": 321,
+  "mensagem": "Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado por item [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-20": {
+  "cStat": 1072,
+  "mensagem": "Rejeição: DFe/Item referenciado em duplicidade [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-30": {
+  "cStat": 1130,
+  "mensagem": "Rejeição: Mais de um documento fiscal referenciado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 69"
+ },
+ "VC02-40": {
+  "cStat": 679,
+  "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido [nItem:nnn]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "VC02-50": {
+  "cStat": 708,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 não pode referenciar documento fiscal",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "VC03-10": {
+  "cStat": 1039,
+  "mensagem": "Rejeição: nItem do DFeReferenciado informado indevidamente [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "VC03-20": {
+  "cStat": 1048,
+  "mensagem": "Rejeição: nItem do DFeReferenciado não informado [nItem: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W01a-10": {
+  "cStat": 1282,
+  "mensagem": "Rejeição: Total Líquido não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 10"
+ },
+ "W01a-20": {
+  "cStat": 1283,
+  "mensagem": "Rejeição: Total Líquido difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.008 v1.00, p. 10"
+ },
+ "W03-10": {
+  "cStat": 531,
+  "mensagem": "Rejeição: Total da BC ICMS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W03-20": {
+  "cStat": 935,
+  "mensagem": "Rejeição: Valor total da Base de Cálculo superior ao valor limite estabelecido [Valor Limite: R$ XXX.XXX,XX] (valor definido pela UF)",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04-10": {
+  "cStat": 532,
+  "mensagem": "Rejeição: Total do ICMS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04-20": {
+  "cStat": 417,
+  "mensagem": "Rejeição: Total do ICMS superior ao valor limite estabelecido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04a-10": {
+  "cStat": 795,
+  "mensagem": "Rejeição: Total do ICMS desonerado difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04b-10": {
+  "cStat": 861,
+  "mensagem": "Rejeição: Total do FCP difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04c-10": {
+  "cStat": 798,
+  "mensagem": "Rejeição: Valor total do ICMS relativo Fundo de Combate à Pobreza (FCP) da UF de destino difere do somatório do valor dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04e-10": {
+  "cStat": 799,
+  "mensagem": "Rejeição: Valor total do ICMS Interestadual da UF de destino difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W04g-10": {
+  "cStat": 800,
+  "mensagem": "Rejeição: Valor total do ICMS Interestadual da UF do remetente difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W05-10": {
+  "cStat": 533,
+  "mensagem": "Rejeição: Total da BC ICMS-ST difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W06-10": {
+  "cStat": 534,
+  "mensagem": "Rejeição: Total do ICMS-ST difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W06-20": {
+  "cStat": 418,
+  "mensagem": "Rejeição: Total do ICMS ST superior ao valor limite estabelecido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W06a-10": {
+  "cStat": 862,
+  "mensagem": "Rejeição: Total do FCP ST difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W06b-10": {
+  "cStat": 859,
+  "mensagem": "Rejeição: Total do FCP retido anteriormente por Substituição Tributária difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 120"
+ },
+ "W07-10": {
+  "cStat": 564,
+  "mensagem": "Rejeição: Total do Produto / Serviço difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W08-10": {
+  "cStat": 535,
+  "mensagem": "Rejeição: Total do Frete difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W09-10": {
+  "cStat": 536,
+  "mensagem": "Rejeição: Total do Seguro difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W10-10": {
+  "cStat": 537,
+  "mensagem": "Rejeição: Total do Desconto difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W11-10": {
+  "cStat": 601,
+  "mensagem": "Rejeição: Total do II difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W12-10": {
+  "cStat": 538,
+  "mensagem": "Rejeição: Total do IPI difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W12a-10": {
+  "cStat": 863,
+  "mensagem": "Rejeição: Total do IPI devolvido difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W13-10": {
+  "cStat": 602,
+  "mensagem": "Rejeição: Total do PIS difere do somatório dos itens sujeitos ao ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W14-10": {
+  "cStat": 603,
+  "mensagem": "Rejeição: Total da COFINS difere do somatório dos itens sujeitos ao ICMS",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W15-10": {
+  "cStat": 604,
+  "mensagem": "Rejeição: Total do vOutro difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 121"
+ },
+ "W16-10": {
+  "cStat": 610,
+  "mensagem": "Rejeição: Total da NF difere do somatório dos Valores que compõe o valor Total da NF.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.001 v1.60, p. 41"
+ },
+ "W16-20": {
+  "cStat": 628,
+  "mensagem": "Rejeição: Total da NF superior ao valor limite estabelecido pela SEFAZ [Limite]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 122"
+ },
+ "W16-30": {
+  "cStat": 780,
+  "mensagem": "Rejeição: Total da NFC-e ou NF-e com DANFE Simplificado Tipo 2 superior ao valor limite estabelecido pela SEFAZ [Limite]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 18"
+ },
+ "W16-40": {
+  "cStat": 750,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com valor total superior ao permitido para destinatário não identificado (Código) [Limite]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "W16-50": {
+  "cStat": 751,
+  "mensagem": "Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Nome) [Limite]",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 122"
+ },
+ "W16-60": {
+  "cStat": 752,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com valor total superior ao permitido para destinatário não identificado (Endereço) [Limite]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "W16a-10": {
+  "cStat": 685,
+  "mensagem": "Rejeição: Total do Valor Aproximado dos Tributos difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W18-10": {
+  "cStat": 605,
+  "mensagem": "Rejeição: Total do vServ difere do somatório do vProd dos itens sujeitos ao ISSQN",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W19-10": {
+  "cStat": 606,
+  "mensagem": "Rejeição: Total do vBC do ISS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W20-10": {
+  "cStat": 607,
+  "mensagem": "Rejeição: Total do ISS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W21-10": {
+  "cStat": 608,
+  "mensagem": "Rejeição: Total do PIS difere do somatório dos itens sujeitos ao ISSQN",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22-10": {
+  "cStat": 609,
+  "mensagem": "Rejeição: Total da COFINS difere do somatório dos itens sujeitos ao ISSQN",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22b-10": {
+  "cStat": 364,
+  "mensagem": "Rejeição: Total do valor da dedução do ISS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22c-10": {
+  "cStat": 365,
+  "mensagem": "Rejeição: Total de outras retenções difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22d-10": {
+  "cStat": 366,
+  "mensagem": "Rejeição: Total do desconto incondicionado ISS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22e-10": {
+  "cStat": 367,
+  "mensagem": "Rejeição: Total do desconto condicionado ISS difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W22f-10": {
+  "cStat": 368,
+  "mensagem": "Rejeição: Total de ISS retido difere do somatório dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 123"
+ },
+ "W31-10": {
+  "cStat": 1073,
+  "mensagem": "Rejeição: Total de IS informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W31-20": {
+  "cStat": 1117,
+  "mensagem": "Rejeição: Total de IS não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W33-10": {
+  "cStat": 1075,
+  "mensagem": "Rejeição: Total do Imposto Seletivo difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W34-10": {
+  "cStat": 1118,
+  "mensagem": "Rejeição: Total de IBS e CBS informado indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W34-20": {
+  "cStat": 1119,
+  "mensagem": "Rejeição: Total de IBS e CBS não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W35-10": {
+  "cStat": 1076,
+  "mensagem": "Rejeição: Total da BC do IBS e da CBS difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W38-10": {
+  "cStat": 1077,
+  "mensagem": "Rejeição: Total de Diferimento do IBS UF difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W39-10": {
+  "cStat": 1078,
+  "mensagem": "Rejeição: Total Devolvido do IBS UF difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W41-10": {
+  "cStat": 1080,
+  "mensagem": "Rejeição: Total de IBS UF difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W43-10": {
+  "cStat": 1081,
+  "mensagem": "Rejeição: Total de Diferimento do IBS Municipal difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 70"
+ },
+ "W44-10": {
+  "cStat": 1082,
+  "mensagem": "Rejeição: Total Devolvido do IBS Municipal difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W46-10": {
+  "cStat": 1084,
+  "mensagem": "Rejeição: Total de IBS Municipal difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W47-10": {
+  "cStat": 1085,
+  "mensagem": "Rejeição: Total do IBS difere da soma do vIBS dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W48-10": {
+  "cStat": 1086,
+  "mensagem": "Rejeição: Total de Crédito Presumido do IBS UF difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W53-10": {
+  "cStat": 1088,
+  "mensagem": "Rejeição: Total de Diferimento da CBS difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W54-10": {
+  "cStat": 1089,
+  "mensagem": "Rejeição: Total Devolvido da CBS difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W56-10": {
+  "cStat": 1091,
+  "mensagem": "Rejeição: Total de CBS difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W56a-10": {
+  "cStat": 1087,
+  "mensagem": "Rejeição: Total de Crédito Presumido da CBS difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W58-10": {
+  "cStat": 1092,
+  "mensagem": "Rejeição: Total do IBS monofásico difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59-10": {
+  "cStat": 1093,
+  "mensagem": "Rejeição: Total da CBS monofásica difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59a-10": {
+  "cStat": 1120,
+  "mensagem": "Rejeição: Total do IBS monofásico sujeito à retenção difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59b-10": {
+  "cStat": 1121,
+  "mensagem": "Rejeição: Total da CBS monofásica sujeita à retenção difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59c-10": {
+  "cStat": 1122,
+  "mensagem": "Rejeição: Total do IBS monofásico retido anteriormente difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59d-10": {
+  "cStat": 1123,
+  "mensagem": "Rejeição: Total da CBS monofásica retida anteriormente difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59f-10": {
+  "cStat": 1176,
+  "mensagem": "Rejeição: Total do IBS estornado difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W59g-10": {
+  "cStat": 1177,
+  "mensagem": "Rejeição: Total da CBS estornada difere da soma dos itens",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W60-05": {
+  "cStat": 1004,
+  "mensagem": "Rejeição: Valor total da NF-e com IBS / CBS / IS (vNFTot) não informado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "W60-10": {
+  "cStat": 1094,
+  "mensagem": "Rejeição: Total da NFe difere da soma do total dos itens da Nota",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2025.002 v1.52, p. 71"
+ },
+ "X02-10": {
+  "cStat": 753,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com Frete",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "X02-20": {
+  "cStat": 868,
+  "mensagem": "Rejeição: Grupos Veiculo Transporte e Reboque não devem ser informados",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X03-10": {
+  "cStat": 754,
+  "mensagem": "Rejeição: NFC-e com dados do Transportador",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "X03-20": {
+  "cStat": 786,
+  "mensagem": "Rejeição: NFC-e de entrega a domicílio sem dados do Transportador",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "X03-30": {
+  "cStat": 845,
+  "mensagem": "Rejeição: O Grupo Transportador não pode ser preenchido para Modalidade do frete informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 16"
+ },
+ "X04-10": {
+  "cStat": 362,
+  "mensagem": "Rejeição: Venda de combustível sem informação do Transportador Página 13 / 13",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2022.002 v1.30a, p. 13"
+ },
+ "X04-20": {
+  "cStat": 542,
+  "mensagem": "Rejeição: CNPJ do Transportador inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X04-30": {
+  "cStat": 846,
+  "mensagem": "Rejeição: Transporte próprio por conta do Remetente e CNPJ Base ou CPF do Transportador difere do CNPJ Base ou CPF do Remetente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 16"
+ },
+ "X04-40": {
+  "cStat": 846,
+  "mensagem": "Rejeição: Transporte próprio por conta do Remetente e CNPJ Base ou CPF do Transportador difere do CNPJ Base ou CPF do Remetente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 16"
+ },
+ "X04-50": {
+  "cStat": 847,
+  "mensagem": "Rejeição: Transporte não é próprio por conta do Remetente e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Remetente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 16"
+ },
+ "X04-60": {
+  "cStat": 847,
+  "mensagem": "Rejeição: Transporte não é próprio por conta do Remetente e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Remetente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 17"
+ },
+ "X04-70": {
+  "cStat": 848,
+  "mensagem": "Rejeição: Transporte próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador difere do CNPJ Base ou CPF do Destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 17"
+ },
+ "X04-80": {
+  "cStat": 848,
+  "mensagem": "Rejeição: Transporte próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador difere do CNPJ Base ou CPF do Destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 17"
+ },
+ "X04-90": {
+  "cStat": 849,
+  "mensagem": "Rejeição: Transporte não é próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 17"
+ },
+ "X04-100": {
+  "cStat": 849,
+  "mensagem": "Rejeição: Transporte não é próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 18"
+ },
+ "X05-10": {
+  "cStat": 543,
+  "mensagem": "Rejeição: CPF do Transportador inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X07-10": {
+  "cStat": 559,
+  "mensagem": "Rejeição: UF do Transportador não informada",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X07-20": {
+  "cStat": 544,
+  "mensagem": "Rejeição: IE do Transportador inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X11-10": {
+  "cStat": 755,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados de Retenção do ICMS no Transporte",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "X16-10": {
+  "cStat": 722,
+  "mensagem": "Rejeição: CFOP de Transporte Inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X17-10": {
+  "cStat": 288,
+  "mensagem": "Rejeição: Código Município do Fato Gerador do Transporte inexistente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 124"
+ },
+ "X18-10": {
+  "cStat": 756,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados do veículo de Transporte",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "X22-10": {
+  "cStat": 757,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados de Reboque do veículo de Transporte",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "X25a-10": {
+  "cStat": 758,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados do Vagão de Transporte",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "X25b-10": {
+  "cStat": 759,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados da Balsa de Transporte",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "Y01-10": {
+  "cStat": 760,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados de cobrança (Fatura, Duplicata)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "Y01-20": {
+  "cStat": 905,
+  "mensagem": "Rejeição: Campos do grupo Fatura não informados",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y05-10": {
+  "cStat": 901,
+  "mensagem": "Rejeição: Valor do Desconto da Fatura maior que Valor Original da Fatura",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y06-10": {
+  "cStat": 902,
+  "mensagem": "Rejeição: Valor Liquido da Fatura difere do Valor Original menos o Valor do Desconto",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y08-10": {
+  "cStat": 852,
+  "mensagem": "Rejeição: Número da parcela inválido ou não informado [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y09-20": {
+  "cStat": 900,
+  "mensagem": "Rejeição: Data de vencimento da parcela não informada ou menor que Data de Emissão [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y09-30": {
+  "cStat": 850,
+  "mensagem": "Rejeição: Data de vencimento da parcela não informada ou menor que a Data de vencimento da parcela anterior [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "Y09-40": {
+  "cStat": 853,
+  "mensagem": "Rejeição: Dados de cobrança não devem ser informados para pagamento à vista",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 10"
+ },
+ "Y09-50": {
+  "cStat": 797,
+  "mensagem": "Rejeição: Data de vencimento da parcela superior a 10 anos da data atual [nOcor: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 10"
+ },
+ "Y10-10": {
+  "cStat": 851,
+  "mensagem": "Rejeição: Soma do valor das parcelas difere do Valor Líquido da Fatura",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "YA02-04": {
+  "cStat": 871,
+  "mensagem": "Rejeição: O campo Meio de Pagamento deve ser preenchido com a opção Sem Pagamento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "YA02-10": {
+  "cStat": 857,
+  "mensagem": "Rejeição: Informado Duplicata Mercantil como Forma de Pagamento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "YA02-40": {
+  "cStat": 899,
+  "mensagem": "Rejeição: Informado incorretamente o campo meio de pagamento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 125"
+ },
+ "YA02-50": {
+  "cStat": 436,
+  "mensagem": "Rejeição: Informado 99-Outros como meio de pagamento",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA02-60": {
+  "cStat": 436,
+  "mensagem": "Rejeição: Código do meio de pagamento inexistente.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA02a-10": {
+  "cStat": 441,
+  "mensagem": "Rejeição: Descrição do pagamento obrigatória para meio de pagamento 99-outros",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA02a-20": {
+  "cStat": 442,
+  "mensagem": "XXX Rejeição: Descrição do pagamento não permitida.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA03-10": {
+  "cStat": 865,
+  "mensagem": "Rejeição: Total dos pagamentos menor que o total da nota",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA03-20": {
+  "cStat": 866,
+  "mensagem": "Rejeição: Ausência de troco quando o valor dos pagamentos informados for maior que o total da nota",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA03-30": {
+  "cStat": 904,
+  "mensagem": "Rejeição: Informado indevidamente campo valor de pagamento",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA03a-10": {
+  "cStat": 657,
+  "mensagem": "Rejeição: Data de Pagamento inválida [nOcor:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "YA03c-10": {
+  "cStat": 961,
+  "mensagem": "Rejeição: CNPJ transacional do pagamento inválido [nOcor:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "YA04-10": {
+  "cStat": 391,
+  "mensagem": "Rejeição: Não informados os dados do cartão de crédito / débito nas Formas de Pagamento da Nota Fiscal",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA04-20": {
+  "cStat": 963,
+  "mensagem": "Rejeição: Tipo de pagamento não aceita o grupo de cartões ou boletos. [nOcor:999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 14"
+ },
+ "YA04a-20": {
+  "cStat": 737,
+  "mensagem": "Rejeição: Pagamento com cartão de crédito em sistema de automação não integrado",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA05-10": {
+  "cStat": 392,
+  "mensagem": "Rejeição: Não informados os dados da operação de pagamento por cartão de crédito / débito",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA05-20": {
+  "cStat": 437,
+  "mensagem": "Rejeição: CNPJ da instituição de pagamento inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA06-10": {
+  "cStat": 443,
+  "mensagem": "Rejeição: Código da bandeira de cartão de crédito e/ou débito inexistente.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YA09-10": {
+  "cStat": 869,
+  "mensagem": "Rejeição: Valor do troco incorreto",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 126"
+ },
+ "YA09-20": {
+  "cStat": 965,
+  "mensagem": "Rejeição: Valor do troco acima do permitido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2023.004 v1.20, p. 15"
+ },
+ "YB01-10": {
+  "cStat": 438,
+  "mensagem": "Rejeição: Obrigatória as informações do intermediador da transação para operação por site de terceiros",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YB01-20": {
+  "cStat": 439,
+  "mensagem": "Rejeição: Informações do intermediador da transação para operação por site de terceiros preenchido indevidamente",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YB02-10": {
+  "cStat": 440,
+  "mensagem": "Rejeição: CNPJ do intermediador da transação inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2020.006 v1.31, p. 11"
+ },
+ "YC03-10": {
+  "cStat": 215,
+  "mensagem": "Rejeição: Falha no esquema XML Observação: Validação realizada pelo Schema XML",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.006 v1.00, p. 7"
+ },
+ "YC04-20": {
+  "cStat": 215,
+  "mensagem": "Rejeição: Falha no esquema XML Observação: Validação realizada pelo Schema XML",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.006 v1.00, p. 7"
+ },
+ "YC05-10": {
+  "cStat": 1273,
+  "mensagem": "Rejeição: Meio de pagamento inválido [nPag: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.006 v1.00, p. 8"
+ },
+ "YC06-10": {
+  "cStat": 1274,
+  "mensagem": "Rejeição: CNPJ do recebedor do pagamento inválido [nPag: 999]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.006 v1.00, p. 8"
+ },
+ "Z02-10": {
+  "cStat": 949,
+  "mensagem": "Rejeição: NFC-e sem preenchimento das Informações Adicionais de Interesse do Fisco",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 18"
+ },
+ "Z02-20": {
+  "cStat": 950,
+  "mensagem": "Rejeição: Informações Adicionais de Interesse do Fisco abaixo do tamanho mínimo exigido pela UF.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 18"
+ },
+ "Z13-10": {
+  "cStat": 941,
+  "mensagem": "Rejeição: Número do Regime especial inválido.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.004 v1.35, p. 18"
+ },
+ "ZA01-10": {
+  "cStat": 355,
+  "mensagem": "Rejeição: Informar o local de saída do Pais no caso da exportação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZA01-20": {
+  "cStat": 356,
+  "mensagem": "Rejeição: Informar o local de saída do Pais somente no caso da exportação",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZA01-30": {
+  "cStat": 814,
+  "mensagem": "Rejeição: Nota Fiscal com grupo de comércio exterior",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZB01-10": {
+  "cStat": 762,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados de compras (Empenho, Pedido, Contrato)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 19"
+ },
+ "ZB02-10": {
+  "cStat": 359,
+  "mensagem": "Rejeição: NF-e de venda a Órgão Público sem informar a Nota de Empenho",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZB02-20": {
+  "cStat": 360,
+  "mensagem": "Rejeição: NF-e com Nota de Empenho inválida para a UF.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZB02-30": {
+  "cStat": 361,
+  "mensagem": "Rejeição: NF-e com Nota de Empenho inexistente na UF.",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 127"
+ },
+ "ZC01-10": {
+  "cStat": 763,
+  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com dados de aquisição de Cana",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZD01-10": {
+  "cStat": 972,
+  "mensagem": "Rejeição: Obrigatória as informações do responsável técnico",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 15"
+ },
+ "ZD02-10": {
+  "cStat": 973,
+  "mensagem": "Rejeição: CNPJ do responsável técnico inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 15"
+ },
+ "ZD07-10": {
+  "cStat": 975,
+  "mensagem": "Rejeição: Obrigatória a informação do identificador do CSRT e do Hash do CSRT",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 15"
+ },
+ "ZE01-10": {
+  "cStat": 819,
+  "mensagem": "Rejeição: Informação de Solicitação de NFF não pode estar preenchido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 21"
+ },
+ "ZE01-20": {
+  "cStat": 834,
+  "mensagem": "Rejeição: Informação de Solicitação de NFF não preenchida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2021.002 v1.12, p. 21"
+ },
+ "ZF03a-10": {
+  "cStat": 308,
+  "mensagem": "Rejeição: CPF inválido para Responsável Técnico do receituário de agrotóxico.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2024.003 v1.10, p. 11"
+ },
+ "ZG01-10": {
+  "cStat": 1179,
+  "mensagem": "Rejeição: Ambiente de autorização inválido para emissão pelo PAA",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 13"
+ },
+ "ZG02-10": {
+  "cStat": 1180,
+  "mensagem": "Rejeição: CNPJ do PAA inválido",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 13"
+ },
+ "ZG02-20": {
+  "cStat": 1181,
+  "mensagem": "Rejeição: Provedor de Assinatura e Autorização não existe na base da SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 14"
+ },
+ "ZG02-30": {
+  "cStat": 1182,
+  "mensagem": "Rejeição: Emitente não associado ao PAA",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 14"
+ },
+ "ZG02-34": {
+  "cStat": 872,
+  "mensagem": "Rejeição: Série da NF difere da estipulada para este Emitente no PAA",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 14"
+ },
+ "ZG04-10": {
+  "cStat": 1184,
+  "mensagem": "Rejeição: Emissão por PAA com Assinatura RSA inválida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.001 v1.02b, p. 14"
+ },
+ "ZX01-10": {
+  "cStat": 393,
+  "mensagem": "Rejeição: NF-e com o grupo de Informações Suplementares",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 128"
+ },
+ "ZX02-10": {
+  "cStat": 394,
+  "mensagem": "Rejeição: Nota Fiscal sem a informação do QR-Code",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZX02-15": {
+  "cStat": 903,
+  "mensagem": "Rejeição Versão informada no QR-Code (“100”) não é mais válida para a data de emissão",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 128"
+ },
+ "ZX02-20": {
+  "cStat": 395,
+  "mensagem": "Rejeição: Endereço do site da UF da Consulta via QR-Code diverge do previsto",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZX02-22": {
+  "cStat": 813,
+  "mensagem": "Rejeição: QR-Code com sequência de escape para o e-comercial. Usar CDATA",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-24": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (chAcesso)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-28": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (chAcesso)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-32": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (nVersao)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-40": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (tpAmp)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-44": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (tpAmb)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-48": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (cDest)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-52": {
+  "cStat": 399,
+  "mensagem": "Rejeição: Parâmetro de Identificação do destinatário no QR-Code para Nota Fiscal sem identificação do destinatário",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-56": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (cDest)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-60": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (dhEmi)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-64": {
+  "cStat": 400,
+  "mensagem": "Rejeição: Parâmetro do QR-Code não está no formato hexadecimal (dhEmi)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-68": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (dhEmi)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 129"
+ },
+ "ZX02-72": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (vNF)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-76": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (vNF)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-80": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (vICMS)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-84": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (vICMS)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-88": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (digVal)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-92": {
+  "cStat": 400,
+  "mensagem": "Rejeição: Parâmetro do QR-Code não está no formato hexadecimal (digVal)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-96": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (digVal)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-100": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (cIdToken)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-104": {
+  "cStat": 462,
+  "mensagem": "Rejeição: Código Identificador do CSC no QR-Code não cadastrado na SEFAZ",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-108": {
+  "cStat": 463,
+  "mensagem": "Rejeição: Código Identificador do CSC no QR-Code foi revogado pela empresa",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-112": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente (cHashQRCode)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-116": {
+  "cStat": 400,
+  "mensagem": "Rejeição: Parâmetro do QR-Code não está no formato hexadecimal (cHashQRCode)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-120": {
+  "cStat": 464,
+  "mensagem": "Rejeição: Código de Hash no QR-Code difere do calculado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 130"
+ },
+ "ZX02-220": {
+  "cStat": 672,
+  "mensagem": "Rejeição: NF-e com DANFE Simplificado Tipo 2 com versão de qrCode não permitida",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZX02-222": {
+  "cStat": 444,
+  "mensagem": "Rejeição: NFC-e com qrCode na versão 2 para Pessoa Física",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 11"
+ },
+ "ZX02-224": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx)]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZX02-228": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal [Param: xxx)].",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 20"
+ },
+ "ZX02-232": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx)]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 21"
+ },
+ "ZX02-236": {
+  "cStat": 398,
+  "mensagem": "Rejeição: Parâmetro Versão informada no QR-Code diverge do previsto [Param: xxx].",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 21"
+ },
+ "ZX02-240": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 21"
+ },
+ "ZX02-244": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 21"
+ },
+ "ZX02-260": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 21"
+ },
+ "ZX02-268": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 22"
+ },
+ "ZX02-272": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 22"
+ },
+ "ZX02-276": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 22"
+ },
+ "ZX02-288": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 132"
+ },
+ "ZX02-292": {
+  "cStat": 400,
+  "mensagem": "Rejeição: Parâmetro Digest Value no QR-Code não está no formato hexadecimal (Caracteres: “0-9”, “a-f”,“A-F”).",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 132"
+ },
+ "ZX02-296": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal: [Param: xxx)]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 132"
+ },
+ "ZX02-300": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "NT 2025.001 v1.03, p. 12"
+ },
+ "ZX02-304": {
+  "cStat": 462,
+  "mensagem": "Rejeição: Parâmetro Código Identificador do CSC no QR-Code não cadastrado na SEFAZ.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 132"
+ },
+ "ZX02-308": {
+  "cStat": 463,
+  "mensagem": "Rejeição: Parâmetro Código Identificador do CSC no QR-Code foi revogado pela empresa anteriormente a Data de Emissão.",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 132"
+ },
+ "ZX02-312": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 133"
+ },
+ "ZX02-316": {
+  "cStat": 400,
+  "mensagem": "Rejeição: Parâmetro Hash no QR-Code não está no formato hexadecimal (Caracteres: “0-9”, “a-f”,“A-F”).",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 133"
+ },
+ "ZX02-320": {
+  "cStat": 464,
+  "mensagem": "Rejeição: Parâmetro Hash no QR-Code diverge do calculado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 133"
+ },
+ "ZX02-324": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 22"
+ },
+ "ZX02-326": {
+  "cStat": 396,
+  "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 22"
+ },
+ "ZX02-328": {
+  "cStat": 397,
+  "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (idDest)",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 23"
+ },
+ "ZX02-330": {
+  "cStat": 445,
+  "mensagem": "Rejeição: Parâmetro assinatura não deve ser informado no qrCode",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 23"
+ },
+ "ZX02-334": {
+  "cStat": 474,
+  "mensagem": "Rejeição: Parâmetro assinatura deve ser informado no qrCode",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 23"
+ },
+ "ZX02-338": {
+  "cStat": 583,
+  "mensagem": "Rejeição: Valor da assinatura do qrCode difere do valor calculado",
+  "efeito": "rejeicao",
+  "aplicacao": "obrigatoria",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "fonte": "NT 2026.002 v1.11, p. 23"
+ },
+ "ZX03-20": {
+  "cStat": 878,
+  "mensagem": "Rejeição: Endereço do site da UF da Consulta por chave de acesso diverge do previsto",
+  "efeito": "rejeicao",
+  "aplicacao": "facultativa",
+  "modelos": [
+   "65"
+  ],
+  "fonte": "MOC 7.0 Anexo I, p. 133"
+ }
+}

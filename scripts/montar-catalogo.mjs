@@ -68,3 +68,22 @@ const ordenadas = [...regras.values()]
 writeFileSync('catalogo/regras.json', JSON.stringify(ordenadas, null, 1) + '\n')
 writeFileSync('catalogo/fontes.json', JSON.stringify(fontes, null, 1) + '\n')
 console.error(`\n${ordenadas.length} regras vigentes de ${fontes.length} documentos`)
+
+// Versão enxuta para o pacote: o que o validador mostra em cada problema, sem o texto longo da
+// regra (esse fica em catalogo/regras.json, para quem quiser ler a fonte).
+const enxuto = {}
+for (const r of ordenadas) {
+  enxuto[r.id] = {
+    cStat: r.cStat,
+    mensagem: r.mensagem,
+    efeito: r.efeito,
+    aplicacao: r.aplicacao,
+    modelos: r.modelos,
+    fonte: `${r.documento}, p. ${r.pagina}`,
+  }
+}
+writeFileSync(
+  'src/catalogo.js',
+  '// Gerado por scripts/montar-catalogo.mjs a partir de catalogo/regras.json. Não editar à mão.\n\n' +
+    `export default ${JSON.stringify(enxuto, null, 1)}\n`,
+)
