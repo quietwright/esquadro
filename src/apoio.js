@@ -53,3 +53,7 @@ export function fcpAceito(cUF, percentual) {
 export const fcpPermitidos = (cUF) => t.fcp[cUF] ?? []
 export const classificacaoTributaria = (cClassTrib) => t.cclasstrib[cClassTrib] ?? null
 export const fontesDasTabelas = t.fontes
+
+export function bandeiraVigente(tBand, dia) {
+  return t.bandeiras.some(([c, inicio, fim]) => c === tBand && vigente(inicio, fim, dia))
+}

@@ -32,13 +32,23 @@ export function comChave(xml) {
     .replaceAll(`NFe${ctx.chave}`, `NFe${chave}`)
 }
 
-// NFC-e derivada da fixture: modelo 65, DANFE NFC-e e sem destinatário identificado.
-export const NFCE = comChave(
-  nota([
-    ['<mod>55</mod>', '<mod>65</mod>'],
-    ['<tpImp>1</tpImp>', '<tpImp>4</tpImp>'],
-    [/<dest>.*<\/dest>/.exec(NFE_55)[0], ''],
-  ]),
+/** Põe (ou refaz) o QR Code versão 3 online com a chave atual da nota. */
+export function comQrCode(xml) {
+  const chave = /Id="NFe(\w{44})"/.exec(xml)[1]
+  const tpAmb = /<tpAmb>(\d)</.exec(xml)[1]
+  const supl = `<infNFeSupl><qrCode>https://www.homologacao.nfce.fazenda.sp.gov.br/qrcode?p=${chave}|3|${tpAmb}</qrCode><urlChave>https://www.homologacao.nfce.fazenda.sp.gov.br/consulta</urlChave></infNFeSupl>`
+  return xml.replace(/<infNFeSupl>.*<\/infNFeSupl>/, '').replace('</infNFe>', `</infNFe>${supl}`)
+}
+
+// NFC-e derivada da fixture: modelo 65, DANFE NFC-e, sem destinatário identificado e com QR Code.
+export const NFCE = comQrCode(
+  comChave(
+    nota([
+      ['<mod>55</mod>', '<mod>65</mod>'],
+      ['<tpImp>1</tpImp>', '<tpImp>4</tpImp>'],
+      [/<dest>.*<\/dest>/.exec(NFE_55)[0], ''],
+    ]),
+  ),
 )
 
 export function validarNota(xml, opcoes = {}) {

@@ -102,6 +102,11 @@ tabelas.meiosPagamento = corpo(lerXlsx(arquivo('meios-pagamento')), 'tPag')
   .map((l) => [l.tPag, data(l.dIniVig), data(l.dFimVig)])
 registrar('meios-pagamento')
 
+tabelas.bandeiras = corpo(lerXlsx(arquivo('bandeiras')), 'tBand')
+  .filter((l) => /^\d{2}$/.test(l.tBand))
+  .map((l) => [l.tBand, data(l.dIniVig), data(l.dFimVig)])
+registrar('bandeiras')
+
 // cClassTrib: o que as regras do grupo UB consultam.
 tabelas.cclasstrib = {}
 for (const l of corpo(lerXlsx(arquivo('cclasstrib')), 'cClassTrib')) {
