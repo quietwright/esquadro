@@ -60,6 +60,14 @@ const nfceAcimaDe10Mil = ({ modelo, total: t }) => modelo === '65' && num(t, 'IC
 
 export default [
   // --- ICMS ------------------------------------------------------------------------------
+  total('W03-10', icmsTot('vBC'), somaIcms('vBC')),
+  {
+    id: 'W03-20',
+    verificar({ total: t }, falhar) {
+      const vBC = num(t, 'ICMSTot/vBC')
+      if (vBC > 200000) falhar(el(t, 'ICMSTot/vBC'), `base de cálculo total ${brl(vBC)} acima do limite padrão de R$ 200.000,00`)
+    },
+  },
   total('W04-10', icmsTot('vICMS'), somaIcms('vICMS', (g) => !['40', '41', '50'].includes(val(g, 'CST')))),
   total('W04a-10', icmsTot('vICMSDeson'), somaIcms('vICMSDeson')),
   total('W04b-10', icmsTot('vFCP'), somaIcms('vFCP')),

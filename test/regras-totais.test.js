@@ -25,8 +25,10 @@ const IBSCBS_TOTAL =
   '<IBSCBSTot><vBCIBSCBS>100.00</vBCIBSCBS><gIBS><gIBSUF><vDif>0.00</vDif><vDevTrib>0.00</vDevTrib><vIBSUF>0.10</vIBSUF></gIBSUF>' +
   '<gIBSMun><vDif>0.00</vDif><vDevTrib>0.00</vDevTrib><vIBSMun>0.00</vIBSMun></gIBSMun><vIBS>0.10</vIBS><vCredPres>0.00</vCredPres><vCredPresCondSus>0.00</vCredPresCondSus></gIBS>' +
   '<gCBS><vDif>0.00</vDif><vDevTrib>0.00</vDevTrib><vCBS>0.90</vCBS><vCredPres>0.00</vCredPres><vCredPresCondSus>0.00</vCredPresCondSus></gCBS></IBSCBSTot>'
-const comItem = (item) => nota([['</COFINS>', `</COFINS>${item}`]])
-const RTC = nota([['</ICMSTot>', `</ICMSTot>${IBSCBS_TOTAL}`]], comItem(IBSCBS_ITEM))
+const comItem = (item, base = SEM_IBSCBS) => nota([['</COFINS>', `</COFINS>${item}`]], base)
+// A fixture já traz IBS/CBS coerente entre item e total.
+const RTC = NFE_55
+const SEM_IBSCBS = nota([[IBSCBS_ITEM, ''], [IBSCBS_TOTAL, '']])
 const rtc = (de, para) => nota([[de, para]], RTC)
 
 const MONO_ITEM = (campo) =>
@@ -55,6 +57,8 @@ test('notas coerentes de serviço e de IBS/CBS não acusam totais', () => {
 })
 
 const casos = [
+  ['W03-10', tot('vBC>100.00</vBC><vICMS>18.00', 'vBC>101.00</vBC><vICMS>18.00')],
+  ['W03-20', tot('vBC>100.00</vBC><vICMS>18.00', 'vBC>250000.00</vBC><vICMS>18.00')],
   ['W04-10', tot('vICMS>18.00</vICMS', 'vICMS>19.00</vICMS')],
   ['W04a-10', tot('vICMSDeson>0.00', 'vICMSDeson>1.00')],
   ['W04b-10', tot('vFCP>0.00', 'vFCP>1.00')],
@@ -98,9 +102,9 @@ const casos = [
   ['W22e-10', tot('/dCompet', '/dCompet><vDescCond>1.00</vDescCond', SERVICO)],
   ['W22f-10', tot('/dCompet', '/dCompet><vISSRet>1.00</vISSRet', SERVICO)],
   ['W31-10', tot('/ICMSTot', '/ICMSTot><ISTot><vIS>1.00</vIS></ISTot')],
-  ['W31-20', comItem('<IS><CSTIS>000</CSTIS><cClassTribIS>000001</cClassTribIS></IS>')],
-  ['W34-10', tot('/ICMSTot', '/ICMSTot><IBSCBSTot><vBCIBSCBS>100.00</vBCIBSCBS></IBSCBSTot')],
-  ['W34-20', comItem(IBSCBS_ITEM)],
+  ['W31-20', nota([['</COFINS>', '</COFINS><IS><CSTIS>000</CSTIS><cClassTribIS>000001</cClassTribIS></IS>']])],
+  ['W34-10', nota([[IBSCBS_ITEM, '']])],
+  ['W34-20', nota([[IBSCBS_TOTAL, '']])],
   ['W35-10', rtc('<vBCIBSCBS>100.00', '<vBCIBSCBS>101.00')],
   ['W38-10', rtc('<gIBSUF><vDif>0.00', '<gIBSUF><vDif>1.00')],
   ['W39-10', rtc('<vDevTrib>0.00</vDevTrib><vIBSUF>', '<vDevTrib>1.00</vDevTrib><vIBSUF>')],

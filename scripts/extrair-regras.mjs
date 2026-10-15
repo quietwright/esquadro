@@ -91,8 +91,20 @@ function bordasDoSvg(svg) {
   // Linha que atravessa quase a página toda também é borda, mesmo sem verticais nas pontas:
   // algumas NTs não desenham as verticais em parte das linhas da tabela.
   const encosta = (x, y) => verticais.some((v) => Math.abs(v.x - x) < 2 && v.y0 - 2 <= y && y <= v.y1 + 2)
-  const largura = Math.max(0, ...horizontais.map((h) => h.x1 - h.x0))
-  const bordas = horizontais.filter((h) => (encosta(h.x0, h.y) && encosta(h.x1, h.y)) || h.x1 - h.x0 > largura * 0.85)
+  // A largura é a da linha inteira (segmentos na mesma altura somados de ponta a ponta), porque
+  // as bordas vêm em segmentos por coluna e um risco longo pode ser do tamanho de uma coluna.
+  const extensao = new Map()
+  for (const h of horizontais) {
+    const k = Math.round(h.y * 2)
+    const e = extensao.get(k) ?? { x0: Infinity, x1: -Infinity }
+    extensao.set(k, { x0: Math.min(e.x0, h.x0), x1: Math.max(e.x1, h.x1) })
+  }
+  const larguraDaLinha = (h) => {
+    const e = extensao.get(Math.round(h.y * 2))
+    return e.x1 - e.x0
+  }
+  const largura = Math.max(0, ...[...extensao.values()].map((e) => e.x1 - e.x0))
+  const bordas = horizontais.filter((h) => (encosta(h.x0, h.y) && encosta(h.x1, h.y)) || larguraDaLinha(h) > largura * 0.85)
   const riscos = horizontais.filter((h) => !bordas.includes(h))
   return { horizontais: bordas, verticais, riscos }
 }
@@ -272,7 +284,15 @@ export function extrair(pdf, documento, primeira = 1, ultima = null) {
 
   paginas.forEach((todas, i) => {
     const pagina = primeira + i
-    const geometria = bordas[i] ?? { horizontais: [], verticais: [], riscos: [] }
+    const base = bordas[i] ?? { horizontais: [], verticais: [], riscos: [] }
+    // Traço que corta palavras pelo meio é risco, mesmo atravessando a linha inteira da tabela
+    // (linha revogada riscada célula por célula); borda de verdade passa entre as linhas de texto.
+    const cortaTexto = (h) => todas.some((p) => riscada(p, [h]))
+    const geometria = {
+      ...base,
+      horizontais: base.horizontais.filter((h) => !cortaTexto(h)),
+      riscos: [...base.riscos, ...base.horizontais.filter(cortaTexto)],
+    }
     for (const p of todas) p.riscada = riscada(p, geometria.riscos)
     const grade = celulas(todas, geometria)
     // Fluxo da página em ordem vertical: linhas de texto fora da grade (títulos) e linhas da grade.

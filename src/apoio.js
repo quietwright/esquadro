@@ -57,3 +57,8 @@ export const fontesDasTabelas = t.fontes
 export function bandeiraVigente(tBand, dia) {
   return t.bandeiras.some(([c, inicio, fim]) => c === tBand && vigente(inicio, fim, dia))
 }
+
+/** Indicadores do CST do IBS/CBS (1 exige, 0 veda, null: avaliar no cClassTrib), ou null. */
+export const indicadoresCstIbsCbs = (cst) => t.cstIbsCbs[cst] ?? null
+export const creditoPresumido = (cCredPres) => t.creditoPresumido[cCredPres] ?? null
+export const cstIbsCbsConhecido = (cst) => cst in t.cstIbsCbs || Object.values(t.cclasstrib).some((c) => c.cst === cst)

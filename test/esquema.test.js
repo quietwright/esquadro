@@ -92,3 +92,10 @@ test('texto solto dentro de grupo', () => {
 test('raiz errada', () => {
   assert.match(problemas('<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe"/>')[0].detalhe, /raiz <nfeProc> não existe/)
 })
+
+test('minInclusive de ano-mês compara como data', () => {
+  const xml = trocar('</COFINS>', '</COFINS>').replace('</gIBSCBS></IBSCBS>', '</gIBSCBS><gCredPresIBSZFM><competApur>2026-09</competApur><tpCredPresIBSZFM>1</tpCredPresIBSZFM><vCredPresIBSZFM>1.00</vCredPresIBSZFM></gCredPresIBSZFM></IBSCBS>')
+  assert.deepEqual(problemas(xml), [])
+  const [p] = problemas(xml.replace('2026-09', '2024-12'))
+  assert.match(p.detalhe, /menor que o mínimo 2025-01/)
+})

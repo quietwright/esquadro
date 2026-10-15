@@ -236,7 +236,11 @@ class Validador {
         return this.falha(no, `${onde}: valor "${resumir(valor)}" fora do formato ${grupo.join(' | ')}${dica}`)
       }
     }
-    if (tipo.minInclusive !== undefined && !(Number(valor) >= Number(tipo.minInclusive))) {
+    // Datas (gYearMonth: AAAA-MM) comparam como texto; números, como número.
+    const abaixoDoMinimo =
+      tipo.minInclusive !== undefined &&
+      (nativo === 'xs:gYearMonth' ? valor < tipo.minInclusive : !(Number(valor) >= Number(tipo.minInclusive)))
+    if (abaixoDoMinimo) {
       return this.falha(no, `${onde}: valor ${valor} menor que o mínimo ${tipo.minInclusive}`)
     }
   }

@@ -127,6 +127,36 @@ for (const l of corpo(lerXlsx(arquivo('cclasstrib')), 'cClassTrib')) {
 }
 registrar('cclasstrib')
 
+// Indicadores por CST do IBS/CBS: 1 exige, 0 veda, null quando a tabela manda avaliar no
+// cClassTrib ou não preenche.
+tabelas.cstIbsCbs = {}
+for (const l of corpo(lerXlsx(arquivo('cst-ibscbs')), 'CST-IBS/CBS')) {
+  if (!/^\d{3}$/.test(l['CST-IBS/CBS'])) continue
+  const ind = (k) => (l[k] === '1' ? 1 : l[k] === '0' ? 0 : null)
+  tabelas.cstIbsCbs[l['CST-IBS/CBS']] = {
+    gIBSCBS: ind('ind_gIBSCBS'),
+    gIBSCBSMono: ind('ind_gIBSCBSMono'),
+    gRed: ind('ind_gRed'),
+    gDif: ind('ind_gDif'),
+    gTribRegular: ind('ind_gTribRegular'),
+  }
+}
+registrar('cst-ibscbs')
+
+tabelas.creditoPresumido = {}
+for (const l of corpo(lerXlsx(arquivo('credito-presumido')), 'cCredPres')) {
+  if (!/^\d{2}$/.test(l.cCredPres)) continue
+  const ind = (k) => (l[k] === '1' ? 1 : l[k] === '0' ? 0 : null)
+  tabelas.creditoPresumido[l.cCredPres] = {
+    deduz: l.indDeduzCredPres === '1',
+    gIBSCredPres: ind('ind_gIBSCredPres'),
+    gCBSCredPres: ind('ind_gCBSCredPres'),
+    nfe: l.indNFe === '1',
+    nfce: l.indNFCe === '1',
+  }
+}
+registrar('credito-presumido')
+
 const json = JSON.stringify(tabelas)
 writeFileSync(
   'src/tabelas.js',

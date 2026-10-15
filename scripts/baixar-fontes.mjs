@@ -36,6 +36,8 @@ const TABELAS = {
   bandeiras: /^Tabela de bandeiras de Cartões/,
   anp: /^Tabela de Códigos? de Produtos da ANP/,
   'ncm-utrib': /^Tabela de NCM e respectiva uTrib/i,
+  'cst-ibscbs': /^Tabela de Indicadores de CST do IBS/,
+  'biocombustivel': /^Tabela de Código de Índice de Biocombustível/,
 }
 const destino = process.argv[2] ?? 'fontes'
 
