@@ -1,0 +1,22 @@
+{
+  "name": "@quietwright/esquadro",
+  "version": "0.0.0",
+  "description": "Validador offline de NF-e e NFC-e: aponta a rejeição da SEFAZ antes do envio, com cada regra citando o MOC ou a Nota Técnica de onde veio.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "fontes": "node scripts/baixar-fontes.mjs fontes",
+    "catalogo": "pdftotext -layout -f 71 -l 153 fontes/moc-anexo1.pdf fontes/anexo1-regras.txt && node scripts/extrair-anexo1.mjs fontes/anexo1-regras.txt catalogo/moc-anexo1.json",
+    "test": "node --test"
+  },
+  "keywords": ["nfe", "nfce", "sefaz", "nota-fiscal", "validacao", "xml", "reforma-tributaria"],
+  "author": "quietwright",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quietwright/esquadro.git"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
