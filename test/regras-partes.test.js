@@ -48,14 +48,14 @@ const casos = [
   ['E05-10', 'destinatário sem endereço', nota([[ENDER_DEST, '']])],
   ['E05-20', 'NFC-e com entrega a domicílio sem endereço', nota([['<indPres>1', '<indPres>4']], nfceComDest(`<CPF>12345678909</CPF>${nomeHomolog}<indIEDest>9</indIEDest>`))],
   ['E10-20', 'município do destinatário de outra UF', nota([['<cMun>3550308</cMun><xMun>SAO PAULO</xMun><UF>SP</UF><CEP>01310100', '<cMun>3304557</cMun><xMun>SAO PAULO</xMun><UF>SP</UF><CEP>01310100']])],
-  ['E10-30', 'exterior com município brasileiro', nota([[ENDER_DEST, enderEX('<cPais>249</cPais>').replace('9999999', '3550308')]])],
+  ['E10-30', 'exterior com município brasileiro', nota([[ENDER_DEST, enderEX('<cPais>2496</cPais>').replace('9999999', '3550308')]])],
   ['E12-10', 'exportação com UF brasileira', nota([['<idDest>1', '<idDest>3']])],
   ['E12-30', 'interestadual dentro da mesma UF', nota([['<idDest>1', '<idDest>2']])],
   ['E12-40', 'interna com destinatário de outra UF', nota([[ENDER_DEST, enderRJ], ['<indFinal>1', '<indFinal>0'], ['<indIEDest>9', '<indIEDest>2']])],
   ['E12-50', 'entrada interestadual dentro da mesma UF', nota([['<idDest>1', '<idDest>2'], ['<tpNF>1', '<tpNF>0']])],
   ['E12-60', 'entrada interna com destinatário de outra UF', nota([[ENDER_DEST, enderRJ], ['<indFinal>1', '<indFinal>0'], ['<tpNF>1', '<tpNF>0']])],
   ['E14-10', 'exportação sem país', nota([['<idDest>1', '<idDest>3'], [ENDER_DEST, enderEX()]])],
-  ['E14-20', 'operação interna com país estrangeiro', nota([['<CEP>01310100</CEP>', '<CEP>01310100</CEP><cPais>249</cPais><xPais>ESTADOS UNIDOS</xPais>']])],
+  ['E14-20', 'operação interna com país estrangeiro', nota([['<CEP>01310100</CEP>', '<CEP>01310100</CEP><cPais>2496</cPais><xPais>ESTADOS UNIDOS</xPais>']])],
   ['E14-30', 'exterior com país Brasil', nota([[ENDER_DEST, enderEX('<cPais>1058</cPais>')]])],
   ['E16a-10', 'NFC-e para contribuinte', nfceComDest('<CPF>12345678909</CPF><indIEDest>1</indIEDest><IE>123456789</IE>')],
   ['E16a-20', 'exportação para contribuinte', nota([['<idDest>1', '<idDest>3'], ['<indIEDest>9</indIEDest>', '<indIEDest>1</indIEDest><IE>123456789</IE>']])],
@@ -64,7 +64,7 @@ const casos = [
   ['E17-10', 'NFC-e para exterior com IE', nota([['<idDest>1', '<idDest>3']], nfceComDest('<CPF>12345678909</CPF><indIEDest>9</indIEDest><IE>123456789</IE>'))],
   ['E17-20', 'contribuinte sem IE', nota([['<indIEDest>9', '<indIEDest>1']])],
   ['E17-30', 'isento com IE', nota([['<indIEDest>9</indIEDest>', '<indIEDest>2</indIEDest><IE>123456789</IE>']])],
-  ['E17-40', 'destinatário no exterior com IE', nota([[ENDER_DEST, enderEX('<cPais>249</cPais>')], ['<indIEDest>9</indIEDest>', '<indIEDest>9</indIEDest><IE>123456789</IE>']])],
+  ['E17-40', 'destinatário no exterior com IE', nota([[ENDER_DEST, enderEX('<cPais>2496</cPais>')], ['<indIEDest>9</indIEDest>', '<indIEDest>9</indIEDest><IE>123456789</IE>']])],
   ['E18-10', 'NFC-e com SUFRAMA do destinatário', nfceComDest('<CPF>12345678909</CPF><indIEDest>9</indIEDest><ISUF>200100138</ISUF>')],
   ['E18-30', 'SUFRAMA com destinatário em SP', nota([['<indIEDest>9</indIEDest>', '<indIEDest>9</indIEDest><ISUF>200100138</ISUF>']])],
   ['F01-10', 'NFC-e com local de retirada', depoisDoDest(local('retirada', `<CNPJ>${CNPJ_OK}</CNPJ>`), nfceComDest('<CPF>12345678909</CPF><indIEDest>9</indIEDest>'))],
@@ -102,7 +102,7 @@ test('E16a-30: item com ICMS isento dispensa a regra', () => {
 })
 
 test('E03a-10: exportação com idEstrangeiro passa', () => {
-  const xml = nota([['<idDest>1', '<idDest>3'], ['<CPF>12345678909</CPF>', '<idEstrangeiro>AB123</idEstrangeiro>'], [ENDER_DEST, enderEX('<cPais>249</cPais>')]])
+  const xml = nota([['<idDest>1', '<idDest>3'], ['<CPF>12345678909</CPF>', '<idEstrangeiro>AB123</idEstrangeiro>'], [ENDER_DEST, enderEX('<cPais>2496</cPais>')]])
   const r = acusadas(xml)
   for (const id of ['E03a-10', 'E12-10', 'E14-10', 'E16a-20']) assert.ok(!r.includes(id), `${id} em ${r}`)
 })

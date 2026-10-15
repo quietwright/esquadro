@@ -15,6 +15,27 @@ const LISTAS = {
   manuais: 'ndIjl+iEFdE=',
   notas: '04BIflQt1aY=',
   esquemas: 'BMPFMBoln3w=',
+  diversos: '/NJarYc9nus=',
+}
+
+// Tabelas de apoio da seção "Diversos". O portal lista da mais nova para a mais antiga; fica a
+// primeira que casa com o título.
+const TABELAS = {
+  cfop: /^Tabela de CFOP/,
+  municipios: /^Tabela de Municípios/,
+  paises: /^Tabela de Países/,
+  gs1: /^Tabela Prefixo GS1/,
+  'combustiveis-monofasicos': /^Tabela de códigos? de combustíveis sujeitos à tributação monofásica/i,
+  'fcp-uf': /^Tabela de Alíquotas de FCP por UF/,
+  'lista-servicos': /^Tabela de Códigos de item da Lista de Serviços/i,
+  veiculos: /^Tabela de Tipo e Espécie de Veículo/,
+  cclasstrib: /^Tabela de (Código de )?Classificação Tributária do IBS/,
+  'credito-presumido': /^Tabela de Código de Crédito Presumido do IBS/,
+  'aliquotas-cbs': /^Tabela de Alíquotas da CBS/,
+  'meios-pagamento': /^Tabela de Meios de pagamento/i,
+  bandeiras: /^Tabela de bandeiras de Cartões/,
+  anp: /^Tabela de Códigos? de Produtos da ANP/,
+  'ncm-utrib': /^Tabela de NCM e respectiva uTrib/i,
 }
 const destino = process.argv[2] ?? 'fontes'
 
@@ -57,7 +78,15 @@ const esquemas = links((await buscar(`listaConteudo.aspx?tipoConteudo=${encodeUR
 const pacote = esquemas.find((l) => /Pacote de Liberação/.test(l.titulo))
 escolhidos.push({ ...pacote, arquivo: join('xsd', 'pacote.zip') })
 
+const diversos = links((await buscar(`listaConteudo.aspx?tipoConteudo=${encodeURIComponent(LISTAS.diversos)}`)).toString())
+for (const [nome, padrao] of Object.entries(TABELAS)) {
+  const tabela = diversos.find((l) => padrao.test(l.titulo))
+  if (tabela) escolhidos.push({ ...tabela, arquivo: join('tabelas', `${nome}.bin`) })
+  else console.error(`tabela não encontrada no portal: ${nome}`)
+}
+
 mkdirSync(join(destino, 'nt'), { recursive: true })
+mkdirSync(join(destino, 'tabelas'), { recursive: true })
 mkdirSync(join(destino, 'xsd'), { recursive: true })
 const manifesto = []
 for (const item of escolhidos) {

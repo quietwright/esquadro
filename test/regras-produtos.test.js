@@ -7,7 +7,7 @@ import { NFCE, NFE_55, acusadas, nota } from './ajuda.js'
 const GTIN = '4006381333931' // exemplo de EAN-13 válido da GS1
 const ICMS = /<ICMS>.*<\/ICMS>/.exec(NFE_55)[0]
 const ISSQN = '<ISSQN><vBC>100.00</vBC><vAliq>5.0000</vAliq><vISSQN>5.00</vISSQN><cMunFG>3550308</cMunFG><cListServ>01.01</cListServ><indISS>1</indISS><indIncentivo>2</indIncentivo></ISSQN>'
-const DEST_EX = '<enderDest><xLgr>MAIN ST</xLgr><nro>1</nro><xBairro>DOWNTOWN</xBairro><cMun>9999999</cMun><xMun>EXTERIOR</xMun><UF>EX</UF><cPais>249</cPais></enderDest>'
+const DEST_EX = '<enderDest><xLgr>MAIN ST</xLgr><nro>1</nro><xBairro>DOWNTOWN</xBairro><cMun>9999999</cMun><xMun>EXTERIOR</xMun><UF>EX</UF><cPais>2496</cPais></enderDest>'
 const ENDER_DEST = /<enderDest>.*<\/enderDest>/.exec(NFE_55)[0]
 const exterior = (cfop, extras = []) =>
   nota([['<idDest>1', '<idDest>3'], ['<CPF>12345678909</CPF>', '<idEstrangeiro>AB123</idEstrangeiro>'], [ENDER_DEST, DEST_EX], ['<CFOP>5102', `<CFOP>${cfop}`], ...extras])

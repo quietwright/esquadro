@@ -8,7 +8,8 @@
     "fontes": "node scripts/baixar-fontes.mjs fontes",
     "catalogo": "node scripts/montar-catalogo.mjs",
     "test": "node --test",
-    "esquema": "node scripts/compilar-xsd.mjs fontes/xsd/pacote/PL_010f_v1.04/nfe_v4.00.xsd src/esquema/nfe.js"
+    "esquema": "node scripts/compilar-xsd.mjs fontes/xsd/pacote/PL_010f_v1.04/nfe_v4.00.xsd src/esquema/nfe.js",
+    "tabelas": "node scripts/montar-tabelas.mjs"
   },
   "keywords": [
     "nfe",
