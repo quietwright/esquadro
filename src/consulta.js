@@ -57,3 +57,21 @@ export function primeiroFilho(no) {
 export function difere(a, b, tolerancia = 0) {
   return Math.abs(Math.round(a * 100) - Math.round(b * 100)) > Math.round(tolerancia * 100)
 }
+
+/** Todos os descendentes com o nome dado, em qualquer profundidade. */
+export function descendentes(no, nome) {
+  const achados = []
+  const visitar = (n) => {
+    for (const f of elementos(n)) {
+      if (f.nome === nome) achados.push(f)
+      visitar(f)
+    }
+  }
+  if (no) visitar(no)
+  return achados
+}
+
+/** Soma de todos os descendentes com o nome dado. */
+export function somaDescendentes(no, nome) {
+  return descendentes(no, nome).reduce((s, e) => s + Number(texto(e) || 0), 0)
+}

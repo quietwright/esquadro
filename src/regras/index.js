@@ -3,5 +3,6 @@
 import ide from './ide.js'
 import partes from './partes.js'
 import produtos from './produtos.js'
+import totais from './totais.js'
 
-export const regras = [...ide, ...partes, ...produtos]
+export const regras = [...ide, ...partes, ...produtos, ...totais]
