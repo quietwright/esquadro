@@ -1,32 +1,15 @@
 [
  {
-  "id": "1C03-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "1. Banco de Dados: Emitente",
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 935,
-  "efeito": "rejeicao",
-  "regra": "Razão Social (tag: emit\\xNome) do emitente diverge do informado no cadastro da SEFAZ. Observação: Regra de validação opcional, a critério da UF. (NT 2019.001 v1.50)",
-  "mensagem": "Rejeição: Razão Social do emitente diverge do informado no cadastro da SEFAZ",
-  "pagina": 133,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
   "id": "1C17-02",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.6. Banco de Dados: Emitente",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 163,
   "efeito": "rejeicao",
-  "regra": "Se não informada a IE do emitente (tag: emit/IE) OU informada a IE do emitente igual a “ISENTO” (tag: emit/IE=ISENTO): - Acessar o CCC (chave: CNPJ/CPF do emitente + UF do emitente. Desconsiderar CCC.cSitIE=9-Exclusão lógica): - Situação do Contribuinte habilitado na UF (cSitIE=1) e Tipo de IE de contribuinte do ICMS (tpIE=1-IE normal ou tpIE=5-Produtor Rural). Observação: Regra de validação exclusiva da SVRS.",
+  "regra": "Se não informada a IE do emitente (tag: emit/IE) OU informada a IE do emitente igual a “ISENTO” (tag: emit/IE=ISENTO): . - Acessar o CCC (chave: CNPJ/CPF do emitente + UF do emitente Desconsiderar CCC.cSitIE=9-Exclusão lógica): - Situação do Contribuinte habilitado na UF (cSitIE=1) e Tipo de IE de contribuinte do ICMS (tpIE=1-IE normal ou tpIE=5-Produtor Rural). Observação: Regra de validação exclusiva da SVRS.",
   "mensagem": "Rejeição: Emitente possui inscrição estadual ativa no cadastro da UF",
   "pagina": 8,
   "consultaBaseSefaz": true,
@@ -35,14 +18,14 @@
  {
   "id": "1C17-04",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.6. Banco de Dados: Emitente",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 164,
   "efeito": "rejeicao",
-  "regra": "Se não informada a IE do emitente (tag: emit/IE) OU informada a IE do emitente igual a “ISENTO” (tag: emit/IE=ISENTO): - Acessar o CCC (chave: CNPJ/CPF do emitente + UF do emitente. Desconsiderar CCC.cSitIE=9-Exclusão lógica) - Situação do Contribuinte = “0-Não habilitado na UF” (cSitIE=0) e Situação do CNPJ (cSitCNPJ) igual a “2-Bloqueado como Destinatário na UF” ou “3-Vedado como Destinatário na UF” Observação: Regra de validação exclusiva da SVRS.",
+  "regra": "Se não informada a IE do emitente (tag: emit/IE) OU informada a IE do emitente igual a “ISENTO” (tag: emit/IE=ISENTO): . - Acessar o CCC (chave: CNPJ/CPF do emitente + UF do emitente Desconsiderar CCC.cSitIE=9-Exclusão lógica) - Situação do Contribuinte = “0-Não habilitado na UF” (cSitIE=0) e Situação do CNPJ (cSitCNPJ) igual a “2-Bloqueado como Destinatário na UF” ou “3-Vedado como Destinatário na UF” Observação: Regra de validação exclusiva da SVRS.",
   "mensagem": "Rejeição: Emitente com situação irregular na UF",
   "pagina": 8,
   "consultaBaseSefaz": true,
@@ -106,7 +89,7 @@
   "cStat": 622,
   "efeito": "rejeicao",
   "regra": "– IE emitente não vinculada ao CPF (se informado CPF emitente)",
-  "mensagem": "Rej.Rejeição: IE emitente não vinculada ao CPF",
+  "mensagem": "Rejeição: IE emitente não vinculada ao CPF",
   "pagina": 16,
   "consultaBaseSefaz": true,
   "historico": [
@@ -128,7 +111,7 @@
   "cStat": 203,
   "efeito": "rejeicao",
   "regra": "– Emitente não autorizado para emissão de NF-e",
-  "mensagem": "Rej.Rejeição: Emissor não habilitado para emissão da NF-e",
+  "mensagem": "Rejeição: Emissor não habilitado para emissão da NF-e",
   "pagina": 16,
   "consultaBaseSefaz": true,
   "historico": [
@@ -198,11 +181,6 @@
     "cStat": 301
    },
    {
-    "documento": "NT 2024.001 v1.20",
-    "pagina": 16,
-    "cStat": 301
-   },
-   {
     "documento": "NT 2021.002 v1.12",
     "pagina": 16,
     "cStat": 301
@@ -212,23 +190,18 @@
  {
   "id": "1C17-50",
   "documento": "NT 2024.001 v1.20",
-  "grupo": null,
+  "grupo": "4.4. Banco de Dados: Emitente",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 307,
-  "efeito": "denegacao",
-  "regra": "Se operação de saída interestadual (tpNF=1 e idDest=2) e operação com Consumidor Final (indFinal=1) e indIEDest=9: Rej • Acessar Cadastro Centralizado de Contribuinte (Chave: UF do Destinatário, CNPJ do Emitente, cSitCNPJ=10) • Denegar Rejeitar a NF-e se for encontrado registro de bloqueio no CCC Nota: Regra de Validação opcional por UF, conforme Ajuste SINIEF 33/19 Nota: Regra de Validação não aplicável pelas UFs não signatárias, conforme parágrafo 7º da Cláusula sexta, do Ajuste SINIEF 07/05.(NT 2020.005)",
-  "mensagem": "Uso Denegado Rejeição: Emitente bloqueado pela UF de destino, em . operação com consumidor final",
+  "efeito": "rejeicao",
+  "regra": "Se operação de saída interestadual (tpNF=1 e idDest=2) e operação com Consumidor Final (indFinal=1) e indIEDest=9: • Acessar Cadastro Centralizado de Contribuinte (Chave: UF do Destinatário, CNPJ do Emitente, cSitCNPJ=10) • Rejeitar a NF-e se for encontrado registro de bloqueio no CCC Nota: Regra de Validação opcional por UF, conforme Ajuste SINIEF 33/19 Nota: Regra de Validação não aplicável pelas UFs não signatárias, conforme parágrafo 7º da Cláusula sexta, do Ajuste SINIEF 07/05.(NT 2020.005)",
+  "mensagem": "Rejeição: Emitente bloqueado pela UF de destino, em operação com consumidor final",
   "pagina": 16,
   "consultaBaseSefaz": true,
   "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 134,
-    "cStat": 230
-   },
    {
     "documento": "NT 2020.005 v1.21",
     "pagina": 21,
@@ -282,6 +255,20 @@
   ]
  },
  {
+  "id": "1P10-10",
+  "documento": "NT 2022.001 v1.00",
+  "grupo": null,
+  "modelos": null,
+  "aplicacao": "obrigatoria",
+  "cStat": 9493,
+  "efeito": "rejeicao",
+  "regra": "Acesso CCC-Cadastro Centralizado de Contribuintes (Chave: CNPJ/CPF do Certificado de Transmissão): - CNPJ/CPF do Certificado de Transmissão não é emitente de NF-e / NFC-e de Dados: Cadastro Centralizado de GTIN (CCG)",
+  "mensagem": "Rejeição: CNPJ/CPF do Certificado de Transmissão não é emitente de NF-e ou NFC-e",
+  "pagina": 10,
+  "consultaBaseSefaz": true,
+  "historico": []
+ },
+ {
   "id": "2AB08-10",
   "documento": "NT 2014.001 v1.41",
   "grupo": null,
@@ -295,7 +282,13 @@
   "mensagem": "Rejeição: Existe EPEC registrado para esta Série e Número [Chave EPEC: xxxxxxxxxxx]",
   "pagina": 16,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 135,
+    "cStat": 692
+   }
+  ]
  },
  {
   "id": "2AB08-20",
@@ -311,7 +304,13 @@
   "mensagem": "Rejeição: Chave de Acesso da NF-e diverge da Chave de Acesso do EPEC [Chave EPEC: xxxxxxxxx]",
   "pagina": 16,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 135,
+    "cStat": 691
+   }
+  ]
  },
  {
   "id": "2AB08-30",
@@ -327,7 +326,13 @@
   "mensagem": "Rejeição: Dados da NF-e divergentes do EPEC [tag:xxxx]",
   "pagina": 16,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 135,
+    "cStat": 467
+   }
+  ]
  },
  {
   "id": "2AB08-40",
@@ -339,11 +344,17 @@
   "aplicacao": "obrigatoria",
   "cStat": 468,
   "efeito": "rejeicao",
-  "regra": "- Se não existe EPEC: - Se Tipo Emissão da NF-e=4-EPEC e Data Emissão NF-e > Data da desativação do DPEC",
+  "regra": "- Se não existe EPEC: - Se Tipo Emissão da NF-e=4-EPEC e Data Emissão NF-e > Data da desativação do D PEC",
   "mensagem": "Rejeição: NF-e com Tipo Emissão = 4, sem EPEC correspondente",
   "pagina": 16,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 135,
+    "cStat": 468
+   }
+  ]
  },
  {
   "id": "2B08-10",
@@ -437,6 +448,20 @@
   "historico": []
  },
  {
+  "id": "2P10-10",
+  "documento": "NT 2022.001 v1.00",
+  "grupo": null,
+  "modelos": null,
+  "aplicacao": "obrigatoria",
+  "cStat": 9494,
+  "efeito": "rejeicao",
+  "regra": "Acesso CCG-Cadastro Centralizado de GTIN (Chave: GTIN): - GTIN inexistente no CCG",
+  "mensagem": "Rejeição: GTIN inexistente no Cadastro Centralizado de GTIN (CCG)",
+  "pagina": 10,
+  "consultaBaseSefaz": true,
+  "historico": []
+ },
+ {
   "id": "2P10-20",
   "documento": "NT 2022.001 v1.00",
   "grupo": null,
@@ -458,7 +483,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 9496,
   "efeito": "rejeicao",
-  "regra": "- GTIN existe no CCG, mas Dono da Marca não autorizou a publicação das informações (indNaoAutoriza = 1) Nota: Não retornar os dados do CCG.",
+  "regra": "- GTIN existe no CCG, mas Dono da Marca não autorizou a publicação das informações ( indNaoAutoriza = 1) Nota: Não retornar os dados do CCG.",
   "mensagem": "Rejeição: GTIN existe no CCG, mas dono da marca não autorizou a publicação das informações. Entrar em contato com o dono da marca",
   "pagina": 10,
   "consultaBaseSefaz": true,
@@ -503,7 +528,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 206,
   "efeito": "rejeicao",
-  "regra": "Se Tipo de Emissão da NF-e for 1 (Emissão normal), 6 (Contingência SVC-AN) ou 7 (Contingência SVC-RS): • Acesso BD de Inutilização (Chave: Modelo, UF, CNPJ/CPF, Série, Número): o Numeração da NF-e está inutilizada (NT 2011/004) (NT 2018.001) Observação: Se cUF(B02) for igual 35(SP) validar também se Tipo de Emissão da NF-e for 2 (Contingência FS-IA), 4(Contingência EPEC) ou 5(Contingência FS-DA).",
+  "regra": "Se Tipo de Emissão da NF-e for 1 (Emissão normal), 6 (Contingência SVC-AN) ou 7 (Contingência SVC-RS): • Acesso BD de Inutilização (Chave: Modelo, UF, CNPJ/CPF, Série, Número): Numeração da NF-e está inutilizada (NT 2011/004) (NT 2018.001) o Observação: Se cUF(B02) for igual 35(SP) validar também se Tipo de Emissão da NF-e for 2 (Contingência FS-IA), 4(Contingência EPEC) ou 5(Contingência FS-DA).",
   "mensagem": "Rejeição: Numeração da NF-e já está inutilizada na Base de Dados da SEFAZ",
   "pagina": 21,
   "consultaBaseSefaz": true,
@@ -616,7 +641,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 546,
   "efeito": "rejeicao",
-  "regra": "Se NF-e de Devolução (finNFe=4): - Valor total do ICMS da NF-e de Devolução (tag: vICMS, id:W04) maior que o somatório do valor correspondente das NF-e referenciadas Exceção 1: A RV somente será aplicada se todas as NF-e referenciadas existirem no BD da SEFAZ. Exceção 2: A RV poderá não ser aplicada, se existirem documentos fiscais referenciados com modelo diferente de 55;",
+  "regra": "Se NF-e de Devolução (finNFe=4): - Valor total do ICMS da NF-e de Devolução (tag: vICMS, id:W04) maior que o somatório do valor correspondente das NF-e referenciadas Exceção 1: A RV somente será aplicada se todas as NF-e referenciadas existirem no BD da SEFAZ. Exceção 2: A RV poderá não ser aplicada, se existirem documentos fiscais referenciados com modelo diferente de 55; Exceção 3: A RV não será aplicada se existirem NF de Produtor referenciada, inviabilizando a identificação do valor devolvido; Observação 1: Se a NF-e de devolução tiver muitas NF-e referenciadas, a conferência do valor pode prejudicar a performance do Ambiente de Autorização. Nesses casos, a SEFAZ Autorizadora poderá não aplicar essa RV. Por exemplo, limitar a aplicação da RV somente para as NF-e de devolução com até 5 NF-e referenciadas e/ou com NF-e referenciadas de até 3 meses anteriores. Observação 2: A devolução pode ocorrer para muitos itens de diferentes NF-e, considerar uma tolerância de até R$ 1,00 na validação.",
   "mensagem": "Rejeição: NF-e de devolução com valor do ICMS superior a NF-e devolvida",
   "pagina": 5,
   "consultaBaseSefaz": true,
@@ -648,7 +673,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 567,
   "efeito": "rejeicao",
-  "regra": "Se NF-e de Devolução (finNFe=4): - Valor total do ICMS interestadual da NF-e de Devolução (tag: vICMSUFDest, id:W04e) maior que o somatório do valor correspondente das NF-e referenciadas Exceção 1: A RV somente será aplicada se todas as NF-e referenciadas existirem no BD da SEFAZ. Exceção 2: A RV poderá não ser aplicada, se existirem documentos fiscais referenciados com modelo diferente de 55; Exceção 3: A RV não será aplicada se existirem NF de Produtor referenciada, inviabilizando a identificação do valor devolvido; Observação 1: Se a NF-e de devolução tiver muitas NF-e referenciadas, a conferência do valor pode prejudicar a performance do Ambiente de",
+  "regra": "Se NF-e de Devolução (finNFe=4): - Valor total do ICMS interestadual da NF-e de Devolução (tag: vICMSUFDest, id:W04e) maior que o somatório do valor correspondente das NF-e referenciadas Exceção 1: A RV somente será aplicada se todas as NF-e referenciadas existirem no BD da SEFAZ. Exceção 2: A RV poderá não ser aplicada, se existirem documentos fiscais referenciados com modelo diferente de 55; Exceção 3: A RV não será aplicada se existirem NF de Produtor referenciada, inviabilizando a identificação do valor devolvido; Observação 1: Se a NF-e de devolução tiver muitas NF-e referenciadas, a conferência do valor pode prejudicar a performance do Ambiente de Autorização. Nesses casos, a SEFAZ Autorizadora poderá não aplicar essa RV. Por exemplo, limitar a aplicação da RV somente para as NF-e de devolução com até 5 NF-e referenciadas e/ou com NF-e referenciadas de até 3 meses anteriores. Observação 2: A devolução pode ocorrer para muitos itens de diferentes NF-e, considerar uma tolerância de até R$ 1,00 na validação.",
   "mensagem": "Rejeição: NF-e de devolução com valor do ICMS da UF Destino superior a NF-e devolvida",
   "pagina": 6,
   "consultaBaseSefaz": true,
@@ -767,37 +792,9 @@
   "historico": []
  },
  {
-  "id": "4P15-30",
-  "documento": "NT 2020.005 v1.21",
-  "grupo": "5. Banco de Dados: Destinatário",
-  "modelos": null,
-  "aplicacao": "obrigatoria",
-  "cStat": 939,
-  "efeito": "rejeicao",
-  "regra": "• Existe evento de Registro de Averbação para Exportação, tpEvento: o 790700 – Registro de Averbação para Exportação",
-  "mensagem": "Rejeição: Pedido de Cancelamento para NF-e com evento de Averbação para Exportação",
-  "pagina": 22,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "4P15-34",
-  "documento": "NT 2020.005 v1.21",
-  "grupo": "5. Banco de Dados: Destinatário",
-  "modelos": null,
-  "aplicacao": "obrigatoria",
-  "cStat": 940,
-  "efeito": "rejeicao",
-  "regra": "• Existe evento Financeiro, tpEvento: o 990100 – Registro de Cessão de Parcela de Fat-e por IMF o 900120 – Transferência de Parcela de Fat-e por IMF o 900140 – Ativação de monitoramento de parcela de Fat-e informada por ESF o 900138 – Envio de Parcela de Fat-e para Cobrança Judicial o 900110 – Recebível em Avaliação Exceção: Uma NF-e pode ter vários eventos deste tipo. Permitir o cancelamento se todos os eventos deste tipo tiverem o correspondente evento de cancelamento.",
-  "mensagem": "Rejeição: Pedido de Cancelamento para NF-e com evento Financeiro",
-  "pagina": 22,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
   "id": "5AF15-10",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.8. Banco de Dados: Local de Retirada",
   "modelos": [
    "55"
   ],
@@ -819,7 +816,7 @@
  {
   "id": "5AF15-11",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.8. Banco de Dados: Local de Retirada",
   "modelos": [
    "55"
   ],
@@ -835,7 +832,7 @@
  {
   "id": "5AF15-12",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.8. Banco de Dados: Local de Retirada",
   "modelos": [
    "55"
   ],
@@ -883,7 +880,7 @@
  {
   "id": "5AF17-10",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.8. Banco de Dados: Local de Retirada",
   "modelos": [
    "55"
   ],
@@ -899,7 +896,7 @@
  {
   "id": "5AF17-20",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.8. Banco de Dados: Local de Retirada",
   "modelos": [
    "55"
   ],
@@ -915,7 +912,7 @@
  {
   "id": "5BG15-10",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.9. Banco de Dados: Local de Entrega",
   "modelos": [
    "55"
   ],
@@ -937,7 +934,7 @@
  {
   "id": "5BG15-11",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.9. Banco de Dados: Local de Entrega",
   "modelos": [
    "55"
   ],
@@ -953,7 +950,7 @@
  {
   "id": "5BG15-12",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.9. Banco de Dados: Local de Entrega",
   "modelos": [
    "55"
   ],
@@ -1001,7 +998,7 @@
  {
   "id": "5BG17-10",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.9. Banco de Dados: Local de Entrega",
   "modelos": [
    "55"
   ],
@@ -1017,7 +1014,7 @@
  {
   "id": "5BG17-20",
   "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "grupo": "5.9. Banco de Dados: Local de Entrega",
   "modelos": [
    "55"
   ],
@@ -1033,14 +1030,14 @@
  {
   "id": "5E17-10",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 233,
   "efeito": "rejeicao",
-  "regra": "Se informada IE do Destinatário: – Acessar Cadastro de Contribuinte da UF (Chave: UF Dest, IE Dest.) (*5) – IE destinatário não cadastrada (*7)",
+  "regra": "Se informada IE do Destinatário: – Acessar Cadastro de Contribuinte da UF (Chave: UF Dest, IE Dest.) (*5) – IE destinatário não cadastrada",
   "mensagem": "Rejeição: IE do destinatário não cadastrada",
   "pagina": 23,
   "consultaBaseSefaz": true,
@@ -1081,7 +1078,7 @@
  {
   "id": "5E17-20",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1108,14 +1105,14 @@
  {
   "id": "5E17-30",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 624,
   "efeito": "rejeicao",
-  "regra": "– Se informado CPF do destinatário e IE destinatário não vinculada ao CPF (*7)",
+  "regra": "– Se informado CPF do destinatário e IE destinatário não vinculada ao CPF",
   "mensagem": "Rejeição: IE Destinatário não vinculada ao CPF",
   "pagina": 23,
   "consultaBaseSefaz": true,
@@ -1135,7 +1132,7 @@
  {
   "id": "5E17-40",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1167,7 +1164,7 @@
  {
   "id": "5E17-43",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1194,14 +1191,14 @@
  {
   "id": "5E17-46",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 306,
   "efeito": "rejeicao",
-  "regra": "- IE do Destinatário não está ativa na UF (CCC.cSitIE=0-Não habilitado) (*7)",
+  "regra": "- IE do Destinatário não está ativa na UF (CCC.cSitIE=0-Não habilitado)",
   "mensagem": "Rejeição: IE do destinatário não está ativa na UF",
   "pagina": 23,
   "consultaBaseSefaz": true,
@@ -1221,7 +1218,7 @@
  {
   "id": "5E17-50",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1248,7 +1245,7 @@
  {
   "id": "5E17-60",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1280,7 +1277,7 @@
  {
   "id": "5E17-63",
   "documento": "NT 2019.001 v1.70",
-  "grupo": null,
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
@@ -1322,17 +1319,17 @@
  },
  {
   "id": "5E17-70",
-  "documento": "NT 2026.007 v1.10",
-  "grupo": null,
+  "documento": "NT 2019.001 v1.70",
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 246,
   "efeito": "rejeicao",
-  "regra": "Mensagens opcionais se informada IE do destinatário e IE não vinculada ao CNPJ/CPF e tpEmis <> 3-NFF (NT 2021.002): - Acessar Cadastro de Pessoa Jurídica ou Pessoa Física: - CNPJ destinatário não cadastrado (NT 2019.001) Observação: Regra de validação excluída para todas as SEFAZ Autorizadoras.",
+  "regra": "Mensagens opcionais se informada IE do destinatário e IE não vinculada ao CNPJ/CPF. - Acessar Cadastro de Pessoa Jurídica ou Pessoa Física: – CNPJ destinatário não cadastrado",
   "mensagem": "Rejeição: CNPJ Destinatário não cadastrado",
-  "pagina": 8,
+  "pagina": 23,
   "consultaBaseSefaz": true,
   "historico": [
    {
@@ -1349,169 +1346,30 @@
  },
  {
   "id": "5E17-80",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "5. Banco de Dados: Destinatário (regras 5E17-10, 5E17-20, 5E17-30, 5E17-40, 5E17-43, 5E17-46, 5E17-50,",
+  "documento": "NT 2019.001 v1.70",
+  "grupo": "3.9. Banco de Dados: Destinatário",
   "modelos": [
    "55"
   ],
   "aplicacao": "facultativa",
   "cStat": 623,
   "efeito": "rejeicao",
-  "regra": "- CPF destinatário não cadastrado (*7) (NT2019.001)",
+  "regra": "– CPF destinatário não cadastrado",
   "mensagem": "Rejeição: CPF Destinatário não cadastrado",
-  "pagina": 17,
+  "pagina": 23,
   "consultaBaseSefaz": true,
   "historico": [
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 137,
     "cStat": 623
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 17,
+    "cStat": 623
    }
   ]
- },
- {
-  "id": "6P31-10",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 233,
-  "efeito": "rejeicao",
-  "regra": "Se informada IE do Destinatário: – Acessar Cadastro de Contribuinte da UF (Chave: UF Dest, IE Dest.) (*5) – IE destinatário não cadastrada",
-  "mensagem": "Rejeição: IE do destinatário não cadastrada",
-  "pagina": 23,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-20",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 234,
-  "efeito": "rejeicao",
-  "regra": "– Se informado CNPJ do destinatário e IE destinatário não vinculada ao CNPJ (tratar Regime Especial de IE Única)",
-  "mensagem": "Rejeição: IE do destinatário não vinculada ao CNPJ",
-  "pagina": 23,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-30",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 624,
-  "efeito": "rejeicao",
-  "regra": "– Se informado CPF do destinatário e IE destinatário não vinculada ao CPF (*7)",
-  "mensagem": "Rejeição: IE Destinatário não vinculada ao CPF",
-  "pagina": 23,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-40",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 302,
-  "efeito": "rejeicao",
-  "regra": "– Destinatário em situação irregular perante o Fisco, vedada operação na UF (CCC.cSitCNPJ=3-Vedado)",
-  "mensagem": "Uso Denegado: Irregularidade fiscal do destinatário",
-  "pagina": 23,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-43",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 305,
-  "efeito": "rejeicao",
-  "regra": "- Destinatário bloqueado na UF (CCC.cSitCNPJ=2-Bloqueado)",
-  "mensagem": "Rejeição: Destinatário bloqueado na UF",
-  "pagina": 24,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-46",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 306,
-  "efeito": "rejeicao",
-  "regra": "- IE do Destinatário não está ativa na UF (CCC.cSitIE=0-Não habilitado) (*7)",
-  "mensagem": "Rejeição: IE do destinatário não está ativa na UF",
-  "pagina": 24,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-50",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 232,
-  "efeito": "rejeicao",
-  "regra": "Se IE Destinatário não informada e informado CNPJ do destinatário: - Acessar Cadastro Contribuinte da UF (Chave: UF-Dest, CNPJ-Dest) (*6) – Destinatário possui IE ativa na UF (CCC.cSitIE=1-Habilitado) e CCC.IndIEDestOpc = 0 – Obrigatório",
-  "mensagem": "Rejeição: IE do destinatário não informada",
-  "pagina": 24,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-60",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 303,
-  "efeito": "denegacao",
-  "regra": "– Destinatário com CNPJ vedado na UF (CCC.cSitCNPJ=3-Vedado)",
-  "mensagem": "Uso Denegado: Destinatário não habilitado a operar na UF",
-  "pagina": 24,
-  "consultaBaseSefaz": true,
-  "historico": []
- },
- {
-  "id": "6P31-63",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 305,
-  "efeito": "rejeicao",
-  "regra": "– Destinatário bloqueado na UF (CCC.cSitCNPJ=2-Bloqueado)",
-  "mensagem": "Rejeição: Destinatário bloqueado na UF",
-  "pagina": 24,
-  "consultaBaseSefaz": true,
-  "historico": []
  },
  {
   "id": "7B09-10",
@@ -1550,7 +1408,7 @@
  {
   "id": "7C21-10",
   "documento": "NT 2024.001 v1.20",
-  "grupo": null,
+  "grupo": "4.6. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1558,7 +1416,7 @@
   "aplicacao": "facultativa",
   "cStat": 481,
   "efeito": "rejeicao",
-  "regra": "Código de Regime Tributário do emitente divergente do cadastrado na SEFAZ (tag:emit/CRT): - CRT=\"1-Simples Nacional\" para Contribuinte cadastrado como Regime Normal na UF (CCC, regTrib=9); - CRT=\"3-Regime Normal\" para Contribuinte cadastrado como Simples Nacional na UF (CCC, regTrib=1 ou 2); - CRT= “4-Simples Nacional - Microempreendedor Individual - MEI” para Contribuinte cadastrado como Simples Nacional - Microempreendedor Individual - MEI na UF (CCC, regTrib=2); Observação: Regra de Validação opcional por UF (NT2022.003)",
+  "regra": "Código de Regime Tributário do emitente divergente do cadastrado na SEFAZ (tag:emit/CRT): - CRT=\"1-Simples Nacional\" para Contribuinte cadastrado como Regime Normal na UF (CCC, regTrib=9); - CRT=\"3-Regime Normal\" para Contribuinte cadastrado como Simples Nacional na UF (CCC, regTrib=1 2); - CRT= “4-Simples Nacional - Microempreendedor Individual - MEI” para Contribuinte cadastrado como Simples Nacional - Microempreendedor Individual - MEI na UF (CCC, regTrib=2); Observação: Regra de Validação opcional por UF (NT2022.003)",
   "mensagem": "Rejeição: Código Regime Tributário do emitente diverge do cadastro na SEFAZ",
   "pagina": 17,
   "consultaBaseSefaz": true,
@@ -1626,8 +1484,8 @@
  },
  {
   "id": "7I03-10",
-  "documento": "NT 2021.003 v1.50",
-  "grupo": null,
+  "documento": "MOC 7.0 Anexo I",
+  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1635,22 +1493,16 @@
   "aplicacao": "obrigatoria",
   "cStat": 889,
   "efeito": "rejeicao",
-  "regra": "Se não informado GTIN (cEAN=Nulo). Observação: Para produtos que não possuem GTIN, utilizar a informação de \"SEM GTIN\" (NT 2017.001) (eliminada pela NT 2021.003)",
+  "regra": "Se não informado GTIN (cEAN=Nulo). Observação: Para produtos que não possuem GTIN, utilizar a informação de \"SEM GTIN\" (NT 2017.001)",
   "mensagem": "Rejeição: Obrigatória a informação do GTIN para o produto [nItem: 999]",
-  "pagina": 12,
+  "pagina": 138,
   "consultaBaseSefaz": true,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 138,
-    "cStat": 889
-   }
-  ]
+  "historico": []
  },
  {
   "id": "7ZD02-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": "4.6. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1658,16 +1510,22 @@
   "aplicacao": "facultativa",
   "cStat": 974,
   "efeito": "rejeicao",
-  "regra": "CNPJ do responsável técnico diverge do cadastrado para o emitente (UF/CNPJ). Observação: Implementação futura (NT 2018.005 v1.30)",
+  "regra": "CNPJ do responsável técnico diverge do cadastrado para o emitente (UF/CNPJ). Observação: Implementação a critério da UF para os estados que possuem Observação 1: Regra válida para o PR, modelo 55, a partir de 16/09/2024 em homologação e 01/05/2025 em produção Observação 2: Modelo 65, implementação futura Exceção 1: Não se aplica para NFF (tpEmis = 3-NFF) e SVC (tpEmis = 7 ou 8)",
   "mensagem": "Rejeição: CNPJ do responsável técnico diverge do cadastrado",
-  "pagina": 138,
+  "pagina": 24,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 138,
+    "cStat": 974
+   }
+  ]
  },
  {
   "id": "7ZD08-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": "4.6. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1675,16 +1533,22 @@
   "aplicacao": "facultativa",
   "cStat": 976,
   "efeito": "rejeicao",
-  "regra": "Identificador do CSRT (tag: idCSRT) não cadastrado na SEFAZ. Observação: Implementação futura (NT 2018.005 v1.30)",
+  "regra": "Identificador do CSRT (tag: idCSRT) não cadastrado na SEFAZ. Observação: Implementação a critério da UF para os estados que possuem Observação 1: Regra válida para o PR, a partir de 16/09/2024 em homologação e 01/10/2024 em produção Observação 2: Modelo 65, implementação futura Exceção 1: Não se aplica para NFF (tpEmis = 3-NFF) e SVC (tpEmis = 7 ou 8)",
   "mensagem": "Rejeição: Identificador do CSRT não cadastrado na SEFAZ",
-  "pagina": 138,
+  "pagina": 24,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 138,
+    "cStat": 976
+   }
+  ]
  },
  {
   "id": "7ZD08-20",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": "4.6. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1692,16 +1556,22 @@
   "aplicacao": "facultativa",
   "cStat": 977,
   "efeito": "rejeicao",
-  "regra": "Identificador do CSRT (tag: idCSRT) revogado. Observação: Implementação futura (NT 2018.005 v1.30)",
+  "regra": "Identificador do CSRT (tag: idCSRT) revogado. Observação: Implementação a critério da UF para os estados que possuem Observação 1: Regra válida para o PR, a partir de 16/09/2024 em homologação e 01/10/2024 em produção Observação 2: Modelo 65, implementação futura Exceção 1: Não se aplica para NFF (tpEmis = 3-NFF) e SVC (tpEmis = 7 ou 8)",
   "mensagem": "Rejeição: Identificador do CSRT revogado",
-  "pagina": 138,
+  "pagina": 24,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 138,
+    "cStat": 977
+   }
+  ]
  },
  {
   "id": "7ZD09-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": "7. Banco de Dados: Cadastro da SEFAZ",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": "4.6. Banco de Dados: Cadastro da SEFAZ",
   "modelos": [
    "55",
    "65"
@@ -1709,11 +1579,17 @@
   "aplicacao": "facultativa",
   "cStat": 978,
   "efeito": "rejeicao",
-  "regra": "Hash do CSRT (tag: hashCSRT) diverge do calculado. Observação: Implementação futura (NT 2018.005 v1.30)",
+  "regra": "Hash do CSRT (tag: hashCSRT) diverge do calculado. Observação: Implementação a critério da UF para os estados que possuem Observação 1: Regra válida para o PR, a partir de 16/09/2024 em homologação e 01/10/2024 em produção Observação 2: Modelo 65, implementação futura Exceção 1: Não se aplica para NFF (tpEmis = 3-NFF) e SVC (tpEmis = 7 ou 8)",
   "mensagem": "Rejeição: Hash do CSRT diverge do calculado",
-  "pagina": 138,
+  "pagina": 25,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 138,
+    "cStat": 978
+   }
+  ]
  },
  {
   "id": "8C02-10",
@@ -1802,8 +1678,8 @@
  },
  {
   "id": "9I03-40",
-  "documento": "NT 2021.003 v1.50",
-  "grupo": null,
+  "documento": "MOC 7.0 Anexo I",
+  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
   "modelos": [
    "55",
    "65"
@@ -1811,17 +1687,11 @@
   "aplicacao": "obrigatoria",
   "cStat": 893,
   "efeito": "rejeicao",
-  "regra": "- Se informado GTIN-14 (tag: cEAN>09999999999999) e informado GTIN da unidade tributável (tag: cEANTrib) diferente do GTIN Contido cadastrado no CCG Exceção: a RV não se aplica em operações com exterior (idDest=3) Nota: o GTIN pode possuir GTIN de nível inferior (GTIN Contido), agrupando diversas unidades do mesmo produto. O GTIN da unidade tributável deve corresponder àquele da menor unidade comercializável identificada por código GTIN, ou seja, deve corresponder ao GTIN do menor nível inferior (GTIN Contido). (NT 2021.003, Etapa 2)",
+  "regra": "Se informado GTIN-14 (tag: cEAN>09999999999999) com prefixo do Brasil (iniciado em 789 ou 790) e informado GTIN da unidade tributável (tag: cEANTrib) diferente do GTIN Contido cadastrado no CCG Exceção: a RV não se aplica em operações com exterior (idDest=3) Nota: o GTIN pode possuir GTIN de nível inferior (GTIN Contido), agrupando diversas unidades do mesmo produto. O GTIN da unidade tributável deve corresponder àquele da menor unidade comercializável identificada por código GTIN, ou seja, deve corresponder ao GTIN do menor nível inferior (GTIN Contido). (NT 2017.001)",
   "mensagem": "Rejeição: GTIN da unidade tributável diverge do GTIN Contido cadastrado no CCG [nItem:999; GTIN Contido esperado: 99999999999999]",
-  "pagina": 13,
+  "pagina": 139,
   "consultaBaseSefaz": true,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 139,
-    "cStat": 893
-   }
-  ]
+  "historico": []
  },
  {
   "id": "9I12-10",
@@ -1848,8 +1718,8 @@
  },
  {
   "id": "9I12-20",
-  "documento": "NT 2021.003 v1.50",
-  "grupo": null,
+  "documento": "MOC 7.0 Anexo I",
+  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
   "modelos": [
    "55",
    "65"
@@ -1857,22 +1727,16 @@
   "aplicacao": "obrigatoria",
   "cStat": 895,
   "efeito": "rejeicao",
-  "regra": "- NCM informada na NF-e diferente da cadastrada no CCG (NT 2021.003, Etapa 2)",
+  "regra": "Se informado GTIN da unidade tributável (tag: cEANTrib) com prefixo do Brasil (iniciado em 789 ou 790) e NCM informada na NF-e diferente da cadastrada no CCG (NT 2017.001)",
   "mensagem": "Rejeição: GTIN da unidade tributável incompatível com a NCM [nItem:999; NCM esperada: 99999999]",
-  "pagina": 13,
+  "pagina": 139,
   "consultaBaseSefaz": true,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 139,
-    "cStat": 895
-   }
-  ]
+  "historico": []
  },
  {
   "id": "9I12-30",
-  "documento": "NT 2021.003 v1.50",
-  "grupo": null,
+  "documento": "MOC 7.0 Anexo I",
+  "grupo": "9. Banco de Dados: Cadastro Centralizado de GTIN (CCG)",
   "modelos": [
    "55",
    "65"
@@ -1880,17 +1744,43 @@
   "aplicacao": "obrigatoria",
   "cStat": 896,
   "efeito": "rejeicao",
-  "regra": "- CEST informado na NF-e diferente do cadastrado no CCG Exceção: Validação somente é realizada se o CEST tiver sido informado no CCG (NT 2021.003, Etapa 2)",
+  "regra": "Se informado GTIN da unidade tributável (tag: cEANTrib) com prefixo do Brasil (iniciado em 789 ou 790) e CEST informado na NF-e diferente do cadastrado no CCG (NT 2017.001)",
   "mensagem": "Rejeição: GTIN da unidade tributável incompatível com CEST [nItem:999; CEST esperado: 9999999]",
+  "pagina": 139,
+  "consultaBaseSefaz": true,
+  "historico": []
+ },
+ {
+  "id": "10ZF04-10",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "10. Banco de Dados: Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 837,
+  "efeito": "rejeicao",
+  "regra": "Guia de Trânsito inválida Observação: Será validado o número da guia de trânsito no banco de dados integrado da SEFAZ com o órgão de controle sanitário responsável pela emissão da GTA. Observação: aplicação a critério da UF.",
+  "mensagem": "Rejeição: Guia de trânsito inválida",
   "pagina": 13,
   "consultaBaseSefaz": true,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 139,
-    "cStat": 896
-   }
-  ]
+  "historico": []
+ },
+ {
+  "id": "10ZF04-20",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "10. Banco de Dados: Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 838,
+  "efeito": "rejeicao",
+  "regra": "Guia de Trânsito já utilizada Observação: Será validada a utilização da guia de trânsito no banco de dados integrado da SEFAZ com o órgão de controle sanitário responsável pela emissão da GTA. Observação: aplicação a critério da UF.",
+  "mensagem": "Rejeição: Guia de trânsito já utilizada",
+  "pagina": 13,
+  "consultaBaseSefaz": true,
+  "historico": []
  },
  {
   "id": "11BC01-10",
@@ -1904,15 +1794,16 @@
   "efeito": "rejeicao",
   "regra": "Se modelo = 65 (NFC-e): - Informado NF-e referenciada de pagamento antecipado (tag: gPagAntecipado\\refNFe)",
   "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado informada indevidamente",
-  "pagina": 73,
+  "pagina": 72,
   "consultaBaseSefaz": true,
-  "historico": [
+  "variantes": [
    {
-    "documento": "NT 2025.002 v1.52",
-    "pagina": 72,
-    "cStat": 1146
+    "cStat": 1146,
+    "regra": "Se modelo = 65 (NFC-e): - Informado NF-e referenciada de pagamento antecipado (tag: gPagAntecipado\\refNFe)",
+    "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado informada indevidamente"
    }
-  ]
+  ],
+  "historico": []
  },
  {
   "id": "11BC01-20",
@@ -1924,17 +1815,18 @@
   "aplicacao": "obrigatoria",
   "cStat": 1147,
   "efeito": "rejeicao",
-  "regra": "Se informado NF-e referenciada de pagamento antecipado (tag: gPagAntecipado\\refNFe): - NF-e referenciada de pagamento antecipado inexistente Exceção 01: NF-e referenciada de pagamento antecipado pode não existir se UF da Chave Acesso diverge da Sefaz Autorizadora. Exceção 2: A NF-e referenciada de pagamento antecipado pode não existir no caso de Emissão em Contingência (tpEmis = 2, 4 ou 5), desde que a Chave de Acesso da NF-e referenciada tenha o Ano-Mês de Emissão inferior a 1 mês da data atual ou desde que exista o EPEC. Observação: Implementação Futura",
+  "regra": "Se informado NF-e referenciada de pagamento antecipado (tag: gPagAntecipado\\refNFe): - NF-e referenciada de pagamento antecipado inexistente Exceção 01: NF-e referenciada de pagamento antecipado pode não existir se UF da Chave Acesso diverge da Sefaz Autorizadora. Exceção 2: A NF-e referenciada de pagamento antecipado pode não existir no caso de Emissão em Contingência (tpEmis = 2, 4 ou 5), desde que a Chave de Acesso da NF-e referenciada tenha o Ano-Mês de Emissão inferior a 1 mês da data atual ou desde que exista o EPEC.",
   "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado inexistente",
-  "pagina": 73,
+  "pagina": 72,
   "consultaBaseSefaz": true,
-  "historico": [
+  "variantes": [
    {
-    "documento": "NT 2025.002 v1.52",
-    "pagina": 72,
-    "cStat": 1147
+    "cStat": 1147,
+    "regra": "Se informado NF-e referenciada de pagamento antecipado (tag: gPagAntecipado\\refNFe): - NF-e referenciada de pagamento antecipado inexistente Exceção 01: NF-e referenciada de pagamento antecipado pode não existir se UF da Chave Acesso diverge da Sefaz Autorizadora. Exceção 2: A NF-e referenciada de pagamento antecipado pode não existir no caso de Emissão em Contingência (tpEmis = 2, 4 ou 5), desde que a Chave de Acesso da NF-e referenciada tenha o Ano-Mês de Emissão inferior a 1 mês da data atual ou desde que exista o EPEC. Observação: Implementação Futura",
+    "mensagem": "Rejeição: NF-e referenciada de pagamento antecipado inexistente"
    }
-  ]
+  ],
+  "historico": []
  },
  {
   "id": "11BC01-30",
@@ -2233,7 +2125,7 @@
  {
   "id": "B00",
   "documento": "NT 2020.005 v1.21",
-  "grupo": "5. Banco de Dados: Destinatário",
+  "grupo": null,
   "modelos": null,
   "aplicacao": "obrigatoria",
   "cStat": 242,
@@ -2808,22 +2700,6 @@
   "historico": []
  },
  {
-  "id": "B12a-20",
-  "documento": "NT 2024.002 v1.10",
-  "grupo": null,
-  "modelos": [
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 1000,
-  "efeito": "rejeicao",
-  "regra": "",
-  "mensagem": "informado apenas em operação presencial fora do",
-  "pagina": 27,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "B21-10",
   "documento": "MOC 7.0 Anexo I",
   "grupo": null,
@@ -2904,8 +2780,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 570,
   "efeito": "rejeicao",
-  "regra": "Na autorização pela SEFAZ:  não aceitar o conteúdo tpEmis=3-SCAN (NT 2010/004), (NT 2021.002) 6-SVC-AN ou 7-SVC-RS",
-  "mensagem": "Rejeição: Tipo de Emissão 3, 6 ou 7 só é válido nas contingências SCAN/SVC",
+  "regra": "Na autorização pela SEFAZ:  não aceitar o conteúdo tpEmis=3-SCAN (NT 2021.002) 6-SVC-AN ou 7-SVC-RS",
+  "mensagem": "Rejeição: Tipo de Emissão 6 ou 7 só é válido nas contingências SCAN/SVC",
   "pagina": 10,
   "consultaBaseSefaz": false,
   "historico": [
@@ -3152,7 +3028,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1001,
   "efeito": "rejeicao",
-  "regra": "Se finalidade da NF-e igual a crédito ou débito (tag: finNFe=5 ou 6) ou tpOperGov=2-Recebimento do pagamento: - Informado ICMS (tag: ICMS), ISSQN (tag: ISSQN), IPI (tag: IPI), II (tag: II), PIS (tag: PIS), PIS ST (tag: PISST), COFINS (tag: COFINS), COFINS ST (tag: COFINSST), ICMS UF Destino (tag: ICMSUFDest) ou Imposto Devolvido (tag: impostoDevol). Exceção 1: a regra acima não se aplica para: - tpNFCredito=03-Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega; - tpNFCredito=04-Redução de valores; - tpNFCredito=06-Retorno por recusa parcial na entrega; - tpNFDebito=07-Perda em estoque; Exceção 2: tpNFDebito=”06-Pagamento Antecipado” permite a informação do PIS, PISST, COFINS e COFINSST em NF-e com data de emissão em 2026. Exceção 3: tpNFDebito=”06-Pagamento Antecipado” permite a informação do IPI. Exceção 4: tpNFDebito=”06-Pagamento Antecipado” permite a informação do grupo ICMS/ICMSPrevistoPagtoAntecip (id: NB01).",
+  "regra": "Se finalidade da NF-e igual a crédito ou débito (tag: finNFe=5 ou 6) ou tpOperGov=2-Recebimento do pagamento: - Informado ICMS (tag: ICMS), ISSQN (tag: ISSQN), IPI (tag: IPI), II (tag: II), PIS (tag: PIS), PIS ST (tag: PISST), COFINS (tag: COFINS), COFINS ST (tag: COFINSST), ICMS UF Destino (tag: ICMSUFDest) ou Imposto Devolvido (tag: impostoDevol). Exceção 1: a regra acima não se aplica para: - tpNFCredito=03-Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega; - tpNFCredito=04-Redução de valores; - tpNFCredito=06-Retorno por recusa parcial na entrega; - tpNFDebito=07-Perda em estoque; Exceção 2: tpNFDebito=”06-Pagamento Antecipado” permite a informação do PIS, PISST, COFINS e COFINSST em NF-e com data de emissão em 2026. Exceção 3: tpNFDebito=”06-Pagamento Antecipado” permite a informação do IPI. Exceção 4: tpNFDebito=”06-Pagamento Antecipado” permite a informação do grupo ICMS/ICMSPrevistoPagtoAntecip (id: NB0 1).",
   "mensagem": "Rejeição: NF-e com finalidade de débito ou crédito somente para IBS/CBS",
   "pagina": 7,
   "consultaBaseSefaz": false,
@@ -3180,11 +3056,6 @@
   "pagina": 6,
   "consultaBaseSefaz": false,
   "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 28,
-    "cStat": 1002
-   },
    {
     "documento": "NT 2025.002 v1.52",
     "pagina": 31,
@@ -3478,7 +3349,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 434,
   "efeito": "rejeicao",
-  "regra": "Se informado indicativo de presença, tag: indPres, IGUAL a 1, 2, 3, 4 ou 9 e Tipo de operação, tag: tpNF, IGUAL 1-Saída e Finalidade de emissão, tag: finNFe, IGUAL 1-NF-e normal. - Obrigatório o preenchimento do campo Indicativo do Intermediador (tag: indIntermed) Observação 1: Regra válida a partir de 23/08/2021 para homologação e 04/04/2022 para produção Observação 2: Regra válida para Nota Fiscal Avulsa eletrônica a partir de 03/05/2021 para homologação e 01/09/2021 para produção Exceção 1: Regra não se aplica para os seguintes CFOP: 5205, 5206, 5207, 5251, 5252, 5253, 5254, 5255, 5256, 5257, 5258, 5301, 5302, 5303, 5304, 5305, 5306, 5307.",
+  "regra": "Se informado indicativo de presença, tag: indPres, IGUAL a 2, 3, 4 ou 9 e Tipo de operação, tag: tpNF, IGUAL 1-Saída e Finalidade de emissão, tag: finNFe, IGUAL 1-NF-e normal. - Obrigatório o preenchimento do campo Indicativo do Intermediador (tag: indIntermed) Observação 1: Regra válida a partir de 23/08/2021 para homologação e 04/04/2022 para produção Exceção 1: Regra não se aplica para os seguintes CFOP: 5205, 5206, 5207, 5251, 5252, 5253, 5254, 5255, 5256, 5257, 5258, 5301, 5302, 5303, 5304, 5305, 5306, 5307.",
   "mensagem": "Rejeição: NF-e sem indicativo do intermediador",
   "pagina": 10,
   "consultaBaseSefaz": false,
@@ -3572,7 +3443,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 244,
   "efeito": "rejeicao",
-  "regra": "Se Processo de Emissão pelo Contribuinte (procEmi<>1 e 2) (procEmi=0 ou 3): - Série da NF-e difere da faixa de 0-889 ou 920-969 (NT 2018.001) ou Se Processo de Emissão não for PAA (procEmi <> 4): - Série da NF-e na faixa 970-979 - Uso exclusivo do PAA. Observação: Regra de Validação implementada em todos os ambientes autorizadores.",
+  "regra": "Se Processo de Emissão pelo Contribuinte (procEmi=0 ou 3): - Série da NF-e difere da faixa de 0-889 ou 920-969 (NT 2018.001) Observação: Regra de Validação implementada em todos os ambientes autorizadores.",
   "mensagem": "Rejeição: Processo de Emissão pelo Contribuinte incompatível com a Série da NF",
   "pagina": 12,
   "consultaBaseSefaz": false,
@@ -3595,7 +3466,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 451,
   "efeito": "rejeicao",
-  "regra": "Se Processo de Emissão pelo Fisco (procEmi=1 ou 2): - Série difere da faixa 890-919 (NF Avulsa) (NT 2018.001) ou Se Processo de Emissão for PAA (procEmi = 4): - Série da NF-e difere da faixa 970-979 Observação: Regra de Validação implementada somente na SVRS.",
+  "regra": "Se Processo de Emissão pelo Fisco (procEmi=1 ou 2): - Série difere da faixa 890-919 (NF Avulsa) (NT 2018.001)",
   "mensagem": "Rejeição: Processo de Emissão pelo Fisco incompatível com a Série da NF",
   "pagina": 12,
   "consultaBaseSefaz": false,
@@ -3884,20 +3755,27 @@
  },
  {
   "id": "BA02-30",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "BA. Documento Fiscal Referenciado (regra BA02-30)",
-  "modelos": null,
+  "documento": "NT 2026.001 v1.02b",
+  "grupo": "BA. Documento Fiscal Referenciado",
+  "modelos": [
+   "55"
+  ],
   "aplicacao": "facultativa",
   "cStat": 552,
   "efeito": "rejeicao",
-  "regra": "Se informada uma NF-e referenciada (tag:refNFe): - Série = [0-909] e CNPJ zerado ou dígito inválido, ou - Série = [910-969] e CPF zerado ou dígito inválido (NT 2018.001) Nota: Caso tpEmis = 3-NFF, considerar o 5º dígito do número da nota (nNF) para determinar se CNPJ/CPF na Chave de Acesso: CNPJ: 5º dígito do nNF = “1” , CPF: 5º dígito do nNF = “2” (NT 2021.002).",
-  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido[nOcor:nnn]",
-  "pagina": 14,
+  "regra": "Se informada uma NF-e referenciada (tag:refNFe, id: BA02): - Série = [0-909, 980-989] e CNPJ zerado ou dígito inválido, ou - Série <> [0-909, 980-989] e CPF zerado ou dígito inválido (NT 2018.001) Nota: Caso tpEmis = 3-NFF, considerar o 5º dígito do número da nota (nNF) para determinar se CNPJ/CPF na Chave de Acesso: - CNPJ: 5º dígito do nNF = “1” - CPF: 5º dígito do nNF = “2” (NT 2021.002). Observação: Regra de Validação implementada em todos os ambientes autorizadores.",
+  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido [nOcor:nnn]",
+  "pagina": 12,
   "consultaBaseSefaz": false,
   "historico": [
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 79,
+    "cStat": 552
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 14,
     "cStat": 552
    }
   ]
@@ -3928,7 +3806,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 679,
   "efeito": "rejeicao",
-  "regra": "Se informada uma NF-e referenciada (tag:refNFe): - Se NF-e de Saída (tpNF=1): - Se Finalidade diferente de “2-NFe Complementar” (tag:finNFe<>2) e diferente de “4-NFe de Devolução” (tag:finNFe<>4): - Modelo da NF-e referenciada não pode ser: - NFC-e, modelo 65; - CF-e, modelo 59; - NF-e, modelo 55, com DANFE Simplificado Tipo 2 (tag:tpImp=6). Observação: Implantação em Produção em 14/12/2026.",
+  "regra": "Se informada NF-e referenciada (tag:refNFe): - Se NF-e de Saída (tpNF=1): - Se Finalidade diferente de “2-NFe Complementar” (tag:finNFe<>2) e diferente de “4-NFe de Devolução” (tag:finNFe<>4): - Modelo da NF-e referenciada não pode ser: - NFC-e, modelo 65; - CF-e, modelo 59; - NF-e, modelo 55, com DANFE Simplificado Tipo 2 (tag:tpImp=6). Observação: Implantação em Produção em 14/12/2026.",
   "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido [nOcor:nnn]",
   "pagina": 9,
   "consultaBaseSefaz": false,
@@ -4096,19 +3974,25 @@
  },
  {
   "id": "BA02a-50",
-  "documento": "NT 2022.003 v1.11",
-  "grupo": null,
+  "documento": "NT 2026.001 v1.02b",
+  "grupo": "BA. Documento Fiscal Referenciado",
   "modelos": [
    "55"
   ],
   "aplicacao": "facultativa",
   "cStat": 552,
   "efeito": "rejeicao",
-  "regra": "Se informada uma NF-e referenciada por Chave de Acesso com código numérico zerado (tag: refNFeSig): -Série = [0-909] e CNPJ zerado ou dígito inválido, ou -Série = [910-969] e CPF zerado ou dígito inválido",
-  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido[nOcor:nnn]",
-  "pagina": 10,
+  "regra": "Se informada uma NF-e referenciada com código numérico zerado (tag:refNFeSig, id: BA02a): - Série = [0-909, 980-989] e CNPJ zerado ou dígito inválido, ou - Série <> [0-909, 980-989] e CPF zerado ou dígito inválido (NT 2018.001)",
+  "mensagem": "Rejeição: Chave de Acesso referenciada com CNPJ/CPF inválido [nOcor:nnn]",
+  "pagina": 13,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "NT 2022.003 v1.11",
+    "pagina": 10,
+    "cStat": 552
+   }
+  ]
  },
  {
   "id": "BA02a-60",
@@ -4248,7 +4132,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 681,
   "efeito": "rejeicao",
-  "regra": "Se informada NF Modelo 1 ou NF Modelo 2 referenciada (tag:refNF): - Verificar duplicidade de Nota Fiscal Modelo 1 ou 2 referenciada (mesmo CNPJ, Modelo, Série, Número) (NT 2016.002) - Proibido informar NF referenciada (tag: refNF)",
+  "regra": "Se informada NF Modelo 1 ou NF Modelo 2 referenciada (tag:refNF): - Verificar duplicidade de Nota Fiscal Modelo 1 ou 2 referenciada (mesmo - Proibido informar NF referenciada (tag: refNF)",
   "mensagem": "Rejeição: Proibido informar NF referenciada [nOcor: nnn]",
   "pagina": 9,
   "consultaBaseSefaz": false,
@@ -4302,7 +4186,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 682,
   "efeito": "rejeicao",
-  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - Verificar duplicidade de Nota Fiscal de Produtor referenciada (mesma IE, Modelo, Série, Número) (NT 2013/003) (NT 2015.002) - Proibido referenciar NF de Produtor (tag:refNFP)",
+  "regra": "Se informada NF de Produtor referenciada (tag:refNFP): - Verificar duplicidade de Nota Fiscal de Produtor referenciada (mesma IE, - Proibido referenciar NF de Produtor (tag:refNFP)",
   "mensagem": "Rejeição: Proibido referenciar NF de Produtor [nOcor: 999]",
   "pagina": 9,
   "consultaBaseSefaz": false,
@@ -4316,7 +4200,7 @@
  },
  {
   "id": "BA10-20",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
    "55"
@@ -4324,15 +4208,21 @@
   "aplicacao": "facultativa",
   "cStat": 318,
   "efeito": "rejeicao",
-  "regra": "Contranota de Produtor sem Nota Fiscal referenciada: - não informada NF de Produtor referenciada (tag:refNFP); - e não informada Nota Fiscal referenciada (tag:refNFe). Observação 1: A Contranota de Produtor é identificada como uma Nota Fiscal de entrada (tag:tpNF=0) e remetente da mesma UF com IE de Produtor Rural. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF.",
+  "regra": "Contranota de Produtor sem Nota Fiscal referenciada: - Não informada Nota Fiscal referenciada (tag:refNFe). Observação 1: A Contranota de Produtor é identificada como uma Nota Fiscal de entrada (tag:tpNF=0) com finalidade de emissão normal (tag:finNFe=1) e remetente da mesma UF com IE de Produtor Rural. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF.",
   "mensagem": "Rejeição: Contranota de Produtor sem Nota Fiscal referenciada",
-  "pagina": 79,
+  "pagina": 9,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 79,
+    "cStat": 318
+   }
+  ]
  },
  {
   "id": "BA10-30",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
    "55"
@@ -4340,15 +4230,21 @@
   "aplicacao": "facultativa",
   "cStat": 319,
   "efeito": "rejeicao",
-  "regra": "Contranota de Produtor não pode referenciar somente Nota Fiscal de entrada: - não informada NF de Produtor referenciada (tag:refNFP); - e não informada Nota Fiscal referenciada (tag:refNFe) de saída (tag:tpNF=1). Observação 1: Identificação de Contranota de Produtor conforme observação da validação anterior. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF. (NT 2015.002)",
+  "regra": "Contranota de Produtor não pode referenciar somente Nota Fiscal de entrada: - Não informada Nota Fiscal referenciada (tag:refNFe) de saída (tag:tpNF=1). Observação 1: Identificação de Contranota de Produtor conforme observação da validação anterior. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF. (NT 2015.002)",
   "mensagem": "Rejeição: Contranota de Produtor não pode referenciar somente Nota Fiscal de entrada",
-  "pagina": 79,
+  "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 79,
+    "cStat": 319
+   }
+  ]
  },
  {
   "id": "BA10-40",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
    "55"
@@ -4356,15 +4252,26 @@
   "aplicacao": "facultativa",
   "cStat": 320,
   "efeito": "rejeicao",
-  "regra": "Contranota de Produtor referencia somente Nota Fiscal de outro emitente. Não existe nenhuma das ocorrências abaixo: - IE da NF de Produtor referenciada (tag: refNFP/IE) idêntica à IE do Emitente (tag: emit/IE) ou do Remetente (tag: dest/IE); - IE do emitente da NF referenciada (tag: emit/IE) idêntica à IE do Emitente (tag: emit/IE) ou do Remetente (tag: dest/IE). Observação 1: Identificação de Contranota de Produtor conforme Observação 1 da regra BA10-20. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF. Observação 3: A critério da UF, a validação da IE do emitente da NF referenciada (tag: emit/IE) pode ser substituída por: o CNPJ-8 do emitente da NF referenciada (tag:emit/CNPJ) idêntico ao CNPJ-8 do Emitente (tag: emit/CNPJ) ou do Remetente (tag: dest/CNPJ) (NT 2019.001 v1.00).",
+  "regra": "Contranota de Produtor referencia somente Nota Fiscal de outro emitente. Não existe nenhuma das ocorrências abaixo: - IE da NF de Produtor referenciada (tag:refNFP/IE) idêntica à IE do Emitente - IE do emitente da NF referenciada (tag:emit/IE) idêntica à IE do Emitente (emit/IE) ou do Remente (dest/IE). Observação 1: Identificação de Contranota de Produtor conforme observação da validação anterior. Observação 2: A utilização e controle da Contranota de Produtor é opcional, a critério da UF. (NT 2015.002) Observação 3: A critério da UF, a validação da IE do emitente da NF referenciada (tag:emit/IE) pode ser substituída por: - CNPJ-8 do emitente da NF referenciada (tag:emit/CNPJ) idêntico ao CNPJ-8 do Emitente (tag: emit/CNPJ) ou do Remetente (tag: dest/CNPJ). (NT 2019.001)",
   "mensagem": "Rejeição: Contranota de Produtor referencia somente NF de outro emitente",
-  "pagina": 80,
+  "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 80,
+    "cStat": 320
+   },
+   {
+    "documento": "NT 2019.001 v1.70",
+    "pagina": 15,
+    "cStat": 320
+   }
+  ]
  },
  {
   "id": "BA10-50",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
    "55"
@@ -4372,11 +4279,22 @@
   "aplicacao": "facultativa",
   "cStat": 922,
   "efeito": "rejeicao",
-  "regra": "Contranota de Produtor só pode referenciar NF-e (tag: refNFe) ou NF de Produtor Modelo 4 (tag: refNFP): Observação 1: Identificação de Contranota de Produtor conforme Observação 1 da regra BA10-20. Observação 2: Regra opcional, a critério da UF. (NT 2019.001 v1.00)",
-  "mensagem": "Rejeição: Contranota de Produtor só pode referenciar NF-e ou NF de Produtor Modelo 4",
-  "pagina": 80,
+  "regra": "Contranota de Produtor só pode referenciar NF-e (tag: refNFe) Observação 1: Identificação de Contranota de Produtor conforme observação da validação anterior. Observação 2: Regra opcional, a critério da UF. (NT2019.001)",
+  "mensagem": "Rejeição: Contranota de Produtor só pode referenciar NF-e",
+  "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 80,
+    "cStat": 922
+   },
+   {
+    "documento": "NT 2019.001 v1.70",
+    "pagina": 15,
+    "cStat": 922
+   }
+  ]
  },
  {
   "id": "BA12-10",
@@ -4588,7 +4506,7 @@
  },
  {
   "id": "BA20-20",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55"
@@ -4596,11 +4514,17 @@
   "aplicacao": "facultativa",
   "cStat": 923,
   "efeito": "rejeicao",
-  "regra": "Informado Cupom Fiscal referenciado (tag: refECF) ou informado NF modelo 1 ou 2 referenciada (tag: refNF) em NF-e de operação interestadual ou com o exterior (tag: idDest<>1) (NT 2019.001 v1.00)",
+  "regra": "Informado Cupom Fiscal referenciado (tag: refECF) ou informado NF modelo 1 ou 2 referenciada (tag: refNF) em NF-e de operação interestadual ou com o exterior (tag: idDest<>1)",
   "mensagem": "Rejeição: Referenciado documento de operação interna em operação interestadual ou com o exterior",
-  "pagina": 81,
+  "pagina": 15,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 81,
+    "cStat": 923
+   }
+  ]
  },
  {
   "id": "BA20-30",
@@ -4612,7 +4536,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 924,
   "efeito": "rejeicao",
-  "regra": "Se Informado Cupom Fiscal referenciado (tag: refECF) em UF que não permite essa referência.: - Proibido referenciar Cupom Fiscal (tag: refECF) Observação: Regra de validação opcional, a critério da UF. (NT 2019.001)",
+  "regra": "Se Informado Cupom Fiscal referenciado (tag: refECF) - Proibido referenciar Cupom Fiscal (tag: refECF) Observação: Regra de validação opcional, a critério da UF. (NT 2019.001)",
   "mensagem": "Rejeição: Proibido referenciar Cupom Fisca [nOcor: 999]",
   "pagina": 11,
   "consultaBaseSefaz": false,
@@ -4620,6 +4544,11 @@
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 81,
+    "cStat": 924
+   },
+   {
+    "documento": "NT 2019.001 v1.70",
+    "pagina": 15,
     "cStat": 924
    }
   ]
@@ -5052,17 +4981,12 @@
     "documento": "MOC 7.0 Anexo I",
     "pagina": 81,
     "cStat": 337
-   },
-   {
-    "documento": "NT 2022.003 v1.11",
-    "pagina": 11,
-    "cStat": 337
    }
   ]
  },
  {
   "id": "C02a-08",
-  "documento": "NT 2022.003 v1.11",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
    "55"
@@ -5072,15 +4996,9 @@
   "efeito": "rejeicao",
   "regra": "Se informado CPF do emitente: – Se NF-e (modelo 55) Observação: Regra de validação opcional a critério da UF. (NT 2018.001)",
   "mensagem": "Rejeição: NF-e para emitente pessoa física",
-  "pagina": 11,
+  "pagina": 81,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 81,
-    "cStat": 652
-   }
-  ]
+  "historico": []
  },
  {
   "id": "C02a-10",
@@ -5134,11 +5052,6 @@
     "documento": "MOC 7.0 Anexo I",
     "pagina": 81,
     "cStat": 407
-   },
-   {
-    "documento": "NT 2022.003 v1.11",
-    "pagina": 11,
-    "cStat": 407
    }
   ]
  },
@@ -5167,19 +5080,26 @@
  },
  {
   "id": "C02a-30",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2023.002 v1.01",
   "grupo": null,
   "modelos": [
-   "55"
+   "55",
+   "65"
   ],
   "aplicacao": "facultativa",
   "cStat": 560,
   "efeito": "rejeicao",
-  "regra": "Se informado CPF do emitente: – CPF do Emitente difere do CPF da primeira NF-e do Lote recebido (NT 2018.001)",
+  "regra": "Se informado CPF do emitente: – CPF do Emitente difere do CPF da primeira NF-e do Lote recebido",
   "mensagem": "Rejeição: CNPJ Base/CPF do emitente difere do CNPJ Base/CPF da primeira NF-e do lote recebido",
-  "pagina": 82,
+  "pagina": 8,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 82,
+    "cStat": 560
+   }
+  ]
  },
  {
   "id": "C10-10",
@@ -5240,7 +5160,7 @@
  },
  {
   "id": "C17-10",
-  "documento": "NT 2026.007 v1.10",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
    "55",
@@ -5249,17 +5169,11 @@
   "aplicacao": "obrigatoria",
   "cStat": 229,
   "efeito": "rejeicao",
-  "regra": "IE Emitente com zeros ou nulo Observação: Regra de validação excluída para todas as SEFAZ Autorizadoras.",
+  "regra": "IE Emitente com zeros ou nulo",
   "mensagem": "Rejeição: IE do emitente não informada",
-  "pagina": 6,
+  "pagina": 82,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 82,
-    "cStat": 229
-   }
-  ]
+  "historico": []
  },
  {
   "id": "C17-11",
@@ -5478,9 +5392,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1178,
+  "cStat": 668,
   "efeito": "rejeicao",
-  "regra": "Se CRT (emit/CRT) = “3-Regime Normal” ou “2-Simples Nacional, excesso sublimite de receita bruta”: 668 - Se emissão por PAA (grupo infPAA informado): - PAA não disponível para contribuinte do regime normal. Exceção: Essa regra não se aplica ao contribuinte Produtor Rural (CCC, tpIE = “5-IE de Produtor Rural”). Observação: Regra de Validação implementada somente na SVRS.",
+  "regra": "Se CRT (emit/CRT) = “3-Regime Normal” ou “2-Simples Nacional, excesso sublimite de receita bruta”: - Se emissão por PAA (grupo infPAA informado): - PAA não disponível para contribuinte do regime normal. Exceção: Essa regra não se aplica ao contribuinte Produtor Rural (CCC, tpIE = “5-IE de Produtor Rural”). Observação: Regra de Validação implementada somente na SVRS.",
   "mensagem": "Rejeição: Utilização de PAA não permitida para contribuinte enquadrado no regime normal",
   "pagina": 13,
   "consultaBaseSefaz": false,
@@ -5526,19 +5440,20 @@
   "grupo": null,
   "modelos": null,
   "aplicacao": "obrigatoria",
-  "cStat": 215,
+  "cStat": 225,
   "efeito": "rejeicao",
-  "regra": "Verifica Schema XML da Área de Dados",
-  "mensagem": "Rejeição: Falha no schema XML",
+  "regra": "Verifica Schema XML da Área de Dados (WS Autorização)",
+  "mensagem": "Rejeição: Falha no Schema XML do lote de NFe",
   "pagina": 72,
   "consultaBaseSefaz": false,
-  "historico": [
+  "variantes": [
    {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 72,
-    "cStat": 225
+    "cStat": 215,
+    "regra": "Verifica Schema XML da Área de Dados",
+    "mensagem": "Rejeição: Falha no schema XML"
    }
-  ]
+  ],
+  "historico": []
  },
  {
   "id": "D01-10",
@@ -5580,19 +5495,20 @@
   "grupo": null,
   "modelos": null,
   "aplicacao": "facultativa",
-  "cStat": 516,
+  "cStat": 565,
   "efeito": "rejeicao",
-  "regra": "Em caso de Falha de Schema, verificar se existe a tag raiz esperada para mensagem",
-  "mensagem": "Rejeição: Falha no schema XML – inexiste a tag raiz esperada para a mensagem",
+  "regra": "Em caso de Falha de Schema, verificar se existe a tag raiz esperada para o lote (WS Autorização)",
+  "mensagem": "Rejeição: Falha no schema XML – inexiste a tag raiz esperada para o lote de NF-e",
   "pagina": 72,
   "consultaBaseSefaz": false,
-  "historico": [
+  "variantes": [
    {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 72,
-    "cStat": 565
+    "cStat": 516,
+    "regra": "Em caso de Falha de Schema, verificar se existe a tag raiz esperada para mensagem",
+    "mensagem": "Rejeição: Falha no schema XML – inexiste a tag raiz esperada para a mensagem"
    }
-  ]
+  ],
+  "historico": []
  },
  {
   "id": "D01b",
@@ -5600,19 +5516,20 @@
   "grupo": null,
   "modelos": null,
   "aplicacao": "facultativa",
-  "cStat": 517,
+  "cStat": 568,
   "efeito": "rejeicao",
   "regra": "Em caso de Falha de Schema, verificar se existe o atributo versao para a tag raiz da mensagem",
-  "mensagem": "Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz da mensagem",
+  "mensagem": "Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz do lote de NF-e",
   "pagina": 72,
   "consultaBaseSefaz": false,
-  "historico": [
+  "variantes": [
    {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 72,
-    "cStat": 568
+    "cStat": 517,
+    "regra": "Em caso de Falha de Schema, verificar se existe o atributo versao para a tag raiz da mensagem",
+    "mensagem": "Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz da mensagem"
    }
-  ]
+  ],
+  "historico": []
  },
  {
   "id": "D01d",
@@ -6899,8 +6816,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 323,
   "efeito": "rejeicao",
-  "regra": "Se informada autorização download XML com CNPJ: – CNPJ com zeros ou dígito inválido",
-  "mensagem": "Rejeição: CNPJ autorizado para download inválido",
+  "regra": "Se informada autorização download XML com CNPJ: – CNPJ com zeros ou dígito inválido Se informada autorização download XML com CNPJ: – Informado CNPJ do destinatário",
+  "mensagem": "Rejeição: CNPJ autorizado para download inválido Rejeição: CNPJ do destinatário já autorizado para download",
   "pagina": 88,
   "consultaBaseSefaz": false,
   "historico": []
@@ -6961,7 +6878,7 @@
   "aplicacao": "facultativa",
   "cStat": 776,
   "efeito": "rejeicao",
-  "regra": "Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1) DB. Extração dos eventos do lote e validação do Schema XML do evento",
+  "regra": "Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
   "mensagem": "Rejeição: Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1)",
   "pagina": 73,
   "consultaBaseSefaz": false,
@@ -7091,7 +7008,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 883,
   "efeito": "rejeicao",
-  "regra": "GTIN (tag: cEAN) em branco, campo sem informação. Observação 1: Para produtos que não possuem GTIN, utilizar a informação de \"SEM GTIN\" (NT 2017.001) (NT 2021.003, Etapa 1)",
+  "regra": "GTIN (tag: cEAN) em branco, campo sem informação. Observação 1: Para produtos que não possuem GTIN, utilizar a informação de \"SEM GTIN\" (NT 2021.003, Etapa 1)",
   "mensagem": "Rejeição: GTIN (cEAN) sem informação [nItem: 999]",
   "pagina": 11,
   "consultaBaseSefaz": false,
@@ -7256,7 +7173,7 @@
   "historico": []
  },
  {
-  "id": "I05f-10",
+  "id": "I05g-10",
   "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
@@ -7264,51 +7181,28 @@
    "65"
   ],
   "aplicacao": "facultativa",
-  "cStat": 928,
+  "cStat": 507,
   "efeito": "rejeicao",
-  "regra": "Informado código de benefício fiscal (tag: cBenef) para CST sem benefício fiscal (CST = 00, 10, 60), conforme Tabela de apoio publicada no Portal Nacional da NF-e Observação: Implementação a critério da UF, por CST e por modelo de DF-e.",
-  "mensagem": "Rejeição: Informado código de benefício fiscal para CST sem benefício fiscal [nItem: nnn]",
+  "regra": "Grupo de informações sobre o Crédito Presumido (tag: gCred) não permitido para UF Exceção: Não se aplica para (tpEmis = 3-NFF) (NT 2021.002) Observação: Regra a critério da UF",
+  "mensagem": "Grupo de informações sobre o Crédito Presumido não permitido",
   "pagina": 16,
-  "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 90,
-    "cStat": 928
-   }
-  ]
- },
- {
-  "id": "I05f-20",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 931,
-  "efeito": "rejeicao",
-  "regra": "Se informado código de benefício fiscal (tag: cBenef): - verificar se tipo de código do benefício corresponde ao CST com benefício fiscal. Exemplo: Código de benefício fiscal de isenção deve ser utilizado com CST de isenção. Observação 1: Implementação a critério da UF, por modelo de DF-e. Observação 2: Tabela de código de benefício fiscal por UF publicada no Portal Nacional da NF-e (NT 2019.001 v1.00, v1.50)",
-  "mensagem": "Rejeição: CST não corresponde ao tipo de código de benefício fiscal [nItem: nnn]",
-  "pagina": 91,
   "consultaBaseSefaz": false,
   "historico": []
  },
  {
-  "id": "I05f-30",
-  "documento": "MOC 7.0 Anexo I",
+  "id": "I05h-10",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55",
    "65"
   ],
   "aplicacao": "facultativa",
-  "cStat": 934,
+  "cStat": 664,
   "efeito": "rejeicao",
-  "regra": "Se informado código de benefício fiscal (tag: cBenef), Obrig.atório informar valor do ICMS desonerado (tag: vICMSDeson) e o motivo de desoneração (tag: motDesICMS) Observações: Implementação a critério da UF (NT 2019.001 v1.00, v1.50)",
-  "mensagem": "Rejeição: Não informado valor do ICMS desonerado ou o Motivo de desoneração [nItem: nnn]",
-  "pagina": 91,
+  "regra": "Se informado código de crédito presumido (tag: cCredPresumido): - Verificar se código de crédito presumido existe, está vigente e corresponde a um código de crédito presumido, conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF (NT 2019.001). Observação 1: Implementação a critério da UF, por modelo de DF-e.",
+  "mensagem": "Rejeição: Informado código de crédito presumido (cCredPresumido) incorreto, inexistente ou incompatível na UF [nItem: nnn]",
+  "pagina": 16,
   "consultaBaseSefaz": false,
   "historico": []
  },
@@ -7354,8 +7248,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 1167,
   "efeito": "rejeicao",
-  "regra": "Se não informada a Classificação para subapuração do IBS na ZFM (tag: tpCredPresIBSZFM, id:I05k): - Código da UF do Emitente do Documento Fiscal (tag:ide/cUF) igual a 13-AM e emitente com inscrição de indústria incentivada. Observação 01: Regra de Validação se aplica somente ao Amazonas. Observação 02: Implementação futura. Para NF-e com finalidade de devolução de mercadoria (tag: finNFe = 4) ou de Nota de Crédito (tag: finNFe=5) do tipo “03=Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega” (tag: tpNFCredito=03) ou do tipo “06=Retorno por Recusa Parcial na Entrega” (tag: tpNFCredito=06), somente serão aceitos CFOPs de devolução de mercadoria.",
-  "mensagem": "Rejeição: Classificação para subapuração do IBS na ZFM não informada [nItem: 999] Rejeição: CFOP inválido para Nota Fiscal de devolução",
+  "regra": "Se não informada a Classificação para subapuração do IBS na ZFM (tag: tpCredPresIBSZFM, id:I05k): - Código da UF do Emitente do Documento Fiscal (tag:ide/cUF) igual a 13-AM e emitente com inscrição de indústria incentivada. Observação 01: Regra de Validação se aplica somente ao Amazonas. Observação 02: Implementação futura.",
+  "mensagem": "Rejeição: Classificação para subapuração do IBS na ZFM não informada [nItem: 999]",
   "pagina": 36,
   "consultaBaseSefaz": false,
   "historico": []
@@ -7545,7 +7439,7 @@
  },
  {
   "id": "I08-120",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2020.002 v1.01",
   "grupo": null,
   "modelos": [
    "55"
@@ -7553,11 +7447,17 @@
   "aplicacao": "facultativa",
   "cStat": 597,
   "efeito": "rejeicao",
-  "regra": "CFOP de Importação (inicia por 3) e não informado o grupo de IPI Exceção: a regra não se aplica para os seguintes CFOP: 3.201; 3.202; 3.211; 3.503; 3.553 (NT 2011/004, NT 2020.002 v1.00)",
+  "regra": "CFOP de Importação (inicia por 3) e não informado o grupo de IPI Exceção: a regra não se aplica para os seguintes CFOP: 3.201; 3.202; 3.211; 3.503; 3.553 (NT 2011/004)",
   "mensagem": "Rejeição: CFOP de Importação e não informado dados de IPI",
-  "pagina": 92,
+  "pagina": 5,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 92,
+    "cStat": 597
+   }
+  ]
  },
  {
   "id": "I08-130",
@@ -7577,17 +7477,17 @@
  },
  {
   "id": "I08-140",
-  "documento": "NT 2026.009 v1.00",
-  "grupo": null,
+  "documento": "NT 2025.002 v1.52",
+  "grupo": "I. Produtos e Serviços da NF-e",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 327,
   "efeito": "rejeicao",
-  "regra": "Para NF-e com as finalidades abaixo, somente serão aceitos CFOPs de devolução de mercadoria: - Devolução de mercadoria (tag: finNFe = 4); - ou Nota de Crédito (tag: finNFe=5) do tipo “03=Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega” (tag: tpNFCredito=03); - ou Nota de Crédito (tag: finNFe=5) do tipo “06=Retorno por Recusa Parcial na Entrega” (tag: tpNFCredito=06); Observação 1: Vide relação de CFOP de devolução de mercadoria na tabela de apoio publicada no Portal da NF-e (Tabela CFOP, indDevol=1). Exceção 1: Aceitar os CFOP 1.949 e 2.949. na devolução de venda. Para estes CFOP verificar a condição: - Devolução de mercadoria (tag: finNFe = 4) (NT 2015.002); Exceção 2: Aceitar os CFOP 5.949 e 6.949 na devolução simbólica de gás natural (NCM 27112100) nos termos do Ajuste SINIEF nº 22/21 (NT 2021.004)",
-  "mensagem": "Rejeição: CFOP inválido para Nota Fiscal de devolução ou de retorno de mercadoria [nItem: 999]",
-  "pagina": 5,
+  "regra": "Para NF-e com finalidade de devolução de mercadoria (tag: finNFe = 4) ou de Nota de Crédito (tag: finNFe=5) do tipo “03=Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega” (tag: tpNFCredito=03) ou do tipo “06=Retorno por Recusa Parcial na Entrega” (tag: tpNFCredito=06), somente serão aceitos CFOPs de devolução de mercadoria. Observação 1: Vide relação de CFOP de devolução de mercadoria na tabela de apoio publicada no Portal da NF-e (Tabela CFOP, indDevol=1). Exceção 1: Aceitar os CFOP 1.949 e 2.949. (alterado na NT 2026.009) Exceção 2: Aceitar os CFOP 5.949 e 6.949 na devolução simbólica de gás natural (NCM 27112100) nos termos do Ajuste SINIEF nº 22/21 (NT 2021.004)",
+  "mensagem": "Rejeição: CFOP inválido para Nota Fiscal de devolução ou de retorno de mercadoria [nItem:nnn]",
+  "pagina": 36,
   "consultaBaseSefaz": false,
   "historico": [
    {
@@ -7604,6 +7504,11 @@
     "documento": "NT 2024.001 v1.20",
     "pagina": 10,
     "cStat": 327
+   },
+   {
+    "documento": "NT 2026.009 v1.00",
+    "pagina": 5,
+    "cStat": 327
    }
   ]
  },
@@ -7617,8 +7522,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 1179,
   "efeito": "rejeicao",
-  "regra": "",
-  "mensagem": "ou de retorno de mercadoria emitida por MEI",
+  "regra": "Se informado CRT (id:C21) igual 4-MEI e idDest<>3: - Se finalidade de devolução de mercadoria (tag:finNFe=4) ou tipo de nota de crédito igual a “03-Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega” (tag: tpNFCredito=03) ou igual a “06-Retorno por Recusa Parcial na Entrega” (tag: tpNFCredito=06): - Somente serão aceitos CFOP 1.202, 1.553, 2.202,2.553, 5.202 e 6.202",
+  "mensagem": "Rejeição: CFOP inválido para Nota Fiscal de devolução ou de retorno de mercadoria emitida por MEI [nItem:nnn]",
   "pagina": 36,
   "consultaBaseSefaz": false,
   "historico": []
@@ -7633,8 +7538,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 328,
   "efeito": "rejeicao",
-  "regra": "",
-  "mensagem": "que não é de devolução ou de retorno de mercadoria",
+  "regra": "Para as NF-e que não tem a finalidade de devolução de mercadoria (tag: finNFe não é “2\" nem “4\"), não serão aceitos CFOP de devolução de mercadoria. (NT 2013/005) Exceção: Esta regra não se aplica para Nota de Crédito (tag: finNFe=5) dos tipos: - 03=Retorno por Recusa Total na Entrega ou Por Não Localização do Destinatário na Tentativa de Entrega” (tag: tpNFCredito=03); - 04=Redução de valores (tag: tpNFCredito=04); - 06=Retorno por Recusa Parcial na Entrega” (tag: tpNFCredito=06). Observação:Vide relação de CFOP de devolução de mercadoria natabela de apoio publicada no Portal da NF-e (Tabela CFOP, indDevol=1). (NT 2015.002)",
+  "mensagem": "Rejeição: CFOP de devolução de mercadoria para NF-e que não é de devolução ou de retorno de mercadoria [nItem:nnn]",
   "pagina": 36,
   "consultaBaseSefaz": false,
   "historico": [
@@ -7725,22 +7630,6 @@
   ]
  },
  {
-  "id": "I08-171",
-  "documento": "NT 2019.001 v1.70",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 374,
-  "efeito": "rejeicao",
-  "regra": "NF-e (mod=55) com os CFOP=1.933, 2.933, 5.933 e 6.933 (Aquisição ou prestação de serviço), no grupo de tributação do ICMS (tag:imposto/ICMS).",
-  "mensagem": "Rejeição: CFOP incompatível com o grupo de tributação [nItem:nnn]",
-  "pagina": 17,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "I08-180",
   "documento": "NT 2026.002 v1.11",
   "grupo": null,
@@ -7750,7 +7639,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 375,
   "efeito": "rejeicao",
-  "regra": "NF-e (mod=55) com lançamento relativo a Cupom Fiscal (CFOP=5.929 ou CFOP=6.929) e existe NFC-e referenciada (tag:refNFe com modelo 65) Observação: Regra de Validação obrigatória em produção a partir de 05/10/2026 14/12/2026.",
+  "regra": "NF-e (mod=55) com lançamento relativo a Cupom Fiscal (CFOP=5.929 ou CFOP=6.929) e existe NFC-e referenciada (tag:refNFe com modelo 65) Observação: Regra de Validação obrigatória em produção a partir de 14/12/2026.",
   "mensagem": "Rejeição: NF-e com lançamento relativo a Cupom Fiscal referencia uma NFC-e [nItem:nnn]",
   "pagina": 12,
   "consultaBaseSefaz": false,
@@ -7777,28 +7666,6 @@
   "pagina": 93,
   "consultaBaseSefaz": false,
   "historico": []
- },
- {
-  "id": "I08-186",
-  "documento": "NT 2026.002 v1.11",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 953,
-  "efeito": "rejeicao",
-  "regra": "NF-e (mod=55) com lançamento relativo a Documento Fiscal de Varejo (CFOP=5.929 ou CFOP 6.929) com ECF referenciado (tag: refECF) Observação: Regra de Validação obrigatória em produção a partir de 05/10/2026.",
-  "mensagem": "Rejeição: Informado ECF referenciado para CFOP 5.929 em UF que não permite essa referência",
-  "pagina": 12,
-  "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2022.003 v1.11",
-    "pagina": 11,
-    "cStat": 953
-   }
-  ]
  },
  {
   "id": "I08-190",
@@ -8051,7 +7918,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 888,
   "efeito": "rejeicao",
-  "regra": "GTIN da unidade tributável (tag: cEANTrib) em branco, campo sem informação. Observação: Para produtos que não possuem GTIN da unidade tributável, utilizar a informação de \"SEM GTIN\". (NT 2017.001) (NT 2021.003, Etapa 1)",
+  "regra": "GTIN da unidade tributável (tag: cEANTrib) em branco, campo sem informação. Observação: Para produtos que não possuem GTIN da unidade tributável, utilizar a informação de \"SEM GTIN\". (NT 2021.003, Etapa 1)",
   "mensagem": "Rejeição: GTIN da unidade tributável (cEANTrib) sem informação [nItem:999]",
   "pagina": 11,
   "consultaBaseSefaz": false,
@@ -8491,7 +8358,7 @@
   "aplicacao": "facultativa",
   "cStat": 465,
   "efeito": "rejeicao",
-  "regra": "Se informado o Número de Controle da FCI (tag:nFCI, id:I70): - Acessar Cadastro de FCI (Chave: nFCI) Observação: esta regra possui previsão de implementação futura, não tendo sido posta em produção até a publicação deste Manual. I08. Rastreabilidade de produto",
+  "regra": "Se informado o Número de Controle da FCI (tag:nFCI, id:I70): - Acessar Cadastro de FCI (Chave: nFCI) Observação: esta regra possui previsão de implementação futura, não tendo sido posta em produção até a publicação deste Manual.",
   "mensagem": "Rejeição: Número de Controle da FCI inexistente",
   "pagina": 96,
   "consultaBaseSefaz": false,
@@ -8630,7 +8497,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 843,
   "efeito": "rejeicao",
-  "regra": "Verificar se o código da espécie de veículo (campo: espVeic) é compatível com o tipo de veículo (campo: tpVeic) conforme Tabela de Tipo e Espécie de Veículo",
+  "regra": "Verificar se o código da espécie de veículo (campo: espVeic) é compatível com o tipo de veículo (campo: tpVeic) conforme Tabela de Tipo e Espécie de Veículo Observação 1: Tabela de Tipo e Espécie de Veículo publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da NF-e (www.nfe.fazenda.gov.br)",
   "mensagem": "Rejeição: Código da espécie de Veículo incompatível com o tipo do Veículo. [nItem:nnn]",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -8650,7 +8517,13 @@
   "mensagem": "Rejeição: NCM de medicamento e não informado o grupo de medicamento (med) [nItem:nnn]",
   "pagina": 13,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "NT 2021.004 v1.35",
+    "pagina": 15,
+    "cStat": 840
+   }
+  ]
  },
  {
   "id": "K01-20",
@@ -8789,7 +8662,7 @@
  },
  {
   "id": "LA03d-10",
-  "documento": "NT 2023.001 v1.60",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
    "55"
@@ -8799,31 +8672,32 @@
   "efeito": "rejeicao",
   "regra": "Obrigatória a informação do campo vPart (id: LA03d) para produto \"210203001 – GLP\" (tag:cProdANP) (NT 2016.002)",
   "mensagem": "Rejeição: Campo valor de partida não preenchido para produto GLP [nItem: 999].",
-  "pagina": 29,
+  "pagina": 97,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 97,
-    "cStat": 856
-   }
-  ]
+  "historico": []
  },
  {
   "id": "LA11-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
+   "55",
    "65"
   ],
   "aplicacao": "facultativa",
   "cStat": 378,
   "efeito": "rejeicao",
-  "regra": "NFC-e sem a informação do grupo de Encerrante na venda de combustível para consumidor final Observação: Regra de validação opcional a critério da UF. Exceção 1: A regra de validação se aplica somente para os códigos de produtos ANP (cProdANP) abaixo: - 810101002 - ETANOL HIDRATADO ADITIVADO - 810101001 - ETANOL HIDRATADO COMUM - 220101005 - GÁS NATURAL VEICULAR - 220101006 - GÁS NATURAL VEICULAR PADRÃO - 320103001 - GASOLINA AUTOMOTIVA PADRÃO - 320102002 - GASOLINA C ADITIVADA - 320102001 - GASOLINA C COMUM - 320102003 - GASOLINA C PREMIUM - 820101033 - ÓLEO DIESEL B S10 - ADITIVADO - 820101034 - ÓLEO DIESEL B S10 - COMUM - 420106001 - ÓLEO DIESEL B S10 AMD 10 - 820101011 - ÓLEO DIESEL B S1800 Não Rodoviário-Aditivado - 820101003 - ÓLEO DIESEL B S1800 Não Rodoviário - Comum - 820101013 - ÓLEO DIESEL B S500 - ADITIVADO - 820101012 - ÓLEO DIESEL B S500 - COMUM - 420106002 - ÓLEO DIESEL B S500 AMD 10 - 420301004 - OLEO DIESEL DE REFERÊNCIA S300 Exceção 2: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/01/2016. (NT 2015.002)",
+  "regra": "NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) sem a informação do grupo de Encerrante na venda de combustível para consumidor final. Observação: Regra de validação opcional a critério da UF. Exceção 1: A regra de validação se aplica somente para os códigos de produtos ANP (cProdANP) abaixo: - 810101002 - ETANOL HIDRATADO ADITIVADO - 810101001 - ETANOL HIDRATADO COMUM - 220101005 - GÁS NATURAL VEICULAR - 220101006 - GÁS NATURAL VEICULAR PADRÃO - 320103001 - GASOLINA AUTOMOTIVA PADRÃO - 320102002 - GASOLINA C ADITIVADA - 320102001 - GASOLINA C COMUM - 320102003 - GASOLINA C PREMIUM - 820101033 - ÓLEO DIESEL B S10 - ADITIVADO - 820101034 - ÓLEO DIESEL B S10 - COMUM - 420106001 - ÓLEO DIESEL B S10 AMD 10 - 820101011 - ÓLEO DIESEL B S1800 Não Rodoviário-Aditivado - 820101003 - ÓLEO DIESEL B S1800 Não Rodoviário - Comum - 820101013 - ÓLEO DIESEL B S500 - ADITIVADO - 820101012 - ÓLEO DIESEL B S500 - COMUM - 420106002 - ÓLEO DIESEL B S500 AMD 10 - 420301004 - OLEO DIESEL DE REFERÊNCIA S300 Exceção 2: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/01/2016. (NT 2015.002)",
   "mensagem": "Rejeição: Grupo de Combustível sem a informação de Encerrante [nItem: nnn]",
-  "pagina": 98,
+  "pagina": 13,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 98,
+    "cStat": 378
+   }
+  ]
  },
  {
   "id": "LA11-20",
@@ -8885,7 +8759,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 908,
   "efeito": "rejeicao",
-  "regra": "Se produto (tag: cProdANP) existe na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna \"Código ANP\") e coluna (\"Percentual do Biocombustível) igual a 1: - Obrigatório o preenchimento do índice de mistura do Biocombustível (tag: pBio) Exceção 1: Regra de validação não se aplica quando: - NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 2: Regra de validação não se aplica quando campo (tag:indFinal) igual a 1. Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922. Exceção 4: Regra de validação não se aplica a NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Observação 2: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção.",
+  "regra": "Se produto (tag: cProdANP) existe na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna \"Código ANP\") e coluna (\"Percentual do Biocombustível) igual a 1: - Obrigatório o preenchimento do índice de mistura do Biocombustível (tag: pBio) Exceção 1: Regra de validação não se aplica quando: - NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 2: Regra de validação não se aplica quando campo (tag:indFinal) igual a 1. Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922. Exceção 4: Regra de validação não se aplica a NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica. Observação 2: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento do índice de mistura do Biocombustível. [nItem:999]",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -8907,7 +8781,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 909,
   "efeito": "rejeicao",
-  "regra": "Se produto (tag: cProdANP) está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna \"Código ANP\") e coluna (\"Origem do Combustível\") igual a 1: - Obrigatória informação de pelo menos uma ocorrência do grupo de origem do combustível (id: LA18) Exceção 1: Regra de Validação não se aplica quando o campo (tag: indFinal) igual a 1. Exceção 2: Regra de validação não se aplica quando: NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922.",
+  "regra": "Se produto (tag: cProdANP) está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna \"Código ANP\") e coluna (\"Origem do Combustível\") igual a 1: - Obrigatória informação de pelo menos uma ocorrência do grupo de origem do combustível (id: LA18) Exceção 1: Regra de Validação não se aplica quando o campo (tag: indFinal) igual a 1. Exceção 2: Regra de validação não se aplica quando: NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922. Exceção 4: Regra de validação não se aplica a NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica. Observação 2: Regra implementada em 04/08/2025 em homologação, e 01/10/2025 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento do grupo de UF de origem do combustível [nItem:999]",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -8929,7 +8803,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 909,
   "efeito": "rejeicao",
-  "regra": "Se preenchido o campo Percentual de Gás Natural Nacional - GLGNn para o produto GLP (tag: pGNn) ou o campo Percentual de Gás Natural Importado - GLGNi para o produto GLP (tag: pGNi) com valor diferente de “0”: - Obrigatória informação de pelo menos uma ocorrência do grupo de origem do combustível (id: LA18) Exceção 1: Regra de Validação não se aplica quando o campo (tag: indFinal) igual a 1. Exceção 2: Regra de validação não se aplica quando: - NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922. Exceção 4: Regra de validação não se aplica a NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6). Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Observação 2: Regra válida a partir de 03/07/2023 em homologação e 04/09/2023 em produção.",
+  "regra": "Se preenchido o campo Percentual de Gás Natural Nacional - GLGNn para o produto GLP (tag: pGNn) ou o campo Percentual de Gás Natural Importado - GLGNi para o produto GLP (tag: pGNi) com valor diferente de “0”: - Obrigatória informação de pelo menos uma ocorrência do grupo de origem do combustível (id: LA18) Exceção 1: Regra de Validação não se aplica quando o campo (tag: indFinal) igual a 1. Exceção 2: Regra de validação não se aplica quando: - NF-e Complementar (tag:finNFe =2) ou NF-e de Devolução (tag:finfe=4). Exceção 3: Regra de validação não se aplica quando CFOP 5.922 ou 6.922. Exceção 4: Regra de validação não se aplica a NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6). Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica. Observação 2: Regra válida a partir de 03/07/2023 em homologação e 04/09/2023 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento do grupo de UF de origem",
   "pagina": 15,
   "consultaBaseSefaz": false,
@@ -9064,22 +8938,6 @@
   "historico": []
  },
  {
-  "id": "N07-10",
-  "documento": "MOC 7.0 Anexo I",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 929,
-  "efeito": "rejeicao",
-  "regra": "Não informados campos de valores do CST 51 (Diferimento): - modBC (id: N13), pRedBC (id: N14), vBC (id: N15), pICMS (id: N16), vICMSOp (id: N16a), pDif (id: N16b), vICMSDif (id: N16c), vICMS (id: N17) Observações: Implementação a critério da UF (NT 2019.001 v1.10, v1.50)",
-  "mensagem": "Rejeição: Informado CST de diferimento sem as informações de diferimento [nItem: nnn]",
-  "pagina": 99,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
   "id": "N08-10",
   "documento": "MOC 7.0 Anexo I",
   "grupo": null,
@@ -9173,7 +9031,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 766,
   "efeito": "rejeicao",
-  "regra": "Se NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6): - CST diferente da relação abaixo: - 00-Tributada integralmente; - 20-Com redução da Base de Cálculo; - 40-Isenta; - 41-Não tributada; - 60-ICMS cobrado anteriormente por substituição tributária; - 61-Tributação monofásica sobre combustíveis cobrada anteriormente; Exceção 1: Aceitar CST=90-Outros, a critério da UF.",
+  "regra": "Se NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6): - CST diferente da relação abaixo: - 00-Tributada integralmente; - 20-Com redução da Base de Cálculo; - 40-Isenta; - 41-Não tributada; - 60-ICMS cobrado anteriormente por substituição tributária; - 61-Tributação monofásica sobre combustíveis cobrada anteriormente; Exceção 1: Aceitar CST=90-Outros, a critério da UF. Exceção 2: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. (NT 2015.002)",
   "mensagem": "Rejeição: Item com CST indevido [nItem:nnn]",
   "pagina": 15,
   "consultaBaseSefaz": false,
@@ -9376,7 +9234,7 @@
  },
  {
   "id": "N12-81",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2018.005 v1.52",
   "grupo": null,
   "modelos": [
    "55",
@@ -9385,11 +9243,17 @@
   "aplicacao": "facultativa",
   "cStat": 938,
   "efeito": "rejeicao",
-  "regra": "Se informado CST 60 em operações que não sejam para consumidor final (tag: indFinal=0, “Normal”): - Não informada Base de Cálculo ICMS Retido na operação anterior (tag: vBCSTRet), Alíquota suportada pelo Consumidor Final (tag: pST) e Valor do ICMS ST Retido na operação anterior (tag: vICMSSTRet). Observação: Implementação opcional a critério da UF. (Atualizado NT 2018.005 v1.30)",
-  "mensagem": "Rejeição: Não informada BCST, pST e ICMSST retido na operação anterior [nItem: 999]",
-  "pagina": 102,
+  "regra": "Se informado CST = 60 em operações que não sejam para consumidor final (tag: indFinal=0, “Normal”): - Não informada Base de Cálculo ICMS Retido na operação anterior (tag: vBCSTRet), Alíquota suportada pelo Consumidor Final (tag: pST) , Valor do ICMS próprio do Substituto (tag: vICMSSubstituto) e Valor do ICMS ST Retido na operação anterior (tag: vICMSSTRet). Observação: Implementação opcional a critério da UF.",
+  "mensagem": "Rejeição: Não informada vBCSTRet, pST, vICMSSubstituto e vICMSSTRet [nItem: 999]",
+  "pagina": 22,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 102,
+    "cStat": 938
+   }
+  ]
  },
  {
   "id": "N12-82",
@@ -9415,8 +9279,8 @@
   ]
  },
  {
-  "id": "N12-84",
-  "documento": "MOC 7.0 Anexo I",
+  "id": "N12-85",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55",
@@ -9425,72 +9289,54 @@
   "aplicacao": "facultativa",
   "cStat": 930,
   "efeito": "rejeicao",
-  "regra": "Se informado CST com benefício fiscal (CST = 20, 30, 40, 41, 50, 51, 60, 70 ou 90): - Obrig.atório informar o código de benefício fiscal (tag: cBenef) Observação 1: Implementação a critério da UF, por modelo de DF-e e por CST. Observação 2: Tabela de código de benefício fiscal por UF publicada no Portal Nacional da NF-e Exceção: Não se aplica esta regra de validação no caso de CST=90 e: - Percentual de Redução de Base de Cálculo (tag: pRedBC) igual a zero; - e (Percentual de Redução de Base de Cálculo do ICMS-ST (tag: pRedBCST) igual a zero e operação interna (idDest=1). (NT 2019.001 v1.10, v1.50)",
+  "regra": "Se informado CST e não informado código de benefício fiscal: - Verificar se CST exige código de benefício fiscal (tag: cBenef), conforme tabela de código de benefício fiscal por UF publicada no Portal da Fazenda da respectiva UF. Observação 1: Implementação a critério da UF, por modelo de DF-e e por CST. Observação 2: Para o CST informado, o sistema autorizador apenas verifica se existe qualquer cBenef na tabela publicada no Portal da Fazenda da respectiva UF, sem verificar a compatibilidade. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior; Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada.",
   "mensagem": "Rejeição: CST com benefício fiscal e não informado o código de benefício fiscal [nItem: nnn]",
-  "pagina": 102,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N12-85",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "N. Item / Tributo: ICMS (regras N12-85, N12-86, N12-94, N12-98)",
-  "modelos": null,
-  "aplicacao": "facultativa",
-  "cStat": 930,
-  "efeito": "rejeicao",
-  "regra": "Se informado CST e não informado código de benefício fiscal: - Verificar se CST exige código de benefício fiscal (tag: cBenef), conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF. Observação 1: Implementação a critério da UF, por modelo de DF-e e por CST. Observação 2: Para o CST informado, o sistema autorizador apenas verifica se existe qualquer cBenef na tabela publicada no Portal da Secretaria de Fazenda da respectiva UF, sem verificar a compatibilidade. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior; Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. (NT 2019.001 v1.50); Exceção 5: Não se aplica para NFF (tpEmis = 3-NFF) (NT 2021.002).",
-  "mensagem": "Rejeição: CST com benefício fiscal e não informado o código de benefício fiscal [nItem: nnn]",
-  "pagina": 12,
+  "pagina": 17,
   "consultaBaseSefaz": false,
   "historico": [
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 103,
     "cStat": 930
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 12,
+    "cStat": 930
    }
   ]
  },
  {
   "id": "N12-86",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "N. Item / Tributo: ICMS (regras N12-85, N12-86, N12-94, N12-98)",
-  "modelos": null,
-  "aplicacao": "facultativa",
-  "cStat": 928,
-  "efeito": "rejeicao",
-  "regra": "Se informado CST e informado código de benefício fiscal: - Verificar se CST não possui código de benefício fiscal, conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF. Observação 1: Implementação a critério da UF, por modelo de DF-e e CST. Observação 2: Para o CST informado, o sistema apenas verifica se não existe qualquer cBenef na tabela publicada no Portal da Secretaria de Fazenda da respectiva UF, sem verificar a compatibilidade. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. (NT 2019.001 v1.50); Exceção 5: Não se aplica para NFF (tpEmis = 3-NFF) (NT 2021.002).",
-  "mensagem": "Rejeição: Informado código de benefício fiscal para CST sem benefício fiscal [nItem: nnn]",
-  "pagina": 13,
-  "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 104,
-    "cStat": 928
-   }
-  ]
- },
- {
-  "id": "N12-88",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55",
    "65"
   ],
   "aplicacao": "facultativa",
-  "cStat": 931,
+  "cStat": 928,
   "efeito": "rejeicao",
-  "regra": "Se informado código de benefício fiscal (tag: cBenef): - verificar se tipo de código do benefício corresponde ao CST com benefício fiscal. Exemplo: Código de benefício fiscal de isenção deve ser utilizado com CST de isenção. Observação 1: Implementação a critério da UF, por modelo de DF-e e por CST. Observação 2: Tabela de código de benefício fiscal por UF publicada no Portal Nacional da NF-e (NT 2019.001 v1.10, v1.50)",
-  "mensagem": "Rejeição: CST não corresponde ao tipo de código de benefício fiscal [nItem: nnn]",
-  "pagina": 104,
+  "regra": "Se informado CST e informado código de benefício fiscal: - Verificar se CST não possui código de benefício fiscal, conforme tabela de código de benefício fiscal por UF publicada no Portal da Fazenda da respectiva UF. Observação 1: Implementação a critério da UF, por modelo de DF-e e CST.",
+  "mensagem": "Rejeição: Informado código de benefício fiscal para CST sem benefício fiscal [nItem: nnn]",
+  "pagina": 17,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 104,
+    "cStat": 928
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 13,
+    "cStat": 928
+   }
+  ]
  },
  {
   "id": "N12-90",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55",
@@ -9499,35 +9345,49 @@
   "aplicacao": "facultativa",
   "cStat": 934,
   "efeito": "rejeicao",
-  "regra": "Se CST de ICMS = (20, 30, 40, 41, 50, 70 ou 90): - Verificar se informado o valor do ICMS desonerado (tag:vICMSDeson) e o Motivo da Desoneração (tag: motDesICMS). Observação: Implementação a critério da UF, por modelo de DF-e e por CST. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior; Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. Exceção 5: Não se aplica esta regra de validação no caso de CST=90 e: - Percentual de Redução de Base de Cálculo (tag: pRedBC) igual a zero; - e (Percentual de Redução de Base de Cálculo do ICMS-ST (tag: pRedBCST) igual a zero (NT 2019.001 v1.10, v1.50)",
+  "regra": "Se CST de ICMS = (20, 30, 40, 41, 50, 70 ou 90): - Verificar se informado o valor do ICMS desonerado (tag:vICMSDeson) e o Motivo da Desoneração (tag: motDesICMS). Observação1: Implementação a critério da UF, por modelo de DF-e e por CST. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior; Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. Exceção 5: Não se aplica esta regra de validação no caso de CST=90 e: - Percentual de Redução de Base de Cálculo (tag: pRedBC) igual a zero; - e (Percentual de Redução de Base de Cálculo do ICMS-ST (tag: pRedBCST) igual a zero",
   "mensagem": "Rejeição: Não informado valor do ICMS desonerado ou o Motivo de desoneração [nItem: nnn]",
-  "pagina": 105,
+  "pagina": 18,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 105,
+    "cStat": 934
+   }
+  ]
  },
  {
   "id": "N12-94",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "N. Item / Tributo: ICMS (regras N12-85, N12-86, N12-94, N12-98)",
-  "modelos": null,
+  "documento": "NT 2019.001 v1.70",
+  "grupo": null,
+  "modelos": [
+   "55",
+   "65"
+  ],
   "aplicacao": "facultativa",
   "cStat": 931,
   "efeito": "rejeicao",
-  "regra": "Se informado CST e informado código de benefício fiscal: - Verificar se código de benefício fiscal corresponde ao CST informado, conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF. Observação: Implementação a critério da UF, por modelo de DF-e e por CST. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada; Exceção 5: Não se aplica para NFF (tpEmis = 3-NFF) (NT 2021.002). Nota: Para itens sem benefício fiscal, a UF poderá exigir a informação da literal “SEM CBENEF” para alguns CST, vide tabela publicada no Portal da Secretaria de Fazenda da respectiva UF. Nota: Para itens sem benefício fiscal, a UF poderá exigir a informação da literal “SEM CBENEF” para alguns CST, vide tabela publicada no Portal Nacional Fazenda da respectiva UF.",
+  "regra": "Se informado CST e informado código de benefício fiscal: - Verificar se código de benefício fiscal corresponde ao CST informado, conforme tabela de código de benefício fiscal por UF publicada no Portal da Fazenda da respectiva UF. Observação: Implementação a critério da UF, por modelo de DF-e e por CST.",
   "mensagem": "Rejeição: Informado código de benefício fiscal incompatível com CST e UF [nItem: nnn]",
-  "pagina": 13,
+  "pagina": 18,
   "consultaBaseSefaz": false,
   "historico": [
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 106,
     "cStat": 931
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 13,
+    "cStat": 931
    }
   ]
  },
  {
   "id": "N12-97",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55"
@@ -9535,28 +9395,42 @@
   "aplicacao": "facultativa",
   "cStat": 929,
   "efeito": "rejeicao",
-  "regra": "Não informados campos de valores do CST 51 (Diferimento): - modBC (id: N13), pRedBC (id: N14), vBC (id: N15), pICMS (id: N16), vICMSOp (id: N16a), pDif (id: N16b), vICMSDif (id: N16c), vICMS (id: N17) Observações: Regra de Validação opcional a critério da UF. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. (NT2019.001)",
+  "regra": "Não informados campos de valores do CST 51 (Diferimento): - modBC (id: N13), pRedBC (id: N14), vBC (id: N15), pICMS (id: N16), vICMSOp (id: N16a), pDif (id: N16b), vICMSDif (id: N16c), vICMS (id: N17) Observações: Regra de Validação opcional a critério da UF. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada.",
   "mensagem": "Rejeição: Informado CST de diferimento sem as informações de diferimento [nItem: nnn]",
-  "pagina": 106,
+  "pagina": 19,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 106,
+    "cStat": 929
+   }
+  ]
  },
  {
   "id": "N12-98",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "N. Item / Tributo: ICMS (regras N12-85, N12-86, N12-94, N12-98)",
-  "modelos": null,
+  "documento": "NT 2019.001 v1.70",
+  "grupo": null,
+  "modelos": [
+   "55",
+   "65"
+  ],
   "aplicacao": "facultativa",
   "cStat": 946,
   "efeito": "rejeicao",
-  "regra": "Se informado código de benefício fiscal: - Verificar se código de benefício fiscal existe e está vigente, conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF. Observação: Implementação a critério da UF e por modelo de DF-e. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. Exceção 5: essa RV não se aplica quando informado CSOSN (operação realizada por optante pelo Simples Nacional). (NT2019.001 v1.50) Exceção 6: Não se aplica para NFF (tpEmis = 3-NFF) (NT 2021.002).",
+  "regra": "Se informado código de benefício fiscal: - Verificar se código de benefício fiscal existe e está vigente, conforme tabela de código de benefício fiscal por UF publicada no Portal da Fazenda da respectiva UF. Observação: Implementação a critério da UF e por modelo de DF-e. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada. Exceção 5: essa RV não se aplica quando informado CSOSN (Simples Nacional).",
   "mensagem": "Rejeição: Informado código de benefício fiscal incorreto ou inexistente na UF [nItem: nnn]",
-  "pagina": 14,
+  "pagina": 19,
   "consultaBaseSefaz": false,
   "historico": [
    {
     "documento": "MOC 7.0 Anexo I",
     "pagina": 107,
+    "cStat": 946
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 14,
     "cStat": 946
    }
   ]
@@ -9704,7 +9578,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 386,
   "efeito": "rejeicao",
-  "regra": "NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com CSOSN = 102, 103, 300, 400 ou 900",
+  "regra": "NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com CSOSN = 102, 103, 300, 400 ou 900 - CFOP diferente de 5.101, 5.102, 5.103, 5.104, 5.115, 5.910 (NT 2015.002) Observação 1: Para a UF do RS, poderá ser permitido o uso do CST 90 com o CFOP 5.949. Observação 2: Para a UF do CE, poderá ser permitido o uso do CSOSN 900 com o CFOP 5.405. Observação 3: Para a UF do SP, poderá ser permitido o uso do CSOSN 900 com o CFOP 5.949.",
   "mensagem": "Rejeição: CFOP não permitido para o CSOSN informado [nItem: nnn]",
   "pagina": 16,
   "consultaBaseSefaz": false,
@@ -9756,7 +9630,7 @@
  },
  {
   "id": "N12a-50",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2018.005 v1.52",
   "grupo": null,
   "modelos": [
    "55",
@@ -9765,11 +9639,17 @@
   "aplicacao": "facultativa",
   "cStat": 938,
   "efeito": "rejeicao",
-  "regra": "Se informado CSOSN = 500 em operações que não sejam para consumidor final (tag: indFinal=0, “Normal”): - Não informada Base de Cálculo ICMS Retido na operação anterior (tag: vBCSTRet), Alíquota suportada pelo Consumidor Final (tag: pST) e Valor do ICMS ST Retido na operação anterior (tag: vICMSSTRet). Observação: Implementação opcional a critério da UF. (Atualizado na NT 2018.005 v1.30)",
-  "mensagem": "Rejeição: Não informada BCST, pST e ICMSST retido na operação anterior [nItem: 999]",
-  "pagina": 107,
+  "regra": "Se informado CSOSN = 500 em operações que não sejam para consumidor final (tag: indFinal=0, “Normal”): - Não informada Base de Cálculo ICMS Retido na operação anterior (tag: vBCSTRet), Alíquota suportada pelo Consumidor Final (tag: pST), Valor do ICMS próprio do Substituto (tag: vICMSSubstituto) e Valor do ICMS ST Retido na operação anterior (tag: vICMSSTRet). Observação: Implementação opcional a critério da UF.",
+  "mensagem": "Rejeição: Não informada vBCSTRet, pST, vICMSSubstituto e vICMSSTRet [nItem: 999]",
+  "pagina": 22,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 107,
+    "cStat": 938
+   }
+  ]
  },
  {
   "id": "N12a-60",
@@ -9898,6 +9778,38 @@
     "cStat": 337
    }
   ]
+ },
+ {
+  "id": "N14a-10",
+  "documento": "NT 2019.001 v1.70",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 665,
+  "efeito": "rejeicao",
+  "regra": "Se CST de ICMS = 51 (diferimento) e informado tag:ICMS51/pRedBC (id:N14) maior que zero, é obrigatório informar cBenefRBC (id:N14a) (NT 2019.001). Observação: Implementação a critério da UF.",
+  "mensagem": "Rejeição: Não informado código de benefício fiscal de redução de BC (cBenefRBC) quando percentual de redução de BC for maior que zero",
+  "pagina": 19,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "N14a-20",
+  "documento": "NT 2019.001 v1.70",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 666,
+  "efeito": "rejeicao",
+  "regra": "Se CST de ICMS = 51 (diferimento) e informado tag:ICMS51/cBenefRBC (id:N14a): - Verificar se código de benefício fiscal de redução de BC (cBenefRBC) existe, está vigente e corresponde a um código de benefício de redução de base de cálculo (coluna CST 20 = SIM), conforme tabela de código de benefício fiscal por UF publicada no Portal da Secretaria de Fazenda da respectiva UF (NT 2019.001). Observação: Implementação a critério da UF. Exceção 1: a RV não se aplica quando Finalidade de emissão da NFe (tag: finNFe) igual a Devolução de Mercadoria e Identificador de local de destino da operação (tag: idDest) igual a Operação interestadual ou com o Exterior. Exceção 2: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a Devolução de Mercadoria; Exceção 3: a critério da UF, a RV não se aplica quando Finalidade de emissão da NF-e (tag: finNFe) igual a NF-e de Ajuste; Exceção 4: a critério da UF, a RV não se aplica quando Tipo de Operação (tag: tpNF) igual à Entrada.",
+  "mensagem": "Rejeição: Informado código de benefício fiscal de redução de BC (cBenefRBC) incorreto, inexistente ou incompatível na UF [nItem: nnn]",
+  "pagina": 20,
+  "consultaBaseSefaz": false,
+  "historico": []
  },
  {
   "id": "N16-04",
@@ -10041,7 +9953,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 860,
   "efeito": "rejeicao",
-  "regra": "Informado a tag vFCP (id:N17c) e finNFe=1 (id:B25), verificar: - Se CST=00 e vFCP (id:N17c) difere da vBC (id:N15)* pFCP (id:N17b) (*4) ou - Se CST=10, 20,70, 90 ou 51 e vFCP (id:N17c) difere da vBCFCP (id:N17a)* pFCP (id:N17b) (*4) (NT 2016.002)",
+  "regra": "Informado a tag vFCP (id:N17c) e finNFe=1 (id:B25), verificar: - Se CST=00 e vFCP (id:N17c) difere da vBC (id:N15)* pFCP (id:N17b) (*4) ou - Se CST=10, 20,70, 90 e vFCP (id:N17c) difere da vBCFCP (id:N17a)* pFCP (id:N17b) (*4) (NT 2016.002)",
   "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
   "pagina": 18,
   "consultaBaseSefaz": false,
@@ -10071,29 +9983,23 @@
  },
  {
   "id": "N17c-30",
-  "documento": "NT 2024.001 v1.20",
+  "documento": "NT 2022.003 v1.11",
   "grupo": null,
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 474,
   "efeito": "rejeicao",
-  "regra": "Se Operação Interna ou Operação Interestadual (idDest=1 ou 2) com CST=00 (operação tributada normalmente): (NT 2022.003) - Se informado valor diferente de zero para o FCP (verificar tags vFCP, vFCPST, vFCPSTRet) Observação: Regra de validação aplicável para a UF: CE.",
+  "regra": "Se Operação Interna ou Operação Interestadual (idDest=1 ou 2) com CST=00 (operação tributada normalmente): - Se informado valor diferente de zero para o FCP (verificar tags vFCP, vFCPST, vFCPSTRet) Observação: Regra de validação aplicável para a UF CE.",
   "mensagem": "Rejeição: FCP não deve ser destacado na NF-e conforme legislação estadual [nItem:999]",
-  "pagina": 14,
+  "pagina": 12,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2022.003 v1.11",
-    "pagina": 12,
-    "cStat": 474
-   }
-  ]
+  "historico": []
  },
  {
   "id": "N18-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55"
@@ -10101,15 +10007,21 @@
   "aplicacao": "facultativa",
   "cStat": 932,
   "efeito": "rejeicao",
-  "regra": "Se o campo modBCST = “4” Margem Valor Agregado, Obrigatório o preenchimento do campo pMVAST Nota: Regra de Validação opcional a critério da UF (NT 2019.001 v1.10, v1.50)",
+  "regra": "Se o campo modBCST = “4” Margem Valor Agregado, obrigatório o preenchimento do campo pMVAST Nota: Regra de Validação opcional a critério da UF.",
   "mensagem": "Rejeição: Informada modalidade de determinação da BC da ST como MVA e não informado o campo pMVAST [nItem: nnn]",
-  "pagina": 111,
+  "pagina": 20,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 111,
+    "cStat": 932
+   }
+  ]
  },
  {
   "id": "N18-20",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55"
@@ -10117,11 +10029,17 @@
   "aplicacao": "facultativa",
   "cStat": 933,
   "efeito": "rejeicao",
-  "regra": "Se o campo modBCST <> “4” Margem Valor Agregado, não deverá ser preenchido o campo pMVAST Nota: Regra de Validação opcional a critério da UF (NT 2019.001 v1.10, v1.50)",
+  "regra": "Se o campo modBCST <> “4” Margem Valor Agregado, não deverá ser preenchido o campo pMVAST Nota: Regra de Validação opcional a critério da UF.",
   "mensagem": "Rejeição: Informada modalidade de determinação da BC da ST diferente de MVA e informado o campo pMVAST [nItem: nnn]",
-  "pagina": 111,
+  "pagina": 20,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 111,
+    "cStat": 933
+   }
+  ]
  },
  {
   "id": "N23-10",
@@ -10311,29 +10229,6 @@
   "historico": []
  },
  {
-  "id": "N33-10",
-  "documento": "NT 2018.005 v1.52",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "facultativa",
-  "cStat": 906,
-  "efeito": "rejeicao",
-  "regra": "Se Informado CST = 60 ou CSOSN=500 e indFinal=1 (id:B25a), preenchimento",
-  "mensagem": "Rejeição: Não informados os campos do grupo opcional para informações do ICMS",
-  "pagina": 22,
-  "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 113,
-    "cStat": 906
-   }
-  ]
- },
- {
   "id": "N37a-10",
   "documento": "NT 2023.001 v1.60",
   "grupo": null,
@@ -10345,22 +10240,6 @@
   "efeito": "rejeicao",
   "regra": "Se informado CST de ICMS = 02, 15 ou 53: - Obrigatório o preenchimento da Quantidade tributada (id: N37a): Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada [nItem:999]",
-  "pagina": 36,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N38-10",
-  "documento": "NT 2023.001 v1.60",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 961,
-  "efeito": "rejeicao",
-  "regra": "Se produto (tag: cProdANP) está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP): - Alíquota adrem do imposto (id: N38) dever ser igual ao valor presente na coluna (adRemICMS) correspondente. Exceção 1: Regra não aplicável quando preenchido o campo de Percentual de redução do valor da alíquota ad rem do ICMS (tag: pRedAdRem) Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica Observação 2: Implementação futura.",
-  "mensagem": "Rejeição: Alíquota adrem do imposto difere do definido na legislação para o produto. [nItem:999]",
   "pagina": 36,
   "consultaBaseSefaz": false,
   "historico": []
@@ -10394,22 +10273,6 @@
   "efeito": "rejeicao",
   "regra": "Se informado CST de ICMS = 15: - Obrigatório o preenchimento da Quantidade tributada sujeita a retenção (id: N39a) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada sujeita a retenção [nItem:999]",
-  "pagina": 37,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N40-10",
-  "documento": "NT 2023.001 v1.60",
-  "grupo": null,
-  "modelos": [
-   "55"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 963,
-  "efeito": "rejeicao",
-  "regra": "Se produto (tag: cProdANP) está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP): - Alíquota adrem do imposto com retenção (id: N40) dever ser igual ao valor presente na coluna (adRemICMS) Exceção 1: Regra não aplicável quando preenchido o campo de Percentual de redução do valor da alíquota ad rem do ICMS (tag: pRedAdRem) Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica Observação 2: Implementação futura.",
-  "mensagem": "Rejeição: Alíquota adrem do imposto com retenção difere do definido na legislação para o produto. [nItem:999]",
   "pagina": 37,
   "consultaBaseSefaz": false,
   "historico": []
@@ -10460,40 +10323,6 @@
   "efeito": "rejeicao",
   "regra": "Se informado CST de ICMS = 61: - Obrigatório o preenchimento da Quantidade tributada retida anteriormente (id: N43a): Observação 1: Regra válida a partir de 25/09/2023 em homologação e 01/04/2024 em produção.",
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada retida anteriormente [nItem:999]",
-  "pagina": 38,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N44-10",
-  "documento": "NT 2023.001 v1.60",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 965,
-  "efeito": "rejeicao",
-  "regra": "Se produto (tag: cProdANP) está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP): - Alíquota adrem do imposto retido anteriormente (id: N44) dever ser igual ao valor presente na coluna (adRemICMS). Observação 1: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica Observação 2: Implementação futura.",
-  "mensagem": "Rejeição: Alíquota adrem do imposto retido anteriormente difere do definido na legislação para o produto. [nItem:999]",
-  "pagina": 38,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "N45-10",
-  "documento": "NT 2023.001 v1.60",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 966,
-  "efeito": "rejeicao",
-  "regra": "-Se CST de ICMS = 61 e trata-se de NF-e normal (tag:finNFe = 1) e - Se informada a Quantidade tributada retida anteriormente (id: N44a): - Valor do ICMS retido anteriormente (id: N45) difere de Quantidade Tributada retida anteriormente (id: N44a) * Alíquota adrem do imposto retido anteriormente (id: N44) (*4) Observação 1: Regra válida a partir de 03/07/2023 em homologação e 04/09/2023 em produção.",
-  "mensagem": "Rejeição: Valor do ICMS retido anteriormente difere do calculado. [nItem:999]",
   "pagina": 38,
   "consultaBaseSefaz": false,
   "historico": []
@@ -11196,13 +11025,7 @@
   "mensagem": "Rejeição: Classificação Tributária do Imposto Seletivo informada inexistente [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 29,
-    "cStat": 1014
-   }
-  ]
+  "historico": []
  },
  {
   "id": "UB05-10",
@@ -11297,17 +11120,11 @@
   "aplicacao": "obrigatoria",
   "cStat": 1115,
   "efeito": "rejeicao",
-  "regra": "Não informado grupo de imposto IBS e CBS (grupo: det/imposto/IBSCBS) Exceção 1: Não se aplica à NFe de devolução de mercadorias (tag: finNFe = 4) ou NFe complementar (tag: finNFe = 2) que referencia NFe com data de emissão anterior a 2026 2027. Exceção 2: Não se aplica caso informado campo cProdANP (id: LA02) e produto está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP). Observação 1: implementação em homologação para NFe com data de emissão maior ou igual a 01/07/2026 e emitente com CRT 3=Regime Normal. Observação 2: implementação em produção para NFe com data de emissão maior ou igual a 03/08/2026 e emitente com CRT 3=Regime Normal. Observação 3: implementação em produção para emitente com CRT com 1=Simples Nacional, 2=Simples Nacional, excesso sublimite de receita bruta ou 4=Simples Nacional - Microempreendedor Individual – MEI a partir 04/01/2027. Observação 2: implementação futura para produção. Observação 3: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica.",
+  "regra": "Não informado grupo de imposto IBS e CBS (grupo: det/imposto/IBSCBS) Exceção 1: Não se aplica à NFe de devolução de mercadorias (tag: finNFe = 4) ou NFe complementar (tag: finNFe = 2) que referencia NFe com data de emissão anterior a 2027. Exceção 2: Não se aplica caso informado campo cProdANP (id: LA02) e produto está presente na Tabela de Combustíveis Sujeitos à Tributação Monofásica (coluna cProdANP). Observação 1: implementação em homologação para NFe com data de emissão maior ou igual a 01/07/2026 e emitente com CRT 3=Regime Normal. Observação 2: implementação em produção para NFe com data de emissão maior ou Observação 3: implementação em produção para emitente com CRT com 1=Simples Nacional, 2=Simples Nacional, excesso sublimite de receita bruta ou 4=Simples Observação 2: implementação futura para produção. Observação 3: Tabela de Combustíveis Sujeitos à Tributação Monofásica publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica.",
   "mensagem": "Rejeição: Grupo IBSCBS não informado [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 30,
-    "cStat": 1020
-   }
-  ]
+  "historico": []
  },
  {
   "id": "UB12-11",
@@ -11459,13 +11276,7 @@
   "mensagem": "Rejeição: Classificação Tributária do IBS/CBS informada inexistente [nItem: 999]",
   "pagina": 41,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 30,
-    "cStat": 1025
-   }
-  ]
+  "historico": []
  },
  {
   "id": "UB14-20",
@@ -11527,7 +11338,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1059,
   "efeito": "rejeicao",
-  "regra": "Se cClassTrib (id: UB14, tag: IBSCBS/cClassTrib) for igual a 620005: - Percentual do índice de mistura do Etanol Anidro na Gasolina C (id: LA17, tag: comb/pBio) deve ser inferior ao obrigatório correspondende ao respectivo código ANP (tag: cProdANP), observado o art. 179 IIb da LC 214/2025 Observação 1: Consultar Tabela de Código de Classificação Tributária do IBS e CBS. Observação 2: Consultar Tabela Índice de mistura do Biocombustível publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica. -- cClassTrib x tpNFCredito / tpNFDebito --",
+  "regra": "Se cClassTrib (id: UB14, tag: IBSCBS/cClassTrib) for igual a 620005: - Percentual do índice de mistura do Etanol Anidro na Gasolina C (id: LA17, tag: comb/pBio) deve ser inferior ao obrigatório correspondende ao respectivo código ANP (tag: cProdANP), observado o art. 179 IIb da LC 214/2025 Observação 1: Consultar Tabela de Código de Classificação Tributária do IBS e CBS. Observação 2: Consultar Tabela Índice de mistura do Biocombustível publicada na aba “Documentos”, opção “Diversos” do Portal Nacional da Nota Fiscal Eletrônica.",
   "mensagem": "Rejeição: Índice de mistura do Biocombustível superior ao obrigatório para esta Classificação Tributária do IBS e CBS [nItem: 999]",
   "pagina": 42,
   "consultaBaseSefaz": false,
@@ -11575,7 +11386,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1201,
   "efeito": "rejeicao",
-  "regra": "Se informado tipo de nota de crédito (tag: tpNFCredito): - Validar se tpNFCredito é compatível com o cClassTrib, de acordo com a tabela abaixo: tpNFCredito cClassTrib 01=Multa e Juros Não limitar 02=Apropriação de crédito presumido de IBS sobre o saldo devedor 810001 na ZFM (art. 450, § 1º, LC 214/25) 03=Retorno por recusa total na entrega ou por não localização do Não limitar destinatário na tentativa de entrega 04=Redução de valores Não limitar 05=Transferência de crédito na sucessão 800001 06=Retorno por recusa parcial na entrega Não limitar --",
+  "regra": "Se informado tipo de nota de crédito (tag: tpNFCredito): - Validar se tpNFCredito é compatível com o cClassTrib, de acordo com a tabela abaixo: tpNFCredito cClassTrib 01=Multa e Juros Não limitar 02=Apropriação de crédito presumido de IBS sobre o saldo devedor na ZFM (art. 450, § 1º, LC 214/25) 810001 03=Retorno por recusa total na entrega ou por não localização do destinatário na tentativa de entrega Não limitar 04=Redução de valores Não limitar 05=Transferência de crédito na sucessão 800001 06=Retorno por recusa parcial na entrega Não limitar --",
   "mensagem": "Rejeição: cClassTrib incompatível com o tipo de Nota de Crédito [nItem: 999]",
   "pagina": 43,
   "consultaBaseSefaz": false,
@@ -11583,7 +11394,7 @@
  },
  {
   "id": "UB16-10",
-  "documento": "NT 2026.008 v1.00",
+  "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": [
    "55",
@@ -11592,17 +11403,11 @@
   "aplicacao": "obrigatoria",
   "cStat": 1104,
   "efeito": "rejeicao",
-  "regra": "Valor da Base de cálculo do IBS e CBS (gIBSCBS/vBC) deve ser igual ao somatório de: (+) vProd (+) vServ (+) vFrete (+) vSeg (+) vOutro (+) vII (-) vDesc (-) vPIS (-) vCOFINS (-) vICMS (-) vICMSUFDest (-) vFCP (-) vFCPUFDest (-) vICMSMono (-) vISSQN (+) vIS Exceção 1: Não subtrair o valor do PIS por Substituição Tributária (PIST/vPIS) quando compor o valor total da NF-e (se indSomaPISST=1); Exceção 2: Não subtrair o valor do COFINS por Substituição Tributária (COFINSST/vCOFINS) quando compor o valor total da NF-e (se indSomaCOFINSST=1). Nota: Implementação Futura, aguardando orientação normativa. Observação: Regra removida.",
+  "regra": "Valor da Base de cálculo do IBS e CBS (gIBSCBS/vBC) deve ser igual ao somatório de: (+) vProd (+) vServ (+) vFrete (+) vSeg (+) vOutro (+) vII (-) vDesc (-) vPIS (-) vCOFINS (-) vICMS (-) vICMSUFDest (-) vFCP (-) vFCPUFDest (-) vICMSMono (-) vISSQN (+) vIS Exceção 1: Não subtrair o valor do PIS por Substituição Tributária (PIST/vPIS) quando compor o valor total da NF-e (se indSomaPISST=1); Exceção 2: Não subtrair o valor do COFINS por Substituição Tributária (COFINSST/vCOFINS) quando compor o valor total da NF-e (se indSomaCOFINSST=1). Nota: Implementação Futura, aguardando orientação normativa.",
   "mensagem": "Rejeição: Valor da Base de cálculo do IBS e CBS difere do somatório dos valores que a compõem [nItem: 999]",
-  "pagina": 8,
+  "pagina": 43,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2025.002 v1.52",
-    "pagina": 43,
-    "cStat": 1104
-   }
-  ]
+  "historico": []
  },
  {
   "id": "UB18-10",
@@ -11717,7 +11522,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1033,
   "efeito": "rejeicao",
-  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (tag:gCompraGov): - Grupo de Redução de Alíquota Estadual não informado (grupo: gIBSUF/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui indicador que não permite a informação do IBS/CBS (ind_gIBSCBS = 0). Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
+  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (tag:gCompraGov): - Grupo de Redução de Alíquota Estadual não informado (grupo: gIBSUF/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
   "mensagem": "Rejeição: Não informado o grupo de redução de alíquota Estadual [nItem: 999]",
   "pagina": 44,
   "consultaBaseSefaz": false,
@@ -11887,7 +11692,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1074,
   "efeito": "rejeicao",
-  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (grupo: gCompraGov): - Grupo de Redução de Alíquota Municipal não informado (grupo: gIBSMun/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui indicador que não permite a informação do IBS/CBS (ind_gIBSCBS = 0). Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
+  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (grupo: gCompraGov): - Grupo de Redução de Alíquota Municipal não informado (grupo: gIBSMun/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
   "mensagem": "Rejeição: Não informado o grupo de redução de alíquota Municipal [nItem: 999]",
   "pagina": 46,
   "consultaBaseSefaz": false,
@@ -11972,7 +11777,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1037,
   "efeito": "rejeicao",
-  "regra": "Alíquota da CBS (tag: pCBS) deve ser igual a 0,9% para documento com data de emissão no ano de 2025 e 2026. Art. 346 da LC 214/2025. Exceção 1: Se o cClassTrib possuir indicador de Tributação Regular (ind_gTribRegular = 1), o pCBS deve ser igual a zero. Exceção 2: A regra não se aplica caso tpNFCredito=04-Redução de valores. Exceção 3: A Alíquota da CBS (tag: pCBS) pode ser igual a zero quando as duas condições abaixo forem atendidas: Condição 01: NCM do Produto (tag: prod/NCM) NÃO inicia por: a) 93 (armas e munições); b) 24 (fumos e derivados); c) 2203 a 2208 (bebidas alcoólicas); d) 8703 (automóveis de passageiros); e) 33, exceto 3303 a 3307 (produtos de perfumaria ou de toucador). Condição 02: Emitente e destinatário devem estar na mesma área incentivada (ou seja, emitente e destinatário dentro da ZFM, ou emitente e destinatário na mesma ALC), conforme relação abaixo: - ZFM: 1302603-Manaus, 1303569-Rio Preto da Eva, 1301902-Itacoatiara - ALC: conforme tabela abaixo: Município Emitente Município Destinatário ZFM 1301902-Itacoatiara (AM) 1301902-Itacoatiara (AM) 1301902-Itacoatiara (AM) 1302603-Manaus (AM) 1301902-Itacoatiara (AM) 1303569-Rio Preto da Eva (AM) 1302603-Manaus (AM) 1301902-Itacoatiara (AM) 1302603-Manaus (AM) 1302603-Manaus (AM) 1302603-Manaus (AM) 1303569-Rio Preto da Eva (AM) 1303569-Rio Preto da Eva (AM) 1301902-Itacoatiara (AM) 1303569-Rio Preto da Eva (AM) 1302603-Manaus (AM) 1303569-Rio Preto da Eva (AM) 1303569-Rio Preto da Eva (AM) ALC 1 1304062-Tabatinga (AM) 1304062-Tabatinga (AM) ALC 2 1100106-Guajará-Mirim (RO) 1100106-Guajará-Mirim (RO) ALC 3 1400100-Boa Vista (RR) 1400100-Boa Vista (RR) 1400100-Boa Vista (RR) 1400159-Bonfim (RR) 1400159-Bonfim (RR) 1400100-Boa Vista (RR) 1400159-Bonfim (RR) 1400159-Bonfim (RR) ALC 4 1600303-Macapá (AP) 1600303-Macapá (AP) 1600303-Macapá (AP) 1600600-Santana (AP) 1600600-Santana (AP) 1600303-Macapá (AP) 1600600-Santana (AP) 1600600-Santana (AP) ALC 5 1200104-Brasileia (AC) 1200104-Brasileia (AC) 1200104-Brasileia (AC) 1200252-Epitaciolândia (AC) 1200104-Brasileia (AC) 1200203-Cruzeiro do Sul(AC) 1200252-Epitaciolândia (AC) 1200104-Brasileia (AC) 1200252-Epitaciolândia (AC) 1200252-Epitaciolândia (AC) 1200252-Epitaciolândia (AC) 1200203-Cruzeiro do Sul(AC) 1200203-Cruzeiro do Sul(AC) 1200104-Brasileia (AC) 1200203-Cruzeiro do Sul(AC) 1200252-Epitaciolândia (AC) 1200203-Cruzeiro do Sul(AC) 1200203-Cruzeiro do Sul(AC) Observação: Alíquota de referência a ser publicada para anos posteriores a 2026.",
+  "regra": "Alíquota da CBS (tag: pCBS) deve ser igual a 0,9% para documento com data de emissão no ano de 2025 e 2026. Art. 346 da LC 214/2025. Exceção 1: Se o cClassTrib possuir indicador de Tributação Regular (ind_gTribRegular = 1), o pCBS deve ser igual a zero. Exceção 2: A regra não se aplica caso tpNFCredito=04-Redução de valores. Exceção 3: A Alíquota da CBS (tag: pCBS) pode ser igual a zero quando as duas condições abaixo forem atendidas: Condição 01: NCM do Produto (tag: prod/NCM) NÃO inicia por: a) 93 (armas e munições); b) 24 (fumos e derivados); c) 2203 a 2208 (bebidas alcoólicas); d) 8703 (automóveis de passageiros); e) 33, exceto 3303 a 3307 (produtos de perfumaria ou de toucador). Condição 02: Emitente e destinatário devem estar na mesma área incentivada (ou seja, emitente e destinatário dentro da ZFM, ou emitente e destinatário na mesma ALC), conforme relação abaixo: Município Emitente Município Destinatário ZFM 1301902-Itacoatiara (AM) 1301902-Itacoatiara (AM) 1301902-Itacoatiara (AM) 1302603-Manaus (AM) 1301902-Itacoatiara (AM) 1303569-Rio Preto da Eva (AM) 1302603-Manaus (AM) 1301902-Itacoatiara (AM) 1302603-Manaus (AM) 1302603-Manaus (AM) 1302603-Manaus (AM) 1303569-Rio Preto da Eva (AM) 1303569-Rio Preto da Eva (AM) 1301902-Itacoatiara (AM) 1303569-Rio Preto da Eva (AM) 1302603-Manaus (AM) 1303569-Rio Preto da Eva (AM) 1303569-Rio Preto da Eva (AM) ALC 1 1304062-Tabatinga (AM) 1304062-Tabatinga (AM) ALC 2 1100106-Guajará-Mirim (RO) 1100106-Guajará-Mirim (RO) ALC 3 1400100-Boa Vista (RR) 1400100-Boa Vista (RR) 1400100-Boa Vista (RR) 1400159-Bonfim (RR) 1400159-Bonfim (RR) 1400100-Boa Vista (RR) 1400159-Bonfim (RR) 1400159-Bonfim (RR) ALC 4 1600303-Macapá (AP) 1600303-Macapá (AP) 1600303-Macapá (AP) 1600600-Santana (AP) 1600600-Santana (AP) 1600303-Macapá (AP) 1600600-Santana (AP) 1600600-Santana (AP) ALC 5 1200104-Brasileia (AC) 1200104-Brasileia (AC) 1200104-Brasileia (AC) 1200252-Epitaciolândia (AC) 1200104-Brasileia (AC) 1200203-Cruzeiro do Sul(AC) 1200252-Epitaciolândia (AC) 1200104-Brasileia (AC) 1200252-Epitaciolândia (AC) 1200252-Epitaciolândia (AC) 1200252-Epitaciolândia (AC) 1200203-Cruzeiro do Sul(AC) 1200203-Cruzeiro do Sul(AC) 1200104-Brasileia (AC) 1200203-Cruzeiro do Sul(AC) 1200252-Epitaciolândia (AC) 1200203-Cruzeiro do Sul(AC) 1200203-Cruzeiro do Sul(AC) Observação: Alíquota de referência a ser publicada para anos posteriores a 2026.",
   "mensagem": "Rejeição: Alíquota da CBS inválida [nItem: 999]",
   "pagina": 47,
   "consultaBaseSefaz": false,
@@ -12122,7 +11927,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1079,
   "efeito": "rejeicao",
-  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (grupo: gCompraGov): - Grupo de Redução de Alíquota da CBS não informado (grupo: gCBS/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui indicador que não permite a informação do IBS/CBS (ind_gIBSCBS = 0). Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
+  "regra": "Se informado grupo gIBSCBS (id: UB15, grupo: imposto/IBSCBS/gIBSCBS): - Se CST possui indicador que exige o uso de Redução de Alíquota (ind_gRed = 1), ou foi informado o grupo de compras governamentais (grupo: gCompraGov): - Grupo de Redução de Alíquota da CBS não informado (grupo: gCBS/gRed) Exceção: A regra não se aplica para CST do IBS/CBS (tag: IBSCBS/CST) que possui Observação: Consultar Tabela de Indicadores de CST do IBS e CBS.",
   "mensagem": "Rejeição: Não informado o grupo de redução de alíquota da CBS [nItem: 999]",
   "pagina": 49,
   "consultaBaseSefaz": false,
@@ -13974,7 +13779,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 1105,
   "efeito": "rejeicao",
-  "regra": "Se vItem informado: Se informada operação de Faturamento Direto para veículos novos (tpOp = 2, id:J02): - Valor total do Item (vItem) deve ser igual ao somatório: (+) vProd (contém vIBS, vCBS e vIS) (-) vDesc (-) vICMSDeson, se indDeduzDeson=1 (+) vFrete (+) vSeg (+) vOutro (+) vII (+) vIPI (+) vServ (+) vPIS (id: R06, campo: PISST/vPIS), se indSomaPISST=1 (+) vCofins (id: T06, campo: COFINSST/vCOFINS), se indSomaCOFINSST =1 (NT 2020.005) (+) vIBS (+) vCBS",
+  "regra": "Se vItem informado: Se informada operação de Faturamento Direto para veículos novos (tpOp = 2, id:J02): - Valor total do Item (vItem) deve ser igual ao somatório: (+) vProd (contém vIBS, vCBS e vIS) (-) vDesc (-) vICMSDeson, se indDeduzDeson=1 (+) vFrete (+) vSeg (+) vOutro (+) vII (+) vIPI (+) vServ (+) vPIS (id: R06, campo: PISST/vPIS), se indSomaPISST=1 (+) vCofins (id: T06, campo: COFINSST/vCOFINS), se indSomaCOFINSST =1 (NT 2020.005)",
   "mensagem": "Rejeição: Valor total do Item (vItem) difere do somatório dos valores que o compõem [nItem: 999]",
   "pagina": 9,
   "consultaBaseSefaz": false,
@@ -13985,40 +13790,6 @@
     "cStat": 1105
    }
   ]
- },
- {
-  "id": "VB02-10",
-  "documento": "NT 2024.002 v1.10",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 1072,
-  "efeito": "rejeicao",
-  "regra": "Informado mais de uma vez uma mesma chave de acesso (tag: DFeReferenciado/chaveAcesso) e item (tag: DFeReferenciado/nItem). Um único documento fiscal deve ser referenciado.",
-  "mensagem": "Rejeição: Item referenciado em duplicidade.",
-  "pagina": 37,
-  "consultaBaseSefaz": false,
-  "historico": []
- },
- {
-  "id": "VB02-20",
-  "documento": "NT 2024.002 v1.10",
-  "grupo": null,
-  "modelos": [
-   "55",
-   "65"
-  ],
-  "aplicacao": "obrigatoria",
-  "cStat": 1072,
-  "efeito": "rejeicao",
-  "regra": "Informado chaves de acesso diferentes em documento referenciado (tag: DFeReferenciado/chaveAcesso).",
-  "mensagem": "Rejeição: Mais de um documento fiscal referenciado.",
-  "pagina": 37,
-  "consultaBaseSefaz": false,
-  "historico": []
  },
  {
   "id": "VC02-04",
@@ -14101,7 +13872,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 321,
   "efeito": "rejeicao",
-  "regra": "Se NF-e de devolução de mercadoria (tag: finNFe = 4): - Não informado documento fiscal referenciado a nível de item (tag: DFeReferenciado/chaveAcesso) Observação 1: Fica proibido o referenciamento da Nota na tag “refNFe” na devolução, devendo referenciar no grupo “DFeReferenciado”. Observação 2: Implementação em produção a partir de 01/09/2026 05/10/2026 03/11/2026.",
+  "regra": "Se NF-e de devolução de mercadoria (tag: finNFe = 4): - Não informado documento fiscal referenciado a nível de item (tag: DFeReferenciado/chaveAcesso) Observação 1: Fica proibido o referenciamento da Nota na tag “refNFe” na devolução, devendo referenciar no grupo “DFeReferenciado”. Observação 2: Implementação em produção a partir de 03/11/2026.",
   "mensagem": "Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado por item [nItem: 999]",
   "pagina": 69,
   "consultaBaseSefaz": false,
@@ -14163,25 +13934,19 @@
  },
  {
   "id": "VC02-50",
-  "documento": "NT 2026.002 v1.11",
-  "grupo": null,
+  "documento": "NT 2025.002 v1.52",
+  "grupo": "VC. Referenciamento de item de outro Documento Fiscal Eletrônico - DF-e",
   "modelos": [
    "55"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 708,
+  "cStat": 1194,
   "efeito": "rejeicao",
-  "regra": "Se NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) - DFe Referenciado informado indevidamente Observação: Essa validação passou a ser realizada pela RV VC02-04.",
-  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 não pode referenciar documento fiscal",
-  "pagina": 18,
+  "regra": "Se NF-e de devolução de mercadoria (tag: finNFe = 4) e tpNF=1-Saída: - Se o DFeReferenciado for de saída (tpNF=1-Saída): - CNPJ/CPF do Emitente do DFeReferenciado deve ser igual ao CNPJ/CPF do Destinatário da NF-e atual Observação: No caso de Nota Fiscal Avulsa (NFA) com CNPJ da SEFAZ na Chave de Acesso deve ser considerado o CNPJ ou CPF do Emitente.",
+  "mensagem": "Rejeição: Destintário da NF-e deve ser o igual ao Emitente da NF referenciada [nItem: 999]",
+  "pagina": 70,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2025.002 v1.52",
-    "pagina": 70,
-    "cStat": 1194
-   }
-  ]
+  "historico": []
  },
  {
   "id": "VC03-10",
@@ -14268,7 +14033,7 @@
  },
  {
   "id": "W03-20",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2019.001 v1.70",
   "grupo": null,
   "modelos": [
    "55",
@@ -14277,11 +14042,17 @@
   "aplicacao": "facultativa",
   "cStat": 935,
   "efeito": "rejeicao",
-  "regra": "Valor total da base de cálculo tag “vBC” (id:W03) superior ao valor limite estabelecido pela SEFAZ por modelo de DF-e. Observação: o valor total máximo da base de cálculo é de R$ 200.000,00 (Duzentos mil reais). (NT 2019.001 v1.10, v1.50)",
+  "regra": "Valor total da base de cálculo tag “vBC” (id:W03) superior ao valor limite estabelecido pela SEFAZ por modelo de DF-e. Observação: o valor total máximo da base de cálculo é de R$ 200.000,00 (Duzentos mil reais).",
   "mensagem": "Rejeição: Valor total da Base de Cálculo superior ao valor limite estabelecido [Valor Limite: R$ XXX.XXX,XX] (valor definido pela UF)",
-  "pagina": 120,
+  "pagina": 22,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 120,
+    "cStat": 935
+   }
+  ]
  },
  {
   "id": "W04-10",
@@ -14483,6 +14254,104 @@
   "historico": []
  },
  {
+  "id": "W06b.1-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 700,
+  "efeito": "rejeicao",
+  "regra": "Total da quantidade tributada do ICMS monofásico próprio (id:W06b.1, tag: qBCMono) difere do somatório dos itens (id:N37a) (*4) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico próprio difere do somatório dos itens.",
+  "pagina": 39,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "W06c-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 967,
+  "efeito": "rejeicao",
+  "regra": "Total do ICMS monofásico próprio (id:W06c, tag:vICMSMono) difere do somatório dos itens (id:N39) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total do ICMS monofásico próprio difere do somatório dos itens.",
+  "pagina": 39,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "W06c.1-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 723,
+  "efeito": "rejeicao",
+  "regra": "Total da quantidade tributada do ICMS monofásico sujeito a retenção (id:W06c.1, tag: qBCMonoReten) difere do somatório dos itens (id:N39a) (*4) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico sujeito a retenção difere do somatório dos itens.",
+  "pagina": 39,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "W06d-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 968,
+  "efeito": "rejeicao",
+  "regra": "Total do ICMS monofásico sujeito a retenção (id:W06d, tag:vICMSMonoReten) difere do somatório dos itens (id: N41) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total do ICMS monofásico sujeito a retenção difere do somatório dos itens.",
+  "pagina": 39,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "W06d.1-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 744,
+  "efeito": "rejeicao",
+  "regra": "Total da quantidade tributada do ICMS monofásico retido anteriormente (id:W06d.1, tag: qBCMonoRet) difere do somatório dos itens (id: N43a) (*4) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico retido anteriormente difere do somatório dos itens.",
+  "pagina": 40,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "W06e-10",
+  "documento": "NT 2023.001 v1.60",
+  "grupo": null,
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 969,
+  "efeito": "rejeicao",
+  "regra": "Total do ICMS monofásico retido anteriormente (id:W06e, tag:vICMSMonoRet) difere do somatório dos itens (id: N45) Observação 1: Regra implantada até 25/09/2023 em homologação e em 30/10/2023 em produção. Observação 2: Considerar valor=0, se não informado.",
+  "mensagem": "Rejeição: Total do ICMS monofásico retido anteriormente difere do somatório dos itens.",
+  "pagina": 40,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
   "id": "W07-10",
   "documento": "NT 2025.002 v1.52",
   "grupo": "W03. Total da NF-e - IBS / CBS / IS",
@@ -14574,7 +14443,7 @@
  },
  {
   "id": "W12-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2020.002 v1.01",
   "grupo": null,
   "modelos": [
    "55"
@@ -14584,13 +14453,19 @@
   "efeito": "rejeicao",
   "regra": "Total do IPI (id:W12) difere do somatório do valor dos itens (id:O14)",
   "mensagem": "Rejeição: Total do IPI difere do somatório dos itens",
-  "pagina": 121,
+  "pagina": 5,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 121,
+    "cStat": 538
+   }
+  ]
  },
  {
   "id": "W12a-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2020.002 v1.01",
   "grupo": null,
   "modelos": [
    "55"
@@ -14598,11 +14473,17 @@
   "aplicacao": "facultativa",
   "cStat": 863,
   "efeito": "rejeicao",
-  "regra": "Total do IPI devolvido (id: W12a) difere do somatório do valor dos itens (id:UA04) ) (NT 2016.002)",
+  "regra": "Total do IPI devolvido (id: W12a) difere do somatório do valor dos itens (id:UA04)",
   "mensagem": "Rejeição: Total do IPI devolvido difere do somatório dos itens",
-  "pagina": 121,
+  "pagina": 6,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 121,
+    "cStat": 863
+   }
+  ]
  },
  {
   "id": "W13-10",
@@ -14677,8 +14558,18 @@
     "cStat": 610
    },
    {
+    "documento": "NT 2020.005 v1.21",
+    "pagina": 20,
+    "cStat": 610
+   },
+   {
     "documento": "NT 2020.002 v1.01",
     "pagina": 5,
+    "cStat": 610
+   },
+   {
+    "documento": "NT 2023.004 v1.20",
+    "pagina": 15,
     "cStat": 610
    }
   ]
@@ -14733,8 +14624,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 750,
   "efeito": "rejeicao",
-  "regra": "Se NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com valor total superior a R$ 10.000,00 ou outro valor definido pela UF: - Código do Destinatário não informado (tag:dest/CNPJ, dest/CPF ou dest/idEstrang). (NT 2015.002)",
-  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com valor total superior ao permitido para destinatário não identificado (Código) [Limite]",
+  "regra": "Se NFC-e com valor total superior a R$ 10.000,00 ou outro valor definido pela UF: - Código do Destinatário não informado (tag:dest/CNPJ, dest/CPF ou dest/idEstrang). (NT 2015.002)",
+  "mensagem": "Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Código) [Limite]",
   "pagina": 19,
   "consultaBaseSefaz": false,
   "historico": [
@@ -14747,19 +14638,26 @@
  },
  {
   "id": "W16-50",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2026.002 v1.11",
   "grupo": null,
   "modelos": [
+   "55",
    "65"
   ],
   "aplicacao": "facultativa",
   "cStat": 751,
   "efeito": "rejeicao",
-  "regra": "NFC-e com valor total superior a R$ 10.000,00: – Nome do Destinatário não informado (tag:dest/xNome) Observação: Regra de Validação opcional, a critério da UF. (NT 2015.002)",
+  "regra": "Se NFC-e com valor total superior a R$ 10.000,00: - Nome do Destinatário não informado (tag:dest/xNome) Observação: Regra de Validação opcional, a critério da UF. (NT 2015.002)",
   "mensagem": "Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Nome) [Limite]",
-  "pagina": 122,
+  "pagina": 19,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 122,
+    "cStat": 751
+   }
+  ]
  },
  {
   "id": "W16-60",
@@ -14772,8 +14670,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 752,
   "efeito": "rejeicao",
-  "regra": "Se NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6) com valor total superior a R$ 10.000,00: - Endereço do Destinatário não informado (tag:dest/enderDest) Observação: Regra de Validação opcional, a critério da UF. (NT 2015.002)",
-  "mensagem": "Rejeição: NFC-e ou NF-e com DANFE Simplificado Tipo 2 com valor total superior ao permitido para destinatário não identificado (Endereço) [Limite]",
+  "regra": "Se NFC-e com valor total superior a R$ 10.000,00: - Endereço do Destinatário não informado (tag:dest/enderDest) Observação: Regra de Validação opcional, a critério da UF. (NT 2015.002)",
+  "mensagem": "Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Endereço) [Limite]",
   "pagina": 19,
   "consultaBaseSefaz": false,
   "historico": [
@@ -15122,13 +15020,7 @@
   "mensagem": "Rejeição: Total de IBS UF difere da soma dos itens",
   "pagina": 70,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 38,
-    "cStat": 1080
-   }
-  ]
+  "historico": []
  },
  {
   "id": "W43-10",
@@ -15179,13 +15071,7 @@
   "mensagem": "Rejeição: Total de IBS Municipal difere da soma dos itens",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 38,
-    "cStat": 1084
-   }
-  ]
+  "historico": []
  },
  {
   "id": "W47-10",
@@ -15253,13 +15139,7 @@
   "mensagem": "Rejeição: Total Devolvido da CBS difere da soma dos itens",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 38,
-    "cStat": 1089
-   }
-  ]
+  "historico": []
  },
  {
   "id": "W56-10",
@@ -15276,13 +15156,7 @@
   "mensagem": "Rejeição: Total de CBS difere da soma dos itens",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 39,
-    "cStat": 1091
-   }
-  ]
+  "historico": []
  },
  {
   "id": "W56a-10",
@@ -15316,13 +15190,7 @@
   "mensagem": "Rejeição: Total do IBS monofásico difere da soma dos itens",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2024.002 v1.10",
-    "pagina": 39,
-    "cStat": 1092
-   }
-  ]
+  "historico": []
  },
  {
   "id": "W59-10",
@@ -15518,7 +15386,7 @@
  },
  {
   "id": "X03-10",
-  "documento": "NT 2023.004 v1.20",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
    "65"
@@ -15528,19 +15396,13 @@
   "efeito": "rejeicao",
   "regra": "NFC-e com dados do Transportador e não é entrega a domicílio (tag:transporta e indPres<>4)",
   "mensagem": "Rejeição: NFC-e com dados do Transportador",
-  "pagina": 14,
+  "pagina": 124,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 124,
-    "cStat": 754
-   }
-  ]
+  "historico": []
  },
  {
   "id": "X03-20",
-  "documento": "NT 2023.004 v1.20",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
    "65"
@@ -15550,15 +15412,9 @@
   "efeito": "rejeicao",
   "regra": "NFC-e sem dados do Transportador (tag:transporta) e é entrega a domicílio (indPres=4)",
   "mensagem": "Rejeição: NFC-e de entrega a domicílio sem dados do Transportador",
-  "pagina": 14,
+  "pagina": 124,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 124,
-    "cStat": 786
-   }
-  ]
+  "historico": []
  },
  {
   "id": "X03-30",
@@ -15587,7 +15443,7 @@
   "cStat": 362,
   "efeito": "rejeicao",
   "regra": "Obrigatória a informação de identificação do Transportador para os CFOP de venda de combustível (tag: CNPJ/CPF, id:X04/X05) com esta obrigatoriedade na Tabela CFOP, indComb=2. Exceção 1: A regra de validação acima se aplica somente para as NF-e com Finalidade de Emissão normal (tag:finNFe=1); Exceção 2: A regra de validação acima se aplica somente para os Códigos de Produto ANP relacionados na seção 8.11 do MOC – Visão Geral, Exceção 3: A regra de validação acima não se aplica se for informada a UF do Transportador no exterior (tag:transporta/UF=”EX”, id:X10); Exceção 4: Regra não se aplica quando existir algum item com a UF de consumo do combustível igual a exterior (tag: comb/UFCons = “EX”) e com CFOP = “7667 - Venda de combustível ou lubrificante a consumidor ou usuário final”. Observação: Nos casos em que não houver circulação física de mercadoria ou em que o transportador seja estrangeiro, os dados do transportador poderão ser preenchidos com o CNPJ do próprio emitente do documento fiscal. (NT 2015.002)",
-  "mensagem": "Rejeição: Venda de combustível sem informação do Transportador Página 13 / 13",
+  "mensagem": "Rejeição: Venda de combustível sem informação do Transportador",
   "pagina": 13,
   "consultaBaseSefaz": false,
   "historico": [
@@ -16158,26 +16014,19 @@
  },
  {
   "id": "YA02-50",
-  "documento": "NT 2020.006 v1.31",
+  "documento": "MOC 7.0 Anexo I",
   "grupo": null,
   "modelos": [
-   "55",
    "65"
   ],
   "aplicacao": "obrigatoria",
   "cStat": 436,
   "efeito": "rejeicao",
-  "regra": "Informado meio de pagamento tPag= 99 “Outros” Observação 1: Regra válida a partir de 01/02/2021 para homologação e 01/09/2021 para produção Observação 2: Regra de validação não se aplica para Nota Fiscal eletrônica Avulsa emitida por Produtor Primário",
+  "regra": "Informado meio de pagamento tPag= 99 “Outros” Observação: Regra de validação valida a partir de 01/02/2021 para homologação e 01/09/2021 para produção (Incluída na NT 2020.006)",
   "mensagem": "Rejeição: Informado 99-Outros como meio de pagamento",
-  "pagina": 11,
+  "pagina": 126,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "MOC 7.0 Anexo I",
-    "pagina": 126,
-    "cStat": 436
-   }
-  ]
+  "historico": []
  },
  {
   "id": "YA02-60",
@@ -16190,7 +16039,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 436,
   "efeito": "rejeicao",
-  "regra": "Verificar se o código do meio de pagamento (tag: tPag) existe na Tabela de códigos dos meios de pagamentos publicada no Portal Nacional da Observação 1: Regra válida a partir de 03/05/2021 para homologação e 01/09/2021 para produção",
+  "regra": "Verificar se o código do meio de pagamento (tag: tPag) existe na Tabela de códigos dos meios de pagamentos publicada no Portal Nacional da Nota Fiscal Eletrônica Observação 1: Regra válida a partir de 03/05/2021 para homologação e 01/09/2021 para produção",
   "mensagem": "Rejeição: Código do meio de pagamento inexistente.",
   "pagina": 11,
   "consultaBaseSefaz": false,
@@ -16225,60 +16074,79 @@
   "cStat": 442,
   "efeito": "rejeicao",
   "regra": "Quando o código do meio de pagamento for diferente 99-outros (tag: tPag<>99), proibido o preenchimento da descrição do meio de pagamento (tag: xPag)",
-  "mensagem": "XXX Rejeição: Descrição do pagamento não permitida.",
+  "mensagem": "Rejeição: Descrição do pagamento não permitida.",
   "pagina": 11,
   "consultaBaseSefaz": false,
   "historico": []
  },
  {
   "id": "YA03-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
+   "55",
    "65"
   ],
-  "aplicacao": "facultativa",
+  "aplicacao": "obrigatoria",
   "cStat": 865,
   "efeito": "rejeicao",
-  "regra": "Somatório do valor dos pagamentos (id:YA03, tag:vPag) menor que o total da nota (id:W16, tag: vNF) Exceção 1: Esta regra não se aplica para nota fiscal de Ajuste, campo finNFe=3 (id:B25) e para nota fiscal de Devolução finNFe=4 (id:B25) Exceção 2: Esta regra não se aplica quando o campo Meio de Pagamento (id:YA02, tag:tPag) for igual a 90 (sem pagamento). ) (NT 2016.002)",
+  "regra": "Somatório do valor dos pagamentos (id:YA03, tag:vPag) menor que o total da nota (id:W16, tag: vNF). Exceção 1: Esta regra não se aplica para nota fiscal de Ajuste, campo finNFe=3 (id:B25) e para nota fiscal de Devolução finNFe=4 (id:B25) Exceção 2: Esta regra não se aplica quando o campo Meio de Pagamento (id:YA02, tag:tPag) for igual a 90 (sem pagamento) ou igual a 91 (pagamento posterior). (NT 2017.002) Observação: Implementação futura para modelo 55.",
   "mensagem": "Rejeição: Total dos pagamentos menor que o total da nota",
-  "pagina": 126,
+  "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 126,
+    "cStat": 865
+   }
+  ]
  },
  {
   "id": "YA03-20",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
    "55",
    "65"
   ],
-  "aplicacao": "facultativa",
+  "aplicacao": "obrigatoria",
   "cStat": 866,
   "efeito": "rejeicao",
-  "regra": "Somatório do valor dos pagamentos (id:YA03, tag:vPag) maior que o total da nota (id:W16, tag: vNF) e sem informação no campo vTroco (id:YA09) ) (NT 2016.002)",
+  "regra": "Somatório do valor dos pagamentos (id:YA03, tag:vPag) maior que o total da nota (id:W16, tag: vNF) e sem informação no campo vTroco (id:YA09) (NT 2017.002)",
   "mensagem": "Rejeição: Ausência de troco quando o valor dos pagamentos informados for maior que o total da nota",
-  "pagina": 126,
+  "pagina": 10,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 126,
+    "cStat": 866
+   }
+  ]
  },
  {
   "id": "YA03-30",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
    "55",
    "65"
   ],
-  "aplicacao": "facultativa",
+  "aplicacao": "obrigatoria",
   "cStat": 904,
   "efeito": "rejeicao",
-  "regra": "Informado o campo Meio de Pagamento igual a sem pagamentoo (tag:tPag=90, id:YA02) e informado campo Valor do Pagamento diferente de zero (tag:vPag<>0, id:YA03). ) (NT 2016.002)",
+  "regra": "ou Informado o campo Meio de Pagamento igual a sem pagamento (tag:tPag=90, id:YA02) pagamento posterior (tag:tPag=91, id:YA02) e informado campo Valor do Pagamento diferente de zero (tag:vPag<>0, id:YA03). (NT 2017.002)",
   "mensagem": "Rejeição: Informado indevidamente campo valor de pagamento",
-  "pagina": 126,
+  "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 126,
+    "cStat": 904
+   }
+  ]
  },
  {
   "id": "YA03a-10",
@@ -16316,19 +16184,31 @@
  },
  {
   "id": "YA04-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
+   "55",
    "65"
   ],
-  "aplicacao": "facultativa",
+  "aplicacao": "obrigatoria",
   "cStat": 391,
   "efeito": "rejeicao",
-  "regra": "Se informado o grupo de pagamentos (tag:pag): - Se o Pagamento for por cartão (tag:tPag=03, 04), deve ser informado o grupo de cartões (tag:card) Observação: Implementação por padrão, opcional a critério da UF. Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. (NT 2015.002)",
-  "mensagem": "Rejeição: Não informados os dados do cartão de crédito / débito nas Formas de Pagamento da Nota Fiscal",
-  "pagina": 126,
+  "regra": "Se informado o grupo de pagamentos (tag:pag): - Se o Pagamento for por cartão (tag:tPag=03, 04), ou PIX (tpag=17), deve ser informado o grupo de cartões (tag:card) Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. (NT 2015.002) Observação: Implementação futura para modelo 55.",
+  "mensagem": "Rejeição: Não informados os dados do cartão de crédito / débito nas Formas Pagamento da Nota Fiscal [nOcor:999]",
+  "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 126,
+    "cStat": 391
+   },
+   {
+    "documento": "NT 2023.004 v1.20",
+    "pagina": 14,
+    "cStat": 391
+   }
+  ]
  },
  {
   "id": "YA04-20",
@@ -16341,8 +16221,8 @@
   "aplicacao": "obrigatoria",
   "cStat": 963,
   "efeito": "rejeicao",
-  "regra": "Se Meio de Pagamento (tag: tPag) diferente de 03, 04, 10, 11, 12, 13, 15, 17 e 18: - Não pode preencher o grupo de cartões (tag: card)",
-  "mensagem": "Rejeição: Tipo de pagamento não aceita o grupo de cartões ou boletos. [nOcor:999]",
+  "regra": "Se Meio de Pagamento (tag: tPag) diferente de 03, 04, 10, 11, 12, 13, 15, 17 e 18: - Não pode preencher o grupo de cartões (tag: card) Se informado CNPJReceb (campo: YA07a) - CNPJ com zeros ou dígito inválido",
+  "mensagem": "Rejeição: Tipo de pagamento não aceita o grupo de cartões ou boletos. [nOcor:999] Rejeição: CNPJ recebedor do pagamento inválido [nOcor:999]",
   "pagina": 14,
   "consultaBaseSefaz": false,
   "historico": []
@@ -16358,7 +16238,7 @@
   "aplicacao": "facultativa",
   "cStat": 737,
   "efeito": "rejeicao",
-  "regra": "Se informado o tipo de integração como pagamento não integrado com o sistema de automação da empresa (tag: tpIntegra=2) para UF que não aceita esse tipo de integração. Observação 1: Regra de Validação opcional a critério da UF. ) (NT 2016.002 /",
+  "regra": "Se informado o tipo de integração como pagamento não integrado com o sistema de automação da empresa (tag: tpIntegra=2) para UF que não aceita esse tipo de integração. Observação 1: Regra de Validação opcional a critério da UF. ) (NT 2016.002 / NT 2015.002)",
   "mensagem": "Rejeição: Pagamento com cartão de crédito em sistema de automação não integrado",
   "pagina": 126,
   "consultaBaseSefaz": false,
@@ -16366,24 +16246,30 @@
  },
  {
   "id": "YA05-10",
-  "documento": "MOC 7.0 Anexo I",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
    "55",
    "65"
   ],
-  "aplicacao": "facultativa",
+  "aplicacao": "obrigatoria",
   "cStat": 392,
   "efeito": "rejeicao",
-  "regra": "Se informado o grupo de Cartão de Crédito / Débito (tag:card): - Se o pagamento com cartão for integrado ao sistema de automação da empresa (tag:tpIntegra=1) devem ser informado os campos de CNPJ da Credenciadora e o código de autenticação da operação (tag:card/CNPJ e card/cAut) Observação: Implementação por padrão, opcional a critério da UF. Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. ) (NT 2016.002/ NT 2015.002)",
+  "regra": "Se informado o grupo de Cartão de Crédito / Débito (tag:card): - Se o pagamento com cartão for integrado ao sistema de automação da empresa (tag:tpIntegra=1) devem ser informado os campos de CNPJ da Credenciadora e o código de autenticação da operação (tag:card/CNPJ e card/cAut) Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. ) (NT 2017.002/ NT 2015.002)",
   "mensagem": "Rejeição: Não informados os dados da operação de pagamento por cartão de crédito / débito",
-  "pagina": 126,
+  "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "MOC 7.0 Anexo I",
+    "pagina": 126,
+    "cStat": 392
+   }
+  ]
  },
  {
   "id": "YA05-20",
-  "documento": "NT 2020.006 v1.31",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
    "55",
@@ -16392,7 +16278,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 437,
   "efeito": "rejeicao",
-  "regra": "Se informado o CNPJ da instituição de pagamento • Verificar CNPJ com zeros, nulo ou DV inválido",
+  "regra": "Se informado o CNPJ da instituição de pagamento: - Verificar CNPJ com zeros, nulo ou DV inválido (Incluída na NT 2020.006)",
   "mensagem": "Rejeição: CNPJ da instituição de pagamento inválido",
   "pagina": 11,
   "consultaBaseSefaz": false,
@@ -16401,12 +16287,17 @@
     "documento": "MOC 7.0 Anexo I",
     "pagina": 126,
     "cStat": 437
+   },
+   {
+    "documento": "NT 2020.006 v1.31",
+    "pagina": 11,
+    "cStat": 437
    }
   ]
  },
  {
   "id": "YA06-10",
-  "documento": "NT 2020.006 v1.31",
+  "documento": "NT 2025.001 v1.03",
   "grupo": null,
   "modelos": [
    "55",
@@ -16415,11 +16306,17 @@
   "aplicacao": "obrigatoria",
   "cStat": 443,
   "efeito": "rejeicao",
-  "regra": "Verificar se o Código da bandeira de cartão de crédito e/ou débito (campo: tBand) existe na tabela de códigos das operadoras de cartão de crédito e/ou débito publicada no Portal Nacional da Nota Fiscal Eletrônica Observação 1: Regra válida a partir de 03/05/2021 para homologação e 01/09/2021 para produção",
-  "mensagem": "Rejeição: Código da bandeira de cartão de crédito e/ou débito inexistente.",
+  "regra": "Verificar se o Código da bandeira de cartão de crédito e/ou débito (campo: tBand) existe na tabela de códigos das operadoras de cartão de crédito e/ou débito publicada no Portal Nacional da Nota Fiscal Eletrônica (NT 2020.006) Observação 1: Regra válida a partir de 03/05/2021 para homologação e 01/09/2021 para produção",
+  "mensagem": "Rejeição: Código da bandeira de cartão de crédito e/ou débito inexistente",
   "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [
+   {
+    "documento": "NT 2020.006 v1.31",
+    "pagina": 11,
+    "cStat": 443
+   }
+  ]
  },
  {
   "id": "YA09-10",
@@ -16449,7 +16346,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 965,
   "efeito": "rejeicao",
-  "regra": "Valor do troco (id:YA09, tag:vTroco) superior a R$ 1.000,00 300.000,00. Observação: Essa regra de validação será ativada em produção em 01/10/2024.",
+  "regra": "Valor do troco (id:YA09, tag:vTroco) superior a R$ 300.000,00. Observação: Essa regra de validação será ativada em produção em 01/10/2024.",
   "mensagem": "Rejeição: Valor do troco acima do permitido",
   "pagina": 15,
   "consultaBaseSefaz": false,
@@ -16785,8 +16682,8 @@
  },
  {
   "id": "ZD01-10",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "ZD. Informações do Responsável Técnico (regras ZD01-10 e ZD02-10)",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": null,
   "modelos": [
    "55",
    "65"
@@ -16794,9 +16691,9 @@
   "aplicacao": "facultativa",
   "cStat": 972,
   "efeito": "rejeicao",
-  "regra": "Não informado o grupo de informações do responsável técnico Observação: Implementação futura, exceto as UF de AM, MS, PE, PR, SC e TO, nas quais estas regras já estão em vigor em ambiente de teste e entrarão em vigor em ambiente de produção no dia 03 de junho de 2019 (NT 2018.005 v 1.30) Exceção: Não se aplica para NFF (tpEmis = 3-NFF), pois neste caso não é informado o grupo Informações do Responsável Técnico (NT 2021.002)",
+  "regra": "Não informado o grupo de informações do responsável técnico Observação: Implementação futura, exceto as UF AM, MS, PE, PR, SC e TO, nas quais estas regras já estão em vigor em ambiente de teste na data da publicação da versão 1.30 desta NT, e entrarão em vigor em ambiente de produção no dia 03 de junho de 2019",
   "mensagem": "Rejeição: Obrigatória as informações do responsável técnico",
-  "pagina": 15,
+  "pagina": 23,
   "consultaBaseSefaz": false,
   "historico": [
    {
@@ -16808,13 +16705,18 @@
     "documento": "NT 2020.005 v1.21",
     "pagina": 21,
     "cStat": 972
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 15,
+    "cStat": 972
    }
   ]
  },
  {
   "id": "ZD02-10",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "ZD. Informações do Responsável Técnico (regras ZD01-10 e ZD02-10)",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": null,
   "modelos": [
    "55",
    "65"
@@ -16822,9 +16724,9 @@
   "aplicacao": "facultativa",
   "cStat": 973,
   "efeito": "rejeicao",
-  "regra": "Se informado CNPJ do responsável técnico e CNPJ inválido (NT 2021.002)  CNPJ com zeros, nulo ou DV inválido Observação: Implementação futura, exceto as UF de AM, MS, PE, PR, SC e TO, nas quais estas regras já estão em vigor em ambiente de teste e entrarão em vigor em ambiente de produção no dia 03 de junho de 2019 (NT 2018.005 v 1.30)",
+  "regra": "Informado CNPJ do responsável técnico inválido – CNPJ com zeros, nulo ou DV inválido Observação: Implementação futura, exceto as UF AM, MS, PE, PR, SC e TO, nas quais estas regras já estão em vigor em ambiente de teste na data da publicação da versão 1.30 desta NT, e entrarão em vigor em ambiente de produção no dia 03 de junho de 2019",
   "mensagem": "Rejeição: CNPJ do responsável técnico inválido",
-  "pagina": 15,
+  "pagina": 23,
   "consultaBaseSefaz": false,
   "historico": [
    {
@@ -16841,13 +16743,18 @@
     "documento": "NT 2022.003 v1.11",
     "pagina": 13,
     "cStat": 973
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 15,
+    "cStat": 973
    }
   ]
  },
  {
   "id": "ZD07-10",
-  "documento": "NT 2021.002 v1.12",
-  "grupo": "ZD. Informações do Responsável Técnico (regras ZD01-10 e ZD02-10)",
+  "documento": "NT 2018.005 v1.52",
+  "grupo": null,
   "modelos": [
    "55",
    "65"
@@ -16855,9 +16762,9 @@
   "aplicacao": "facultativa",
   "cStat": 975,
   "efeito": "rejeicao",
-  "regra": "Obrigatória a informação do identificador do CSRT (tag: idCSRT) e Hash do CSTR (tag: hashCSRT) Observação: Implementação futura, todas as UFs (NT 2018.005 v1.30) Exceção: Não se aplica para NFF (tpEmis = 3-NFF) (NT 2021.002)",
+  "regra": "Obrigatória a informação do identificador do CSRT (tag: idCSRT) e Hash do CSTR (tag: hashCSRT), Observação 1: Regra válida para o PR, modelo 55, a partir de 19/01/2026 em homologação e 23/02/2026 em produção Observação 2: Modelo 65, implementação futura Exceção 1: Não se aplica para NFF (tpEmis = 3-NFF) e SVC (tpEmis = 7 ou 8)",
   "mensagem": "Rejeição: Obrigatória a informação do identificador do CSRT e do Hash do CSRT",
-  "pagina": 15,
+  "pagina": 23,
   "consultaBaseSefaz": false,
   "historico": [
    {
@@ -16868,6 +16775,11 @@
    {
     "documento": "NT 2020.005 v1.21",
     "pagina": 21,
+    "cStat": 975
+   },
+   {
+    "documento": "NT 2021.002 v1.12",
+    "pagina": 15,
     "cStat": 975
    }
   ]
@@ -16907,6 +16819,38 @@
   "historico": []
  },
  {
+  "id": "ZF02-10",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 835,
+  "efeito": "rejeicao",
+  "regra": "Em algum item informado defensivo Agrícola (NCM 3808.52.00, 3808.59.2X 3808.6X.XX, 3808.91.9X, 3808.92.20, 3808.92.9X 3808.93.2X, 3808.93.3X, 3808.93.5X, 3808.99.20, 3808.99.9X) sem Receita / Receituário, quando finNFe = 1 (normal) e indFinal = 1 (consumidor final) Exceção 1: A regra de validação acima não se aplica para as operações com CFOP de Retorno de Mercadorias. Exceção 2: A regra de validação acima não se aplica para as operações com CFOP de Transferência de Mercadorias (X.151, X.152, X.155 e X.156). Exceção 3: A regra de validação acima não se aplica para as operações com CFOP faturamento de venda para entrega futura (5.922, 6.922). Exceção 4: A regra de validação não se aplica a: produtos biológicos nos NCMs: 3808.59.29, 3808.61.00, 3808.62.90, 3808.69.90, 3808.91.91, 3808.91.92, 3808.91.93, 3808.91.94, 3808.91.96, 3808.91.97, 3808.91.99, 3808.92.94, 3808.92.99, 3808.93.29, 3808.93.33, 3808.93.59, 3808.99.91, 3808.99.93, 3808.99.95, 3808.99.96, 3808.99.99 e produtos saneantes do NCM 3808.62.10",
+  "mensagem": "Rejeição: Em algum item da NF-e foi informado produto agrotóxico e não informado número da receita do defensivo agrícola. [nItem: 999]",
+  "pagina": 10,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZF02-20",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 309,
+  "efeito": "rejeicao",
+  "regra": "Nenhum item da NF-e é Defensivo Agrícola ((NCM 3808.52.00, 3808.59.2X 3808.6X.XX, 3808.91.9X, 3808.92.20, 3808.92.9X 3808.93.2X, 3808.93.3X, 3808.93.5X, 3808.99.20, 3808.99.9X ) e informado receituário / receita de agrotóxico.",
+  "mensagem": "Rejeição: Nenhum item da NF-e é defensivo agrícola e informada receita de agrotóxico.",
+  "pagina": 11,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
   "id": "ZF03a-10",
   "documento": "NT 2024.003 v1.10",
   "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
@@ -16923,6 +16867,86 @@
   "historico": []
  },
  {
+  "id": "ZF05-10",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 836,
+  "efeito": "rejeicao",
+  "regra": "Em algum item da NF-e, informado produto Animal Vivo e CFOP diferente de X105; X106; X111; X112; X113; X114; X115; X155; X156; X907 X949, X454; ou X.922), finalidade de emissão normal (finNFe = 1) e não informada Guia de Trânsito Animal (tpGuia=01, 02 ou 03).​ Observação: Aplicação a critério da UF, conforme UF e NCM constantes na tabela 4.1 abaixo.",
+  "mensagem": "Rejeição: Não informada Guia de Trânsito Animal [nItem: 999]",
+  "pagina": 12,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZF05-14",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 310,
+  "efeito": "rejeicao",
+  "regra": "Em nenhum item da NF-e informado produto Animal Vivo (NCM 01xxxxxx e 0301xxxx) e informada a Guia de Trânsito Animal (tpGuia=01, 02 ou 03).​ Observação: aplicação a critério da UF.",
+  "mensagem": "Rejeição: Informação indevida de Guia de Trânsito Animal",
+  "pagina": 12,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZF05-20",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 311,
+  "efeito": "rejeicao",
+  "regra": "Em algum item da NF-e informado produto vegetal e CFOP diferente de X.105; X.106; X.111; X.112; X.113; X.114; X.115; X.155; X.156; X.907 X.949, X.914, X.922 e X.454) e não informada a Guia de Trânsito Vegetal (tpGuia=04,05 ou 06). Observação: Aplicação a critério da UF, conforme UF e NCM constantes na tabela 4.1 abaixo.",
+  "mensagem": "Rejeição: Não Informada Guia de Trânsito Vegetal [nItem: 999]",
+  "pagina": 12,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZF05-24",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 312,
+  "efeito": "rejeicao",
+  "regra": "Em nenhum item da NF-e informado produto 6.vegetal (NCM 06xxxxxx, 07xxxxxx, 08xxxxxx, ou 12xxxxxx) e informada a Guia de Trânsito Vegetal (tpGuia=04,05 ou 06). Observação: aplicação a critério da UF.",
+  "mensagem": "Rejeição: Informação Indevida de Guia de Trânsito Vegetal",
+  "pagina": 12,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZF05-30",
+  "documento": "NT 2024.003 v1.10",
+  "grupo": "ZF. Informações de Produtos da Agricultura, Pecuária e Produção Florestal",
+  "modelos": [
+   "55"
+  ],
+  "aplicacao": "facultativa",
+  "cStat": 839,
+  "efeito": "rejeicao",
+  "regra": "Em algum item da NF-e foi informado produto florestal (Madeira, Lenha ou Carvão) sem documento de origem florestal. (tpGuia=07) ​ Observação: Implementação Futura",
+  "mensagem": "Rejeição: Madeira sem documento de origem [nItem: 999]",
+  "pagina": 12,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
   "id": "ZG01-10",
   "documento": "NT 2026.001 v1.02b",
   "grupo": "ZG. Informações do PAA",
@@ -16931,9 +16955,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1179,
+  "cStat": 633,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): 669 - Ambiente de autorização da NF-e / NFC-e deverá ser o difere da SVRS. 633 Observação: Implementação em todos os ambientes autorizadores de NF-e / NFC-e.",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Ambiente de autorização da NF-e / NFC-e difere da SVRS. Observação: Implementação em todos os ambientes autorizadores de NF-e / NFC-e.",
   "mensagem": "Rejeição: Ambiente de autorização inválido para emissão pelo PAA",
   "pagina": 13,
   "consultaBaseSefaz": false,
@@ -16948,9 +16972,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1180,
+  "cStat": 634,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo:",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - CNPJ do PAA inválido Observação: Regra de Validação implementada somente na SVRS.",
   "mensagem": "Rejeição: CNPJ do PAA inválido",
   "pagina": 13,
   "consultaBaseSefaz": false,
@@ -16965,9 +16989,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1181,
+  "cStat": 671,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): 671 - Acessar Cadastro de PAA (Chave: CNPJPAA) - CNPJ do PAA (tag: CNPJPAA) não existe ou situação inválida Observação: Regra de Validação implementada somente na SVRS.",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Acessar Cadastro de PAA (Chave: CNPJPAA) - CNPJ do PAA (tag: CNPJPAA) não existe ou situação inválida Observação: Regra de Validação implementada somente na SVRS.",
   "mensagem": "Rejeição: Provedor de Assinatura e Autorização não existe na base da SEFAZ",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -16982,9 +17006,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1182,
+  "cStat": 936,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): 672 - Acessar Cadastro de Vínculos do PAA com o Emitente (Chave: CNPJPAA, CNPJ do 936 Emitente) - Emitente (tag: emit/CNPJ) não possui vínculo ativo com o PAA Observação: Regra de Validação implementada somente na SVRS.",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Acessar Cadastro de Vínculos do PAA com o Emitente (Chave: CNPJPAA, CNPJ do Emitente) - Emitente (tag: emit/CNPJ) não possui vínculo ativo com o PAA Observação: Regra de Validação implementada somente na SVRS.",
   "mensagem": "Rejeição: Emitente não associado ao PAA",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -17001,8 +17025,25 @@
   "aplicacao": "obrigatoria",
   "cStat": 872,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Acessar Cadastro de Vínculos do PAA com o Emitente (Chave: CNPJPAA, CNPJ do Emitente) - Série da NF difere da Série estipulada para este emitente no PAA Observação: Regra de Validação implementada somente na SVRS.",
-  "mensagem": "Rejeição: Série da NF difere da estipulada para este Emitente no PAA",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Acessar Cadastro de Vínculos do PAA com o Emitente (Chave: CNPJPAA, CNPJ do Emitente) - Série da NF difere da Série estipulada para este emitente no PAA Observação: Regra de Validação implementada somente na SVRS. Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Acessar Cadastro de Chaves do PAA com o Emitente (Chave: CNPJPAA, CNPJ do Emitente, Data de Vigência) - Chave pública difere da estipulada para este emitente no PAA Observação: Regra de Validação implementada somente na SVRS.",
+  "mensagem": "Rejeição: Série da NF difere da estipulada para este Emitente no PAA Rejeição: Chave do Emitente para o PAA inválida",
+  "pagina": 14,
+  "consultaBaseSefaz": false,
+  "historico": []
+ },
+ {
+  "id": "ZG02-40",
+  "documento": "NT 2026.001 v1.02b",
+  "grupo": "ZG. Informações do PAA",
+  "modelos": [
+   "55",
+   "65"
+  ],
+  "aplicacao": "obrigatoria",
+  "cStat": 776,
+  "efeito": "rejeicao",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - CNPJ-8 do certificado de assinatura difere do CNPJ-8 do PAA (tag: CNPJPAA, id: ZG02) Observação: Regra de Validação implementada somente na SVRS.",
+  "mensagem": "Rejeição: Emissão por PAA deve ser assinada pelo CNPJ do Provedor de Assinatura",
   "pagina": 14,
   "consultaBaseSefaz": false,
   "historico": []
@@ -17016,9 +17057,9 @@
    "65"
   ],
   "aplicacao": "obrigatoria",
-  "cStat": 1184,
+  "cStat": 856,
   "efeito": "rejeicao",
-  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): 856 - Validar assinatura RSA (tag:SignatureValue) com a chave pública do emitente (grupo: RSAKeyValue) Observação: Regra de Validação implementada somente na SVRS.",
+  "regra": "Se o grupo de informações do Provedor de Assinatura e Autorização estiver informado (grupo: infPAA): - Validar assinatura RSA (tag:SignatureValue) com a chave pública do emitente (grupo: RSAKeyValue) Observação: Regra de Validação implementada somente na SVRS.",
   "mensagem": "Rejeição: Emissão por PAA com Assinatura RSA inválida",
   "pagina": 14,
   "consultaBaseSefaz": false,
@@ -17521,13 +17562,7 @@
   "mensagem": "Rejeição: NF-e com DANFE Simplificado Tipo 2 com versão de qrCode não permitida",
   "pagina": 20,
   "consultaBaseSefaz": false,
-  "historico": [
-   {
-    "documento": "NT 2025.001 v1.03",
-    "pagina": 11,
-    "cStat": 407
-   }
-  ]
+  "historico": []
  },
  {
   "id": "ZX02-222",
@@ -17584,7 +17619,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 397,
   "efeito": "rejeicao",
-  "regra": "Se qrCode informado: - Se QR Code versão “2 ou 3”: - Parâmetro Chave de Acesso no QR-Code diverge da Chave de Acesso da Nota Fiscal Observação: Para NFC-e/NF-e ONLINE ou OFFLINE é o 1º parâmetro da URL do QR Code.",
+  "regra": "Se qrCode informado: - Se QR Code versão “2 ou 3”: - Parâmetro Chave de Acesso no QR-Code diverge da Chave de Acesso da Nota Fiscal Observação: Para NFC-e/NF-e ONLINE ou OFFLINE é o 1º parâmetro da URL do QR Code. Obs. 1: Para NF-e, modelo 55, somente é aceito contingência offline (tpEmis=9) para o DANFE Simplificado Tipo 2 (tag:tpImp=6)",
   "mensagem": "Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal [Param: xxx)].",
   "pagina": 20,
   "consultaBaseSefaz": false,
@@ -18009,7 +18044,7 @@
   "aplicacao": "obrigatoria",
   "cStat": 396,
   "efeito": "rejeicao",
-  "regra": "Se qrCode informado: - Se QR Code versão “3”: - Se NFC-e/NF-e é de contingência off-line (tpEmis=9):",
+  "regra": "Se qrCode informado: - Se QR Code versão “3”: - Se NFC-e/NF-e é de contingência off-line (tpEmis=9): - Parâmetro Identificação do Destinatário não informado no QR-Code. Nota: O Schema XML faz esta verificação Obs. 1: Para NFC-e/NFe ONLINE esse parâmetro não existe. Obs. 2: Para a NFC-e/NFe OFFLINE é o 7º parâmetro da URL do QR Code (NT 2025.001) Obs. 3: Para NF-e, modelo 55, somente é aceito contingência offline (tpEmis=9) para o DANFE Simplificado Tipo 2 (tag:tpImp=6)",
   "mensagem": "Rejeição: Parâmetro do QR-Code inexistente: [Param: xxx]",
   "pagina": 22,
   "consultaBaseSefaz": false,

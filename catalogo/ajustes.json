@@ -1,5 +1,10 @@
 [
  {
+  "documento": "NT 2024.002",
+  "acao": "ignorar",
+  "motivo": "Substituída pela NT 2025.002 (RTC), que declara: \"Esta Nota Técnica substitui, no âmbito da NFe/NFCe, a RT NT 2024.002 - IBS/CBS v1.10\"."
+ },
+ {
   "documento": "NT 2015.001",
   "ids": ["P13-14", "P19"],
   "acao": "excluir",

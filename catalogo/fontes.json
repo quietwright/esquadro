@@ -8,21 +8,21 @@
   ],
   "data": "2020-11-01",
   "sha256": "5eb4cf2010b10b0b62f78197c4eb64025f24535d4c6e61158bc7806dd008f55d",
-  "regras": 557
+  "regras": 549
  },
  {
   "documento": "NT 2020.005 v1.21",
   "arquivo": "nt/nt-2020.005-v1.21.pdf",
   "data": "2021-10-15",
   "sha256": "3ce019a6ea73083d65a86123faa5ecb5ec4e76a32dd143e732079862682d7468",
-  "regras": 15
+  "regras": 14
  },
  {
   "documento": "NT 2022.001 v1.00",
   "arquivo": "nt/nt-2022.001-v1.00.pdf",
   "data": "2022-05-31",
   "sha256": "de3174af7330d510f8fa4ec6b9f44047086be761f978029c6fbb660376fb1a22",
-  "regras": 6
+  "regras": 8
  },
  {
   "documento": "NT 2021.001 v1.01",
@@ -36,28 +36,28 @@
   "arquivo": "nt/nt-2020.002-v1.01.pdf",
   "data": "2022-08-19",
   "sha256": "1b9f7d65e64df8f99c2f3636caf912943cb27c64f4f954ec2076a249bb71bc3e",
-  "regras": 3
+  "regras": 6
  },
  {
   "documento": "NT 2020.006 v1.31",
   "arquivo": "nt/nt-2020.006-v1.31.pdf",
   "data": "2022-09-26",
   "sha256": "449c1816a67555082891be24f509c57b8e71096f3f8efaf9a71fcb79c2640600",
-  "regras": 12
+  "regras": 11
  },
  {
   "documento": "NT 2021.004 v1.35",
   "arquivo": "nt/nt-2021.004-v1.35.pdf",
   "data": "2022-11-01",
   "sha256": "e33f067c25a024e3cddd99162baa337eaa7c090f4476c44af394059de3e3ae16",
-  "regras": 25
+  "regras": 26
  },
  {
   "documento": "NT 2022.003 v1.11",
   "arquivo": "nt/nt-2022.003-v1.11.pdf",
   "data": "2023-01-25",
   "sha256": "5eda1dbc0be00922e46972836fc81fa605772298ca6f80a96bac5210ba134e31",
-  "regras": 26
+  "regras": 22
  },
  {
   "documento": "NT 2022.004 v1.10",
@@ -99,7 +99,7 @@
   "arquivo": "nt/nt-2024.001-v1.20.pdf",
   "data": "2024-08-29",
   "sha256": "fc5e648cac11ed84e1107f273893776af2b9cfa748a0a5332748100e82e05b86",
-  "regras": 25
+  "regras": 23
  },
  {
   "documento": "NT 2023.004 v1.20",
@@ -123,13 +123,6 @@
   "regras": 0
  },
  {
-  "documento": "NT 2024.002 v1.10",
-  "arquivo": "nt/nt-2024.002-v1.10.pdf",
-  "data": "2024-12-06",
-  "sha256": "48b7b5de92482866d6898ee4842218c436f123af16e78869021aa48f91f15c89",
-  "regras": 12
- },
- {
   "documento": "NT 2021.002 v1.12",
   "arquivo": "nt/nt-2021.002-v1.12.pdf",
   "data": "2025-01-28",
@@ -141,35 +134,35 @@
   "arquivo": "nt/nt-2023.001-v1.60.pdf",
   "data": "2025-06-09",
   "sha256": "2b18d99fdb4989a12044cd491c176a2199ab19bb2462406a6ac03376b7701fe5",
-  "regras": 25
+  "regras": 26
  },
  {
   "documento": "NT 2018.005 v1.52",
   "arquivo": "nt/nt-2018.005-v1.52.pdf",
   "data": "2025-07-10",
   "sha256": "c2c299ee59397a495c88b7b83826f39ca44e0d070bfeebbb9d9ff61d32a58ec7",
-  "regras": 8
+  "regras": 16
  },
  {
   "documento": "NT 2019.001 v1.70",
   "arquivo": "nt/nt-2019.001-v1.70.pdf",
   "data": "2025-08-18",
   "sha256": "8c03e1d53893f211b4967a5f6da0a1a5f9c46b0862e23ee5b63816657e79ff00",
-  "regras": 28
+  "regras": 36
  },
  {
   "documento": "NT 2025.001 v1.03",
   "arquivo": "nt/nt-2025.001-v1.03.pdf",
   "data": "2025-09-29",
   "sha256": "333b69f71debe5040585b677b574bb13b39362aa7934b904edc59cdf83cded02",
-  "regras": 25
+  "regras": 31
  },
  {
   "documento": "NT 2023.002 v1.01",
   "arquivo": "nt/nt-2023.002-v1.01.pdf",
   "data": "2025-11-18",
   "sha256": "b0cb9528bfaa6e0b5ac2986c879898eebcbb9457e97fcf0af985a00659649031",
-  "regras": 10
+  "regras": 11
  },
  {
   "documento": "NT 2022.002 v1.30a",
@@ -190,7 +183,7 @@
   "arquivo": "nt/nt-2024.003-v1.10.pdf",
   "data": "2026-05-11",
   "sha256": "d7609f48772db2ccbff6784b3e51a138433733ddff3deba84640622f82397966",
-  "regras": 2
+  "regras": 11
  },
  {
   "documento": "NT 2026.003 v1.00",
@@ -218,7 +211,7 @@
   "arquivo": "nt/nt-2026.001-v1.02b.pdf",
   "data": "2026-07-31",
   "sha256": "703310f95bff855aad9a4a7004515ce29ffff343334c53f0c45e9b32390296cd",
-  "regras": 18
+  "regras": 21
  },
  {
   "documento": "NT 2014.001 v1.41",
@@ -246,7 +239,7 @@
   "arquivo": "nt/nt-2021.003-v1.50.pdf",
   "data": "2026-09-25",
   "sha256": "28b7e26b1a515cdd8180084a71c6b8bf4eb6fa7745ecafba878fbeb75547b363",
-  "regras": 17
+  "regras": 13
  },
  {
   "documento": "NT 2023.003 v1.40",
@@ -260,28 +253,28 @@
   "arquivo": "nt/nt-2025.002-v1.52.pdf",
   "data": "2026-10-01",
   "sha256": "54ed893327040a20a4a3c0562d342953542a1dc98e55d73dbe607d6c13d3d416",
-  "regras": 279
+  "regras": 278
  },
  {
   "documento": "NT 2026.002 v1.11",
   "arquivo": "nt/nt-2026.002-v1.11.pdf",
   "data": "2026-10-01",
   "sha256": "72c033b2c7490710f61488a14d0bb3d7bb54e5345aa8d33d6ff2c270c228f046",
-  "regras": 85
+  "regras": 89
  },
  {
   "documento": "NT 2026.007 v1.10",
   "arquivo": "nt/nt-2026.007-v1.10.pdf",
   "data": "2026-10-01",
   "sha256": "4a9d9de64504f4091c55e3e8a2d499116d4bac1a2009a874a7b9ce26d9fe8b10",
-  "regras": 34
+  "regras": 32
  },
  {
   "documento": "NT 2026.008 v1.00",
   "arquivo": "nt/nt-2026.008-v1.00.pdf",
   "data": "2026-10-01",
   "sha256": "bc56e76ae5f3354f7ae636d87908840c5c685284f0f8f32bb29579f8124e44cd",
-  "regras": 11
+  "regras": 10
  },
  {
   "documento": "NT 2026.010 v1.00",

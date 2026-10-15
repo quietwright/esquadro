@@ -37,8 +37,9 @@ for (const item of manifesto) {
   const anterior = notas.get(chave)
   if (!anterior || data > anterior.data) notas.set(chave, { documento, arquivo: item.arquivo, data })
 }
+const ignorada = (n) => ajustes.some((a) => a.acao === 'ignorar' && n.documento.startsWith(a.documento + ' '))
 const aplicadas = [...notas.values()]
-  .filter((n) => n.data > BASE.data)
+  .filter((n) => n.data > BASE.data && !ignorada(n))
   .sort((a, b) => a.data.localeCompare(b.data) || a.documento.localeCompare(b.documento))
 
 const regras = new Map()
