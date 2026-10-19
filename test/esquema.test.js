@@ -99,3 +99,9 @@ test('minInclusive de ano-mês compara como data', () => {
   const [p] = problemas(xml.replace('2026-09', '2024-12'))
   assert.match(p.detalhe, /menor que o mínimo 2025-01/)
 })
+
+test('length de base64Binary conta bytes: hashCSRT de 28 caracteres tem 20 bytes', () => {
+  const comHash = (hash) => trocar('<fone>1130000000</fone></infRespTec>', `<fone>1130000000</fone><idCSRT>01</idCSRT><hashCSRT>${hash}</hashCSRT></infRespTec>`)
+  assert.deepEqual(problemas(comHash('g6+9u14pEMZ48jO/ub9sqU+lFL8=')), [])
+  assert.match(problemas(comHash('g6+9u14pEMZ48jO/ub9sqU+l'))[0].detalhe, /tamanho 18 bytes, deve ter exatamente 20/)
+})

@@ -1062,14 +1062,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 300,
   "efeito": "rejeicao",
   "regra": "Se informada IE do Destinatário e informado Tipo IE Destinatário como “Não Contribuinte” (indIEDest=9): - IE cadastrada no CCC com Tipo IE diferente de “3-IE para Não Contribuinte de ICMS na UF” (CCC.tpIE<>3). (NT 2025.001) Observação: Implementação futura.",
   "mensagem": "Rejeição: Tipo da IE do Destinatário difere de Não Contribuinte no cadastro da UF",
   "pagina": 13,
   "consultaBaseSefaz": true,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "5E17-20",
@@ -1472,7 +1473,11 @@
     "pagina": 138,
     "cStat": 974
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2024-09-16",
+   "producao": "2025-05-01"
+  }
  },
  {
   "id": "7ZD08-10",
@@ -1495,7 +1500,11 @@
     "pagina": 138,
     "cStat": 976
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2024-09-16",
+   "producao": "2024-10-01"
+  }
  },
  {
   "id": "7ZD08-20",
@@ -1518,7 +1527,11 @@
     "pagina": 138,
     "cStat": 977
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2024-09-16",
+   "producao": "2024-10-01"
+  }
  },
  {
   "id": "7ZD09-10",
@@ -1541,7 +1554,11 @@
     "pagina": 138,
     "cStat": 978
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2024-09-16",
+   "producao": "2024-10-01"
+  }
  },
  {
   "id": "8C02-10",
@@ -1613,7 +1630,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 892,
   "efeito": "rejeicao",
   "regra": "- CEST informado na NF-e diferente do cadastrado no CCG Exceção: Validação somente é realizada se o CEST tiver sido informado no CCG (NT 2021.003) Observação: Implementação futura.",
@@ -1626,7 +1643,8 @@
     "pagina": 139,
     "cStat": 892
    }
-  ]
+  ],
+  "futura": true
  },
  {
   "id": "9I12-10",
@@ -3260,7 +3278,11 @@
     "pagina": 77,
     "cStat": 434
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2021-08-23",
+   "producao": "2022-04-04"
+  }
  },
  {
   "id": "B25c-20",
@@ -3711,7 +3733,10 @@
   "mensagem": "Rejeição: Chave de Acesso referenciada com Modelo inválido [nOcor:nnn]",
   "pagina": 9,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "producao": "2026-12-14"
+  }
  },
  {
   "id": "BA02-40",
@@ -6323,14 +6348,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 670,
   "efeito": "rejeicao",
   "regra": "Se NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tag:tpImp=6): - Local de entrega (tag:entrega) informado indevidamente Observação: Implementação futura.",
   "mensagem": "Rejeição: Local de entrega informado indevidamente",
   "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "G02-10",
@@ -6945,14 +6971,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1167,
   "efeito": "rejeicao",
   "regra": "Se não informada a Classificação para subapuração do IBS na ZFM (tag: tpCredPresIBSZFM, id:I05k): - Código da UF do Emitente do Documento Fiscal (tag:ide/cUF) igual a 13-AM e emitente com inscrição de indústria incentivada. Observação 01: Regra de Validação se aplica somente ao Amazonas. Observação 02: Implementação futura.",
   "mensagem": "Rejeição: Classificação para subapuração do IBS na ZFM não informada [nItem: 999]",
   "pagina": 36,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "I08-04",
@@ -7333,7 +7360,10 @@
     "pagina": 93,
     "cStat": 375
    }
-  ]
+  ],
+  "vigencia": {
+   "producao": "2026-12-14"
+  }
  },
  {
   "id": "I08-184",
@@ -7473,14 +7503,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1278,
   "efeito": "rejeicao",
   "regra": "Se vProdLiq (id:I11c) não informado: - vProdLiq (id:I11c) não informado Observação: Implementação futura.",
   "mensagem": "Rejeição: Valor Líquido do Produto não informado [nItem: 999]",
   "pagina": 7,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "I11c-20",
@@ -7626,14 +7657,15 @@
   "modelos": [
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 735,
   "efeito": "rejeicao",
   "regra": "NFC-e com Unidade de Tributação inválida (tag:uTrib não consta da tabela específica) Observação: Implementação Futura",
   "mensagem": "Rejeição: NFC-e com Unidade de Tributação inválida [nItem: 999]",
   "pagina": 94,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "I13-20",
@@ -7656,7 +7688,11 @@
     "pagina": 94,
     "cStat": 854
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "I14-10",
@@ -8415,7 +8451,11 @@
   "mensagem": "Rejeição: Grupo de combustível não pode ter o índice de mistura do Biocombustível. [nItem:999]",
   "pagina": 29,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "LA17-20",
@@ -8437,7 +8477,11 @@
     "pagina": 30,
     "cStat": 908
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "LA18-10",
@@ -8459,7 +8503,11 @@
     "pagina": 31,
     "cStat": 909
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2025-08-04",
+   "producao": "2025-10-01"
+  }
  },
  {
   "id": "LA18-20",
@@ -8481,7 +8529,11 @@
     "pagina": 32,
     "cStat": 909
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2023-07-03",
+   "producao": "2023-09-04"
+  }
  },
  {
   "id": "LA18-30",
@@ -8498,7 +8550,11 @@
   "mensagem": "Rejeição: Não permitido o preenchimento do grupo de UF de origem do combustível [nItem:999]",
   "pagina": 32,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "LA21-10",
@@ -8515,7 +8571,11 @@
   "mensagem": "Rejeição: Somatório dos percentuais originários para a UF do combustível diverge de 100. [nItem:999]",
   "pagina": 33,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "LA21-20",
@@ -8532,7 +8592,11 @@
   "mensagem": "Rejeição: Somatório dos percentuais originários para a UF do combustível diverge de 100. [nItem:999]",
   "pagina": 33,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "LB01-10",
@@ -9118,7 +9182,11 @@
   "mensagem": "Rejeição: NF-e não pode ter preenchimento de Grupo de Tributação do ICMS monofásica sobre combustíveis. [nItem:999]",
   "pagina": 36,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N12-110",
@@ -9141,7 +9209,11 @@
     "pagina": 36,
     "cStat": 960
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N12a-10",
@@ -9384,7 +9456,11 @@
   "mensagem": "Rejeição: CSOSN inválido para emitente MEI (CRT=4) [nItem:nnn]",
   "pagina": 13,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2024-07-01",
+   "producao": "2025-04-01"
+  }
  },
  {
   "id": "N12a-81",
@@ -9423,7 +9499,11 @@
   "mensagem": "Rejeição: CFOP inválido para emitente MEI (CRT=4) [nItem:nnn]",
   "pagina": 13,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2024-07-01",
+   "producao": "2025-04-01"
+  }
  },
  {
   "id": "N12a-91",
@@ -9733,14 +9813,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 875,
   "efeito": "rejeicao",
   "regra": "Se UF do destinatário diferente de “EX” e se informado percentual de FCP ST (tag:N23b), percentual de FCP validado conforme tabela de alíquota definida por UF. Obs.1: Utilizar a UF do destinatário na validação (tag: enderDest/UF, id:E12); Obs.2: Quando informada a UF do local de entrega (tag: entrega/UF) diferente de “EX”, aceitar como válidas tanto a alíquota da UF do destinatário (tag: enderDest/UF; id:E12) quanto a alíquota da UF de entrega (tag: entrega/UF). Obs.: Implementação Futura (NT 2016.002)",
   "mensagem": "Rejeição: Percentual de FCPST inválido [nItem: 999]",
   "pagina": 112,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "N23d-10",
@@ -9749,14 +9830,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 860,
   "efeito": "rejeicao",
   "regra": "Informado a tag vFCPST (id:N23d) e finNFe=1 (id:B25), verificar: - Se informado CST= 10 ou 30 ou 70 ou 90 ou CSOSN=201 ou 202 ou 203 ou 900 e vFCPST (id:N23d) difere da vBCFCPST (id:N23a)* pFCPST (id:N23b) - vFCP (id:N17c) (*4) Obs.1: Campos não informados devem ser considerados como “0\" Obs.2: Regra de validação aplicável a critério da UF (NT 2016.002)",
   "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
   "pagina": 112,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "aplicacaoPeloTexto": true
  },
  {
   "id": "N27b-10",
@@ -9800,14 +9882,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 860,
   "efeito": "rejeicao",
   "regra": "Informado a tag vFCPSTRet (id:N27d) e finNFe=1 (id:B25), verificar: - Se CST=60 ou CSOSN=500 e vFCPSTRet (id:N27d) difere da vBCFCPSTRet (id:N27a)* pFCPSTRet (id:N27b) (*4) Obs.: regra de validação para implementação futura (NT 2016.002)",
   "mensagem": "Rejeição: Valor do FCP informado difere de base de cálculo*alíquota [nItem: 999]",
   "pagina": 113,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "N28-10",
@@ -9895,7 +9978,11 @@
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada [nItem:999]",
   "pagina": 36,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N39-10",
@@ -9912,7 +9999,11 @@
   "mensagem": "Rejeição: Valor do ICMS próprio difere do calculado. [nItem:999]",
   "pagina": 37,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N39a-10",
@@ -9928,7 +10019,11 @@
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada sujeita a retenção [nItem:999]",
   "pagina": 37,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N41-10",
@@ -9945,7 +10040,11 @@
   "mensagem": "Rejeição: Valor do ICMS com retenção difere do calculado. [nItem:999]",
   "pagina": 37,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N41-20",
@@ -9961,7 +10060,11 @@
   "mensagem": "Rejeição: Valor do ICMS com retenção difere do calculado. [nItem:999]",
   "pagina": 38,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "N43a-10",
@@ -9978,7 +10081,11 @@
   "mensagem": "Rejeição: Obrigatório o preenchimento da Quantidade tributada retida anteriormente [nItem:999]",
   "pagina": 38,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2024-04-01"
+  }
  },
  {
   "id": "NA01-10",
@@ -10221,7 +10328,11 @@
   "mensagem": "Rejeição: Grupo do ICMS Previsto no Pagamento Antecipado não informado [nItem: 999]",
   "pagina": 8,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2027-02-01",
+   "producao": "2027-03-01"
+  }
  },
  {
   "id": "O01-10",
@@ -10603,14 +10714,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1011,
   "efeito": "rejeicao",
   "regra": "Não é permitido uso do Imposto Seletivo (grupo: imposto/IS) para este cClassTribIS. Nota: Implementação Futura.",
   "mensagem": "Rejeição: Não é permitido uso do Imposto Seletivo para esta classificação da operação [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB01-20",
@@ -10620,14 +10732,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1012,
   "efeito": "rejeicao",
   "regra": "É exigido uso do Imposto Seletivo (grupo: imposto/IS) para este cClassTribIS. Nota: Implementação Futura.",
   "mensagem": "Rejeição: É exigido o uso do Imposto Seletivo para esta classificação da operação [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB01-30",
@@ -10637,14 +10750,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1013,
   "efeito": "rejeicao",
   "regra": "É exigido uso do Imposto Seletivo (grupo: imposto/IS) para este NCM. Nota: Implementação Futura.",
   "mensagem": "Rejeição: É exigido o uso do Imposto Seletivo para esta classificação da operação para este NCM [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB02-10",
@@ -10654,14 +10768,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1014,
   "efeito": "rejeicao",
   "regra": "Se CST do Imposto Seletivo for informado, este deve existir na tabela de Código de Situação Tributária (tag: imposto/IS/CSTIS). Nota: Implementação Futura.",
   "mensagem": "Rejeição: CST do Imposto Seletivo informado inexistente [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB03-10",
@@ -10671,14 +10786,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1015,
   "efeito": "rejeicao",
   "regra": "Se cClassTribIS for informado, este deve existir na tabela de Classificação Tributária do Imposto Seletivo (tag: imposto/IS/cClassTribIS) Nota: Implementação Futura.",
   "mensagem": "Rejeição: Classificação Tributária do Imposto Seletivo informada inexistente [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB05-10",
@@ -10688,14 +10804,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1103,
   "efeito": "rejeicao",
   "regra": "-Valor da Base de cálculo do Imposto Seletivo (vBCIS) deve ser igual ao somatório de: (+) vProd (+) vServ (+) vFrete (+) vSeg (+) vOutro (+) vII (-) vDesc (-) vPIS (-) vCOFINS (-) vICMS (-) vICMSUFDest (-) vFCP (-) vFCPUFDest (-) vICMSMono (-) vISSQN Exceção 1: Não subtrair o valor do PIS por Substituição Tributária (PIST/vPIS) quando compor o valor total da NF-e (se indSomaPISST=1); Exceção 2: Não subtrair o valor do COFINS por Substituição Tributária (COFINSST/vCOFINS) quando compor o valor total da NF-e (se indSomaCOFINSST=1). Nota: Implementação Futura.",
   "mensagem": "Rejeição: Valor da Base de cálculo do Imposto Seletivo difere do somatório dos valores que a compõem [nItem: 999]",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB06-10",
@@ -10705,28 +10822,30 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1016,
   "efeito": "rejeicao",
   "regra": "Se CSTIS informado exigir grupo do Imposto Seletivo e exigir a alíquota (tag: pIS) diferente de Zero, mas informada alíquota (tag: pIS) do imposto seletivo igual a zero. (tag: imposto/IS/pIS). Nota: Implementação Futura.",
   "mensagem": "Rejeição: CST do Imposto Seletivo obriga informação de alíquota de Imposto Seletivo [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB07-10",
   "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": null,
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1017,
   "efeito": "rejeicao",
   "regra": "55-65 Se CSTIS informado exigir grupo do Imposto Seletivo e exigir a alíquota específica (tag: imposto/IS/pISEspec) diferente de Zero e NCM do item for 2401, 2402, 2403, 2404, 2203, 2204, 2205, 2206, 2208. Nota: Implementação Futura.",
   "mensagem": "Rejeição: Obrigatório informação de alíquota específica de Imposto Seletivo [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB08-10",
@@ -10736,14 +10855,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1018,
   "efeito": "rejeicao",
   "regra": "Se CSTIS informado exigir grupo do Imposto Seletivo (grupo: imposto/IS) e unidade tributável (tag: imposto/IS/uTrib) e quantidade tributável (tag: imposto/IS/qTrib) não informadas ou iguais a zero. Nota: Implementação Futura.",
   "mensagem": "Rejeição: Unidade tributável (uTrib) e Quantidade tributável (qTrib) do imposto seletivo não informados [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB11-10",
@@ -10753,14 +10873,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1019,
   "efeito": "rejeicao",
   "regra": "Se informado imposto seletivo (tag: imposto/IS): Valor do IS (vIS) = BC (tag: vBCIS) * (Alq (tag: pIS) / 100) Observação 1: Se informada alíquota específica (tag: IS/pISEspec): Valor do IS (vIS) = BC (tag: vBCIS) * (Alq (tag: pIS) / 100) + qtd (tag: IS/qTrib) * (Alq (tag: IS/pISEspec) / 100) Observação 2: Aceitar uma tolerância de 0,01 a mais ou a menos. Nota: Implementação Futura.",
   "mensagem": "Rejeição: Valor do Imposto Seletivo difere do calculado [nItem: 999]",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB12-10",
@@ -10778,6 +10899,7 @@
   "pagina": 40,
   "consultaBaseSefaz": false,
   "historico": [],
+  "futura": true,
   "ajuste": "A NT 2025.002 v1.52 prevê a regra em homologação desde 01/07/2026, mas há nota de homologação de 20/07/2026, regime normal, autorizada sem o grupo IBSCBS. Até a obrigatoriedade valer de fato, o esquadro avisa sem invalidar a nota."
  },
  {
@@ -10872,14 +10994,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1116,
   "efeito": "rejeicao",
   "regra": "Se CST do IBS/CBS (tag: IBSCBS/CST) informado possui indicador que exige informação do IBS/CBS Monofásico (ind_gIBSCBSMono = 1): - Grupo gIBSCBSMono (id: UB84, grupo: imposto/IBSCBS/gIBSCBSMono) não informado Exceção: Esta RV não se aplica no caso de tpNFDebito=07-Perda em estoque. Observação 1: Consultar Tabela de Indicadores de CST do IBS e da CBS. Observação 2: Implementação futura para produção. Observação 3: Implementação futura para homologação.",
   "mensagem": "Rejeição: Grupo gIBSCBSMono não informado [nItem: 999]",
   "pagina": 41,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB13-44",
@@ -12031,14 +12154,15 @@
   "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": null,
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1223,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gMonoRet do IBS Ad Rem (id: UB88, grupo: gIBSMonoAdRem/gMonoRet): - vIBSMonoRet do IBS Ad Rem (id: UB88a) deve ser resultante de: - Se cProdANP igual a Gasolina C ou suas variações (cProdANP consta na lista abaixo): vIBSMonoRet = (qCombPetro × adRemIBSCombPetro) + (qBioComb × adRemIBSBioComb), onde: qCombPetro = qTrib × (1 - pBio) qBioComb = qTrib × (1 - pBio) × pBioObrig / (1 - pBioObrig). - Se cProdANP diferente de Gasolina C e suas variações (cProdANP não consta na lista abaixo): vIBSMonoRet = qTrib × adRemIBS cProdANP Gasolina C = 320102001, 320102002, 320102003, 320102005, 320103001, 320103002, 320103003, 320301001, 320301002. Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (adRemIBSCombPetro, adRemIBSBioComb, adRemIBS) (a ser publicada). Observação 3: Consultar Tabela de Código de Índice de Biocombustível do IBS e CBS conforme produto (pBioObrig). Observação 4: Implementação Futura.",
   "mensagem": "Rejeição: Valor do IBS Monofásico Ad Rem retido anteriormente difere do calculado [nItem: 999]",
   "pagina": 55,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB89-10",
@@ -12317,14 +12441,15 @@
   "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": null,
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1240,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gMonoRet do IBS Ad Valorem (id: UB93, grupo: gIBSMonoAdValorem/gMonoRet): - vIBSMonoRet do IBS Ad Valorem (id: UB93a) deve ser resultante de: - Se cProdANP igual a Gasolina C ou suas variações (cProdANP consta na lista abaixo): vIBSMonoRet = (qCombPetro × vRefCombPetro × pAliqIBSCombPetro) + (qBioComb × vRefBioComb × pAliqIBSBioComb), onde: qCombPetro = qTrib × (1 - pBio) qBioComb = qTrib × (1 - pBio) × pBioObrig / (1 - pBioObrig). - Se cProdANP diferente de Gasolina C e suas variações (cProdANP não consta na lista abaixo): vIBSMonoRet = qTrib × pAliqIBS cProdANP Gasolina C = 320102001, 320102002, 320102003, 320102005, 320103001, 320103002, 320103003, 320301001, 320301002. Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (pAliqIBSCombPetro, pAliqIBSBioComb, pAliqIBS) (a ser publicada). Observação 3: Consultar Tabela de Código de Índice de Biocombustível do IBS e CBS conforme produto (pBioObrig). Observação 4: Consultar Tabela de Valores de Referência da Tributação Monofásica do IBS e CBS conforme produto (vRefCombPetro e vRefBioComb) (a ser publicada). Observação 5: Implementação Futura.",
   "mensagem": "Rejeição: Valor do IBS Monofásico Ad Valorem retido anteriormente difere do calculado [nItem: 999]",
   "pagina": 58,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB94-10",
@@ -12385,14 +12510,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1244,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gpBioDiferenca do IBS Ad Valorem (id: UB94, grupo: gIBSMonoAdValorem/gpBioDiferenca): - vIBSDiferenca do IBS Ad Valorem (id:UB94b) deve ser resultante de: vIBSDiferenca = qBCBioComb (id: UB94a) × vRefBioComb × pAliqIBSBioComb Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (a ser publicada). Observação 3: Consultar Tabela de Valores de Referência da Tributação Monofásica do IBS e CBS conforme produto (vRefBioComb) (a ser publicada). Observação 4: Implementação Futura.",
   "mensagem": "Rejeição: Valor do IBS Monofásico Ad Valorem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
   "pagina": 59,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB95a-10",
@@ -12569,14 +12695,15 @@
   "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": null,
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1255,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gMonoRet da CBS Ad Rem (id: UB98, grupo: gCBSMonoAdRem/gMonoRet): - vCBSMonoRet da CBS Ad Rem (id: UB98a) deve ser resultante de: - Se cProdANP igual a Gasolina C ou suas variações (cProdANP consta na lista abaixo): vCBSMonoRet = (qCombPetro × adRemCBSCombPetro) + (qBioComb × adRemCBSBioComb), onde: qCombPetro = qTrib × (1 - pBio) qBioComb = qTrib × (1 - pBio) × pBioObrig / (1 - pBioObrig). - Se cProdANP diferente de Gasolina C e suas variações (cProdANP não consta na lista abaixo): vCBSMonoRet = qTrib × adRemCBS cProdANP Gasolina C = 320102001, 320102002, 320102003, 320102005, 320103001, 320103002, 320103003, 320301001, 320301002. Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (adRemCBSCombPetro, adRemCBSBioComb, adRemCBS) (a ser publicada). Observação 3: Consultar Tabela de Código de Índice de Biocombustível do IBS e CBS conforme produto (pBioObrig). Observação 4: Implementação Futura.",
   "mensagem": "Rejeição: Valor da CBS Monofásica Ad Rem retido anteriormente difere do calculado [nItem: 999]",
   "pagina": 61,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB99-10",
@@ -12821,14 +12948,15 @@
   "documento": "NT 2025.002 v1.52",
   "grupo": "UB. Informações dos tributos IBS / CBS e Imposto Seletivo",
   "modelos": null,
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1268,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gMonoRet da CBS Ad Valorem (id: UB103, grupo: gCBSMonoAdValorem/gMonoRet): - vCBSMonoRet da CBS Ad Valorem (id: UB103a) deve ser resultante de: - Se cProdANP igual a Gasolina C ou suas variações (cProdANP consta na lista abaixo): vCBSMonoRet = (qCombPetro × vRefCombPetro × pAliqCBSCombPetro) + (qBioComb × vRefBioComb × pAliqCBSBioComb), onde: qCombPetro = qTrib × (1 - pBio) qBioComb = qTrib × (1 - pBio) × pBioObrig / (1 - pBioObrig). - Se cProdANP diferente de Gasolina C e suas variações (cProdANP não consta na lista abaixo): vCBSMonoRet = qTrib × pAliqCBS cProdANP Gasolina C = 320102001, 320102002, 320102003, 320102005, 320103001, 320103002, 320103003, 320301001, 320301002. Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (pAliqCBSCombPetro, pAliqCBSBioComb, pAliqCBS) (a ser publicada). Observação 3: Consultar Tabela de Código de Índice de Biocombustível do IBS e CBS conforme produto (pBioObrig). Observação 4: Consultar Tabela de Valores de Referência da Tributação Monofásica do IBS e CBS conforme produto (vRefCombPetro e vRefBioComb) (a ser publicada). Observação 5: Implementação Futura.",
   "mensagem": "Rejeição: Valor da CBS Monofásica Ad Valorem retido anteriormente difere do calculado [nItem: 999]",
   "pagina": 63,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB104-10",
@@ -12889,14 +13017,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1272,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo gpBioDiferenca da CBS Ad Valorem (id: UB104, grupo: gCBSMonoAdValorem/gpBioDiferenca): - vCBSDiferenca da CBS Ad Valorem (id:UB104b) deve ser resultante de: vCBSDiferenca = qBCBioComb (id: UB104a) × vRefBioComb × pAliqCBSBioComb Observação 1: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 2: Consultar Tabela de Combustíveis Sujeitos à Tributação Monofásica do IBS e CBS conforme produto (a ser publicada). Observação 3: Consultar Tabela de Valores de Referência da Tributação Monofásica do IBS e CBS conforme produto (vRefBioComb) (a ser publicada). Observação 4: Implementação Futura.",
   "mensagem": "Rejeição: Valor da CBS Monofásica Ad Valorem correspondente a diferença em relação ao pBioObrigatorio difere do calculado [nItem: 999]",
   "pagina": 64,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB105a-10",
@@ -12906,14 +13035,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1070,
   "efeito": "rejeicao",
   "regra": "Se informado grupo do IBS e CBS monofásico (grupo: gIBSCBSMono): - Valor total do IBS Monofásico do item (tag: vTotIBSMonoItem) deverá ser resultante de: vTotIBSMonoItem = vIBSMono + vIBSMonoReten Observação 01: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 02: Implementação futura.",
   "mensagem": "Rejeição: Valor do IBS monofásico difere do calculado [nItem: 999]",
   "pagina": 65,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB105b-10",
@@ -12923,14 +13053,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1071,
   "efeito": "rejeicao",
   "regra": "Se informado grupo do IBS e CBS monofásico (grupo: gIBSCBSMono): - O valor total da CBS Monofásica do item (tag: vTotCBSMonoItem) deverá ser resultante de: vTotCBSMonoItem = vCBSMono + vCBSMonoReten Observação 01: Aceitar uma tolerância de 0,01 a mais ou a menos. Observação 02: Implementação futura.",
   "mensagem": "Rejeição: Valor da CBS monofásico difere do calculado [nItem: 999]",
   "pagina": 65,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "UB106-30",
@@ -13374,14 +13505,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1137,
   "efeito": "rejeicao",
   "regra": "Se informado grupo gIBSCBS: - vItem não informado. Observação 1: Implementação Futura.",
   "mensagem": "Rejeição: Valor total do Item (vItem) não informado [nItem: 999]",
   "pagina": 68,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "VB01-10",
@@ -13391,7 +13523,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1105,
   "efeito": "rejeicao",
   "regra": "Se vItem informado: Se não é operação de Faturamento Direto para veículos novos (tpOp = nulo ou tpOp <> 2, id:J02): - Valor total do Item (vItem) deve ser igual ao somatório: (+) vProd (contém vIBS, vCBS e vIS) (-) vDesc (-) vICMSDeson, se indDeduzDeson=1 (+) vICMSST (+) vICMSMonoReten (+) vFCPST (+) vFrete (+) vSeg (+) vOutro (+) vII (+) vIPI (+) vIPIDevol (+) vServ (+) vPIS (id: R06, campo: PISST/vPIS), se indSomaPISST=1 (+) vCofins (id: T06, campo: COFINSST/vCOFINS), se indSomaCOFINSST =1 (NT 2020.005) Observação: Implementação Futura.",
@@ -13404,7 +13536,8 @@
     "pagina": 68,
     "cStat": 1105
    }
-  ]
+  ],
+  "futura": true
  },
  {
   "id": "VB01-20",
@@ -13413,7 +13546,7 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1105,
   "efeito": "rejeicao",
   "regra": "Se vItem informado: Se informada operação de Faturamento Direto para veículos novos (tpOp = 2, id:J02): - Valor total do Item (vItem) deve ser igual ao somatório: (+) vProd (contém vIBS, vCBS e vIS) (-) vDesc (-) vICMSDeson, se indDeduzDeson=1 (+) vFrete (+) vSeg (+) vOutro (+) vII (+) vIPI (+) vServ (+) vPIS (id: R06, campo: PISST/vPIS), se indSomaPISST=1 (+) vCofins (id: T06, campo: COFINSST/vCOFINS), se indSomaCOFINSST =1 (NT 2020.005) Observação: Implementação Futura.",
@@ -13426,7 +13559,8 @@
     "pagina": 68,
     "cStat": 1105
    }
-  ]
+  ],
+  "futura": true
  },
  {
   "id": "VC02-04",
@@ -13513,7 +13647,10 @@
   "mensagem": "Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado por item [nItem: 999]",
   "pagina": 69,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "producao": "2026-11-03"
+  }
  },
  {
   "id": "VC02-20",
@@ -13567,7 +13704,10 @@
     "pagina": 70,
     "cStat": 1193
    }
-  ]
+  ],
+  "vigencia": {
+   "producao": "2026-12-14"
+  }
  },
  {
   "id": "VC03-10",
@@ -13888,7 +14028,11 @@
   "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico próprio difere do somatório dos itens.",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W06c-10",
@@ -13904,7 +14048,11 @@
   "mensagem": "Rejeição: Total do ICMS monofásico próprio difere do somatório dos itens.",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W06c.1-10",
@@ -13920,7 +14068,11 @@
   "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico sujeito a retenção difere do somatório dos itens.",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W06d-10",
@@ -13936,7 +14088,11 @@
   "mensagem": "Rejeição: Total do ICMS monofásico sujeito a retenção difere do somatório dos itens.",
   "pagina": 39,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W06d.1-10",
@@ -13953,7 +14109,11 @@
   "mensagem": "Rejeição: Total da quantidade tributada do ICMS monofásico retido anteriormente difere do somatório dos itens.",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W06e-10",
@@ -13970,7 +14130,11 @@
   "mensagem": "Rejeição: Total do ICMS monofásico retido anteriormente difere do somatório dos itens.",
   "pagina": 40,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2023-09-25",
+   "producao": "2023-10-30"
+  }
  },
  {
   "id": "W07-10",
@@ -14533,14 +14697,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1075,
   "efeito": "rejeicao",
   "regra": "O total do Imposto Seletivo (tag: total/ISTot) deverá ser a soma dos campos vIS informados nos itens (tag: det/imposto/IS/vIS). Nota: Implementação Futura.",
   "mensagem": "Rejeição: Total do Imposto Seletivo difere da soma dos itens",
   "pagina": 70,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "W34-10",
@@ -14941,14 +15106,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1004,
   "efeito": "rejeicao",
   "regra": "Se informado grupo IBSCBSTot: - vNFTot não informado. Observação: Implementação futura.",
   "mensagem": "Rejeição: Valor total da NF-e com IBS / CBS / IS (vNFTot) não informado",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "W60-10",
@@ -14958,14 +15124,15 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 1094,
   "efeito": "rejeicao",
   "regra": "Se vNFTot informado: - O total geral do DFe (tag: vNFTot) deverá ser a soma do total dos itens (vItem, tag VB01). Observação: Implementação futura.",
   "mensagem": "Rejeição: Total da NFe difere da soma do total dos itens da Nota",
   "pagina": 71,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "X02-10",
@@ -15100,14 +15267,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 847,
   "efeito": "rejeicao",
   "regra": "Se for NF-e de saída (tpNF=1) e Modalidade do Frete <> 1, 2 ou 3 (id: X02, campo: modFrete), o CNPJ Base (id: X04, campo: CNPJ) ou CPF (id: X05, campo: CPF) do transportador deve ser DIFERENTE do CNPJ Base (id: C02, campo: CNPJ) ou CPF do Remetente (id: C02a, campo: CPF) Observação 1: Regra de validação não se aplica quando CNPJ/CPF do transportador não for informado. Observação 2: Regra de validação não se aplica quando CNPJ Base ou CPF do emitente for igual ao CNPJ Base ou CPF do destinatário e CFOP é de operação com combustíveis (indComb= 2), conforme Tabela CFOP. Observação 3: Implementação futura.",
   "mensagem": "Rejeição: Transporte não é próprio por conta do Remetente e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Remetente",
   "pagina": 16,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "X04-60",
@@ -15116,14 +15284,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 847,
   "efeito": "rejeicao",
   "regra": "Se for NF-e de entrada (tpNF=0) e Modalidade do Frete <> 1, 2 ou 3 (id: X02, campo: modFrete), o CNPJ Base (id: X04, campo: CNPJ) ou CPF (id: X05, campo: CPF) do transportador deve ser DIFERENTE do CNPJ Base (id: E02, campo: CNPJ) ou CPF do Remetente (id: E03, campo: CPF) Observação 1: Regra de validação não se aplica quando CNPJ/CPF do transportador não for informado. Observação 2: Regra de validação não se aplica quando CNPJ Base ou CPF do emitente for igual ao CNPJ Base ou CPF do destinatário e CFOP é de operação com combustíveis (indComb= 2), conforme Tabela CFOP. Observação 3: Implementação futura.",
   "mensagem": "Rejeição: Transporte não é próprio por conta do Remetente e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Remetente",
   "pagina": 17,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "X04-70",
@@ -15164,14 +15333,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 849,
   "efeito": "rejeicao",
   "regra": "Se for NF-e de saída (tpNF=1) e Modalidade do Frete <>0, 2 ou 4 (id: X02, campo: modFrete), o CNPJ Base (id: X04, campo: CNPJ) ou CPF (id: X05, campo: CPF) do transportador deve ser DIFERENTE do CNPJ Base (id: E02, campo: CNPJ) ou CPF do Destinatário (id: E03, campo: CPF) Observação 1: Regra de validação não se aplica quando CNPJ/CPF do transportador não for informado. Observação 2: Regra de validação não se aplica quando CNPJ Base ou CPF do emitente for igual ao CNPJ Base ou CPF do destinatário e CFOP é de operação com combustíveis (indComb= 2), conforme Tabela CFOP. Observação 3: Implementação futura.",
   "mensagem": "Rejeição: Transporte não é próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Destinatário",
   "pagina": 17,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "X04-100",
@@ -15180,14 +15350,15 @@
   "modelos": [
    "55"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 849,
   "efeito": "rejeicao",
   "regra": "Se for NF-e de entrada (tpNF=0) e Modalidade do Frete <> 0, 2 ou 4 (id: X02, campo: modFrete), o CNPJ Base (id: X04, campo: CNPJ) ou CPF (id: X05, campo: CPF) do transportador deve ser DIFERENTE do CNPJ Base (id: C02, campo: CNPJ) ou CPF do Destinatário (id: C02a, campo: CPF) Observação 1: Regra de validação não se aplica quando CNPJ/CPF do transportador não for informado. Observação 2: Regra de validação não se aplica quando CNPJ Base ou CPF do emitente for igual ao CNPJ Base ou CPF do destinatário e CFOP é de operação com combustíveis (indComb= 2), conforme Tabela CFOP. Observação 3: Implementação futura.",
   "mensagem": "Rejeição: Transporte não é próprio por conta do Destinatário e CNPJ Base ou CPF do Transportador igual ao CNPJ Base ou CPF do Destinatário",
   "pagina": 18,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "futura": true
  },
  {
   "id": "X05-10",
@@ -15424,7 +15595,10 @@
   "mensagem": "Rejeição: Campos do grupo Fatura não informados",
   "pagina": 125,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "producao": "2018-09-03"
+  }
  },
  {
   "id": "Y05-10",
@@ -15617,7 +15791,11 @@
   "mensagem": "Rejeição: Código do meio de pagamento inexistente.",
   "pagina": 11,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "homologacao": "2021-05-03",
+   "producao": "2021-09-01"
+  }
  },
  {
   "id": "YA02a-10",
@@ -15661,7 +15839,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 865,
   "efeito": "rejeicao",
   "regra": "Somatório do valor dos pagamentos (id:YA03, tag:vPag) menor que o total da nota (id:W16, tag: vNF). Exceção 1: Esta regra não se aplica para nota fiscal de Ajuste, campo finNFe=3 (id:B25) e para nota fiscal de Devolução finNFe=4 (id:B25) Exceção 2: Esta regra não se aplica quando o campo Meio de Pagamento (id:YA02, tag:tPag) for igual a 90 (sem pagamento) ou igual a 91 (pagamento posterior). (NT 2017.002) Observação: Implementação futura para modelo 55.",
@@ -15674,7 +15852,8 @@
     "pagina": 126,
     "cStat": 865
    }
-  ]
+  ],
+  "futura": true
  },
  {
   "id": "YA03-20",
@@ -15764,7 +15943,7 @@
    "55",
    "65"
   ],
-  "aplicacao": "obrigatoria",
+  "aplicacao": "facultativa",
   "cStat": 391,
   "efeito": "rejeicao",
   "regra": "Se informado o grupo de pagamentos (tag:pag): - Se o Pagamento for por cartão (tag:tPag=03, 04), ou PIX (tpag=17), deve ser informado o grupo de cartões (tag:card) Exceção: A regra de validação não se aplica, em produção, para Nota Fiscal com Data de Emissão anterior a 01/04/2016. (NT 2015.002) Observação: Implementação futura para modelo 55.",
@@ -15782,7 +15961,8 @@
     "pagina": 14,
     "cStat": 391
    }
-  ]
+  ],
+  "futura": true
  },
  {
   "id": "YA04-20",
@@ -15890,7 +16070,11 @@
     "pagina": 11,
     "cStat": 443
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2021-05-03",
+   "producao": "2021-09-01"
+  }
  },
  {
   "id": "YA09-10",
@@ -15924,7 +16108,10 @@
   "mensagem": "Rejeição: Valor do troco acima do permitido",
   "pagina": 15,
   "consultaBaseSefaz": false,
-  "historico": []
+  "historico": [],
+  "vigencia": {
+   "producao": "2024-10-01"
+  }
  },
  {
   "id": "YB01-10",
@@ -16356,7 +16543,11 @@
     "pagina": 15,
     "cStat": 975
    }
-  ]
+  ],
+  "vigencia": {
+   "homologacao": "2026-01-19",
+   "producao": "2026-02-23"
+  }
  },
  {
   "id": "ZE01-10",

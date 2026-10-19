@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { gtinValido } from '../src/regras/produtos.js'
 import { dvChave } from '../src/regras/util.js'
-import { NFCE, NFE_55, acusadas, nota } from './ajuda.js'
+import { NFCE, NFE_55, acusadas, comChave, nota } from './ajuda.js'
 
 const GTIN = '4006381333931' // exemplo de EAN-13 válido da GS1
 const ICMS = /<ICMS>.*<\/ICMS>/.exec(NFE_55)[0]
@@ -124,4 +124,12 @@ test('I11-10: tolera R$ 0,01 de arredondamento', () => {
 test('K01-20: devolução dispensa o rastro', () => {
   const xml = depoisDoIndTot('<med><cProdANVISA>ISENTO</cProdANVISA><xMotivoIsencao>SEM REGISTRO</xMotivoIsencao><vPMC>10.00</vPMC></med>', nota([['<finNFe>1', '<finNFe>4']]))
   assert.ok(!acusadas(xml).includes('K01-20'))
+})
+
+test('vigência: I08-180 vale em homologação já e em produção só a partir de 14/12/2026', () => {
+  const xml = nota([['<CFOP>5102', '<CFOP>5929'], ['</verProc>', `</verProc><NFref><refNFe>${chaveValida('65')}</refNFe></NFref>`]])
+  assert.ok(acusadas(xml).includes('I08-180'))
+  const producao = comChave(nota([['<tpAmb>2', '<tpAmb>1']], xml))
+  assert.ok(!acusadas(producao).includes('I08-180'))
+  assert.ok(acusadas(producao, { agora: new Date('2026-12-14T03:00:00Z') }).includes('I08-180'))
 })

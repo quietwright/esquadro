@@ -218,15 +218,19 @@ class Validador {
     const erroNativo = verificarNativo(nativo, valor)
     if (erroNativo) return this.falha(no, `${onde}: ${erroNativo} ("${resumir(valor)}")`)
     if (!tipo) return
-    const tamanho = [...valor].length
+    // Em base64Binary e hexBinary, length conta bytes decodificados, não caracteres (XSD 1.0,
+    // parte 2, §4.3.1): o hashCSRT tem 28 caracteres e 20 bytes.
+    const binario = nativo === 'xs:base64Binary' || nativo === 'xs:hexBinary'
+    const tamanho = nativo === 'xs:base64Binary' ? bytesDeBase64(valor) : nativo === 'xs:hexBinary' ? valor.length / 2 : [...valor].length
+    const unidade = binario ? ' bytes' : ''
     if (tipo.length !== undefined && tamanho !== tipo.length) {
-      return this.falha(no, `${onde}: tamanho ${tamanho}, deve ter exatamente ${tipo.length} ("${resumir(valor)}")`)
+      return this.falha(no, `${onde}: tamanho ${tamanho}${unidade}, deve ter exatamente ${tipo.length} ("${resumir(valor)}")`)
     }
     if (tipo.minLength !== undefined && tamanho < tipo.minLength) {
-      return this.falha(no, `${onde}: tamanho ${tamanho}, mínimo ${tipo.minLength} ("${resumir(valor)}")`)
+      return this.falha(no, `${onde}: tamanho ${tamanho}${unidade}, mínimo ${tipo.minLength} ("${resumir(valor)}")`)
     }
     if (tipo.maxLength !== undefined && tamanho > tipo.maxLength) {
-      return this.falha(no, `${onde}: tamanho ${tamanho}, máximo ${tipo.maxLength} ("${resumir(valor)}")`)
+      return this.falha(no, `${onde}: tamanho ${tamanho}${unidade}, máximo ${tipo.maxLength} ("${resumir(valor)}")`)
     }
     if (tipo.enumeracao && !tipo.enumeracao.includes(valor)) {
       const opcoes = tipo.enumeracao.length <= 12 ? `; aceitos: ${tipo.enumeracao.join(', ')}` : ''
@@ -292,6 +296,11 @@ function verificarNativo(nativo, valor) {
 function caractereForaDoPadrao(valor) {
   for (const c of valor) if (c.codePointAt(0) > 0xff || c.codePointAt(0) < 0x20) return c
   return null
+}
+
+function bytesDeBase64(valor) {
+  const limpo = valor.replace(/ /g, '')
+  return (limpo.length / 4) * 3 - (limpo.match(/=*$/)[0].length)
 }
 
 function resumir(s) {

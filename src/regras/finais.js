@@ -286,9 +286,8 @@ export default [
   },
   {
     id: 'VC02-14',
-    verificar({ det, ide, agora }, falhar) {
-      // Em produção a partir de 03/11/2026.
-      if (val(ide, 'finNFe') !== '4' || (val(ide, 'tpAmb') === '1' && agora < new Date('2026-11-03T03:00:00Z'))) return
+    verificar({ det, ide }, falhar) {
+      if (val(ide, 'finNFe') !== '4') return
       for (const d of det) if (!tem(d, 'DFeReferenciado')) falhar(d, `item ${nItem(d)}: devolução sem DFeReferenciado`)
     },
   },

@@ -59,8 +59,11 @@ r.valida      // false se houver rejeição obrigatória
 r.problemas   // [{ regra, cStat, mensagem, efeito, aplicacao, detalhe, caminho, linha, coluna, fonte }]
 ```
 
-`aplicacao: 'facultativa'` marca as regras que cada UF decide se aplica. Elas aparecem nos
-problemas, mas não tornam a nota inválida.
+`aplicacao: 'facultativa'` marca as regras que cada UF decide se aplica, as que a NT anuncia
+como "implementação futura" e os casos que notas autorizadas mostram que o autorizador aceita.
+Elas aparecem nos problemas, mas não tornam a nota inválida. Regra com data de entrada em vigor
+(por ambiente) só vale a partir dela, o que também permite conferir nota antiga pelas regras da
+época.
 
 Regras de data comparam com o instante de recebimento. Por padrão é agora; para simular outro:
 

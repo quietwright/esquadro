@@ -22,6 +22,7 @@ export function contexto(nfe, opcoes = {}) {
     pag: el(inf, 'pag'),
     infAdic: el(inf, 'infAdic'),
     modelo,
+    producao: val(ide, 'tpAmb') === '1',
     chave: id.startsWith('NFe') ? id.slice(3) : null,
     // "NFC-e ou NF-e com DANFE Simplificado Tipo 2 (tpImp=6)": a NT 2026.002 estendeu às duas
     // as restrições que antes eram só da NFC-e.

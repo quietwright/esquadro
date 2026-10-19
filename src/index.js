@@ -51,7 +51,7 @@ export function validar(xml, opcoes = {}) {
     etapa,
     problemas,
   })
-  const acusar = (id, onde, detalhe) => problemas.push(problema(id, onde, detalhe))
+  const acusar = (id, onde, detalhe, extra) => problemas.push(problema(id, onde, detalhe, extra))
   // Aviso do próprio esquadro, que não é regra da SEFAZ e não invalida a nota.
   const avisar = (onde, detalhe) =>
     problemas.push({ regra: 'esquadro', cStat: null, mensagem: 'Aviso', efeito: 'alerta', aplicacao: 'facultativa', detalhe, caminho: caminho(onde), linha: onde.linha, coluna: onde.coluna, fonte: 'esquadro' })
@@ -119,9 +119,19 @@ export function validar(xml, opcoes = {}) {
     const meta = catalogo[regra.id]
     if (!meta) throw new Error(`regra ${regra.id} implementada mas ausente do catálogo`)
     if (meta.modelos && !meta.modelos.includes(ctx.modelo)) continue
-    regra.verificar(ctx, (onde, detalhe) => acusar(regra.id, onde, detalhe))
+    if (!emVigor(meta, ctx)) continue
+    // Uma regra pode rebaixar um caso específico para facultativo ({ aplicacao: 'facultativa' })
+    // quando notas autorizadas mostram que o autorizador não rejeita aquele caso.
+    regra.verificar(ctx, (onde, detalhe, extra) => acusar(regra.id, onde, detalhe, extra))
   }
   return resultado('negocio', { modelo: ctx.modelo, chave: ctx.chave })
+}
+
+// Regra que a NT põe em vigor numa data, por ambiente, só vale a partir dela no instante
+// simulado. Isso também deixa conferir nota antiga pelas regras da época.
+function emVigor(meta, ctx) {
+  const data = meta.vigencia?.[ctx.producao ? 'producao' : 'homologacao']
+  return !data || ctx.agora >= new Date(`${data}T00:00:00-03:00`)
 }
 
 function localizarNFe(raiz) {
@@ -163,7 +173,7 @@ function verificarEstrutura(nfe, acusar) {
   }
 }
 
-function problema(id, onde, detalhe) {
+function problema(id, onde, detalhe, extra) {
   const meta = catalogo[id]
   if (!meta) throw new Error(`regra ${id} ausente do catálogo`)
   const p = {
@@ -171,7 +181,7 @@ function problema(id, onde, detalhe) {
     cStat: meta.cStat,
     mensagem: meta.mensagem,
     efeito: meta.efeito,
-    aplicacao: meta.aplicacao,
+    aplicacao: extra?.aplicacao ?? meta.aplicacao,
   }
   if (detalhe) p.detalhe = detalhe
   if (onde) {

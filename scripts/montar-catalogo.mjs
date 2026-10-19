@@ -71,13 +71,38 @@ function origem(r) {
 
 // A coluna "Aplic." às vezes diz Obrig. para regra que o próprio texto declara opcional, a
 // critério da UF. Prevalece o texto: a regra fica facultativa.
-const OPCIONAL = /(Regra(?: de [Vv]alida[çc][ãa]o)? opcional(?!,? até)|Implementa[çc][ãa]o (?:opcional )?a crit[ée]rio da UF|Regra de [Vv]alida[çc][ãa]o a crit[ée]rio da UF|Regra de valida[çc][ãa]o opcional a crit[ée]rio da UF)/
+const OPCIONAL = /(Regra(?: de [Vv]alida[çc][ãa]o)? opcional(?!,? até)|Implementa[çc][ãa]o (?:opcional )?a crit[ée]rio da UF|Regra de [Vv]alida[çc][ãa]o a crit[ée]rio da UF|Regra de valida[çc][ãa]o opcional a crit[ée]rio da UF|Regra de valida[çc][ãa]o aplic[áa]vel a crit[ée]rio da UF)/
 for (const r of regras.values()) {
   if (r.aplicacao === 'obrigatoria' && OPCIONAL.test(r.regra)) {
     r.aplicacao = 'facultativa'
     r.aplicacaoPeloTexto = true
   }
 }
+// Datas de entrada em vigor por ambiente, quando o texto diz ("válida a partir de 03/07/2023 em
+// homologação e 04/09/2023 em produção", "Implantação em Produção em 14/12/2026"). Havendo mais
+// de uma data para o mesmo ambiente (exceções para a NFA-e, por exemplo), vale a mais tarde.
+const DATA = String.raw`(\d{2})\/(\d{2})\/(\d{4})`
+const AMBIENTE = String.raw`(homologa[çc][ãa]o|produ[çc][ãa]o)`
+const DATA_ANTES = new RegExp(`${DATA}\\s*(?:para|em|no ambiente de)\\s*(?:o ambiente de\\s*)?${AMBIENTE}`, 'gi')
+const AMBIENTE_ANTES = new RegExp(`${AMBIENTE}\\s*(?:a partir de|a partir do dia|em|:)\\s*${DATA}`, 'gi')
+for (const r of regras.values()) {
+  const texto = r.regra.replace(/\s+/g, ' ')
+  const vigencia = {}
+  const anotar = (ambiente, d, m, a) => {
+    const chave = /^h/i.test(ambiente) ? 'homologacao' : 'producao'
+    const data = `${a}-${m}-${d}`
+    if (!vigencia[chave] || data > vigencia[chave]) vigencia[chave] = data
+  }
+  for (const [, d, m, a, ambiente] of texto.matchAll(DATA_ANTES)) anotar(ambiente, d, m, a)
+  for (const [, ambiente, d, m, a] of texto.matchAll(AMBIENTE_ANTES)) anotar(ambiente, d, m, a)
+  if (Object.keys(vigencia).length) r.vigencia = vigencia
+  // "Implementação futura" sem data: a SEFAZ ainda não rejeita. Fica facultativa, como aviso.
+  else if (r.aplicacao === 'obrigatoria' && /implementa[çc][ãa]o futura/i.test(texto)) {
+    r.aplicacao = 'facultativa'
+    r.futura = true
+  }
+}
+
 for (const a of ajustes.filter((a) => a.acao === 'aplicacao')) {
   for (const id of a.ids) {
     const r = regras.get(id)
@@ -106,6 +131,7 @@ for (const r of ordenadas) {
     modelos: r.modelos,
     fonte: `${r.documento}, p. ${r.pagina}`,
   }
+  if (r.vigencia) enxuto[r.id].vigencia = r.vigencia
 }
 writeFileSync(
   'src/catalogo.js',

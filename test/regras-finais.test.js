@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { dvChave } from '../src/regras/util.js'
-import { AGORA, NFCE, NFE_55, acusadas, comChave, comQrCode, nota } from './ajuda.js'
+import { AGORA, NFCE, NFE_55, acusadas, comChave, comQrCode, nota, validarNota } from './ajuda.js'
 
 // Chave de outra nota, com DV correto; `troca` altera trechos antes de calcular o DV.
 function chave({ uf = '35', aamm = '2609', doc = '11444777000161', mod = '55', serie = '001', nNF = '000000456', tpEmis = '1', cNF = '12345678' } = {}) {
@@ -127,4 +127,11 @@ test('casos corretos não acusam', () => {
   assert.deepEqual(acusadas(transp('0', transporta('<CNPJ>11444777000161</CNPJ>'))).filter((r) => r.startsWith('X')), [])
   assert.deepEqual(acusadas(pag(detPag('01', '120.00'), '<vTroco>20.00</vTroco>')).filter((r) => r.startsWith('YA')), [])
   assert.deepEqual(acusadas(cobr('<fat><nFat>1</nFat><vOrig>100.00</vOrig><vLiq>100.00</vLiq></fat><dup><nDup>001</nDup><dVenc>2026-11-15</dVenc><vDup>50.00</vDup></dup><dup><nDup>002</nDup><dVenc>2026-12-15</dVenc><vDup>50.00</vDup></dup>')).filter((r) => r.startsWith('Y')), [])
+})
+
+test('regra de implementação futura sai como aviso facultativo e não invalida a nota', () => {
+  const r = validarNota(transp('0', transporta('<CNPJ>11222333000181</CNPJ>')))
+  const x04 = r.problemas.find((p) => p.regra === 'X04-50')
+  assert.equal(x04.aplicacao, 'facultativa')
+  assert.equal(r.valida, true)
 })

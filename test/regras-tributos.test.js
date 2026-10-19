@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { NFCE, NFE_55, acusadas, nota } from './ajuda.js'
+import { NFCE, NFE_55, acusadas, nota, validarNota } from './ajuda.js'
 
 const ICMS00 = /<ICMS00>.*<\/ICMS00>/.exec(NFE_55)[0]
 const ENDER_DEST = /<enderDest>.*<\/enderDest>/.exec(NFE_55)[0]
@@ -101,4 +101,11 @@ test('exceções e casos corretos', () => {
   assert.ok(!acusadas(icms(icms00('12.00', '12.00'), interestadual())).includes('N16-20'))
   assert.ok(!acusadas(comUFDest(icms(icms00('12.00', '12.00'), interestadual()))).some((r) => r.startsWith('NA')))
   assert.ok(!acusadas(nota([['<CFOP>5102', '<CFOP>5949'], [ICMS00, '<ICMS40><orig>0</orig><CST>40</CST></ICMS40>']], NFCE)).includes('N12-40'))
+})
+
+test('N23-10: CST 10 sem CEST rejeita; CST 60 sem CEST só avisa (os autorizadores aceitam)', () => {
+  const aplicacao = (xml) => validarNota(xml).problemas.find((p) => p.regra === 'N23-10')?.aplicacao
+  const cst10 = '<ICMS10><orig>0</orig><CST>10</CST><modBC>3</modBC><vBC>100.00</vBC><pICMS>18.00</pICMS><vICMS>18.00</vICMS><modBCST>4</modBCST><vBCST>10.00</vBCST><pICMSST>18.00</pICMSST><vICMSST>1.80</vICMSST></ICMS10>'
+  assert.equal(aplicacao(icms(cst10)), 'obrigatoria')
+  assert.equal(aplicacao(icms(ICMS60())), 'facultativa')
 })

@@ -201,12 +201,22 @@ export default [
   porItem('N17c-20', (d, { ide, dest }, g) => val(ide, 'idDest') === '2' && val(ide, 'indFinal') === '1' && val(dest, 'indIEDest') === '9' && tem(g, 'vFCP') && 'FCP de operação interestadual para não contribuinte vai em vFCPUFDest'),
   porItem('N18-10', (d, n, g) => val(g, 'modBCST') === '4' && !tem(g, 'pMVAST') && 'modBCST=4 (MVA) sem pMVAST'),
   porItem('N18-20', (d, n, g) => tem(g, 'modBCST') && val(g, 'modBCST') !== '4' && tem(g, 'pMVAST') && `pMVAST com modBCST=${val(g, 'modBCST')}`),
-  porItem('N23-10', (d, n, g) => {
-    if (!g || tem(d, 'prod/CEST') || g.nome === 'ICMSPart') return null
-    const c = cst(g) ?? csosn(g)
-    const comST = ['10', '30', '60', '70', '201', '202', '203', '500'].includes(c) || (['90', '900'].includes(c) && num(g, 'vICMSST') !== 0)
-    return comST && `CST/CSOSN ${c} (substituição tributária) sem CEST`
-  }),
+  {
+    id: 'N23-10',
+    verificar({ det }, falhar) {
+      for (const d of det) {
+        const g = grupoIcms(d)
+        if (!g || tem(d, 'prod/CEST') || g.nome === 'ICMSPart') continue
+        const c = cst(g) ?? csosn(g)
+        const comST = ['10', '30', '60', '70', '201', '202', '203', '500'].includes(c) || (['90', '900'].includes(c) && num(g, 'vICMSST') !== 0)
+        if (!comST) continue
+        // ST recolhida antes (CST 60, CSOSN 500): notas autorizadas de 2022 a 2026 em SP, PR, MS
+        // e CE trazem esses itens sem CEST. Os autorizadores não rejeitam; fica como aviso.
+        const anterior = ['60', '500'].includes(c)
+        falhar(g, `item ${nItem(d)}: CST/CSOSN ${c} (substituição tributária) sem CEST`, anterior ? { aplicacao: 'facultativa' } : undefined)
+      }
+    },
+  },
   porItem('N23b-10', (d, n, g) => tem(g, 'pFCPST') && num(g, 'pFCPST') === 0 && 'pFCPST igual a zero; sem FCP-ST, omita os campos'),
   porItem('N23d-10', (d, { ide }, g) => {
     const c = cst(g) ?? csosn(g)

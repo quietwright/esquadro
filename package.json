@@ -1,6 +1,6 @@
 {
   "name": "@quietwright/esquadro",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Validador offline de NF-e e NFC-e: aponta a rejeição da SEFAZ antes do envio, com cada regra citando o MOC ou a Nota Técnica de onde veio.",
   "type": "module",
   "scripts": {

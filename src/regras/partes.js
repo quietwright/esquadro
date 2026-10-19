@@ -149,9 +149,10 @@ export default [
   {
     id: 'C18-14',
     verificar({ ide, emit }, falhar) {
-      if (tem(emit, 'IEST') && ['1', '3'].includes(val(ide, 'idDest'))) {
-        falhar(el(emit, 'IEST'), `IEST em operação ${val(ide, 'idDest') === '1' ? 'interna' : 'com exterior'}; a UF pode aceitar na interna`)
-      }
+      if (!tem(emit, 'IEST') || !['1', '3'].includes(val(ide, 'idDest'))) return
+      // Na operação interna a UF pode aceitar a IEST (exceção da regra): fica como aviso.
+      if (val(ide, 'idDest') === '1') falhar(el(emit, 'IEST'), 'IEST em operação interna; a UF pode aceitar', { aplicacao: 'facultativa' })
+      else falhar(el(emit, 'IEST'), 'IEST em operação com exterior')
     },
   },
   {

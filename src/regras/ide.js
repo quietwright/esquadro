@@ -273,7 +273,8 @@ export default [
   {
     id: 'B25c-10',
     verificar({ ide, det }, falhar) {
-      if (!['1', '2', '3', '4', '9'].includes(val(ide, 'indPres'))) return
+      // A NT 2020.006 v1.30 tirou a venda presencial (indPres=1): o "1," está riscado na tabela.
+      if (!['2', '3', '4', '9'].includes(val(ide, 'indPres'))) return
       if (val(ide, 'tpNF') !== '1' || val(ide, 'finNFe') !== '1' || tem(ide, 'indIntermed')) return
       const isentos = /^530[1-7]$|^520[5-7]$|^525[1-8]$/
       if (det.some((d) => isentos.test(val(d, 'prod/CFOP')))) return

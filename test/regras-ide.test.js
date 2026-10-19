@@ -42,7 +42,7 @@ const casos = [
   ['B25b-10', 'NF-e com entrega a domicílio', nota([['<indPres>1', '<indPres>4']])],
   ['B25b-20', 'NFC-e pela internet', nota([['<indPres>1', '<indPres>2']], NFCE)],
   ['B25b-40', 'venda fora do estabelecimento sem nota referenciada', nota([['<indPres>1', '<indPres>5']])],
-  ['B25c-10', 'venda sem indIntermed', nota([['<indIntermed>0</indIntermed>', '']])],
+  ['B25c-10', 'venda pela internet sem indIntermed', nota([['<indPres>1</indPres><indIntermed>0</indIntermed>', '<indPres>2</indPres>']])],
   ['B25c-20', 'intermediador em operação sem presença definida', nota([['<indPres>1</indPres><indIntermed>0', '<indPres>0</indPres><indIntermed>1']])],
   ['B26-10', 'série reservada ao fisco', comChave(nota([['<serie>1</serie>', '<serie>890</serie>']]))],
   ['B26-10', 'série exclusiva do PAA', comChave(nota([['<serie>1</serie>', '<serie>975</serie>']]))],
@@ -73,8 +73,12 @@ test('B09-40 não se aplica à NF-e comum', () => {
   assert.ok(!acusadas(atrasada).includes('B09-40'))
 })
 
+test('B25c-10 não se aplica à venda presencial (NT 2020.006 v1.30)', () => {
+  assert.ok(!acusadas(nota([['<indIntermed>0</indIntermed>', '']])).includes('B25c-10'))
+})
+
 test('B25c-10 não se aplica a CFOP de serviço de comunicação/energia da exceção', () => {
-  const xml = nota([['<indIntermed>0</indIntermed>', ''], ['<CFOP>5102', '<CFOP>5301']])
+  const xml = nota([['<indPres>1</indPres><indIntermed>0</indIntermed>', '<indPres>2</indPres>'], ['<CFOP>5102', '<CFOP>5301']])
   assert.ok(!acusadas(xml).includes('B25c-10'))
 })
 
