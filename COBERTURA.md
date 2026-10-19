@@ -1,12 +1,12 @@
 # Cobertura
 
-O catálogo tem **974 regras** de validação da autorização de NF-e e NFC-e, tiradas do MOC 7.0 e das Notas Técnicas vigentes (veja `catalogo/fontes.json`). O esquadro confere **659** delas (68%).
+O catálogo tem **974 regras** de validação da autorização de NF-e e NFC-e, tiradas do MOC 7.0 e das Notas Técnicas vigentes (veja `catalogo/fontes.json`). O esquadro confere **665** delas (68%).
 
 As demais estão abaixo, agrupadas pelo motivo de ficarem de fora. Este arquivo é gerado por `npm run cobertura` a partir do catálogo e do código: não há número escrito à mão.
 
 | | Regras | |
 |---|---:|---:|
-| Conferidas pelo esquadro | 659 | 68% |
+| Conferidas pelo esquadro | 665 | 68% |
 | Consulta bases da SEFAZ | 109 | 11% |
 | Outro serviço | 8 | 1% |
 | Coberta pelo schema | 9 | 1% |
@@ -14,7 +14,7 @@ As demais estão abaixo, agrupadas pelo motivo de ficarem de fora. Este arquivo 
 | Ambiente de transmissão | 35 | 4% |
 | Cadeia do certificado e assinaturas fora da NF-e | 6 | 1% |
 | Implementação futura | 38 | 4% |
-| Inscrição estadual e SUFRAMA | 8 | 1% |
+| Inscrição SUFRAMA | 2 | 0% |
 | Parâmetro da UF | 12 | 1% |
 | QR Code com segredo do contribuinte ou versão antiga | 30 | 3% |
 | Tabela ainda não incorporada | 43 | 4% |
@@ -285,20 +285,14 @@ A própria NT diz que a regra ainda não vale.
 | Z02-20 | 950 | Informações Adicionais de Interesse do Fisco abaixo do tamanho mínimo exigido pela UF. |
 | ZF05-30 | 839 | Madeira sem documento de origem [nItem: 999] |
 
-## Inscrição estadual e SUFRAMA (8)
+## Inscrição SUFRAMA (2)
 
-Dígito verificador de IE (27 algoritmos, um por UF) e da inscrição SUFRAMA. Pendente: quero casos de teste confiáveis antes de rejeitar IE de alguém.
+O MOC pede o dígito verificador, mas não diz o algoritmo, e a SUFRAMA não o publica junto das regras.
 
 | Regra | cStat | Mensagem |
 |---|---:|---|
-| C17-20 | 209 | IE do emitente inválida |
-| C18-30 | 211 | IE do substituto inválida |
 | C22-20 | 1186 | Inscrição do emitente na Suframa com dígito verificador inválido |
-| E17-50 | 210 | IE do destinatário inválida |
 | E18-20 | 235 | Inscrição SUFRAMA inválida |
-| F15-10 | 971 | IE inválida [local de retirada/entrega] |
-| G15-10 | 971 | IE inválida [local de retirada/entrega] |
-| X07-20 | 544 | IE do Transportador inválida |
 
 ## Parâmetro da UF (12)
 

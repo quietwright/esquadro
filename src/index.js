@@ -187,3 +187,4 @@ function problema(id, onde, detalhe) {
 }
 
 export { catalogo, regras }
+export { problemaNaIe } from './ie.js'

@@ -37,9 +37,9 @@ traz essas regras para o seu teste, o seu CI ou a tela do seu emissor.
 - **Certificado e assinatura**: refaz o cálculo da assinatura como a SEFAZ (C14N, SHA-1 e RSA,
   escritos sem dependências) e diz se a nota mudou depois de assinada (rejeição 297), além de
   validade, uso da chave e CNPJ do certificado (290, 291, 292, 213).
-- **Regras de negócio**: **659 das 974 regras** de validação da autorização vigentes, entre elas
-  chave de acesso (com o DV do CNPJ alfanumérico), datas, CFOP, CST/CSOSN, totais, pagamento,
-  QR Code da NFC-e e o grupo de IBS/CBS por item.
+- **Regras de negócio**: **665 das 974 regras** de validação da autorização vigentes, entre elas
+  chave de acesso (com o DV do CNPJ alfanumérico), inscrição estadual das 27 UFs, datas, CFOP,
+  CST/CSOSN, totais, pagamento, QR Code da NFC-e e o grupo de IBS/CBS por item.
 
 [COBERTURA.md](COBERTURA.md) lista as 974 regras: as conferidas e, para cada uma que fica de fora,
 o motivo. A maior parte delas depende do que só a SEFAZ tem, como o cadastro de contribuintes e as
@@ -66,6 +66,15 @@ Regras de data comparam com o instante de recebimento. Por padrão é agora; par
 
 ```js
 validar(xml, { agora: new Date('2026-10-15T13:00:00Z') })
+```
+
+A conferência da inscrição estadual também sai sozinha, para formulário de cadastro:
+
+```js
+import { problemaNaIe } from '@quietwright/esquadro'
+
+problemaNaIe('110042490114', 'SP') // null: válida
+problemaNaIe('110042490115', 'SP') // 'dígito verificador não confere com o cálculo de SP'
 ```
 
 Na linha de comando:
@@ -97,7 +106,6 @@ provam que elas não disparam.
   offline.
 - Do certificado, a cadeia até a raiz ICP-Brasil e a revogação não são conferidas: dependem do
   cadastro de autoridades certificadoras e das listas de revogação que a SEFAZ consulta.
-- O dígito verificador da inscrição estadual (um algoritmo por UF) ainda não está implementado.
 - Onde a regra depende de parâmetro da UF (limites de valor, opções de contingência), o esquadro
   usa o padrão nacional ou não acusa.
 
