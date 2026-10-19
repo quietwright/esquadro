@@ -1,0 +1,46 @@
+name: portal
+# Toda segunda-feira, compara as listas do Portal da NF-e com catalogo/portal.json e abre (ou
+# atualiza) uma issue quando sai Nota Técnica, schema, manual ou tabela nova.
+on:
+  schedule:
+    - cron: '0 11 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - id: vigia
+        run: |
+          codigo=0
+          node scripts/vigiar-portal.mjs > mudancas.md || codigo=$?
+          case $codigo in
+            0) echo "mudou=nao" >> "$GITHUB_OUTPUT" ;;
+            2) echo "mudou=sim" >> "$GITHUB_OUTPUT" ;;
+            *) exit "$codigo" ;;
+          esac
+      - if: steps.vigia.outputs.mudou == 'sim'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          titulo="Portal da NF-e: documentos novos"
+          {
+            echo "O Portal da NF-e mudou desde o último \`npm run fontes\`:"
+            echo
+            cat mudancas.md
+            echo "Para incorporar: \`npm run fontes && npm run catalogo && npm test\`, conferir o diff de \`catalogo/\` e implementar as regras novas."
+          } > corpo.md
+          numero=$(gh issue list --state open --search "\"$titulo\" in:title" --json number --jq '.[0].number')
+          if [ -n "$numero" ]; then
+            gh issue edit "$numero" --body-file corpo.md
+          else
+            gh issue create --title "$titulo" --body-file corpo.md
+          fi
