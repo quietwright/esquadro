@@ -34,13 +34,16 @@ traz essas regras para o seu teste, o seu CI ou a tela do seu emissor.
 - **Schema**: o pacote de schemas oficial (010f, com a NT 2025.002 do IBS/CBS e o CNPJ
   alfanumérico), compilado e validado sem libxml. Aponta o elemento e, quando é o caso, o
   caractere culpado (`contém "“" (U+201C)`).
-- **Regras de negócio**: **653 das 974 regras** de validação da autorização vigentes, entre elas
+- **Certificado e assinatura**: refaz o cálculo da assinatura como a SEFAZ (C14N, SHA-1 e RSA,
+  escritos sem dependências) e diz se a nota mudou depois de assinada (rejeição 297), além de
+  validade, uso da chave e CNPJ do certificado (290, 291, 292, 213).
+- **Regras de negócio**: **659 das 974 regras** de validação da autorização vigentes, entre elas
   chave de acesso (com o DV do CNPJ alfanumérico), datas, CFOP, CST/CSOSN, totais, pagamento,
   QR Code da NFC-e e o grupo de IBS/CBS por item.
 
 [COBERTURA.md](COBERTURA.md) lista as 974 regras: as conferidas e, para cada uma que fica de fora,
 o motivo. A maior parte delas depende do que só a SEFAZ tem, como o cadastro de contribuintes e as
-notas já autorizadas, ou do ambiente de envio, como certificado, lote e webservice.
+notas já autorizadas, ou do ambiente de envio, como certificado de transmissão, lote e webservice.
 
 ## Uso
 
@@ -92,7 +95,8 @@ provam que elas não disparam.
 - O esquadro reproduz as regras escritas. Ele não garante autorização: regras que consultam a
   base da SEFAZ (duplicidade, situação cadastral, IE vinculada ao CNPJ) não podem ser checadas
   offline.
-- A assinatura digital e o certificado ainda não são verificados.
+- Do certificado, a cadeia até a raiz ICP-Brasil e a revogação não são conferidas: dependem do
+  cadastro de autoridades certificadoras e das listas de revogação que a SEFAZ consulta.
 - O dígito verificador da inscrição estadual (um algoritmo por UF) ainda não está implementado.
 - Onde a regra depende de parâmetro da UF (limites de valor, opções de contingência), o esquadro
   usa o padrão nacional ou não acusa.

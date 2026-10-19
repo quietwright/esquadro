@@ -1,18 +1,18 @@
 # Cobertura
 
-O catálogo tem **974 regras** de validação da autorização de NF-e e NFC-e, tiradas do MOC 7.0 e das Notas Técnicas vigentes (veja `catalogo/fontes.json`). O esquadro confere **653** delas (67%).
+O catálogo tem **974 regras** de validação da autorização de NF-e e NFC-e, tiradas do MOC 7.0 e das Notas Técnicas vigentes (veja `catalogo/fontes.json`). O esquadro confere **659** delas (68%).
 
 As demais estão abaixo, agrupadas pelo motivo de ficarem de fora. Este arquivo é gerado por `npm run cobertura` a partir do catálogo e do código: não há número escrito à mão.
 
 | | Regras | |
 |---|---:|---:|
-| Conferidas pelo esquadro | 653 | 67% |
+| Conferidas pelo esquadro | 659 | 68% |
 | Consulta bases da SEFAZ | 109 | 11% |
 | Outro serviço | 8 | 1% |
 | Coberta pelo schema | 9 | 1% |
 | Campos fora do schema 010f | 9 | 1% |
 | Ambiente de transmissão | 35 | 4% |
-| Certificado e assinatura digital | 12 | 1% |
+| Cadeia do certificado e assinaturas fora da NF-e | 6 | 1% |
 | Implementação futura | 38 | 4% |
 | Inscrição estadual e SUFRAMA | 8 | 1% |
 | Parâmetro da UF | 12 | 1% |
@@ -227,22 +227,16 @@ Certificado de transmissão, envelope SOAP, lote, webservice, UF ou ambiente de 
 | ZG01-10 | 633 | Ambiente de autorização inválido para emissão pelo PAA |
 | ZG02-40 | 776 | Emissão por PAA deve ser assinada pelo CNPJ do Provedor de Assinatura |
 
-## Certificado e assinatura digital (12)
+## Cadeia do certificado e assinaturas fora da NF-e (6)
 
-Validade e cadeia do certificado e cálculo da assinatura XML.
+Cadeia até a raiz ICP-Brasil e revogação (dependem do cadastro de ACs e das LCRs da SEFAZ), assinatura RSA do PAA e assinatura do QR Code de contingência (o algoritmo está no Manual do DANFE NFC-e, que o esquadro ainda não baixa).
 
 | Regra | cStat | Mensagem |
 |---|---:|---|
-| E01 | 290 | Certificado Assinatura inválido |
-| E02 | 291 | Certificado Assinatura Data Validade |
-| E03 | 292 | Certificado de Assinatura sem CNPJ/CPF |
 | E04 | 293 | Certificado Assinatura - erro Cadeia de Certificação |
 | E05 | 296 | Certificado Assinatura erro no acesso a LCR |
 | E06 | 294 | Certificado Assinatura revogado |
 | E07 | 295 | Certificado Assinatura difere ICP-Brasil |
-| F01 | 298 | Assinatura difere do padrão do Sistema |
-| F02 | 297 | Assinatura difere do calculado |
-| F03 | 213 | CNPJ-Base do Emitente difere do CNPJ-Base do Certificado Digital |
 | ZG04-10 | 856 | Emissão por PAA com Assinatura RSA inválida |
 | ZX02-338 | 583 | Valor da assinatura do qrCode difere do valor calculado |
 

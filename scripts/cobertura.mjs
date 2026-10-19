@@ -35,7 +35,7 @@ const MOTIVOS = [
     'Certificado de transmissão, envelope SOAP, lote, webservice, UF ou ambiente de destino, SVC, PAA. Dependem de como e para onde a nota é enviada.',
     (r) => /^(A0\d|B0[0345]|B00|B02-\d+|B06-\d+|B22-[2-7]0|B24-10|C12-10|C17-11|GAP|C02-20|C02a-30|B26-22|B26-40|ZG01-10|ZG02-[2-4]\d|B25b-30|GAP03a-\d)$/.test(r.id),
   ],
-  ['assinatura', 'Certificado e assinatura digital', 'Validade e cadeia do certificado e cálculo da assinatura XML.', (r) => /^(E0\d|F0\d|ZG04-10|ZX02-338)$/.test(r.id)],
+  ['assinatura', 'Cadeia do certificado e assinaturas fora da NF-e', 'Cadeia até a raiz ICP-Brasil e revogação (dependem do cadastro de ACs e das LCRs da SEFAZ), assinatura RSA do PAA e assinatura do QR Code de contingência (o algoritmo está no Manual do DANFE NFC-e, que o esquadro ainda não baixa).', (r) => /^(E0\d|F0\d|ZG04-10|ZX02-338)$/.test(r.id)],
   ['futura', 'Implementação futura', 'A própria NT diz que a regra ainda não vale.', (r) => /implementa[çc][ãa]o futura/i.test(r.regra) || r.id === 'NA17-10'],
   ['ie', 'Inscrição estadual e SUFRAMA', 'Dígito verificador de IE (27 algoritmos, um por UF) e da inscrição SUFRAMA. Pendente: quero casos de teste confiáveis antes de rejeitar IE de alguém.', (r) => /^(C17-20|C18-30|E17-50|F15-10|G15-10|X07-20|C22-20|E18-20)$/.test(r.id)],
   [

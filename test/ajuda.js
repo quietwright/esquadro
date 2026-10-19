@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
+import { createHash, createSign } from 'node:crypto'
 import { readFileSync } from 'node:fs'
+import { canonizar } from '../src/c14n.js'
 import { validar } from '../src/index.js'
 import { contexto } from '../src/regras/contexto.js'
 import { chaveSemDv } from '../src/regras/ide.js'
@@ -51,7 +53,36 @@ export const NFCE = comQrCode(
   ),
 )
 
+const CHAVE = readFileSync(new URL('./fixtures/certificados/chave.pem', import.meta.url), 'utf8')
+
+/** Certificado de teste (test/fixtures/certificados) em base64, como vai em <X509Certificate>. */
+export function certificado(nome) {
+  const pem = readFileSync(new URL(`./fixtures/certificados/${nome}.pem`, import.meta.url), 'utf8')
+  return pem.replace(/-----[^-]+-----|\s/g, '')
+}
+
+const filho = (no, nome) => no.filhos.find((f) => f.nome === nome)
+
+/**
+ * Assina a nota de novo com a chave de teste, como o emissor faz depois de montar o XML: as
+ * variações dos testes mudam o conteúdo, e sem isso toda variação acusaria F02.
+ */
+export function assinar(xml, nomeCertificado = 'teste') {
+  const nfeDe = (doc) => (doc.raiz.nome === 'NFe' ? doc.raiz : filho(doc.raiz, 'NFe'))
+  let nfe = nfeDe(lerXml(xml))
+  const digest = createHash('sha1').update(canonizar(filho(nfe, 'infNFe'), nfe)).digest('base64')
+  xml = xml
+    .replace(/<DigestValue>[^<]*</, `<DigestValue>${digest}<`)
+    .replace(/<X509Certificate>[^<]*</, `<X509Certificate>${certificado(nomeCertificado)}<`)
+  nfe = nfeDe(lerXml(xml))
+  const signedInfo = filho(filho(nfe, 'Signature'), 'SignedInfo')
+  const valor = createSign('RSA-SHA1').update(canonizar(signedInfo, nfe)).sign(CHAVE, 'base64')
+  return xml.replace(/<SignatureValue>[^<]*</, `<SignatureValue>${valor}<`)
+}
+
+/** Valida com o instante simulado; a nota é assinada de novo se tiver <Signature>. */
 export function validarNota(xml, opcoes = {}) {
+  if (xml.includes('<Signature')) xml = assinar(xml)
   return validar(xml, { agora: AGORA, ...opcoes })
 }
 

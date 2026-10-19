@@ -282,7 +282,7 @@ class Leitor {
       else if (this.vem('<![CDATA[')) {
         const fim = this.texto.indexOf(']]>', this.pos)
         if (fim < 0) throw this.erro('seção CDATA sem fim')
-        const valor = this.texto.slice(this.pos + 9, fim)
+        const valor = this.texto.slice(this.pos + 9, fim).replace(/\r\n?/g, '\n')
         this.pos = fim + 3
         elemento.filhos.push({ tipo: 'texto', valor, cdata: true, ...this.localizar(inicio) })
       } else if (this.vem('<?')) elemento.filhos.push(this.instrucao())
@@ -292,8 +292,9 @@ class Leitor {
         const bruto = this.texto.slice(this.pos, fim < 0 ? this.texto.length : fim)
         if (bruto.includes(']]>')) throw this.erro('"]]>" fora de seção CDATA', inicio + bruto.indexOf(']]>'))
         this.pos += bruto.length
-        // Fim de linha (§2.11): CRLF e CR sozinho viram LF.
-        const valor = this.resolverEntidades(bruto, inicio).replace(/\r\n?/g, '\n')
+        // Fim de linha (§2.11): CRLF e CR sozinho viram LF. Vem antes das entidades, porque um
+        // &#13; escrito por referência é um CR de verdade e entra assim na assinatura.
+        const valor = this.resolverEntidades(bruto.replace(/\r\n?/g, '\n'), inicio)
         elemento.filhos.push({ tipo: 'texto', valor, ...this.localizar(inicio) })
       }
     }
